@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>indi.rui</groupId>
-	<artifactId>rui-study-springframework</artifactId>
+	<artifactId>study-extension</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>rui-study-springframework</name>
-	<description>springframework的演示学习</description>
+	<name>study-extension</name>
+	<description>插件扩展</description>
 
 	<properties>
 		<java.version>1.8</java.version>
