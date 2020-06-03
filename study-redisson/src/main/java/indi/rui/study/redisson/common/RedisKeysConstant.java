@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.common;
 
 /**
  * Redis keys 常量类

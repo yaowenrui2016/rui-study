@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.common;
 
 import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.atomic.AtomicInteger;

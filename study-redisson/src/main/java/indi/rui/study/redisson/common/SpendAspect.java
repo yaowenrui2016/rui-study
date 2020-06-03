@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.common;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;

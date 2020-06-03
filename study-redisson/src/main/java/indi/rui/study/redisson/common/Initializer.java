@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.common;
 
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;

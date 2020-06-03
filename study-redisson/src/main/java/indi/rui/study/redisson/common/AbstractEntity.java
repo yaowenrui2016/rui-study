@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.common;
 
 import lombok.Getter;
 import lombok.Setter;

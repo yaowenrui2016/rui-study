@@ -1,4 +1,4 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.redisson;
 
 import java.util.HashMap;
 import java.util.List;

@@ -1,4 +1,7 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.person;
+
+import indi.rui.study.redisson.common.QueryRequest;
+import indi.rui.study.redisson.common.QueryResult;
 
 import java.util.List;
 import java.util.Set;

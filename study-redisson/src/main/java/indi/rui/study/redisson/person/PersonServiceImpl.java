@@ -1,7 +1,7 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.person;
 
-import static indi.rui.study.redisson.RedisKeysConstant.CURRENT_PERSON_ID_KEY;
-import static indi.rui.study.redisson.RedisKeysConstant.RANDOM_TEST_KEY;
+import static indi.rui.study.redisson.common.RedisKeysConstant.CURRENT_PERSON_ID_KEY;
+import static indi.rui.study.redisson.common.RedisKeysConstant.RANDOM_TEST_KEY;
 
 import java.util.*;
 import java.util.concurrent.*;
@@ -13,6 +13,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import indi.rui.study.redisson.common.NamedThreadFactory;
+import indi.rui.study.redisson.common.NoRecordException;
+import indi.rui.study.redisson.common.QueryRequest;
+import indi.rui.study.redisson.common.QueryResult;
 import org.redisson.api.RAtomicLong;
 import org.redisson.api.RSet;
 import org.redisson.api.RedissonClient;

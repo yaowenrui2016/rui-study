@@ -1,8 +1,10 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.person;
 
 import java.util.List;
 import java.util.Set;
 
+import indi.rui.study.redisson.common.QueryRequest;
+import indi.rui.study.redisson.common.QueryResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

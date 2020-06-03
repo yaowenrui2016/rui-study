@@ -1,9 +1,10 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.person;
 
 import java.util.Date;
 
 import javax.persistence.*;
 
+import indi.rui.study.redisson.common.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 

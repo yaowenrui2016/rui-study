@@ -1,9 +1,10 @@
-package indi.rui.study.redisson;
+package indi.rui.study.redisson.person;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import indi.rui.study.redisson.common.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 

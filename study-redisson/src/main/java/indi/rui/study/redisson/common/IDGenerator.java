@@ -1,6 +1,4 @@
-package indi.rui.study.redisson;
-
-import java.io.File;
+package indi.rui.study.redisson.common;
 
 import lombok.extern.slf4j.Slf4j;
 
