@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify.sender;
+package indi.rui.study.redisson.notify;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +17,8 @@ public class NotifyContext {
     private String moduleName;
     private String entityName;
     private String entityId;
-    private List<String> target;
+    private List<String> targets;
     private String provider;
     private String parameter;
+    private String extend;
 }

@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify;
+package indi.rui.study.redisson.notify.sender.sysmsg;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,16 +14,16 @@ import java.util.List;
  * @create: 2020-06-03
  */
 @Service
-public class StudyRedissonNotifyService {
+public class SystemMessageService {
 
     @Autowired
-    private StudyRedissonNotifyRepository repository;
+    private SystemMessageRepository repository;
 
-    public List<StudyRedissonNotifyVO> findAll() {
-        Iterator<StudyRedissonNotify> iterator = repository.findAll().iterator();
-        List<StudyRedissonNotifyVO> rtnList = new ArrayList<>();
+    public List<SystemMessageVO> findAll() {
+        Iterator<SystemMessage> iterator = repository.findAll().iterator();
+        List<SystemMessageVO> rtnList = new ArrayList<>();
         while (iterator.hasNext()) {
-            StudyRedissonNotifyVO vo = new StudyRedissonNotifyVO();
+            SystemMessageVO vo = new SystemMessageVO();
             BeanUtils.copyProperties(iterator.next(), vo);
             rtnList.add(vo);
         }
@@ -31,8 +31,8 @@ public class StudyRedissonNotifyService {
     }
 
     @Transactional
-    public void save(StudyRedissonNotifyVO vo) {
-        StudyRedissonNotify entity = new StudyRedissonNotify();
+    public void save(SystemMessageVO vo) {
+        SystemMessage entity = new SystemMessage();
         BeanUtils.copyProperties(vo, entity, "fdId");
         repository.save(entity);
     }

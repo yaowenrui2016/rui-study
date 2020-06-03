@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify;
+package indi.rui.study.redisson.notify.sender.sysmsg;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @create: 2020-06-03
  */
 @Repository
-public interface StudyRedissonNotifyRepository extends CrudRepository<StudyRedissonNotify, Long> {
+public interface SystemMessageRepository extends CrudRepository<SystemMessage, Long> {
 }

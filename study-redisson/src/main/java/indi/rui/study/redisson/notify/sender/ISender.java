@@ -1,13 +1,15 @@
 package indi.rui.study.redisson.notify.sender;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import indi.rui.study.redisson.notify.NotifyContext;
 
 /**
  * @author: yaowr
  * @create: 2020-06-03
  */
 public interface ISender {
-    @PostMapping("send")
-    void send(@RequestBody NotifyContext notifyContext);
+    void send(NotifyContext notifyContext);
+
+    void done(NotifyContext notifyContext);
+
+    void remove(NotifyContext notifyContext);
 }

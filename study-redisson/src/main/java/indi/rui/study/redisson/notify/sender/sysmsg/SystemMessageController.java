@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify;
+package indi.rui.study.redisson.notify.sender.sysmsg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,14 +12,14 @@ import java.util.List;
  * @create: 2020-06-03
  */
 @RestController
-@RequestMapping("/data/notify/")
-public class StudyRedissonNotifyController {
+@RequestMapping("/data/notify/sysmsg")
+public class SystemMessageController {
 
     @Autowired
-    private StudyRedissonNotifyService studyRedissonNotifyService;
+    private SystemMessageService studyRedissonNotifyService;
 
     @PostMapping("findAll")
-    public List<StudyRedissonNotifyVO> findAll() {
+    public List<SystemMessageVO> findAll() {
         return studyRedissonNotifyService.findAll();
     }
 }
