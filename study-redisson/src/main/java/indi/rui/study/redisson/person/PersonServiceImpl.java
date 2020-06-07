@@ -286,13 +286,15 @@ public class PersonServiceImpl implements PersonService {
         return rset.random(50);
     }
 
+//    @Transactional
     @Override
     public String addUpdateAndDelete() {
         TransactionStatus status1 = txManager.getTransaction(new DefaultTransactionDefinition());
-//        TransactionStatus status2 =
-//            txManager.getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
         log.info("status1 is {} new", status1.isNewTransaction());
-//        log.info("status2 is {} new", status2.isNewTransaction());
+        doSome();
+        TransactionStatus status2 =
+            txManager.getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
+        log.info("status2 is {} new", status2.isNewTransaction());
         long num = getNum(1);
         Person person = randomPerson(num);
         // 新增
@@ -304,5 +306,12 @@ public class PersonServiceImpl implements PersonService {
         repository.delete(person);
         txManager.commit(status1);
         return String.valueOf(num);
+    }
+
+    private void doSome() {
+
+        TransactionStatus status3 = txManager.getTransaction(new DefaultTransactionDefinition());
+
+        log.info("status3 is {} new", status3.isNewTransaction());
     }
 }
