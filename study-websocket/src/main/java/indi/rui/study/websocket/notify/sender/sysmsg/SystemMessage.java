@@ -1,10 +1,10 @@
-package indi.rui.study.redisson.notify.sender.sysmsg;
+package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import indi.rui.study.redisson.common.AbstractVO;
+import indi.rui.study.redisson.common.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.List;
+import javax.persistence.Entity;
 
 /**
  * @author: yaowr
@@ -12,7 +12,8 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class SystemMessageVO extends AbstractVO {
+@Entity
+public class SystemMessage extends AbstractEntity {
     private String fdSubject;
     private String fdAppName;
     private String fdModuleName;

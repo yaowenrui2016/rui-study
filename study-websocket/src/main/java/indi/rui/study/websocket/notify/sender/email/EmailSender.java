@@ -1,7 +1,7 @@
-package indi.rui.study.redisson.notify.sender.email;
+package indi.rui.study.websocket.notify.sender.email;
 
-import indi.rui.study.redisson.notify.NotifyContext;
-import indi.rui.study.redisson.notify.sender.ISender;
+import indi.rui.study.websocket.notify.NotifyContext;
+import indi.rui.study.websocket.notify.sender.ISender;
 import org.springframework.stereotype.Service;
 
 /**

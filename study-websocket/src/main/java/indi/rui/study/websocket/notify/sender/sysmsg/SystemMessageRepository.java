@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify.sender.sysmsg;
+package indi.rui.study.websocket.notify.sender.sysmsg;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

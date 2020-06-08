@@ -1,8 +1,8 @@
-package indi.rui.study.redisson.notify;
+package indi.rui.study.websocket.notify;
 
-import indi.rui.study.redisson.notify.sender.ISender;
-import indi.rui.study.redisson.notify.sender.email.EmailSender;
-import indi.rui.study.redisson.notify.sender.sysmsg.SystemMessageSender;
+import indi.rui.study.websocket.notify.sender.ISender;
+import indi.rui.study.websocket.notify.sender.email.EmailSender;
+import indi.rui.study.websocket.notify.sender.sysmsg.SystemMessageSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

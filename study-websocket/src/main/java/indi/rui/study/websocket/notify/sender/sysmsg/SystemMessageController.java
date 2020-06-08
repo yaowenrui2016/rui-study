@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify.sender.sysmsg;
+package indi.rui.study.websocket.notify.sender.sysmsg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

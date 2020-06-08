@@ -1,14 +1,10 @@
-package indi.rui.study.redisson.notify.sender.sysmsg;
+package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import indi.rui.study.redisson.notify.NotifyContext;
-import indi.rui.study.redisson.notify.sender.ISender;
-import indi.rui.study.redisson.notify.sender.sysmsg.SystemMessageService;
-import indi.rui.study.redisson.notify.sender.sysmsg.SystemMessageVO;
+import indi.rui.study.websocket.notify.NotifyContext;
+import indi.rui.study.websocket.notify.sender.ISender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author: yaowr

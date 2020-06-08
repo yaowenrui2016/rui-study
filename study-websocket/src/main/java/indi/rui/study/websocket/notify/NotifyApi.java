@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify;
+package indi.rui.study.websocket.notify;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

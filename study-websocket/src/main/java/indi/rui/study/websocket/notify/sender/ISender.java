@@ -1,6 +1,6 @@
-package indi.rui.study.redisson.notify.sender;
+package indi.rui.study.websocket.notify.sender;
 
-import indi.rui.study.redisson.notify.NotifyContext;
+import indi.rui.study.websocket.notify.NotifyContext;
 
 /**
  * @author: yaowr

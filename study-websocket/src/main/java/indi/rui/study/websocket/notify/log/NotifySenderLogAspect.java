@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify.log;
+package indi.rui.study.websocket.notify.log;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class NotifySenderLogAspect {
-    @Pointcut("target(indi.rui.study.redisson.notify.sender.ISender)")
+    @Pointcut("target(indi.rui.study.websocket.notify.sender.ISender)")
     public void sender() {}
     @Pointcut("execution(void send(..)) || execution(void done(..))")
     public void include() {}

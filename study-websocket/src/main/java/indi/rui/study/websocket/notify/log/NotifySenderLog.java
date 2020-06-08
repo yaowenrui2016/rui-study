@@ -1,4 +1,4 @@
-package indi.rui.study.redisson.notify.log;
+package indi.rui.study.websocket.notify.log;
 
 import indi.rui.study.redisson.common.AbstractEntity;
 import lombok.Getter;

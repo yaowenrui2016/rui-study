@@ -3,22 +3,22 @@ package indi.rui.study.websocket.notify;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Index;
-import javax.persistence.Table;
+import java.util.List;
 
 /**
  * @author: yaowr
- * @create: 2020-06-07
+ * @create: 2020-06-03
  */
 @Getter
 @Setter
-@Entity
-@Table(indexes = {@Index(columnList = "fdSubject")})
 public class NotifyContext {
-    @Id
-    private Long fdId;
-    private String fdSubject;
-    private String fdType;
+    private String subject;
+    private String appName;
+    private String moduleName;
+    private String entityName;
+    private String entityId;
+    private List<String> targets;
+    private String provider;
+    private String parameter;
+    private String extend;
 }
