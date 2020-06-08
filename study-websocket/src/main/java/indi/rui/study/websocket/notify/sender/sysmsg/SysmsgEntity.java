@@ -1,8 +1,11 @@
 package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import indi.rui.study.redisson.common.AbstractVO;
+import indi.rui.study.websocket.common.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 /**
  * @author: yaowr
@@ -10,7 +13,8 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class SystemMessageVO extends AbstractVO {
+@Entity
+public class SysmsgEntity extends AbstractEntity {
     private String fdSubject;
     private String fdAppName;
     private String fdModuleName;

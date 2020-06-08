@@ -1,10 +1,13 @@
 package indi.rui.study.websocket.notify.log;
 
-import indi.rui.study.redisson.common.AbstractEntity;
+import indi.rui.study.websocket.common.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Lob;
+import java.util.Date;
 
 /**
  * @author: yaowr
@@ -14,4 +17,8 @@ import javax.persistence.Entity;
 @Setter
 @Entity
 public class NotifySenderLog extends AbstractEntity {
+    private Date fdSendTime;
+    private String fdSender;
+    @Lob
+    private String fdContent;
 }

@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @create: 2020-06-03
  */
 @Repository
-public interface SystemMessageRepository extends CrudRepository<SystemMessage, Long> {
+public interface SysmsgRepository extends CrudRepository<SysmsgEntity, Long> {
 }

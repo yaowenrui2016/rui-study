@@ -1,4 +1,4 @@
-package indi.rui.study.websocket.common;
+package indi.rui.study.websocket;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

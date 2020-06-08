@@ -14,16 +14,16 @@ import java.util.List;
  * @create: 2020-06-03
  */
 @Service
-public class SystemMessageService {
+public class SysmsgService {
 
     @Autowired
-    private SystemMessageRepository repository;
+    private SysmsgRepository repository;
 
-    public List<SystemMessageVO> findAll() {
-        Iterator<SystemMessage> iterator = repository.findAll().iterator();
-        List<SystemMessageVO> rtnList = new ArrayList<>();
+    public List<SysmsgVO> findAll() {
+        Iterator<SysmsgEntity> iterator = repository.findAll().iterator();
+        List<SysmsgVO> rtnList = new ArrayList<>();
         while (iterator.hasNext()) {
-            SystemMessageVO vo = new SystemMessageVO();
+            SysmsgVO vo = new SysmsgVO();
             BeanUtils.copyProperties(iterator.next(), vo);
             rtnList.add(vo);
         }
@@ -31,8 +31,8 @@ public class SystemMessageService {
     }
 
     @Transactional
-    public void save(SystemMessageVO vo) {
-        SystemMessage entity = new SystemMessage();
+    public void save(SysmsgVO vo) {
+        SysmsgEntity entity = new SysmsgEntity();
         BeanUtils.copyProperties(vo, entity, "fdId");
         repository.save(entity);
     }

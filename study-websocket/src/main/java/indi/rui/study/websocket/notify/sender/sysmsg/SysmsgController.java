@@ -13,13 +13,13 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/data/notify/sysmsg")
-public class SystemMessageController {
+public class SysmsgController {
 
     @Autowired
-    private SystemMessageService studyRedissonNotifyService;
+    private SysmsgService studyRedissonNotifyService;
 
     @PostMapping("findAll")
-    public List<SystemMessageVO> findAll() {
+    public List<SysmsgVO> findAll() {
         return studyRedissonNotifyService.findAll();
     }
 }

@@ -8,6 +8,7 @@ class StudyWebsocketApplicationTests {
 
 	@Test
 	void contextLoads() {
+
 	}
 
 }

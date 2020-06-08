@@ -2,7 +2,7 @@ package indi.rui.study.websocket.notify;
 
 import indi.rui.study.websocket.notify.sender.ISender;
 import indi.rui.study.websocket.notify.sender.email.EmailSender;
-import indi.rui.study.websocket.notify.sender.sysmsg.SystemMessageSender;
+import indi.rui.study.websocket.notify.sender.sysmsg.SysmsgSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class NotifyComponent implements NotifyApi {
 
     @Autowired
-    private SystemMessageSender systemMessageSender;
+    private SysmsgSender sysmsgSender;
     @Autowired
     private EmailSender emailSender;
 
@@ -40,7 +40,7 @@ public class NotifyComponent implements NotifyApi {
         ISender iSender;
         switch (provider) {
             case "sysmsg":
-                iSender = systemMessageSender;
+                iSender = sysmsgSender;
                 break;
             case "email":
                 iSender = emailSender;
