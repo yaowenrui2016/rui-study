@@ -1,11 +1,10 @@
 package indi.rui.study.websocket.notify.log;
 
-import indi.rui.study.websocket.common.AbstractEntity;
+import indi.rui.study.websocket.common.entity.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.Id;
 import javax.persistence.Lob;
 import java.util.Date;
 

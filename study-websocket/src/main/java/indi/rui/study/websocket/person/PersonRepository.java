@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.person;
 
-import org.springframework.data.repository.CrudRepository;
+import indi.rui.study.websocket.common.repository.IRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @create: 2020-06-08
  */
 @Repository
-public interface PersonRepository extends CrudRepository<PersonEntity, Long> {
+public interface PersonRepository extends IRepository<Person> {
 }

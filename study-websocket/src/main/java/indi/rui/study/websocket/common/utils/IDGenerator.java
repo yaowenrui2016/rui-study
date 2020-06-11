@@ -1,4 +1,4 @@
-package indi.rui.study.websocket.common;
+package indi.rui.study.websocket.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 

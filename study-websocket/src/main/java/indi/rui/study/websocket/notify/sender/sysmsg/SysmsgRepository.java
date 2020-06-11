@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import org.springframework.data.repository.CrudRepository;
+import indi.rui.study.websocket.common.repository.IRepository;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  * @create: 2020-06-03
  */
 @Repository
-public interface SysmsgRepository extends CrudRepository<SysmsgEntity, Long> {
+public interface SysmsgRepository extends IRepository<SysmsgEntity> {
 }

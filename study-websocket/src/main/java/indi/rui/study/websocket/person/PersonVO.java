@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.person;
 
-import indi.rui.study.websocket.common.AbstractVO;
+import indi.rui.study.websocket.common.dto.AbstractVO;
 import lombok.Getter;
 import lombok.Setter;
 
