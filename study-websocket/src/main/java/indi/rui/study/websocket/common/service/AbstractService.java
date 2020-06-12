@@ -11,7 +11,7 @@ import indi.rui.study.websocket.common.query.QueryTemplate;
 import indi.rui.study.websocket.common.repository.IRepository;
 import indi.rui.study.websocket.common.utils.IDGenerator;
 import indi.rui.study.websocket.common.utils.ReflectUtil;
-import org.springframework.beans.BeanUtils;
+import indi.rui.study.websocket.common.utils.VoAndEntityHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -102,7 +102,7 @@ public class AbstractService<E extends IEntity, V extends IVO, R extends IReposi
             entity.setFdId(IDGenerator.get());
         }
         if (entity instanceof FdCreateTime) {
-            ((FdCreateTime)entity).setFdCreateTime(new Date());
+            ((FdCreateTime) entity).setFdCreateTime(new Date());
         }
     }
 
@@ -111,11 +111,11 @@ public class AbstractService<E extends IEntity, V extends IVO, R extends IReposi
     }
 
     protected void voToEntity(V vo, E entity) {
-        BeanUtils.copyProperties(vo, entity);
+        VoAndEntityHelper.copyProperties(vo, entity);
     }
 
     protected void entityToVo(E entity, V vo) {
-        BeanUtils.copyProperties(entity, vo);
+        VoAndEntityHelper.copyProperties(entity, vo);
     }
 
     //==================== 获取VO和Entity类的方法 ==================//

@@ -29,14 +29,6 @@ public abstract class AbstractEntity implements IEntity {
         this.fdId = fdId;
     }
 
-    public String getFdStatus() {
-        return (String) getDynamicProps().get("fdCreator");
-    }
-
-    public void setFdStatus(String creator) {
-        getDynamicProps().put("fdCreator", creator);
-    }
-
 
     @Override
     public ConcurrentHashMap<String, Object> getDynamicProps() {

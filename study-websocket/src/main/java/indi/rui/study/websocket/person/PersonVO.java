@@ -1,6 +1,8 @@
 package indi.rui.study.websocket.person;
 
 import indi.rui.study.websocket.common.dto.AbstractVO;
+import indi.rui.study.websocket.common.field.FdCreateTime;
+import indi.rui.study.websocket.common.field.FdStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,7 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class PersonVO extends AbstractVO {
+public class PersonVO extends AbstractVO implements FdStatus, FdCreateTime {
     private String fdName;
     private String fdLoginName;
     private String fdPassword;
