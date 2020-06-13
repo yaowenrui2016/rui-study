@@ -17,9 +17,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import java.util.Date;
-import java.util.Objects;
-import java.util.Optional;
+import java.util.*;
 
 /**
  * @author: yaowr
@@ -93,6 +91,18 @@ public class AbstractService<E extends IEntity, V extends IVO, R extends IReposi
     @Override
     public void deleteAll() {
         repository.deleteAll();
+    }
+
+    @Override
+    public List<V> findAll() {
+        Iterator<E> iterator = repository.findAll().iterator();
+        List<V> rtnList = new ArrayList<>(64);
+        while (iterator.hasNext()) {
+            V vo = ReflectUtil.newInstance(getViewObjectClass());
+            entityToVo(iterator.next(), vo);
+            rtnList.add(vo);
+        }
+        return rtnList;
     }
 
     //====================== 推荐重载的底层方法 ====================//

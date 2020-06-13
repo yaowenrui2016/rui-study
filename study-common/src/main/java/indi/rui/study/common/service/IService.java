@@ -6,6 +6,7 @@ import indi.rui.study.common.dto.IdVO;
 import indi.rui.study.common.entity.IEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -19,6 +20,9 @@ public interface IService<E extends IEntity, V extends IVO> extends IApi<V> {
 
     @PostMapping("deleteAll")
     void deleteAll();
+
+    @PostMapping("findAll")
+    List<V> findAll();
 
     /**
      * 获取Entity的实现类
