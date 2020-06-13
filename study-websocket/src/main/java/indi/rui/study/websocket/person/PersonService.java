@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.person;
 
-import indi.rui.study.websocket.common.service.AbstractService;
+import indi.rui.study.common.service.AbstractService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,5 +13,4 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/person")
 public class PersonService extends AbstractService<Person, PersonVO, PersonRepository> {
-
 }

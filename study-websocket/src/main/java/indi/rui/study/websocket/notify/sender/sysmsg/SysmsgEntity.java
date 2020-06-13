@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import indi.rui.study.websocket.common.entity.AbstractEntity;
+import indi.rui.study.common.entity.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 

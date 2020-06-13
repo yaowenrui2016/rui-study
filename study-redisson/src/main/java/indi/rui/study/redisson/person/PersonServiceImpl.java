@@ -13,10 +13,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import indi.rui.study.common.query.QueryRequest;
+import indi.rui.study.common.query.QueryResult;
+import indi.rui.study.common.service.AbstractService;
 import indi.rui.study.redisson.common.NamedThreadFactory;
-import indi.rui.study.redisson.common.NoRecordException;
-import indi.rui.study.redisson.common.QueryRequest;
-import indi.rui.study.redisson.common.QueryResult;
 import org.redisson.api.RAtomicLong;
 import org.redisson.api.RSet;
 import org.redisson.api.RedissonClient;
@@ -42,8 +42,8 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Service
-// @Transactional(readOnly = true)
-public class PersonServiceImpl implements PersonService {
+ @Transactional(readOnly = true)
+public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonRepository> implements PersonApi {
     @Autowired
     private PersonRepository repository;
     @Autowired
@@ -64,14 +64,14 @@ public class PersonServiceImpl implements PersonService {
             new NamedThreadFactory("producer"), new ThreadPoolExecutor.CallerRunsPolicy());
 
     @Override
-    public void add(Person person) {
+    public void add(PersonVO person) {
         executor.execute(() -> {
             TransactionStatus status1 = txManager.getTransaction(new DefaultTransactionDefinition());
             log.info("status1 is {} new", status1.isNewTransaction());
             TransactionStatus status2 = txManager
                 .getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
             log.info("status2 is {} new", status2.isNewTransaction());
-            repository.save(person);
+            super.add(person);
             txManager.commit(status1);
         });
     }
@@ -84,7 +84,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     public void testTx(Person person) {
         repository.save(person);
-        throw new NoRecordException("ss");
+        throw new RuntimeException("ss");
     }
 
     @Override
@@ -159,25 +159,6 @@ public class PersonServiceImpl implements PersonService {
         }
     }
 
-    @Override
-    public QueryResult<Person> findAll(QueryRequest request) {
-        CriteriaBuilder builder = em.getCriteriaBuilder();
-        // 查询总数
-        CriteriaQuery<Long> criteriaQuery = builder.createQuery(Long.class);
-        Root<Person> root = criteriaQuery.from(Person.class);
-        criteriaQuery.select(builder.count(root.get("fdId")));
-        toPredicate(builder, criteriaQuery, root, request.getConditions()); // where条件
-        int total = em.createQuery(criteriaQuery).getSingleResult().intValue();
-
-        // 查询内容
-        CriteriaQuery query = builder.createQuery(Person.class);
-        Root<Person> rt = query.from(Person.class);
-        query.select(rt);
-        toPredicate(builder, query, rt, request.getConditions()); // where条件
-        List<Person> content = em.createQuery(query).setFirstResult(request.getOffset())
-            .setMaxResults(request.getPageSize()).getResultList();
-        return QueryResult.of(request, total, content);
-    }
 
     private void toPredicate(CriteriaBuilder builder, CriteriaQuery criteriaQuery, Root root,
         Map<String, Object> conditions) {

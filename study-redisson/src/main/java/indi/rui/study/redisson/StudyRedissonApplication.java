@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Objects;
 
 @EnableAspectJAutoProxy
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"indi.rui.study"})
 public class StudyRedissonApplication {
 
 	public static void main(String[] args) {

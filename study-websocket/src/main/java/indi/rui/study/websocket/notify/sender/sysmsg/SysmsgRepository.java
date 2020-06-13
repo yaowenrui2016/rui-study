@@ -1,6 +1,6 @@
 package indi.rui.study.websocket.notify.sender.sysmsg;
 
-import indi.rui.study.websocket.common.repository.IRepository;
+import indi.rui.study.common.repository.IRepository;
 import org.springframework.stereotype.Repository;
 
 /**

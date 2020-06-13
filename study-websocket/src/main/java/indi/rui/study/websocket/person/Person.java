@@ -1,8 +1,8 @@
 package indi.rui.study.websocket.person;
 
-import indi.rui.study.websocket.common.entity.AbstractEntity;
-import indi.rui.study.websocket.common.field.FdCreateTime;
-import indi.rui.study.websocket.common.field.FdStatus;
+import indi.rui.study.common.entity.AbstractEntity;
+import indi.rui.study.common.field.FdCreateTime;
+import indi.rui.study.common.field.FdStatus;
 import lombok.Getter;
 import lombok.Setter;
 

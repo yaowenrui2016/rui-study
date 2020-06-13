@@ -4,7 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-import indi.rui.study.redisson.common.AbstractEntity;
+import indi.rui.study.common.entity.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 

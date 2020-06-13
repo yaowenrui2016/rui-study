@@ -2,6 +2,7 @@ package indi.rui.study.redisson.person;
 
 import java.util.List;
 
+import indi.rui.study.common.repository.IRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * @create: 2020-01-31
  */
 @Repository
-public interface PersonRepository extends CrudRepository<Person, Long> {
+public interface PersonRepository  extends IRepository<Person> {
     @Modifying
     @Query("delete from Person where fdGender = :gender")
     int deleteByGender(@Param("gender") GenderEnum gender);

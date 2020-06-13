@@ -4,7 +4,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
-import indi.rui.study.redisson.common.AbstractEntity;
+import indi.rui.study.common.entity.AbstractEntity;
 import lombok.Getter;
 import lombok.Setter;
 
