@@ -4,7 +4,6 @@ import indi.rui.study.common.IData;
 
 import javax.persistence.Column;
 import javax.persistence.Lob;
-import java.util.Date;
 
 /**
  * @author: yaowr
@@ -16,5 +15,9 @@ public interface FdContent extends IData, IField {
     @Lob
     default String getFdContent() {
         return (String) getDynamicProps().get("fdContent");
+    }
+
+    default void setFdContent(String fdContent) {
+        getDynamicProps().put("fdCreateTime", fdContent);
     }
 }
