@@ -1,12 +1,12 @@
 package indi.rui.study.websocket.notify.log;
 
 import indi.rui.study.common.entity.AbstractEntity;
+import indi.rui.study.common.field.FdContent;
+import indi.rui.study.common.field.FdCreateTime;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.Entity;
-import javax.persistence.Lob;
-import java.util.Date;
 
 /**
  * @author: yaowr
@@ -15,9 +15,6 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-public class NotifySenderLog extends AbstractEntity {
-    private Date fdSendTime;
+public class NotifySenderLog extends AbstractEntity implements FdContent, FdCreateTime {
     private String fdSender;
-    @Lob
-    private String fdContent;
 }

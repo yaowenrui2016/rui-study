@@ -1,10 +1,9 @@
-package indi.rui.study.websocket.notify.sender.sysmsg;
+package indi.rui.study.websocket.notify.sysmsg;
 
-import indi.rui.study.common.entity.AbstractEntity;
+import indi.rui.study.common.dto.AbstractVO;
+import indi.rui.study.common.field.FdCreateTime;
 import lombok.Getter;
 import lombok.Setter;
-
-import javax.persistence.Entity;
 
 /**
  * @author: yaowr
@@ -12,8 +11,7 @@ import javax.persistence.Entity;
  */
 @Getter
 @Setter
-@Entity
-public class SysmsgEntity extends AbstractEntity {
+public class SysmsgVO extends AbstractVO implements FdCreateTime {
     private String fdSubject;
     private String fdAppName;
     private String fdModuleName;

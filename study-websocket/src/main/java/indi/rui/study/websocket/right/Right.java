@@ -1,6 +1,7 @@
 package indi.rui.study.websocket.right;
 
 import indi.rui.study.common.entity.AbstractEntity;
+import indi.rui.study.common.field.FdCode;
 import indi.rui.study.common.field.FdCreateTime;
 import lombok.Getter;
 import lombok.Setter;
@@ -17,7 +18,6 @@ import javax.persistence.Entity;
 @Setter
 @Entity(name = "`right`")
 @Access(AccessType.PROPERTY)
-public class Right extends AbstractEntity implements FdCreateTime {
+public class Right extends AbstractEntity implements FdCreateTime, FdCode {
     private String fdName;
-
 }
