@@ -2,6 +2,7 @@ package indi.rui.study.common.conf;
 
 import org.redisson.Redisson;
 import org.redisson.api.RedissonClient;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
@@ -23,13 +24,14 @@ import java.io.IOException;
 public class RedisConfig {
 
     @Bean
+    @ConditionalOnProperty(name = "spring.redis")
     @ConditionalOnMissingBean(RedisConnectionFactory.class)
-    @ConditionalOnProperty(prefix = "spring.redis")
     public LettuceConnectionFactory redisConnectionFactory(RedisProperties redisProperties) {
         return new LettuceConnectionFactory(new RedisStandaloneConfiguration(redisProperties.getHost(), redisProperties.getPort()));
     }
 
     @Bean
+    @ConditionalOnBean(RedisConnectionFactory.class)
     @ConditionalOnMissingBean(RedissonClient.class)
     public RedissonClient redissonClient() throws IOException {
         return Redisson.create();

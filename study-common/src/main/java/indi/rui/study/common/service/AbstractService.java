@@ -46,7 +46,7 @@ public class AbstractService<E extends IEntity, V extends IVO, R extends IReposi
         repository.save(entity);
     }
 
-    //    @Transactional
+    @Transactional
     @Override
     public void update(V vo) {
         E entity = loadById(IdVO.of(vo.getFdId())).orElseThrow(() -> new RuntimeException("记录不存在"));

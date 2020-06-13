@@ -27,13 +27,12 @@ public interface ICrudController<V extends IVO, A extends IApi<V>> extends ICont
 
     @PostMapping("get")
     default Response get(@RequestBody IdVO idVO) {
-        getApi().get(idVO);
-        return Response.ok();
+        return Response.ok(getApi().get(idVO));
     }
 
     @PostMapping("delete")
-    default Response delete(@RequestBody V vo) {
-        getApi().update(vo);
+    default Response delete(@RequestBody IdVO idVO) {
+        getApi().delete(idVO);
         return Response.ok();
     }
 }
