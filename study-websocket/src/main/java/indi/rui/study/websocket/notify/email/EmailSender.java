@@ -1,4 +1,4 @@
-package indi.rui.study.websocket.notify.sender.email;
+package indi.rui.study.websocket.notify.email;
 
 import indi.rui.study.websocket.notify.NotifyContext;
 import indi.rui.study.websocket.notify.sender.ISender;
