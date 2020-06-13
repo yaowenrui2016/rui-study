@@ -16,4 +16,8 @@ public interface FdLastModifiedTime extends IData, IField {
         return (Date) getDynamicProps().get("fdLastModifiedTime");
     }
 
+    default void setFdLastModifiedTime(Date fdLastModifiedTime) {
+        getDynamicProps().put("fdLastModifiedTime", fdLastModifiedTime);
+    }
+
 }
