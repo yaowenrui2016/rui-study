@@ -14,19 +14,19 @@ public interface ISender {
      *
      * @param notifyContext
      */
-    void send(NotifyContext notifyContext);
+    long send(NotifyContext notifyContext);
 
     /**
      * 置为已办
      *
      * @param notifyContext
      */
-    void done(NotifyContext notifyContext);
+    int done(NotifyContext notifyContext);
 
     /**
      * 移除消息
      *
      * @param notifyContext
      */
-    void remove(NotifyContext notifyContext);
+    int remove(NotifyContext notifyContext);
 }

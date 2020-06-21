@@ -11,17 +11,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailSender implements ISender {
     @Override
-    public void send(NotifyContext notifyContext) {
+    public long send(NotifyContext notifyContext) {
         System.out.println("EmailSender.send()");
+        return 0;
     }
 
     @Override
-    public void done(NotifyContext notifyContext) {
+    public int done(NotifyContext notifyContext) {
         System.out.println("EmailSender.done()");
+        return 0;
     }
 
     @Override
-    public void remove(NotifyContext notifyContext) {
+    public int remove(NotifyContext notifyContext) {
         System.out.println("EmailSender.remove()");
+        return 0;
     }
 }

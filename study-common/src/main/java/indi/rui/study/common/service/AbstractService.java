@@ -54,7 +54,7 @@ public class AbstractService<E extends IEntity, V extends IVO, R extends IReposi
     }
 
     @Override
-    public QueryResult find(QueryRequest request) {
+    public QueryResult<V> find(QueryRequest request) {
         QueryTemplate queryTemplate = new QueryTemplate<>(entityManager, getEntityClass(), getViewObjectClass(),
                 this::entityToVo);
         return queryTemplate.find(request);

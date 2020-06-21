@@ -8,12 +8,25 @@ import org.springframework.web.bind.annotation.RequestBody;
  * @create: 2020-06-03
  */
 public interface NotifyApi {
+    /**
+     * 发送消息
+     * 返回消息ID
+     *
+     * @param notifyContext
+     * @return
+     */
     @PostMapping("send")
-    void send(@RequestBody NotifyContext notifyContext);
+    long send(@RequestBody NotifyContext notifyContext);
 
+    /**
+     * 置为已办
+     * 指定消息ID和接收人，如未指定接收人则将所有接收人执行DONE操作
+     *
+     * @param notifyContext
+     */
     @PostMapping("done")
-    void done(@RequestBody NotifyContext notifyContext);
+    int done(@RequestBody NotifyContext notifyContext);
 
     @PostMapping("remove")
-    void remove(@RequestBody NotifyContext notifyContext);
+    int remove(@RequestBody NotifyContext notifyContext);
 }

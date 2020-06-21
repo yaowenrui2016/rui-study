@@ -4,17 +4,11 @@ import indi.rui.study.common.dto.Condition;
 import indi.rui.study.common.dto.IVO;
 import indi.rui.study.common.entity.IEntity;
 import indi.rui.study.common.utils.ReflectUtil;
-import lombok.Getter;
 import org.springframework.util.CollectionUtils;
 
 import javax.persistence.EntityManager;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
+import javax.persistence.criteria.*;
+import java.util.*;
 import java.util.function.BiConsumer;
 
 /**
@@ -22,6 +16,9 @@ import java.util.function.BiConsumer;
  * @create: 2020-06-10
  */
 public class QueryTemplate<E extends IEntity, V extends IVO> {
+
+    public static final String ASC = "asc";
+    public static final String DESC = "desc";
 
     private EntityManager entityManager;
     private Class<E> entityClass;
@@ -49,6 +46,8 @@ public class QueryTemplate<E extends IEntity, V extends IVO> {
         Root<E> rt = query.from(entityClass);
         query.select(rt);
         toPredicate(builder, query, rt, request.getConditions()); // where条件
+        // 排序字段
+        query.orderBy(toOrders(builder, rt, request.getSorts()));
         List<E> entitys = entityManager.createQuery(query).setFirstResult(request.getOffset())
                 .setMaxResults(request.getPageSize()).getResultList();
         // Entity转换为VO
@@ -120,4 +119,24 @@ public class QueryTemplate<E extends IEntity, V extends IVO> {
         criteriaQuery.where(builder.and(predicates.toArray(new Predicate[predicates.size()])));
     }
 
+    private List<Order> toOrders(CriteriaBuilder builder, Root<E> rt, Map<String, String> sorts) {
+        if (!CollectionUtils.isEmpty(sorts)) {
+            List<Order> orderList = new ArrayList();
+            Iterator<Map.Entry<String, String>> iterator = sorts.entrySet().iterator();
+            while (iterator.hasNext()) {
+                Map.Entry<String, String> entry = iterator.next();
+                Order order;
+                if (ASC.equalsIgnoreCase(entry.getValue())) {
+                    order = builder.asc(rt.get(entry.getKey()));
+                } else if (DESC.equalsIgnoreCase(entry.getValue())) {
+                    order = builder.desc(rt.get(entry.getKey()));
+                } else {
+                    throw new RuntimeException("不支持的排序方式:" + entry.getValue());
+                }
+                orderList.add(order);
+            }
+            return orderList;
+        }
+        return Collections.emptyList();
+    }
 }

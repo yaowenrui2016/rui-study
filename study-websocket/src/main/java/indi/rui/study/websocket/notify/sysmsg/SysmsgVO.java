@@ -13,6 +13,7 @@ import lombok.Setter;
 @Setter
 public class SysmsgVO extends AbstractVO implements FdCreateTime {
     private String fdSubject;
+    private Long fdNotifyId;
     private String fdAppName;
     private String fdModuleName;
     private String fdEntityName;

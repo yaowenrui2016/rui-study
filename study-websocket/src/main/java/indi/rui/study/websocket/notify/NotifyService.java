@@ -1,7 +1,7 @@
 package indi.rui.study.websocket.notify;
 
-import indi.rui.study.websocket.notify.sender.ISender;
 import indi.rui.study.websocket.notify.email.EmailSender;
+import indi.rui.study.websocket.notify.sender.ISender;
 import indi.rui.study.websocket.notify.sender.SysmsgSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/notify")
-public class NotifyComponent implements NotifyApi {
+public class NotifyService implements NotifyApi {
 
     @Autowired
     private SysmsgSender sysmsgSender;
@@ -21,24 +21,24 @@ public class NotifyComponent implements NotifyApi {
     private EmailSender emailSender;
 
     @Override
-    public void send(NotifyContext notifyContext) {
-        choose(notifyContext).send(notifyContext);
+    public long send(NotifyContext notifyContext) {
+        return choose(notifyContext).send(notifyContext);
     }
 
     @Override
-    public void done(NotifyContext notifyContext) {
-        choose(notifyContext).done(notifyContext);
+    public int done(NotifyContext notifyContext) {
+        return choose(notifyContext).done(notifyContext);
     }
 
     @Override
-    public void remove(NotifyContext notifyContext) {
-        choose(notifyContext).remove(notifyContext);
+    public int remove(NotifyContext notifyContext) {
+        return choose(notifyContext).remove(notifyContext);
     }
 
     private ISender choose(NotifyContext notifyContext) {
-        String provider = notifyContext.getProvider();
+        String sender = notifyContext.getSender();
         ISender iSender;
-        switch (provider) {
+        switch (sender) {
             case "sysmsg":
                 iSender = sysmsgSender;
                 break;
