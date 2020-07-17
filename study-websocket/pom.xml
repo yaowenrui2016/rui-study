@@ -23,14 +23,13 @@
         <dependency>
             <groupId>indi.rui</groupId>
             <artifactId>study-common</artifactId>
-            <version>0.0.1.SNAPSHOT</version>
+            <version>${project.version}</version>
         </dependency>
         <!-- websocket -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
-
         <!-- JSP支持 -->
         <dependency>
             <groupId>org.apache.tomcat.embed</groupId>
@@ -45,7 +44,6 @@
             <artifactId>ecj</artifactId>
             <version>4.6.1</version>
         </dependency>
-
         <!-- 分库分表 -->
         <dependency>
             <groupId>org.apache.shardingsphere</groupId>
