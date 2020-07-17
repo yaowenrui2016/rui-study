@@ -28,10 +28,10 @@ public class WebServiceClient {
 		ISysNotifyTodoWebService service = (ISysNotifyTodoWebService) callService(cfg.getAddress(), cfg.getServiceClass());
 		// 请在此处添加业务代码
 		NotifyTodoSendContext context = new NotifyTodoSendContext();
-		context.setSubject("测试一下");
+		context.setSubject("投资管理");
 		context.setAppName("001");
 		context.setModelId("kms");
-		context.setModelId("188936fhsl8834");
+		context.setModelId("188936fhsl8834001");
 		context.setTargets("[{\"LoginName\":\"yaowr\"}]");
 		context.setLink("www.taobao.com");
 		context.setType(1);
@@ -61,7 +61,7 @@ public class WebServiceClient {
 		factory.getOutInterceptors().add(new LoggingOutInterceptor());
 		
 		// 添加消息头验证信息。如果服务端要求验证用户密码，请加入此段代码
-		// factory.getOutInterceptors().add(new AddSoapHeader());
+		 factory.getOutInterceptors().add(new AddSoapHeader());
 
 		factory.setServiceClass(serviceClass);
 		factory.setAddress(address);
