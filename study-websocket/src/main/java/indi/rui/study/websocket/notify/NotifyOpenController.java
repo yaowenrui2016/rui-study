@@ -14,8 +14,8 @@ import javax.validation.Valid;
  * @create: 2020-06-15
  */
 @RestController
-@RequestMapping("/service/notify")
-public class NotifyController {
+@RequestMapping("/open/notify")
+public class NotifyOpenController {
 
     @Autowired
     private NotifyService notifyService;
@@ -27,11 +27,13 @@ public class NotifyController {
 
     @PostMapping("done")
     public Response done(@RequestBody NotifyContext notifyContext) {
-        return Response.ok(notifyService.done(notifyContext));
+        notifyService.done(notifyContext);
+        return Response.ok();
     }
 
     @PostMapping("remove")
     public Response remove(@RequestBody NotifyContext notifyContext) {
-        return Response.ok(notifyService.remove(notifyContext));
+        notifyService.remove(notifyContext);
+        return Response.ok();
     }
 }

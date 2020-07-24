@@ -50,6 +50,12 @@
             <artifactId>sharding-jdbc-core</artifactId>
             <version>${shardingsphere.version}</version>
         </dependency>
+        <!-- Kafka客户端 -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>2.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>

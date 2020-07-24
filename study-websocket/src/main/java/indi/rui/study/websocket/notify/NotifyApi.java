@@ -25,8 +25,8 @@ public interface NotifyApi {
      * @param notifyContext
      */
     @PostMapping("done")
-    int done(@RequestBody NotifyContext notifyContext);
+    void done(@RequestBody NotifyContext notifyContext);
 
     @PostMapping("remove")
-    int remove(@RequestBody NotifyContext notifyContext);
+    void remove(@RequestBody NotifyContext notifyContext);
 }
