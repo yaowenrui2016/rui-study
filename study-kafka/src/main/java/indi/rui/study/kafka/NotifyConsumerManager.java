@@ -1,10 +1,8 @@
 package indi.rui.study.kafka;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.apache.kafka.clients.consumer.ConsumerRecords;
-import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.apache.kafka.clients.consumer.*;
+import org.apache.kafka.common.TopicPartition;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
@@ -12,8 +10,10 @@ import org.springframework.stereotype.Service;
 
 import java.time.Duration;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Properties;
+import java.util.regex.Pattern;
 
 /**
  * @author: yaowr
@@ -23,21 +23,21 @@ import java.util.Properties;
 @Service
 public class NotifyConsumerManager implements InitializingBean {
 
-    private static final Properties PROP;
+    public static final Properties PROPS;
 
     static {
-        PROP = new Properties();
-        PROP.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "study.rui.ubuntu:9092");
-        PROP.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        PROP.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        PROP.put(ConsumerConfig.GROUP_ID_CONFIG, "notify");
-        PROP.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
-//        PROP.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 500);
-        PROP.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 2000);
-        PROP.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 6000);
-        PROP.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        PROP.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 20);
-        PROP.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 10000);
+        PROPS = new Properties();
+        PROPS.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "study.rui.ubuntu:9092");
+        PROPS.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        PROPS.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
+        PROPS.put(ConsumerConfig.GROUP_ID_CONFIG, "notify");
+        PROPS.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "false");
+//        PROPS.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 500);
+        PROPS.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 2000);
+        PROPS.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 6000);
+        PROPS.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
+        PROPS.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 20);
+        PROPS.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 10000);
     }
 
     @Value("${notify.consumer.amount:5}")
@@ -56,8 +56,19 @@ public class NotifyConsumerManager implements InitializingBean {
 
 
     private void start(List<String> topics) {
-        KafkaConsumer<String, Object> consumer = new KafkaConsumer<>(PROP);
-        consumer.subscribe(Arrays.asList("notify_sysmsg_0", "notify_sysmsg_1", "notify_sysmsg_2", "notify_sysmsg_3", "notify_sysmsg_4"));
+        KafkaConsumer<String, Object> consumer = new KafkaConsumer<>(PROPS);
+//        consumer.subscribe(Arrays.asList("notify_sysmsg_0", "notify_sysmsg_1", "notify_sysmsg_2", "notify_sysmsg_3", "notify_sysmsg_4"));
+        consumer.subscribe(Pattern.compile("yao_test_.*"), new ConsumerRebalanceListener() {
+            @Override
+            public void onPartitionsRevoked(Collection<TopicPartition> partitions) {
+                log.info("Kafka重平衡正在发生...");
+            }
+
+            @Override
+            public void onPartitionsAssigned(Collection<TopicPartition> partitions) {
+
+            }
+        });
         int rePoll = 3;
         log.info("消费者启动!");
         outloop:
