@@ -37,19 +37,21 @@ public class KafkaProducerStarter {
 
     public static void main(String[] args) {
         KafkaProducer<String, String> kafkaProducer = new KafkaProducer<>(PROPS);
-        String message = "THIS IS A TEST MESSAGE!";
-        ProducerRecord<String, String> record = new ProducerRecord<>("yao_test_1",
-                String.valueOf(Math.abs(message.hashCode())), message);
-        Future<RecordMetadata> future = kafkaProducer.send(record);
-        try {
-            future.get(3, TimeUnit.SECONDS);
-        } catch (InterruptedException e) {
-            log.error("发送Kafka消息时，线程被打断...");
-        } catch (ExecutionException e) {
-            log.error("发送Kafka消息时，执行异常...");
-        } catch (TimeoutException e) {
-            log.error("发送Kafka消息时，超时了...");
+        for (int i = 0; i < 100000; i++) {
+            String message = "THIS IS A TEST MESSAGE(" + i + ")!";
+            ProducerRecord<String, String> record = new ProducerRecord<>("yao_test_1",
+                    System.currentTimeMillis() + "", message);
+            Future<RecordMetadata> future = kafkaProducer.send(record);
+            try {
+                future.get(200, TimeUnit.MILLISECONDS);
+                log.info("发送Kafka消息成功: {}", record);
+            } catch (InterruptedException e) {
+                log.error("发送Kafka消息时，线程被打断...");
+            } catch (ExecutionException e) {
+                log.error("发送Kafka消息时，执行异常...");
+            } catch (TimeoutException e) {
+                log.error("发送Kafka消息时，超时了...");
+            }
         }
-        log.info("发送Kafka消息成功: {}", record);
     }
 }
