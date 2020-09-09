@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 
 import java.time.Duration;
 import java.util.*;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static indi.rui.study.kafka.Constant.KAFKA_BOOTSTRAP_SERVER;
@@ -38,15 +39,17 @@ public class KafkaConsumerMultiStarter {
         PROPS.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 2000);
         PROPS.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 6000);
         PROPS.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        PROPS.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 10);
-        PROPS.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 10000);
+        PROPS.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 1);
+        PROPS.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 20000);
         List<String> interceptors =  new ArrayList<>();
         interceptors.add("indi.rui.study.kafka.MyConsumerInterceptor");
         PROPS.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, interceptors);
     }
 
+    private static final Pattern PATTERN = Pattern.compile("^.*?\\((.*)\\).*$");
+
     public static void main(String[] args) {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 4; i++) {
             new Thread(KafkaConsumerMultiStarter::start, "kafka-consumer-" + i).start();
         }
         log.info("启动成功!");
@@ -66,16 +69,31 @@ public class KafkaConsumerMultiStarter {
             }
         });
 
-        while (true) {
-            ConsumerRecords<String, String> records = kafkaConsumer.poll(Duration.ofMinutes(180));
-            if (records.isEmpty()) {
-                continue;
+        try {
+            while (true) {
+                ConsumerRecords<String, String> records = kafkaConsumer.poll(Duration.ofSeconds(3));
+                if (records.isEmpty()) {
+                    continue;
+                }
+                Iterator<ConsumerRecord<String, String>> iterator = records.iterator();
+                for (; iterator.hasNext(); ) {
+                    ConsumerRecord<String, String> record = iterator.next();
+                    String message = record.value();
+                    log.info("接收到kafka消息：partition = {}, offset = {}, value = {}", record.partition(), record.offset(),message);
+                    Matcher matcher = PATTERN.matcher(message);
+                    if (matcher.find()) {
+                        try {
+                            Thread.sleep(Long.valueOf(matcher.group(1)) * 1000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
             }
-            Iterator<ConsumerRecord<String, String>> iterator = records.iterator();
-            for (; iterator.hasNext(); ) {
-                ConsumerRecord<String, String> record = iterator.next();
-                log.info("接收到kafka消息：{}", record.value());
-            }
+        } catch (Throwable th) {
+            log.error("消费失败");
+        } finally {
+            log.error("消费者退出~");
         }
     }
 }
