@@ -33,7 +33,7 @@ public class KafkaConsumerMultiStarter {
         PROPS.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BOOTSTRAP_SERVER);
         PROPS.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         PROPS.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
-        PROPS.put(ConsumerConfig.GROUP_ID_CONFIG, "yao_test_consumer" + System.currentTimeMillis());
+        PROPS.put(ConsumerConfig.GROUP_ID_CONFIG, "yao_test_consumer");
         PROPS.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
         PROPS.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, 5000);
         PROPS.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 2000);
@@ -41,7 +41,7 @@ public class KafkaConsumerMultiStarter {
         PROPS.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
         PROPS.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 1);
         PROPS.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 20000);
-        List<String> interceptors =  new ArrayList<>();
+        List<String> interceptors = new ArrayList<>();
         interceptors.add("indi.rui.study.kafka.MyConsumerInterceptor");
         PROPS.put(ConsumerConfig.INTERCEPTOR_CLASSES_CONFIG, interceptors);
     }
@@ -79,7 +79,7 @@ public class KafkaConsumerMultiStarter {
                 for (; iterator.hasNext(); ) {
                     ConsumerRecord<String, String> record = iterator.next();
                     String message = record.value();
-                    log.info("接收到kafka消息：partition = {}, offset = {}, value = {}", record.partition(), record.offset(),message);
+                    log.info("接收到kafka消息：partition = {}, offset = {}, value = {}", record.partition(), record.offset(), message);
                     Matcher matcher = PATTERN.matcher(message);
                     if (matcher.find()) {
                         try {

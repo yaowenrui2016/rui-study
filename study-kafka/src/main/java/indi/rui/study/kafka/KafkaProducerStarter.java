@@ -38,7 +38,7 @@ public class KafkaProducerStarter {
         PROPS.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
         PROPS.put(ProducerConfig.MAX_IN_FLIGHT_REQUESTS_PER_CONNECTION, 1);
-        PROPS.put(ProducerConfig.ACKS_CONFIG, "1");
+        PROPS.put(ProducerConfig.ACKS_CONFIG, "all");
         PROPS.put(ProducerConfig.RETRIES_CONFIG, 1);
     }
 
@@ -72,7 +72,7 @@ public class KafkaProducerStarter {
                     0, "testKey", message);
             Future<RecordMetadata> future = kafkaProducer.send(record);
             try {
-                future.get(200, TimeUnit.MILLISECONDS);
+                RecordMetadata recordMetadata = future.get(200, TimeUnit.MILLISECONDS);
                 log.info("发送Kafka消息成功: {}", record);
             } catch (InterruptedException e) {
                 log.error("发送Kafka消息时，线程被打断...");
