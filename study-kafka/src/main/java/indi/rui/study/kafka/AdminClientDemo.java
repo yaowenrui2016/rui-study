@@ -27,7 +27,6 @@ import static indi.rui.study.kafka.Constant.KAFKA_BOOTSTRAP_SERVER;
 @Slf4j
 public class AdminClientDemo {
 
-    private static final String BOOTSTRAP_SERVERS = "study.rui.ubuntu:9092";
 
     private static final String TOPIC_1 = "admin_test_create_topic_1";
     private static final String TOPIC_2 = "admin_test_create_topic_2";
@@ -49,7 +48,7 @@ public class AdminClientDemo {
 
     static {
         ADMIN_PROPS = new Properties();
-        ADMIN_PROPS.put("bootstrap.servers", BOOTSTRAP_SERVERS);
+        ADMIN_PROPS.put("bootstrap.servers", KAFKA_BOOTSTRAP_SERVER);
         ADMIN_PROPS.put("request.timeout.ms", 600000);
     }
 
@@ -63,9 +62,9 @@ public class AdminClientDemo {
         // 演示2.查询消费者组位移
 //        queryConsumerGroupOffset();
         // 演示3.删除 Topics
-//        deleteTopic();
+        deleteTopic();
         // 演示4.查询 Broker 的磁盘占用
-        describeLogDirs();
+//        describeLogDirs();
     }
 
     /**
@@ -144,7 +143,7 @@ public class AdminClientDemo {
 
     static {
         CONSUMER_PROPS = new Properties();
-        CONSUMER_PROPS.put("bootstrap.servers", BOOTSTRAP_SERVERS);
+        CONSUMER_PROPS.put("bootstrap.servers", KAFKA_BOOTSTRAP_SERVER);
         CONSUMER_PROPS.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         CONSUMER_PROPS.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         CONSUMER_PROPS.put(ConsumerConfig.GROUP_ID_CONFIG, GROUP_ID);

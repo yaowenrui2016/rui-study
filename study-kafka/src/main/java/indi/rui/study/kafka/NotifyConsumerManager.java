@@ -15,6 +15,8 @@ import java.util.List;
 import java.util.Properties;
 import java.util.regex.Pattern;
 
+import static indi.rui.study.kafka.Constant.KAFKA_BOOTSTRAP_SERVER;
+
 /**
  * @author: yaowr
  * @create: 2020-07-23
@@ -27,7 +29,7 @@ public class NotifyConsumerManager implements InitializingBean {
 
     static {
         PROPS = new Properties();
-        PROPS.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "study.rui.ubuntu:9092");
+        PROPS.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_BOOTSTRAP_SERVER);
         PROPS.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         PROPS.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class.getName());
         PROPS.put(ConsumerConfig.GROUP_ID_CONFIG, "notify");
