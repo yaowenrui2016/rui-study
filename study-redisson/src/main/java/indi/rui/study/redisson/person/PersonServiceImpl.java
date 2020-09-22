@@ -1,29 +1,15 @@
 package indi.rui.study.redisson.person;
 
-import static indi.rui.study.redisson.common.RedisKeysConstant.CURRENT_PERSON_ID_KEY;
-import static indi.rui.study.redisson.common.RedisKeysConstant.RANDOM_TEST_KEY;
-
-import java.util.*;
-import java.util.concurrent.*;
-import java.util.concurrent.atomic.AtomicInteger;
-
-import javax.persistence.EntityManager;
-import javax.persistence.criteria.CriteriaBuilder;
-import javax.persistence.criteria.CriteriaQuery;
-import javax.persistence.criteria.Predicate;
-import javax.persistence.criteria.Root;
-
-import indi.rui.study.common.query.QueryRequest;
-import indi.rui.study.common.query.QueryResult;
+import com.alibaba.fastjson.JSON;
 import indi.rui.study.common.service.AbstractService;
 import indi.rui.study.redisson.common.NamedThreadFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.redisson.api.RAtomicLong;
 import org.redisson.api.RSet;
 import org.redisson.api.RedissonClient;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.TransactionDefinition;
@@ -32,9 +18,17 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 import org.springframework.util.CollectionUtils;
 
-import com.alibaba.fastjson.JSON;
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.atomic.AtomicInteger;
 
-import lombok.extern.slf4j.Slf4j;
+import static indi.rui.study.redisson.common.RedisKeysConstant.CURRENT_PERSON_ID_KEY;
+import static indi.rui.study.redisson.common.RedisKeysConstant.RANDOM_TEST_KEY;
 
 /**
  * @author: yaowr
@@ -42,7 +36,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Service
- @Transactional(readOnly = true)
+@Transactional(readOnly = true)
 public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonRepository> implements PersonApi {
     @Autowired
     private PersonRepository repository;
@@ -52,16 +46,14 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
     private RedissonClient redisson;
     @Autowired
     private RedisTemplate redisTemplate;
-    // @Autowired
-    private KafkaTemplate kafkaTemplate;
     @Autowired
     private PlatformTransactionManager txManager;
 
     private Random r = new Random(System.currentTimeMillis());
 
     private ThreadPoolExecutor executor =
-        new ThreadPoolExecutor(8, 8, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10000),
-            new NamedThreadFactory("producer"), new ThreadPoolExecutor.CallerRunsPolicy());
+            new ThreadPoolExecutor(8, 8, 0, TimeUnit.SECONDS, new LinkedBlockingQueue<>(10000),
+                    new NamedThreadFactory("producer"), new ThreadPoolExecutor.CallerRunsPolicy());
 
     @Override
     public void add(PersonVO person) {
@@ -69,7 +61,7 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
             TransactionStatus status1 = txManager.getTransaction(new DefaultTransactionDefinition());
             log.info("status1 is {} new", status1.isNewTransaction());
             TransactionStatus status2 = txManager
-                .getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
+                    .getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
             log.info("status2 is {} new", status2.isNewTransaction());
             super.add(person);
             txManager.commit(status1);
@@ -78,7 +70,7 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
 
     /**
      * 测试一下事务
-     * 
+     *
      * @param person
      */
     @Override
@@ -89,7 +81,7 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
 
     @Override
     public void addByKafka(Person person) {
-        kafkaTemplate.send("study_redisson_person", JSON.toJSONString(person));
+//        kafkaTemplate.send("study_redisson_person", JSON.toJSONString(person));
     }
 
     // @KafkaListener(topics = "study_redisson_person")
@@ -100,13 +92,13 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
     @Override
     public void batchedAdd(int amount) {
         long begin = getNum(amount);
-        new ForkJoinPool().invoke(new CreatePersonTask((int)begin, amount));
+        new ForkJoinPool().invoke(new CreatePersonTask((int) begin, amount));
         log.info("创建Person Begin with {} and amount is {}", begin, amount);
     }
 
     private long getNum(int amount) {
         RAtomicLong currentPersonId = redisson.getAtomicLong(CURRENT_PERSON_ID_KEY);
-        for (;;) {
+        for (; ; ) {
             long begin = currentPersonId.get();
             if (currentPersonId.compareAndSet(begin, begin + amount)) {
                 return begin;
@@ -161,7 +153,7 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
 
 
     private void toPredicate(CriteriaBuilder builder, CriteriaQuery criteriaQuery, Root root,
-        Map<String, Object> conditions) {
+                             Map<String, Object> conditions) {
         if (CollectionUtils.isEmpty(conditions)) {
             return;
         }
@@ -230,7 +222,7 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
 
     @Override
     public void send() {
-        kafkaTemplate.send("my_topic_name", "hello springboot " + counter.getAndIncrement());
+//        kafkaTemplate.send("my_topic_name", "hello springboot " + counter.getAndIncrement());
     }
 
     // @KafkaListener(topics = "my_topic_name")
@@ -267,14 +259,14 @@ public class PersonServiceImpl extends AbstractService<Person, PersonVO, PersonR
         return rset.random(50);
     }
 
-//    @Transactional
+    //    @Transactional
     @Override
     public String addUpdateAndDelete() {
         TransactionStatus status1 = txManager.getTransaction(new DefaultTransactionDefinition());
         log.info("status1 is {} new", status1.isNewTransaction());
         doSome();
         TransactionStatus status2 =
-            txManager.getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
+                txManager.getTransaction(new DefaultTransactionDefinition(TransactionDefinition.PROPAGATION_REQUIRES_NEW));
         log.info("status2 is {} new", status2.isNewTransaction());
         long num = getNum(1);
         Person person = randomPerson(num);
