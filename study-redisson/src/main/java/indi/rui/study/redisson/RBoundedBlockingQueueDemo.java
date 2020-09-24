@@ -35,15 +35,15 @@ public class RBoundedBlockingQueueDemo {
     }
 
     /**
-     * 演示1.使用 Redisson 提供的有界阻塞队列，进行入队列与出对列操作
-     * 使用 RateLimiter 控制入队列和出对列的速率，正常运行一段时间后模
-     * 拟异常场景，手动将 redis 的 key 'redisson-bqs' 删除，运行中的
-     * 程序立即抛出期望的异常：org.redisson.client.RedisException: ERR Error running script (call to f_d404aba30301167784efa4539108cd4cc9b948c4): @user_script:1: user_script:1: Capacity of queue redisson_bqs:{JobQueue} has not been set . channel: [id: 0xdcde841c, L:/192.168.174.1:55153 - R:study.rui.ubuntu/192.168.174.128:6379] command: (EVAL), params: [local value = redis.call('get', KEYS[1]); assert(value ~= false, 'Capacity of queue ' .. KEYS[1] .. ..., 2, redisson_bqs:{JobQueue}, JobQueue, 1, PooledUnsafeDirectByteBuf(ridx: 0, widx: 2, cap: 256)]
+     * 演示1.使用 Redisson 提供的有界阻塞队列 RBoundedBlockingQueue 进
+     * 行入队列与出对列操作。使用 RateLimiter 控制入队列和出对列的速率，
+     * 正常运行一段时间后，通过手动将名称为 redisson-bqs 的 Redis 键删除
+     * 来模拟异常场景，运行中的程序立即抛出期望的异常：org.redisson.client.RedisException: ERR Error running script (call to f_d404aba30301167784efa4539108cd4cc9b948c4): @user_script:1: user_script:1: Capacity of queue redisson_bqs:{JobQueue} has not been set . channel: [id: 0xdcde841c, L:/192.168.174.1:55153 - R:study.rui.ubuntu/192.168.174.128:6379] command: (EVAL), params: [local value = redis.call('get', KEYS[1]); assert(value ~= false, 'Capacity of queue ' .. KEYS[1] .. ..., 2, redisson_bqs:{JobQueue}, JobQueue, 1, PooledUnsafeDirectByteBuf(ridx: 0, widx: 2, cap: 256)]
      *
      * @param args
      */
     public static void main(String[] args) {
-        RateLimiter rateLimiter = RateLimiter.create(1);
+        RateLimiter rateLimiter = RateLimiter.create(10);
         AtomicInteger proNum = new AtomicInteger(0);
         CompletableFuture.runAsync(() -> {
             for (; ; ) {
