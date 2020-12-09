@@ -21,6 +21,7 @@ import java.util.stream.Collectors;
 import static indi.rui.study.kafka.CommonUtil.printOffsets;
 import static indi.rui.study.kafka.CommonUtil.printTopicPartition;
 import static indi.rui.study.kafka.Constant.KAFKA_BOOTSTRAP_SERVER;
+import static indi.rui.study.kafka.Constant.MSG_CONTENT;
 
 /**
  * @author: yaowr
@@ -32,8 +33,6 @@ public class PauseDemo {
     private static final String TOPIC = "pause_test_topic";
 
     private static final String GROUP_ID = "kafka-consumer";
-
-    private static final String MSG_CONTENT = "这是一条测试消息";
 
     private static final String CONSUMER_THREAD_NAME = GROUP_ID;
 
@@ -86,21 +85,6 @@ public class PauseDemo {
             List<String> topics = Collections.singletonList(TOPIC);
             log.info("开始删除 topics...");
             DeleteTopicsResult result = client.deleteTopics(topics);
-            result.all().get(10, TimeUnit.SECONDS);
-            log.info("删除成功! topics = {}", Arrays.toString(topics.toArray()));
-        } catch (Throwable th) {
-            log.error("删除 topics 出错了", th);
-        }
-    }
-
-    /**
-     * 删除 Topic
-     */
-    public static void listTopics() {
-        try (AdminClient client = AdminClient.create(ADMIN_PROPS)) {
-            List<String> topics = Collections.singletonList(TOPIC);
-            log.info("开始删除 topics...");
-            DescribeTopicsResult result = client.describeTopics(topics);
             result.all().get(10, TimeUnit.SECONDS);
             log.info("删除成功! topics = {}", Arrays.toString(topics.toArray()));
         } catch (Throwable th) {
@@ -321,7 +305,7 @@ public class PauseDemo {
         // 创建 Topics
 //        createTopics();
         // 发送消息
-//        startProducer();
+        startProducer();
         // 查看主题分区的最新位置
 //        getLatestPosition();
         // 启动消费者
