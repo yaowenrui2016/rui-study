@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -21,6 +23,8 @@ import java.util.List;
  */
 @Slf4j
 @Service
+@RestController
+@RequestMapping("/study/hibernate/user")
 public class StudyHibernateUserServiceImpl implements IStudyHibernateUserService {
 
     @PersistenceContext
@@ -47,7 +51,7 @@ public class StudyHibernateUserServiceImpl implements IStudyHibernateUserService
     }
 
     @Override
-    public List<StudyHibernateUser> list() {
+    public List<StudyHibernateUser> findAll() {
         Iterator<StudyHibernateUser> iterator = repository.findAll().iterator();
         List<StudyHibernateUser> rtnList = new ArrayList<>();
         while (iterator.hasNext()) {

@@ -1,6 +1,8 @@
 package indi.rui.study.hibernate.service;
 
 import indi.rui.study.hibernate.entity.StudyHibernateUser;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -10,9 +12,12 @@ import java.util.List;
  */
 public interface IStudyHibernateUserService {
 
-    void save(StudyHibernateUser entity);
+    @PostMapping("save")
+    void save(@RequestBody StudyHibernateUser entity);
 
-    StudyHibernateUser get(Long id);
+    @PostMapping("get")
+    StudyHibernateUser get(@RequestBody Long id);
 
-    List<StudyHibernateUser> list();
+    @PostMapping("findAll")
+    List<StudyHibernateUser> findAll();
 }

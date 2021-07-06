@@ -1,6 +1,9 @@
 package indi.rui.study.hibernate.service;
 
 import indi.rui.study.hibernate.entity.StudyHibernateAccount;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -10,11 +13,12 @@ import java.util.List;
  */
 public interface IStudyHibernateAccountService {
 
-    void save(StudyHibernateAccount entity);
+    @PostMapping("save")
+    void save(@RequestBody StudyHibernateAccount entity);
 
-    StudyHibernateAccount get(Long id);
+    @PostMapping("get")
+    StudyHibernateAccount get(@RequestBody Long id);
 
-    List<StudyHibernateAccount> list();
-
-    void createShard(String suffix);
+    @PostMapping("findAll")
+    List<StudyHibernateAccount> findAll(@PathVariable(value = "suffixNo",required = false) Integer suffixNo);
 }
