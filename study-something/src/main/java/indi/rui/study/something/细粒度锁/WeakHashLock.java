@@ -16,6 +16,7 @@ public class WeakHashLock<K> {
     private ConcurrentHashMap<K, LockWeakReference<K, ReentrantLock>> lockMap = new ConcurrentHashMap<>();
     private ReferenceQueue<ReentrantLock> queue = new ReferenceQueue<>();
 
+
     public ReentrantLock getLock(K key) {
         if (lockMap.size() > 1000) {
             clearEmptyLock();
