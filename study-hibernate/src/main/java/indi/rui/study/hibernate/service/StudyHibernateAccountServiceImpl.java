@@ -49,7 +49,7 @@ public class StudyHibernateAccountServiceImpl implements IStudyHibernateAccountS
         if (id == null) {
             return null;
         }
-        studyHibernateAccountTableShardService.presetTable(suffixNo);
+        studyHibernateAccountTableShardService.presetDefaultTable();
         return repository.findById(id).orElse(null);
     }
 
