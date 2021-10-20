@@ -1,8 +1,9 @@
 package indi.rui.study.something.细粒度锁;
 
+import indi.rui.study.something.ThreadHelper;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -10,8 +11,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * @create: 2021-10-19
  */
 public class Test {
-
-    private Random random = new Random(System.currentTimeMillis());
 
     private WeakHashLock<Integer> hashLock = new WeakHashLock<>();
 
@@ -60,18 +59,11 @@ public class Test {
             try {
                 // 模拟并发访问int变量，将value递增
                 int tmp = valueList.get(key);
-                doAny(2);
+
+                ThreadHelper.randSleep(2);
                 valueList.set(key, tmp + 1);
             } finally {
                 lock.unlock();
-            }
-        }
-
-        private void doAny(int bound) {
-            try {
-                Thread.sleep(random.nextInt(bound));
-            } catch (InterruptedException e) {
-                e.printStackTrace();
             }
         }
     }
