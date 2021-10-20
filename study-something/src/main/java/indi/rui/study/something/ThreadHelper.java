@@ -1,11 +1,14 @@
 package indi.rui.study.something;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.Random;
 
 /**
  * @author: yaowr
  * @create: 2021-10-18
  */
+@Slf4j
 public class ThreadHelper {
     private static Random random = new Random(System.currentTimeMillis());
 
@@ -21,7 +24,14 @@ public class ThreadHelper {
         try {
             Thread.sleep(millis);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            log.error("sleep exception", e);
+        }
+    }
+
+    public static void TimedRun(Runnable r, int millis) {
+        while (true) {
+            sleep(millis);
+            r.run();
         }
     }
 }
