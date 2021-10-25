@@ -30,8 +30,8 @@ public class ThreadHelper {
 
     public static void TimedRun(Runnable r, int millis) {
         while (true) {
-            sleep(millis);
             r.run();
+            sleep(millis);
         }
     }
 }

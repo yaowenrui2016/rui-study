@@ -37,8 +37,8 @@ public class HttpClientUtils {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader("Content-type", "application/json");
             RequestConfig requestConfig = RequestConfig.custom()
-                    .setSocketTimeout(10000)
-                    .setConnectTimeout(10000)
+                    .setSocketTimeout(60000)
+                    .setConnectTimeout(60000)
                     .build();
             httpPost.setConfig(requestConfig);
             if (header != null) {
