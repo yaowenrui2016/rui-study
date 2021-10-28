@@ -1,4 +1,4 @@
-package indi.rui.study.bgytest;
+package indi.rui.study.bgytest.util;
 
 import java.io.BufferedInputStream;
 import java.io.File;

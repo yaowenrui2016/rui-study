@@ -1,4 +1,4 @@
-package indi.rui.study.bgytest;
+package indi.rui.study.bgytest.dto;
 
 import lombok.Getter;
 import lombok.Setter;

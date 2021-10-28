@@ -9,7 +9,7 @@
   "moduleName": "sys-notify",
   "entityId": "TEST_{{notifyId}}",
   "entityName": "sequential_1",
-  "entityKey": "xxx",
+  "entityKey": "sss",
   "orgProperty": "fdLoginName",
   "targets": [
     "yaowr",
