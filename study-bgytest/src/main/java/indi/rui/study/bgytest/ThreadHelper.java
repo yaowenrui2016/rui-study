@@ -1,4 +1,4 @@
-package indi.rui.study.something;
+package indi.rui.study.bgytest;
 
 import lombok.extern.slf4j.Slf4j;
 

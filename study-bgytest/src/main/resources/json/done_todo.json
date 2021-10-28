@@ -1,0 +1,7 @@
+{
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "TEST_{{notifyId}}",
+  "entityName": "sequential_1",
+  "docInfo": "{\"taskType\":1,\"instanceId\":\"1997\"}"
+}
