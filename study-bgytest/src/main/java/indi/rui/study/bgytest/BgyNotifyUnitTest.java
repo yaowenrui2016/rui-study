@@ -21,17 +21,17 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class BgyNotifyUnitTest {
 
-//    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
+    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
+
+    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
+
+    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05";
+
+//    private static final String ADDRESS = "http://localhost:8040";
 //
-//    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
+//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 //
-//    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang";
-
-    private static final String ADDRESS = "http://localhost:8040";
-
-    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
-
-    private static final String TARGETS = "yaowr,cuipx";
+//    private static final String TARGETS = "yaowr,cuipx";
 
     private static final int EXEC_INTERVAL = 200;
 
@@ -42,7 +42,9 @@ public class BgyNotifyUnitTest {
     private static final String DONE_TODO_JSON_PATH = "json/done_todo.json";
 
     // MK服务访问地址 | MK验权请求头x-service-name | 测试人员账号 | 执行待办请求间隔 | 监控时间间隔
-    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang -Dmk.execInterval.ms=200 -Dmk.monitorInterval.s=60
+    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05 -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60
+    // 完整启动命令：
+    // java -jar -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05 -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-bgytest-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
         log.info(">>>>>>>>>>>>>>>>> begin <<<<<<<<<<<<<<<<<");
         BgyNotifyUnitTest unitTest = new BgyNotifyUnitTest();
@@ -55,6 +57,9 @@ public class BgyNotifyUnitTest {
         // 通过控制台手动触发查询以及停止程序
         Scanner scanner = new Scanner(System.in);
         boolean stop = false;
+        log.info("\n===请输入'stop'停止执行消息推送===" +
+                "\n===再次输入'stop'则停止监控查询===" +
+                "\n===输入其他任意字符立即触发监控查询===");
         while (true) {
             String input = scanner.next();
             if (!stop && "stop".equalsIgnoreCase(input)) {
@@ -274,9 +279,8 @@ public class BgyNotifyUnitTest {
         body.put("pageSize", 1);
         // 需要x-service-name请求头验权
         Map<String, String> header = Collections.singletonMap("x-service-name", this.xServiceName);
-        String response = null;
         try {
-            response = HttpClientUtils.httpPost(findUrl, body, header);
+            String response = HttpClientUtils.httpPost(findUrl, body, header);
             QueryResult<JSONObject> queryResult = JSONObject.parseObject(response, QueryResult.class);
             return queryResult.getTotalSize();
         } catch (Exception e) {
