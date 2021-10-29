@@ -5,29 +5,40 @@ import indi.rui.study.bgytest.dto.MkResponse;
 import indi.rui.study.bgytest.dto.QueryResult;
 import indi.rui.study.bgytest.util.FileUtils;
 import indi.rui.study.bgytest.util.HttpClientUtils;
-import indi.rui.study.bgytest.util.ThreadHelper;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
+ * 碧桂园待办完整性测试程序
+ *
  * @author: yaowr
  * @create: 2021-10-22
  */
 @Slf4j
 public class BgyNotifyUnitTest {
 
-    //    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
-//    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
-    private static final String ADDRESS = "http://localhost:8040";
-    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
+    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
+//    private static final String ADDRESS = "http://localhost:8040";
+//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String TARGETS = "yaowr,cuipx";
+    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang";
+    private static final int EXEC_INTERVAL = 100;
+    private static final int MONITOR_INTERVAL = 60;
 
     private static final String SEND_TODO_JSON_PATH = "json/send_todo.json";
     private static final String DONE_TODO_JSON_PATH = "json/done_todo.json";
 
+    // MK服务访问地址 | MK验权请求头x-service-name | 测试人员账号 | 执行待办请求间隔 | 监控时间间隔
+    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn1
+    // -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d
+    // -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang
+    // -Dmk.execInterval.ms=100
+    // -Dmk.monitorInterval.s=10
     public static void main(String[] args) {
         log.info(">>>>>>>>>>>>>>>>> begin <<<<<<<<<<<<<<<<<");
         BgyNotifyUnitTest unitTest = new BgyNotifyUnitTest();
@@ -39,16 +50,18 @@ public class BgyNotifyUnitTest {
 
         // 通过控制台停止程序
         Scanner scanner = new Scanner(System.in);
-        boolean stop1 = false;
+        boolean stop = false;
         while (true) {
             String input = scanner.next();
-            if (!stop1 && "stop1".equalsIgnoreCase(input)) {
-                stop1 = true;
+            if (!stop && "stop".equalsIgnoreCase(input)) {
+                stop = true;
                 unitTest.execRunning = false;
-            }
-            if (stop1 && "stop2".equalsIgnoreCase(input)) {
+            } else if (stop && "stop".equalsIgnoreCase(input)) {
                 unitTest.monitorRunning = false;
+                unitTest.addPermit();
                 break;
+            } else {
+                unitTest.addPermit();
             }
         }
         log.info("accomplish!");
@@ -63,10 +76,15 @@ public class BgyNotifyUnitTest {
 
     private final String entityName = "kafka_transfer_" + System.currentTimeMillis();
 
-    private final List<String> targets = Arrays.asList(System.getProperty("targets", TARGETS).split(","));
+    private final List<String> targets = Arrays.asList(System.getProperty("mk.targets", TARGETS).split(","));
 
     private final List<AtomicInteger> counts = new ArrayList<>(targets.size());
 
+
+    private LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>(1);
+
+    private int execInterval = Integer.valueOf(System.getProperty("mk.execInterval.ms", String.valueOf(EXEC_INTERVAL)));
+    private int monitorInterval = Integer.valueOf(System.getProperty("mk.monitorInterval.s", String.valueOf(MONITOR_INTERVAL)));
 
     private boolean execRunning = true;
 
@@ -107,37 +125,44 @@ public class BgyNotifyUnitTest {
                         person,
                         end - begin,
                         this.counts.get(idx));
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e) {
+                if (execInterval > 0) {
+                    try {
+                        Thread.sleep(execInterval);
+                    } catch (InterruptedException e) {
+                    }
                 }
             }, "notify-executor-" + i).start();
         }
     }
 
     public void monitor() {
-        try {
-            ThreadHelper.TimedRun(() -> {
-                if (!this.monitorRunning) {
-                    throw new RuntimeException("STOP");
-                }
-                List<Integer> finds = new ArrayList<>();
-                for (int i = 0; i < this.targets.size(); i++) {
-                    String target = this.targets.get(i);
-                    long find = findByPerson(target);
-                    finds.add(i, (int) find);
-                }
-                for (int i = 0; i < this.targets.size(); i++) {
-                    log.info("find todo OK. [entityName={}, target={}, count={}, find={}]",
-                            this.entityName,
-                            this.targets.get(i),
-                            this.counts.get(i),
-                            finds.get(i));
-                }
-            }, 3000);
-        } catch (Exception e) {
+        while (true) {
+            try {
+                this.queue.poll(monitorInterval, TimeUnit.SECONDS);
+            } catch (InterruptedException e) {
+            }
+            if (!this.monitorRunning) {
+                break;
+            }
+            List<Integer> finds = new ArrayList<>();
+            for (int i = 0; i < this.targets.size(); i++) {
+                String target = this.targets.get(i);
+                long find = findByPerson(target);
+                finds.add(i, (int) find);
+            }
+            log.info("---------------- entityName: {} ----------------", this.entityName);
+            for (int i = 0; i < this.targets.size(); i++) {
+                log.info("find todo OK. [target={}, count={}, find={}]",
+                        this.targets.get(i),
+                        this.counts.get(i),
+                        finds.get(i));
+            }
         }
         log.info("monitor stopped.");
+    }
+
+    public void addPermit() {
+        this.queue.add(1);
     }
 
     // ===================== 私有方法 ===================== //
@@ -212,7 +237,7 @@ public class BgyNotifyUnitTest {
         // 从JSON文件中获取请求体
         JSONObject body = new JSONObject();
         Map<String, Object> conditions = new HashMap<>();
-        conditions.put("todoOrDone", "todo");
+        conditions.put("todoOrDone", "done");
         conditions.put("targets", Arrays.asList(target));
         conditions.put("fdEntityName", this.entityName);
         body.put("conditions", conditions);
