@@ -21,24 +21,28 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class BgyNotifyUnitTest {
 
-    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
-    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
-//    private static final String ADDRESS = "http://localhost:8040";
-//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+//    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
+//
+//    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
+//
+//    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang";
 
-    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang";
-    private static final int EXEC_INTERVAL = 100;
+    private static final String ADDRESS = "http://localhost:8040";
+
+    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+
+    private static final String TARGETS = "yaowr,cuipx";
+
+    private static final int EXEC_INTERVAL = 200;
+
     private static final int MONITOR_INTERVAL = 60;
 
     private static final String SEND_TODO_JSON_PATH = "json/send_todo.json";
+
     private static final String DONE_TODO_JSON_PATH = "json/done_todo.json";
 
     // MK服务访问地址 | MK验权请求头x-service-name | 测试人员账号 | 执行待办请求间隔 | 监控时间间隔
-    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn1
-    // -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d
-    // -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang
-    // -Dmk.execInterval.ms=100
-    // -Dmk.monitorInterval.s=10
+    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang -Dmk.execInterval.ms=200 -Dmk.monitorInterval.s=60
     public static void main(String[] args) {
         log.info(">>>>>>>>>>>>>>>>> begin <<<<<<<<<<<<<<<<<");
         BgyNotifyUnitTest unitTest = new BgyNotifyUnitTest();
@@ -48,7 +52,7 @@ public class BgyNotifyUnitTest {
         // 执行消息发送和置已办操作
         unitTest.execute();
 
-        // 通过控制台停止程序
+        // 通过控制台手动触发查询以及停止程序
         Scanner scanner = new Scanner(System.in);
         boolean stop = false;
         while (true) {
@@ -84,6 +88,7 @@ public class BgyNotifyUnitTest {
     private LinkedBlockingQueue<Integer> queue = new LinkedBlockingQueue<>(1);
 
     private int execInterval = Integer.valueOf(System.getProperty("mk.execInterval.ms", String.valueOf(EXEC_INTERVAL)));
+
     private int monitorInterval = Integer.valueOf(System.getProperty("mk.monitorInterval.s", String.valueOf(MONITOR_INTERVAL)));
 
     private boolean execRunning = true;
@@ -119,18 +124,18 @@ public class BgyNotifyUnitTest {
                     } catch (Exception e) {
                         log.error("send or done todo exception!", e);
                     }
-                }
-                long end = System.currentTimeMillis();
-                log.info("execution stopped. [person={}, timeOfDuration={}, count={}]",
-                        person,
-                        end - begin,
-                        this.counts.get(idx));
-                if (execInterval > 0) {
-                    try {
-                        Thread.sleep(execInterval);
-                    } catch (InterruptedException e) {
+                    if (execInterval > 0) {
+                        try {
+                            Thread.sleep(execInterval);
+                        } catch (InterruptedException e) {
+                        }
                     }
                 }
+                long end = System.currentTimeMillis();
+                log.info("execution stopped. [person={}, duration={}(s), count={}]",
+                        person,
+                        (end - begin) / 1000f,
+                        this.counts.get(idx));
             }, "notify-executor-" + i).start();
         }
     }
@@ -144,25 +149,49 @@ public class BgyNotifyUnitTest {
             if (!this.monitorRunning) {
                 break;
             }
-            List<Integer> finds = new ArrayList<>();
+            log.info("---------------- entityName: {} ----------------", this.entityName);
+            long begin = System.currentTimeMillis();
+            // 查询原始消息
+//            List<Integer> oriSends = new ArrayList<>();
+//            List<Integer> oriDones = new ArrayList<>();
+//            for (int i = 0; i < this.targets.size(); i++) {
+//                String target = this.targets.get(i);
+//                long oriSend = findOriginal(target, "send");
+//                long oriDone = findOriginal(target, "done");
+//                oriSends.add(i, (int) oriSend);
+//                oriDones.add(i, (int) oriDone);
+//            }
+            // 查询待办和已办
+            List<Integer> findTodos = new ArrayList<>();
+            List<Integer> findDones = new ArrayList<>();
             for (int i = 0; i < this.targets.size(); i++) {
                 String target = this.targets.get(i);
-                long find = findByPerson(target);
-                finds.add(i, (int) find);
+                long findTodo = findByPerson(target, "todo");
+                long findDone = findByPerson(target, "done");
+                findTodos.add(i, (int) findTodo);
+                findDones.add(i, (int) findDone);
             }
-            log.info("---------------- entityName: {} ----------------", this.entityName);
+            long end = System.currentTimeMillis();
             for (int i = 0; i < this.targets.size(); i++) {
-                log.info("find todo OK. [target={}, count={}, find={}]",
+                log.info("find todo OK. [target={}, count={}, todo={}, done={}]",
                         this.targets.get(i),
                         this.counts.get(i),
-                        finds.get(i));
+//                        oriSends.get(i),
+//                        oriDones.get(i),
+                        findTodos.get(i),
+                        findDones.get(i));
             }
+            log.info("duration: {}(s)", (end - begin) / 1000f);
         }
         log.info("monitor stopped.");
     }
 
     public void addPermit() {
-        this.queue.add(1);
+        try {
+            this.queue.add(1);
+        } catch (Exception e) {
+            log.error("add permit failed!", e);
+        }
     }
 
     // ===================== 私有方法 ===================== //
@@ -213,6 +242,7 @@ public class BgyNotifyUnitTest {
         body.put("subject", "消息完整性之kafka迁移测试" + entityId);
         body.put("entityId", entityId);
         body.put("entityName", this.entityName);
+        body.put("entityKey", target);
         body.put("targets", Arrays.asList(target));
         body.put("orgProperty", "fdLoginName");
 
@@ -232,12 +262,12 @@ public class BgyNotifyUnitTest {
         }
     }
 
-    private long findByPerson(String target) {
+    private long findByPerson(String target, String todoOrDone) {
         String findUrl = this.address + "/api/sys-notify/baseSysNotify/findByPerson";
-        // 从JSON文件中获取请求体
+        // 构造查询条件
         JSONObject body = new JSONObject();
         Map<String, Object> conditions = new HashMap<>();
-        conditions.put("todoOrDone", "done");
+        conditions.put("todoOrDone", todoOrDone);
         conditions.put("targets", Arrays.asList(target));
         conditions.put("fdEntityName", this.entityName);
         body.put("conditions", conditions);
@@ -250,7 +280,30 @@ public class BgyNotifyUnitTest {
             QueryResult<JSONObject> queryResult = JSONObject.parseObject(response, QueryResult.class);
             return queryResult.getTotalSize();
         } catch (Exception e) {
-            log.error("find todo exception! {}", response, e);
+            log.error("find todo exception! [target={}]", target, e);
+        }
+        return 0;
+    }
+
+    private long findOriginal(String target, String command) {
+        String findUrl = this.address + "/api/sys-notifybus/sysNotifyOriginal/findAll";
+        // 构造查询条件
+        JSONObject body = new JSONObject();
+        Map<String, Object> conditions = new HashMap<>();
+        conditions.put("fdCommand", command);
+        conditions.put("fdEntityName", this.entityName);
+        conditions.put("fdEntityKey", target);
+        body.put("conditions", conditions);
+        body.put("pageSize", 1);
+        // 需要x-service-name请求头验权
+        Map<String, String> header = Collections.singletonMap("x-service-name", this.xServiceName);
+        String response = null;
+        try {
+            response = HttpClientUtils.httpPost(findUrl, body, header);
+            QueryResult<JSONObject> queryResult = JSONObject.parseObject(response, QueryResult.class);
+            return queryResult.getTotalSize();
+        } catch (Exception e) {
+            log.error("find original exception! [target={}, command={}]", target, command, e);
         }
         return 0;
     }
