@@ -1,0 +1,21 @@
+{
+  "subject": "消息扩展顺序消息测试",
+  "notifyType": "todo",
+  "todoType": 1,
+  "todoLevel": 3,
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "TEST_{{notifyId}}",
+  "entityName": "sequential_1",
+  "entityKey": "sss",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr",
+    "cuipx"
+  ],
+  "creator": "admin",
+  "nodeName": "开发调试",
+  "docInfo": "{\"taskType\":1,\"instanceId\":\"1997\"}"
+}

@@ -1,4 +1,4 @@
-package indi.rui.study.bgytest.util;
+package indi.rui.study.kafkatest.util;
 
 import java.io.BufferedInputStream;
 import java.io.File;

@@ -1,10 +1,10 @@
-package indi.rui.study.bgytest;
+package indi.rui.study.kafkatest;
 
 import com.alibaba.fastjson.JSONObject;
-import indi.rui.study.bgytest.dto.MkResponse;
-import indi.rui.study.bgytest.dto.QueryResult;
-import indi.rui.study.bgytest.util.FileUtils;
-import indi.rui.study.bgytest.util.HttpClientUtils;
+import indi.rui.study.kafkatest.dto.MkResponse;
+import indi.rui.study.kafkatest.dto.QueryResult;
+import indi.rui.study.kafkatest.util.FileUtils;
+import indi.rui.study.kafkatest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;

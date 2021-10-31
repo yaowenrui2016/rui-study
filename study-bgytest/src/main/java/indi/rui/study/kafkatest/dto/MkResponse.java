@@ -1,4 +1,4 @@
-package indi.rui.study.bgytest.dto;
+package indi.rui.study.kafkatest.dto;
 
 import lombok.Getter;
 import lombok.Setter;
