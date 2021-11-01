@@ -6,9 +6,7 @@ import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
-import org.apache.kafka.clients.producer.KafkaProducer;
-import org.apache.kafka.clients.producer.ProducerConfig;
-import org.apache.kafka.clients.producer.ProducerRecord;
+import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 
@@ -37,7 +35,7 @@ public class BgyKafkaUnitTest {
 
     private static final int DEFAULT_MONITOR_INTERVAL_SEC = 10;
 
-    private static final int DEFAULT_MAX_PRODUCE_RECORDS = -1;
+    private static final int DEFAULT_MAX_PRODUCE_RECORDS = 1000000;
 
     private static final boolean DEFAULT_IGNORE_PRODUCER = false;
 
@@ -127,8 +125,9 @@ public class BgyKafkaUnitTest {
 
     private int consumerThread = Integer.valueOf(System.getProperty("kafka.consumerThread", String.valueOf(DEFAULT_CONSUMER_THREAD)));
 
-
     private String message;
+
+//    private ConcurrentMap<String, String> msgMap = new ConcurrentHashMap<>();
 
 
     // ===================== Constructor ===================== //
@@ -153,18 +152,34 @@ public class BgyKafkaUnitTest {
         }
         KafkaProducer<String, String> kafkaProducer = initProducer();
         for (int i = 0; i < producerThread; i++) {
-            final String key = String.valueOf(i);
             new Thread(() -> {
+                long begin = System.currentTimeMillis();
                 while (produceRunning) {
                     try {
                         // 同步调用send
                         int count = produceCount.incrementAndGet();
-                        if (maxProduceRecords > 0 && count >= maxProduceRecords) {
+                        if (maxProduceRecords > 0 && count > maxProduceRecords) {
                             produceRunning = false;
+                            produceCount.decrementAndGet();
                         } else {
-                            kafkaProducer.send(new ProducerRecord<>(topic, key, message)).get();
+                            String key = count + "";
+                            kafkaProducer.send(new ProducerRecord<>(topic, key, message), new Callback() {
+                                @Override
+                                public void onCompletion(RecordMetadata recordMetadata, Exception e) {
+                                    if (e != null) {
+                                        produceCount.decrementAndGet();
+                                        log.error("send kafka message failed!", e);
+                                    } else {
+//                                        String value = recordMetadata.topic() + ":"
+//                                                + recordMetadata.partition() + ":"
+//                                                + recordMetadata.offset();
+//                                        msgMap.put(key, value);
+                                    }
+                                }
+                            });
                         }
                     } catch (Exception e) {
+                        produceCount.decrementAndGet();
                         log.error("send kafka message failed!", e);
                     }
                     if (produceInterval > 0) {
@@ -174,7 +189,8 @@ public class BgyKafkaUnitTest {
                         }
                     }
                 }
-                log.info("producer stopped.");
+                long end = System.currentTimeMillis();
+                log.info("producer stopped. [duration={}(s)]", (end - begin) / 1000f);
             }, "producer-" + i).start();
         }
     }
@@ -201,10 +217,11 @@ public class BgyKafkaUnitTest {
                     while (iterator.hasNext()) {
                         ConsumerRecord<String, String> consumerRecord = iterator.next();
                         if (message.equals(consumerRecord.value())) {
+//                            msgMap.remove(consumerRecord.key());
                             consumeCount.incrementAndGet();
                         }
-                        kafkaConsumer.commitSync();
                     }
+                    kafkaConsumer.commitSync();
                 }
                 log.info("consume stopped.");
             }, "consumer-" + i).start();
@@ -236,8 +253,7 @@ public class BgyKafkaUnitTest {
                     duration,
                     topic,
                     pCount,
-                    (pCount - lastProduceCount.getAndSet(pCount)) / duration
-                    ,
+                    (pCount - lastProduceCount.getAndSet(pCount)) / duration,
                     produceRunning ? "running" : "stopped",
                     cCount,
                     (cCount - lastConsumeCount.getAndSet(cCount)) / duration,
@@ -287,7 +303,7 @@ public class BgyKafkaUnitTest {
         properties.put(ConsumerConfig.HEARTBEAT_INTERVAL_MS_CONFIG, 2000);
         properties.put(ConsumerConfig.SESSION_TIMEOUT_MS_CONFIG, 6000);
         properties.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "latest");
-        properties.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 20);
+        properties.put(ConsumerConfig.MAX_POLL_RECORDS_CONFIG, 500);
         properties.put(ConsumerConfig.MAX_POLL_INTERVAL_MS_CONFIG, 20000);
         return new KafkaConsumer<String, String>(properties);
     }
