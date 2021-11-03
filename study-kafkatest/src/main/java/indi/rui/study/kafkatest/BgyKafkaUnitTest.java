@@ -35,7 +35,7 @@ public class BgyKafkaUnitTest {
 
     private static final int DEFAULT_MONITOR_INTERVAL_SEC = 10;
 
-    private static final int DEFAULT_MAX_PRODUCE_RECORDS = 1000000;
+    private static final int DEFAULT_MAX_PRODUCE_RECORDS = -1;
 
     private static final boolean DEFAULT_IGNORE_PRODUCER = false;
 
