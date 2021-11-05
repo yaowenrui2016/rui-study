@@ -1,0 +1,16 @@
+{
+  "sourceId": "1",
+  "apps": [
+    {
+      "name": "系统A",
+      "code": "A",
+      "children": [
+        {
+          "name": "模块1",
+          "code": "1"
+        }
+      ]
+    }
+  ],
+  "creator": "yaowr"
+}

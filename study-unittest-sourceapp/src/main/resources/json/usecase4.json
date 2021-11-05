@@ -1,0 +1,43 @@
+{
+  "sourceId": "2",
+  "apps": [
+    {
+      "name": "系统A",
+      "code": "A",
+      "children": [
+        {
+          "name": "模块11",
+          "code": "11"
+        },
+        {
+          "name": "模块3",
+          "code": "3"
+        }
+      ]
+    },
+    {
+      "name": "系统1B",
+      "code": "1B",
+      "children": [
+        {
+          "name": "模块7",
+          "code": "7"
+        },{
+          "name": "模块9",
+          "code": "9"
+        }
+      ]
+    },
+    {
+      "name": "系统C",
+      "code": "C",
+      "children": [
+        {
+          "name": "模块9",
+          "code": "9"
+        }
+      ]
+    }
+  ],
+  "creator": "yaowr"
+}

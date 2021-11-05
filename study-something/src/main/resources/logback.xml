@@ -20,7 +20,7 @@
         </rollingPolicy>
 
         <layout class="ch.qos.logback.classic.PatternLayout">
-            <Pattern>%d{HH:mm:ss,SSS} [%thread] %-5level %logger{32} - %msg%n</Pattern>
+            <Pattern>%d{HH:mm:ss.SSS,CTT} [%thread] %-5level %logger{32} - %msg%n</Pattern>
         </layout>
     </appender>
 
