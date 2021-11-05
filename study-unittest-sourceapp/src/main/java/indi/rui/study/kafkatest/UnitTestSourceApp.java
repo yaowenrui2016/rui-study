@@ -137,9 +137,9 @@ public class UnitTestSourceApp {
                     String expect = getExpect(usecaseNo);
                     boolean success = expect.equals(result);
                     if (success) {
-                        log.info("\nusecase {} => [success]", usecaseNo);
+                        log.info("usecase {} => [success]", usecaseNo);
                     } else {
-                        log.info("\nusecase {} => [failure]\nexpect:\n{}\nresult:\n{}",
+                        log.info("usecase {} => [failure]\nexpect:\n{}\nresult:\n{}",
                                 usecaseNo,
                                 expect,
                                 result);
