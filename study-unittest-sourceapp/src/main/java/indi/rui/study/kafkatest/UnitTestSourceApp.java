@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * 碧桂园待办完整性测试程序
+ * 来源系统push接口自动化测试
  *
  * @author: yaowr
  * @create: 2021-10-22
@@ -43,10 +43,8 @@ public class UnitTestSourceApp {
 
     private static final String[] TEST_APPS = new String[]{"A", "B", "1B", "C"};
 
-    // MK服务访问地址 | MK验权请求头x-service-name | 测试人员账号 | 执行待办请求间隔 | 监控时间间隔
-    // -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05 -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60
     // 完整启动命令：
-    // java -jar -Dmk.address=https://bipnew-sit.countrygarden.com.cn -Dmk.xServiceName=43534c48566d654e5031674d355238395259346736673d3d -Dmk.targets=youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05 -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-bgytest-0.0.1.SNAPSHOT.jar
+    // java -jar -Dmk.address=http://localhost:8040 -Dmk.xServiceName=73456775666d4c416f73776139584a4131432f6847413d3d -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-unittest-sourceapp-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
         log.info(">>>>>>>>>>>>>>>>> start <<<<<<<<<<<<<<<<<");
         UnitTestSourceApp unitTest = new UnitTestSourceApp();
