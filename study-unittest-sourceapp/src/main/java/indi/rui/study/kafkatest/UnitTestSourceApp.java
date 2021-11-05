@@ -46,7 +46,7 @@ public class UnitTestSourceApp {
     // 完整启动命令：
     // java -jar -Dmk.address=http://localhost:8040 -Dmk.xServiceName=73456775666d4c416f73776139584a4131432f6847413d3d -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-unittest-sourceapp-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
-        log.info(">>>>>>>>>>>>>>>>> start <<<<<<<<<<<<<<<<<");
+        log.info(">>>> 来源系统push接口自动化测试 <<<<");
         UnitTestSourceApp unitTest = new UnitTestSourceApp();
         // 启动监控
         unitTest.monitor();
@@ -157,13 +157,22 @@ public class UnitTestSourceApp {
             }
             long end = System.currentTimeMillis();
             log.info("execution stopped. [duration={}(s)]", (end - begin) / 1000f);
-        }, "notify-executor").start();
+        }, "executor").start();
     }
 
     public void monitor() {
         monitorRunning = true;
         new Thread(() -> {
-            while (monitorRunning) {
+            while (true) {
+                if (monitorInterval > 0) {
+                    try {
+                        monitorQueue.poll(monitorInterval, TimeUnit.SECONDS);
+                    } catch (InterruptedException e) {
+                    }
+                }
+                if (!monitorRunning) {
+                    break;
+                }
                 long currentMonitorTime = System.currentTimeMillis();
                 float monitorDuration = (currentMonitorTime - lastMonitorTime) / 1000f;
                 lastMonitorTime = currentMonitorTime;
@@ -171,7 +180,7 @@ public class UnitTestSourceApp {
                 // 监控查询
                 log.info("---------------- monitor interval: {}(s) ----------------\n" +
                                 "{}\n" +
-                                "usecase: {}/{}\n" +
+                                "finished usecase: [{}/{}]\n" +
                                 "executor status: {}\n" +
                                 "monitor  status: {}",
                         monitorDuration,
@@ -183,15 +192,9 @@ public class UnitTestSourceApp {
                 long end = System.currentTimeMillis();
                 log.info("duration: {}(s)\n",
                         (end - begin) / 1000f);
-                if (monitorInterval > 0) {
-                    try {
-                        monitorQueue.poll(monitorInterval, TimeUnit.SECONDS);
-                    } catch (InterruptedException e) {
-                    }
-                }
             }
             log.info("monitor stopped.");
-        }, "notify-monitor").start();
+        }, "monitor").start();
     }
 
     private String toMonitorString(List<Boolean> usecasesExecResult) {
