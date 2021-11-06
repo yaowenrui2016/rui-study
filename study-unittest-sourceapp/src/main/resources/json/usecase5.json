@@ -10,24 +10,15 @@
           "code": "1"
         },
         {
-          "name": "模块7",
-          "code": "7"
-        }
-      ]
-    },
-    {
-      "name": "系统A1B",
-      "code": "1B",
-      "children": [
+          "name": "模块2",
+          "code": "2"
+        },
         {
-          "name": "模块8",
-          "code": "8"
+          "name": "模块3",
+          "code": "3"
         }
       ]
-    },
-    {
-      "code": "C"
     }
   ],
-  "creator": "yaowr"
+  "creator": "yaowr01"
 }

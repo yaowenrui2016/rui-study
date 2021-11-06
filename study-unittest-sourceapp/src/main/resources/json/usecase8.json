@@ -2,9 +2,13 @@
   "sourceId": "1",
   "apps": [
     {
-      "name": "系统CC",
-      "code": "C",
+      "name": "系统B-",
+      "code": "B",
       "children": [
+        {
+          "name": "模块11",
+          "code": "11"
+        },
         {
           "name": "模块8",
           "code": "8"
@@ -12,6 +16,16 @@
         {
           "name": "模块9",
           "code": "9"
+        }
+      ]
+    },
+    {
+      "name": "系统CC",
+      "code": "C",
+      "children": [
+        {
+          "name": "模块8",
+          "code": "8"
         },
         {
           "name": "模块-10",
@@ -22,10 +36,7 @@
           "code": "11"
         }
       ]
-    },
-    {
-      "code": "D"
     }
   ],
-  "creator": "yaowr06"
+  "creator": "yaowr"
 }

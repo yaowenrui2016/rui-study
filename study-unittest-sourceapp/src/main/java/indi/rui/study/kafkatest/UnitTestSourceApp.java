@@ -3,12 +3,17 @@ package indi.rui.study.kafkatest;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
+import com.alibaba.fastjson.parser.DefaultJSONParser;
+import com.alibaba.fastjson.parser.ParserConfig;
+import com.alibaba.fastjson.parser.deserializer.ObjectDeserializer;
 import indi.rui.study.kafkatest.dto.QueryResult;
 import indi.rui.study.kafkatest.dto.SourceAppDTO;
 import indi.rui.study.kafkatest.util.FileUtils;
 import indi.rui.study.kafkatest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
+import java.lang.reflect.Type;
 import java.util.*;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -41,7 +46,7 @@ public class UnitTestSourceApp {
 
     private static final String JSON_PATH_SUFFIX = ".json";
 
-    private static final String[] TEST_APPS = new String[]{"A", "B", "1B", "C"};
+    private static final String[] TEST_APPS = new String[]{"A", "B", "C", "D"};
 
     // 完整启动命令：
     // java -jar -Dmk.address=http://localhost:8040 -Dmk.xServiceName=73456775666d4c416f73776139584a4131432f6847413d3d -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-unittest-sourceapp-0.0.1.SNAPSHOT.jar
@@ -102,7 +107,7 @@ public class UnitTestSourceApp {
 
     private LinkedBlockingQueue<Integer> monitorQueue = new LinkedBlockingQueue<>(10);
 
-    private int usecaseAmount = 6;
+    private int usecaseAmount = 8;
 
     private AtomicInteger usecaseNum = new AtomicInteger(0);
 
@@ -258,6 +263,21 @@ public class UnitTestSourceApp {
         Map<String, String> header = Collections.singletonMap("x-service-name", this.xServiceName);
         try {
             String response = HttpClientUtils.httpPost(url, body, header);
+            ParserConfig config = new ParserConfig();
+            config.putDeserializer(SourceAppDTO.class, new ObjectDeserializer() {
+                @Override
+                public <T> T deserialze(DefaultJSONParser defaultJSONParser, Type type, Object o) {
+                    return null;
+                }
+
+                @Override
+                public int getFastMatchToken() {
+                    return 0;
+                }
+            });
+//            QueryResult<SourceAppDTO> result = JSON.parseObject(response,
+//                    new TypeReference<QueryResult<SourceAppDTO>>(){});
+//            List<SourceAppDTO> apps = result.getContent();
             List<Object> content = JSONObject.parseObject(response, QueryResult.class).getContent();
             List<SourceAppDTO> apps = buildSourceAppDTO(content);
             appSort(apps);
