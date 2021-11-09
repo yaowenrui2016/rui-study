@@ -1,4 +1,4 @@
-package indi.rui.study.kafkatest.util;
+package indi.rui.study.unittest.util;
 
 import lombok.extern.slf4j.Slf4j;
 

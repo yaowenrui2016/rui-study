@@ -1,10 +1,10 @@
-package indi.rui.study.kafkatest;
+package indi.rui.study.unittest;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.TypeReference;
-import indi.rui.study.kafkatest.dto.MkResponse;
-import indi.rui.study.kafkatest.util.HttpClientUtils;
+import indi.rui.study.unittest.dto.MkResponse;
+import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Collections;

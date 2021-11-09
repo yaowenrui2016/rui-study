@@ -1,4 +1,6 @@
-package indi.rui.study.kafkatest.util;
+package indi.rui.study.unittest.util;
+
+import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -9,6 +11,7 @@ import java.io.IOException;
  * @author: yaowr
  * @create: 2021-10-20
  */
+@Slf4j
 public class FileUtils {
 
     public static String readFileToString(String filePath, String encode) {
@@ -23,15 +26,13 @@ public class FileUtils {
                 sb.append(new String(buff, 0, len, encode));
             }
         } catch (IOException e) {
-            // TODO
-            e.printStackTrace();
+            log.error("IO exception when read file [{}]", filePath, e);
         } finally {
             if (in != null) {
                 try {
                     in.close();
                 } catch (IOException e) {
-                    // TODO
-                    e.printStackTrace();
+                    log.error("IO exception when close file [{}]", filePath, e);
                 }
             }
         }

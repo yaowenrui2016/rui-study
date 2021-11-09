@@ -1,4 +1,4 @@
-package indi.rui.study.kafkatest.dto;
+package indi.rui.study.unittest.dto;
 
 import lombok.Getter;
 import lombok.Setter;

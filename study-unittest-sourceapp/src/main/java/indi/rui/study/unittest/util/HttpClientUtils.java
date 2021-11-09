@@ -1,9 +1,10 @@
-package indi.rui.study.kafkatest.util;
+package indi.rui.study.unittest.util;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.client.CookieStore;
 import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
@@ -29,7 +30,7 @@ import java.util.Map;
 @Slf4j
 public class HttpClientUtils {
 
-    public static String httpPost(String url, JSON json, Map<String, String> header)
+    public static String httpPost(String url, JSON body, Map<String, String> header)
             throws Exception {
         String response;
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -38,6 +39,45 @@ public class HttpClientUtils {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader("Content-type", "application/json");
             RequestConfig requestConfig = RequestConfig.custom()
+                    .setSocketTimeout(60000)
+                    .setConnectTimeout(60000)
+                    .setCookieSpec(CookieSpecs.STANDARD)
+                    .build();
+            httpPost.setConfig(requestConfig);
+            if (header != null) {
+                Iterator h = header.entrySet().iterator();
+                while (h.hasNext()) {
+                    Map.Entry<String, String> entry = (Map.Entry) h.next();
+                    httpPost.addHeader(entry.getKey(), entry.getValue());
+                }
+            }
+            if (body != null) {
+                StringEntity requestEntity = new StringEntity(body.toJSONString(), "utf-8");
+                requestEntity.setContentEncoding("UTF-8");
+                httpPost.setEntity(requestEntity);
+            }
+            response = httpClient.execute(httpPost, responseHandler);
+        } finally {
+            try {
+                httpClient.close();
+            } catch (IOException e) {
+                log.error("Close Failed", e);
+            }
+        }
+        return response;
+    }
+
+    public static String httpPost(String url, JSON body, Map<String, String> header,
+                                  CookieStore cookieStore)
+            throws Exception {
+        String response;
+        CloseableHttpClient httpClient = HttpClients.custom().setDefaultCookieStore(cookieStore).build();
+        ResponseHandler<String> responseHandler = new BasicResponseHandler();
+        try {
+            HttpPost httpPost = new HttpPost(url);
+            httpPost.setHeader("Content-type", "application/json");
+            RequestConfig requestConfig = RequestConfig.custom()
+                    .setCookieSpec(CookieSpecs.STANDARD)
                     .setSocketTimeout(60000)
                     .setConnectTimeout(60000)
                     .build();
@@ -49,8 +89,8 @@ public class HttpClientUtils {
                     httpPost.addHeader(entry.getKey(), entry.getValue());
                 }
             }
-            if (json != null) {
-                StringEntity requestEntity = new StringEntity(json.toJSONString(), "utf-8");
+            if (body != null) {
+                StringEntity requestEntity = new StringEntity(body.toJSONString(), "utf-8");
                 requestEntity.setContentEncoding("UTF-8");
                 httpPost.setEntity(requestEntity);
             }
