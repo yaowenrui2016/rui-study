@@ -24,7 +24,7 @@ import java.util.Objects;
  * @create: 2021-11-05
  */
 @Slf4j
-public class UnitTestNotifyCount {
+public class TestNotifyCount {
 
     private static final String DEFAULT_ADDRESS = "http://localhost:8040";
 

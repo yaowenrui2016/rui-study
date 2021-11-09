@@ -25,7 +25,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create: 2021-10-22
  */
 @Slf4j
-public class UnitTestSourceApp {
+public class TestNotifySourceApp {
 
     private static final String DEFAULT_ADDRESS = "http://localhost:8040";
 
@@ -41,7 +41,7 @@ public class UnitTestSourceApp {
 
     private static final String EXPECTION = "expection";
 
-    private static final String JSON_PATH_PREFIX = "json/sourceapp/";
+    private static final String JSON_PATH_PREFIX = "json/TestNotifySourceApp/";
 
     private static final String JSON_PATH_SUFFIX = ".json";
 
@@ -51,7 +51,7 @@ public class UnitTestSourceApp {
     // java -jar -Dmk.address=http://localhost:8040 -Dmk.xServiceName=73456775666d4c416f73776139584a4131432f6847413d3d -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-unittest-sourceapp-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
         log.info(">>>> 来源系统push接口自动化测试 <<<<");
-        UnitTestSourceApp unitTest = new UnitTestSourceApp();
+        TestNotifySourceApp unitTest = new TestNotifySourceApp();
         // 启动监控
         unitTest.monitor();
 
@@ -115,7 +115,7 @@ public class UnitTestSourceApp {
 
     // ===================== Constructor ===================== //
 
-    public UnitTestSourceApp() {
+    public TestNotifySourceApp() {
     }
 
 

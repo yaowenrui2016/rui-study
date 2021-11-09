@@ -65,7 +65,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
-                            <mainClass>indi.rui.study.unittest.UnitTestSourceApp</mainClass>
+                            <mainClass>indi.rui.study.unittest.TestNotifySourceApp</mainClass>
                         </manifest>
                         <manifestEntries>
                             <!--MANIFEST.MF 中 Class-Path 加入配置目录信息-->
