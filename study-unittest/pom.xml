@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>study-unittest-sourceapp</artifactId>
+    <artifactId>study-unittest</artifactId>
 
     <dependencies>
         <!-- http客户端 -->
@@ -55,9 +55,11 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
+                    <finalName>unit-test</finalName>
                     <excludes>
                         <!--不打包资源文件目录-->
                         <exclude>json/</exclude>
+                        <exclude>keypair/</exclude>
                     </excludes>
                     <archive>
                         <manifest>
@@ -106,6 +108,7 @@
                                 <resource>
                                     <directory>src/main/resources</directory>
                                     <excludes>
+                                        <!-- 不复制的资源 -->
                                         <exclude>logback.xml</exclude>
                                     </excludes>
                                 </resource>
