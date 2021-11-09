@@ -1,6 +1,6 @@
-package indi.rui.study.kafkatest;
+package indi.rui.study.unittest;
 
-import indi.rui.study.kafkatest.util.FileUtils;
+import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @create: 2021-10-22
  */
 @Slf4j
-public class BgyKafkaUnitTest {
+public class TestKafka {
 
     // ===================== 静态变量 ===================== //
 
@@ -35,7 +35,7 @@ public class BgyKafkaUnitTest {
 
     private static final int DEFAULT_MONITOR_INTERVAL_SEC = 10;
 
-    private static final int DEFAULT_MAX_PRODUCE_RECORDS = -1;
+    private static final int DEFAULT_MAX_PRODUCE_RECORDS = 1000000;
 
     private static final boolean DEFAULT_IGNORE_PRODUCER = false;
 
@@ -45,7 +45,7 @@ public class BgyKafkaUnitTest {
 
     private static final int DEFAULT_CONSUMER_THREAD = 10;
 
-    private static final String MESSAGE_PATH = "json/send_todo.json";
+    private static final String MESSAGE_JSON_PATH = "json/TestKafka/message.json";
 
 
     // =====================  main ===================== //
@@ -53,7 +53,7 @@ public class BgyKafkaUnitTest {
     // java -jar -Dkafka.bootstrapServer=192.168.191.10:19092,192.168.191.11:19092,192.168.191.12:19092 -Dkafka.topic=test_topic -Dkafka.producerThread=10 -Dkafka.consumerThread=10 -Dkafka.maxProduceRecords=-1 -Dkafka.ignoreProducer=false lib\study-kafkatest-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
         log.info(">>>>>>>>>>>>>>>>> kafka测试开始 <<<<<<<<<<<<<<<<<");
-        BgyKafkaUnitTest unitTest = new BgyKafkaUnitTest();
+        TestKafka unitTest = new TestKafka();
         // 启动监控线程
         new Thread(unitTest::monitor, "monitor").start();
 
@@ -132,9 +132,9 @@ public class BgyKafkaUnitTest {
 
     // ===================== Constructor ===================== //
 
-    public BgyKafkaUnitTest() {
+    public TestKafka() {
         String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader()
-                .getResource(MESSAGE_PATH)).getFile();
+                .getResource(MESSAGE_JSON_PATH)).getFile();
         this.message = FileUtils.readFileToString(filePath, "utf-8");
     }
 
