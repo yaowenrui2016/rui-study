@@ -1,7 +1,6 @@
 package indi.rui.study.unittest;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import indi.rui.study.unittest.dto.MkResponse;
@@ -9,6 +8,7 @@ import indi.rui.study.unittest.dto.NotifyTodo;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.interf.MonitorTestPlan;
+import indi.rui.study.unittest.interf.Value;
 import indi.rui.study.unittest.util.FileUtils;
 import indi.rui.study.unittest.util.Hex;
 import indi.rui.study.unittest.util.HttpClientUtils;
@@ -35,8 +35,8 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
 
     private static final String PUB_KEY_FILE = "pubkey.txt";
 
-    private static String address = System.getProperty("mk.address",
-            "http://localhost:8040");
+    @Value("mk.address")
+    private String address;
 
     private static String xServiceName = System.getProperty("mk.xServiceName",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -58,6 +58,7 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
                 sendJsonPath)).getFile();
         String sendJson = FileUtils.readFileToString(filePath, "utf-8");
         JSONObject body = JSONObject.parseObject(sendJson);
+        body.put("entityKey", System.currentTimeMillis());
         // 需要x-service-name请求头验权
         Map<String, String> header = Collections.singletonMap("x-service-name", xServiceName);
         String response = null;
@@ -84,7 +85,10 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         List<NotifyTodo> todos = findMyTodo();
         StringBuffer buf = new StringBuffer();
         for (NotifyTodo todo : todos) {
-            buf.append(JSON.toJSONString(todo)).append("\n");
+            buf.append("[subject=").append(todo.getFdSubject())
+                    .append(", entityKey=").append(todo.getFdEntityKey())
+                    .append(", corp=").append(todo.getFdCorp())
+                    .append("]\n");
         }
         return buf.toString();
     }
@@ -128,7 +132,8 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         try {
             response = HttpClientUtils.httpPost(url, body, null, cookieStoreThreadLocal.get());
             MkResponse<QueryResult<NotifyTodo>> mkResponse = JSON.parseObject(response,
-                    new TypeReference<MkResponse<QueryResult<NotifyTodo>>>(){} );
+                    new TypeReference<MkResponse<QueryResult<NotifyTodo>>>() {
+                    });
             if (mkResponse.isSuccess()) {
                 rtnList = mkResponse.getData().getContent();
             } else {

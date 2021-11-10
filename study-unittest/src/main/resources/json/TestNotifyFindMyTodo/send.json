@@ -7,8 +7,8 @@
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",
   "moduleName": "sys-notify",
-  "entityId": "TEST_{{notifyId}}",
-  "entityName": "sequential_1",
+  "entityId": "1",
+  "entityName": "sequential_2",
   "entityKey": "sss",
   "orgProperty": "fdLoginName",
   "targets": [

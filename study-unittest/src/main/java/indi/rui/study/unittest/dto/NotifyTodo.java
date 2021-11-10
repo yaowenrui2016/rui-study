@@ -24,6 +24,11 @@ public class NotifyTodo {
     private String fdDigest;
 
     /**
+     *标题
+     */
+    private String fdSubject;
+
+    /**
      * 副标题
      */
     private String fdSubTitle;
@@ -57,6 +62,12 @@ public class NotifyTodo {
      * 来源模块编码
      */
     private String fdModuleCode;
+
+    private String fdEntityId;
+
+    private String fdEntityName;
+
+    private String fdEntityKey;
 
     /**
      * 待办类型

@@ -5,61 +5,78 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.TypeReference;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.UserInfo;
+import indi.rui.study.unittest.interf.MonitorTestPlan;
+import indi.rui.study.unittest.interf.Value;
 import indi.rui.study.unittest.util.FileUtils;
 import indi.rui.study.unittest.util.Hex;
 import indi.rui.study.unittest.util.HttpClientUtils;
 import indi.rui.study.unittest.util.RsaHelper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.http.client.CookieStore;
-import org.apache.http.cookie.Cookie;
 import org.apache.http.impl.client.BasicCookieStore;
 
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author: yaowr
  * @create: 2021-11-05
  */
 @Slf4j
-public class TestNotifyCount {
-
-    private static final String DEFAULT_ADDRESS = "http://localhost:8040";
-
-    private static final String DEFAULT_X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+public class TestNotifyCount implements MonitorTestPlan {
 
     private static final String KEY_PAIR_DIR = "keypair/";
 
     private static final String PUB_KEY_FILE = "pubkey.txt";
 
-    private static final ThreadLocal<CookieStore> COOKIE_THREAD_LOCAL = ThreadLocal.withInitial(
-            () -> new BasicCookieStore());
+    private ThreadLocal<CookieStore> cookieStoreThreadLocal = ThreadLocal.withInitial(
+            BasicCookieStore::new);
 
-    private static final ThreadLocal<UserInfo> USER_THREAD_LOCAL = new ThreadLocal<>();
+    private ThreadLocal<UserInfo> userInfoThreadLocal = new ThreadLocal<>();
+
+    @Value("mk.address")
+    private String address;
 
 
-    public static void main(String[] args) {
+    @Override
+    public String planName() {
+        return "消息count接口测试";
+    }
+
+    @Override
+    public String monitor() {
+        return null;
+    }
+
+    @Override
+    public void test() {
         List<String[]> users = Arrays.asList(
                 new String[]{"yaowr", "1"},
                 new String[]{"cuipx", "1"},
                 new String[]{"laow", "1"},
                 new String[]{"zhangs", "1"},
                 new String[]{"lis", "1"});
+        CountDownLatch countDownLatch = new CountDownLatch(users.size());
         for (int i = 0; i < users.size(); i++) {
             String[] user = users.get(i);
             new Thread(() -> {
+                // 先登录
                 login(user[0], user[1]);
+                // 查询统计
                 count();
+                countDownLatch.countDown();
             }).start();
         }
-        for (Cookie cookie : COOKIE_THREAD_LOCAL.get().getCookies()) {
-            log.info("cookie: {} => {}, {}", cookie.getName(), cookie.getValue(), cookie.getDomain());
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
         }
     }
 
-    private static void login(String username, String password) {
+    private void login(String username, String password) {
         // 密码加密处理
         String pubKey = FileUtils.readFileToString(
                 Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
@@ -68,12 +85,12 @@ public class TestNotifyCount {
         // 请求地址
         String url = null;
         try {
-            url = DEFAULT_ADDRESS + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
-            String response = HttpClientUtils.httpPost(url, null, null, COOKIE_THREAD_LOCAL.get());
+            url = address + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
+            String response = HttpClientUtils.httpPost(url, null, null, cookieStoreThreadLocal.get());
             MkResponse<UserInfo> mkResponse = JSON.parseObject(response, new TypeReference<MkResponse<UserInfo>>() {
             });
             if (mkResponse.isSuccess()) {
-                USER_THREAD_LOCAL.set(mkResponse.getData());
+                userInfoThreadLocal.set(mkResponse.getData());
             } else {
                 log.error("login failure: {} [url={}]",
                         JSON.toJSONString(mkResponse.getMsg()),
@@ -84,17 +101,17 @@ public class TestNotifyCount {
         }
     }
 
-    private static void count() {
+    private void count() {
         // 请求地址
-        String url = DEFAULT_ADDRESS + "/data/sys-notify/portlet/count";
+        String url = address + "/data/sys-notify/portlet/count";
         try {
-            String response = HttpClientUtils.httpPost(url, null, null, COOKIE_THREAD_LOCAL.get());
+            String response = HttpClientUtils.httpPost(url, null, null, cookieStoreThreadLocal.get());
             MkResponse<JSONArray> mkResponse = JSON.parseObject(response, new TypeReference<MkResponse<JSONArray>>() {
             });
             if (mkResponse.isSuccess()) {
                 String username = null;
-                if (!Objects.isNull(USER_THREAD_LOCAL.get())) {
-                    username = USER_THREAD_LOCAL.get().getUserName();
+                if (!Objects.isNull(userInfoThreadLocal.get())) {
+                    username = userInfoThreadLocal.get().getUserName();
                 }
                 log.info("count success: \n[username={}, count={}]", username, JSON.toJSONString(mkResponse.getData()));
             } else {

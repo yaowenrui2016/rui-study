@@ -78,8 +78,8 @@ public class HttpClientUtils {
             httpPost.setHeader("Content-type", "application/json");
             RequestConfig requestConfig = RequestConfig.custom()
                     .setCookieSpec(CookieSpecs.STANDARD)
-                    .setSocketTimeout(60000)
-                    .setConnectTimeout(60000)
+                    .setSocketTimeout(30000)
+                    .setConnectTimeout(30000)
                     .build();
             httpPost.setConfig(requestConfig);
             if (header != null) {

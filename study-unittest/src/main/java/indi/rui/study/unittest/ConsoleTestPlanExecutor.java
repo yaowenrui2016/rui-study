@@ -4,6 +4,7 @@ import indi.rui.study.unittest.interf.MonitorTestPlan;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -40,15 +41,27 @@ public class ConsoleTestPlanExecutor {
     // 完整启动命令：
     // java -jar -Dmk.address=http://localhost:8040 -Dmk.xServiceName=73456775666d4c416f73776139584a4131432f6847413d3d -Dmk.execInterval.ms=100 -Dmk.monitorInterval.s=60 lib\study-unittest-sourceapp-0.0.1.SNAPSHOT.jar
     public static void main(String[] args) {
-        Properties props = new Properties();
+        Properties global = new Properties();
         String className = null;
         try {
-            props.load(Thread.currentThread().getContextClassLoader().getResourceAsStream(
-                    "unittest.properties"));
-            className = "indi.rui.study.unittest." + props.getProperty("test.plan");
+            // 加载全局配置项
+            global.load(Thread.currentThread().getContextClassLoader().getResourceAsStream(
+                    "config/unittest.properties"));
+            String simpleClassName = global.getProperty("test.plan");
+            // 加载测试计划执行类并初始化对象
+            className = "indi.rui.study.unittest." + simpleClassName;
             Class<? extends MonitorTestPlan> clazz = (Class<? extends MonitorTestPlan>) Class.forName(className);
             MonitorTestPlan testPlan = clazz.newInstance();
             log.info(">>>> {} <<<<", testPlan.planName());
+            // 加载测试计划配置项
+            Properties props = new Properties(global);
+            InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(
+                    "config/" + simpleClassName + ".properties");
+            if (inputStream != null) {
+                props.load(inputStream);
+            }
+            // 初始化私有字段
+            testPlan.init(props);
 
             // 启动监控
             monitor(testPlan);

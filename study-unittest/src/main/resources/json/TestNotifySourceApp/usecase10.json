@@ -1,0 +1,523 @@
+{
+  "sourceId": "MK-MODELING",
+  "apps":
+  [
+    {
+      "name": "金科业务",
+      "code": "MK-MODELING-1fj5fb3nkw1tjwgbw1u7rk23vknoah2gsmw0",
+      "children":
+      [
+        {
+          "name": "成本_BB",
+          "code": "MK-MODELING-231"
+        },
+        {
+          "name": "主数据_ZSJ",
+          "code": "MK-MODELING-1314"
+        },
+        {
+          "name": "定位系统_H3",
+          "code": "MK-MODELING-459"
+        },
+        {
+          "name": "账号平台_H3",
+          "code": "MK-MODELING-ddddd"
+        },
+        {
+          "name": "ATS—资金系统",
+          "code": "MK-MODELING-583"
+        },
+        {
+          "name": "部门计划_H3",
+          "code": "MK-MODELING-www2"
+        },
+        {
+          "name": "培训验证",
+          "code": "MK-MODELING-jinketest01"
+        },
+        {
+          "name": "工程",
+          "code": "MK-MODELING-380"
+        },
+        {
+          "name": "合资合作",
+          "code": "MK-MODELING-269"
+        },
+        {
+          "name": "材料_TT",
+          "code": "MK-MODELING-6478"
+        },
+        {
+          "name": "按揭合同",
+          "code": "MK-MODELING-870"
+        },
+        {
+          "name": "营销_YX",
+          "code": "MK-MODELING-yuny"
+        },
+        {
+          "name": "招采_BB",
+          "code": "MK-MODELING-1011"
+        },
+        {
+          "name": "投资_H3",
+          "code": "MK-MODELING-km-touz"
+        },
+        {
+          "name": "财务_CW",
+          "code": "MK-MODELING-4320"
+        },
+        {
+          "name": "人力_RL",
+          "code": "MK-MODELING-5684"
+        },
+        {
+          "name": "IT管控_H3",
+          "code": "MK-MODELING-123111"
+        },
+        {
+          "name": "运营_AA",
+          "code": "MK-MODELING-4321"
+        }
+      ]
+    },
+    {
+      "name": "MKPaaS",
+      "code": "MK-MODELING-DEFAULT",
+      "children":
+      [
+        {
+          "name": "全面预算_H3",
+          "code": "MK-MODELING-6704"
+        },
+        {
+          "name": "样例表单（用印申请、表单配置）",
+          "code": "MK-MODELING-KM-yongyin"
+        },
+        {
+          "name": "测试用_CS",
+          "code": "MK-MODELING-348"
+        },
+        {
+          "name": "创新_H3",
+          "code": "MK-MODELING-357"
+        },
+        {
+          "name": "temp",
+          "code": "MK-MODELING-temp"
+        },
+        {
+          "name": "测试",
+          "code": "MK-MODELING-123"
+        },
+        {
+          "name": "运维测试",
+          "code": "MK-MODELING-wangmeil2"
+        },
+        {
+          "name": "新应用创建测试0912",
+          "code": "MK-MODELING-0912"
+        },
+        {
+          "name": "平安",
+          "code": "MK-MODELING-100000"
+        },
+        {
+          "name": "chw测试",
+          "code": "MK-MODELING-111"
+        },
+        {
+          "name": "公文对接测试",
+          "code": "MK-MODELING-km-missive"
+        },
+        {
+          "name": "10月份测试",
+          "code": "MK-MODELING-10sdf"
+        },
+        {
+          "name": "hzq",
+          "code": "MK-MODELING-hzq"
+        },
+        {
+          "name": "你懂的.aiv",
+          "code": "MK-MODELING-ndd"
+        },
+        {
+          "name": "数据源",
+          "code": "MK-MODELING-saaaafa"
+        },
+        {
+          "name": "库存管理",
+          "code": "MK-MODELING-store"
+        },
+        {
+          "name": "CP应用",
+          "code": "MK-MODELING-CP-APP"
+        },
+        {
+          "name": "DING 测试",
+          "code": "MK-MODELING-ding"
+        },
+        {
+          "name": "订聊测试",
+          "code": "MK-MODELING-11151"
+        },
+        {
+          "name": "LUOYY",
+          "code": "MK-MODELING-mkluoyy1"
+        },
+        {
+          "name": "DING测试2",
+          "code": "MK-MODELING-51515"
+        },
+        {
+          "name": "LUOYY",
+          "code": "MK-MODELING-mkluoyy1"
+        },
+        {
+          "name": "LZX0929",
+          "code": "MK-MODELING-LZX0929"
+        },
+        {
+          "name": "小乐",
+          "code": "MK-MODELING-xiaole"
+        },
+        {
+          "name": "lirs应用",
+          "code": "MK-MODELING-lirs"
+        },
+        {
+          "name": "liuf1008",
+          "code": "MK-MODELING-liuf1008"
+        },
+        {
+          "name": "贺双",
+          "code": "MK-MODELING-hes"
+        },
+        {
+          "name": "cjg-test",
+          "code": "MK-MODELING-ggg"
+        },
+        {
+          "name": "tic测试应用",
+          "code": "MK-MODELING-tic-test"
+        },
+        {
+          "name": "#9875测试",
+          "code": "MK-MODELING-9875Test"
+        },
+        {
+          "name": "流程结束通知起草人",
+          "code": "MK-MODELING-lcjstzqcr"
+        },
+        {
+          "name": "9875测试2",
+          "code": "MK-MODELING-ceshi"
+        },
+        {
+          "name": "行权限测试",
+          "code": "MK-MODELING-csxxxx"
+        },
+        {
+          "name": "01",
+          "code": "MK-MODELING-222"
+        },
+        {
+          "name": "yanmj",
+          "code": "MK-MODELING-yanmj"
+        },
+        {
+          "name": "请假申请",
+          "code": "MK-MODELING-12"
+        },
+        {
+          "name": "ly",
+          "code": "MK-MODELING-km-ly001"
+        },
+        {
+          "name": "lq的应用",
+          "code": "MK-MODELING-lqyy"
+        },
+        {
+          "name": "ly01",
+          "code": "MK-MODELING-ly01"
+        },
+        {
+          "name": "UED验收",
+          "code": "MK-MODELING-1234567890"
+        },
+        {
+          "name": "yyds",
+          "code": "MK-MODELING-yyds"
+        },
+        {
+          "name": "看板视图1011？",
+          "code": "MK-MODELING-boardview1011"
+        },
+        {
+          "name": "qs",
+          "code": "MK-MODELING-km-qs11"
+        },
+        {
+          "name": "yja",
+          "code": "MK-MODELING-yja"
+        },
+        {
+          "name": "gmstest",
+          "code": "MK-MODELING-testgsm"
+        },
+        {
+          "name": "库存管理_1",
+          "code": "MK-MODELING-store-1"
+        },
+        {
+          "name": "行权限测试_1",
+          "code": "MK-MODELING-csxxxx-1"
+        },
+        {
+          "name": "流程接口测试(勿动20211028182520)",
+          "code": "MK-MODELING-lbpm-test20211028182519"
+        },
+        {
+          "name": "采购管理",
+          "code": "MK-MODELING-caigou"
+        },
+        {
+          "name": "fjq测试",
+          "code": "MK-MODELING-km-reviewfjq"
+        },
+        {
+          "name": "hq集成门户",
+          "code": "MK-MODELING-1104"
+        },
+        {
+          "name": "1105-cjg",
+          "code": "MK-MODELING-1105-cjg"
+        },
+        {
+          "name": "谢书江_华南二战区_合规事项管理",
+          "code": "MK-MODELING-km-review-fengkong"
+        },
+        {
+          "name": "蓝订公式定义器测试",
+          "code": "MK-MODELING-12345"
+        },
+        {
+          "name": "ly_1",
+          "code": "MK-MODELING-ly"
+        },
+        {
+          "name": "吴婉琳的1126验收",
+          "code": "MK-MODELING-1126"
+        },
+        {
+          "name": "yyq2110",
+          "code": "MK-MODELING-mkpaas-yyq"
+        },
+        {
+          "name": "测试应用2",
+          "code": "MK-MODELING-km-review1"
+        },
+        {
+          "name": "xionghl测试互动卡片",
+          "code": "MK-MODELING-xionghl"
+        },
+        {
+          "name": "ly_问题验证",
+          "code": "MK-MODELING-km-review123"
+        },
+        {
+          "name": "测试互动卡片",
+          "code": "MK-MODELING-cesium"
+        },
+        {
+          "name": "周梓凡(专用)",
+          "code": "MK-MODELING-zhouzf"
+        },
+        {
+          "name": "终极卡片测试",
+          "code": "MK-MODELING-dddd"
+        },
+        {
+          "name": "导出明细表1029",
+          "code": "MK-MODELING-exp1029"
+        },
+        {
+          "name": "测试专用1103",
+          "code": "MK-MODELING-test1103"
+        },
+        {
+          "name": "测试-xionghl",
+          "code": "MK-MODELING-1b"
+        },
+        {
+          "name": "导出明细表1029_1",
+          "code": "MK-MODELING-exp1029-1"
+        },
+        {
+          "name": "lui-app",
+          "code": "MK-MODELING-1725"
+        },
+        {
+          "name": "测试钉钉集成能力",
+          "code": "MK-MODELING-mk00112"
+        }
+      ]
+    },
+    {
+      "name": "LJL建模",
+      "code": "MK-MODELING-1fgo2cftvwjewp6w10j0l2i3nnvpl02g0nw0",
+      "children":
+      [
+        {
+          "name": "证照_H3",
+          "code": "MK-MODELING-569"
+        },
+        {
+          "name": "控件应用",
+          "code": "MK-MODELING-mk-ControlApplication"
+        },
+        {
+          "name": "王兵成",
+          "code": "MK-MODELING-wbc"
+        },
+        {
+          "name": "LJL业务应用",
+          "code": "MK-MODELING-mk-BusinessApplications"
+        },
+        {
+          "name": "LJL导入表单应用",
+          "code": "MK-MODELING-mk-BusinessApplications-1"
+        },
+        {
+          "name": "示例应用",
+          "code": "MK-MODELING-mk-Examplezpplication"
+        },
+        {
+          "name": "LJL控件应用",
+          "code": "MK-MODELING-mk-controlapplication"
+        },
+        {
+          "name": "LJL业务触发",
+          "code": "MK-MODELING-mk-BusinessTrigger"
+        },
+        {
+          "name": "LJL问题应用",
+          "code": "MK-MODELING-mk-questtionapp"
+        },
+        {
+          "name": "LJL列表视图",
+          "code": "MK-MODELING-mk-Listview"
+        }
+      ]
+    },
+    {
+      "name": "MK建模",
+      "code": "MK-MODELING-1f3k8v823wnw9dw1t15fdh1luqsj8u595aw0",
+      "children":
+      [
+        {
+          "name": "MK应用",
+          "code": "MK-MODELING-km-mkapp"
+        },
+        {
+          "name": "\b测试应用",
+          "code": "MK-MODELING-cesmb"
+        },
+        {
+          "name": "功能测试_TEST",
+          "code": "MK-MODELING-functional-testing"
+        },
+        {
+          "name": "差假",
+          "code": "MK-MODELING-8888"
+        },
+        {
+          "name": "模拟表单配置",
+          "code": "MK-MODELING-JKBD01"
+        },
+        {
+          "name": "测试1234",
+          "code": "MK-MODELING-4567"
+        },
+        {
+          "name": "DWB审批模板",
+          "code": "MK-MODELING-DWB2021"
+        },
+        {
+          "name": "测试111",
+          "code": "MK-MODELING-1223"
+        },
+        {
+          "name": "1",
+          "code": "MK-MODELING-mk-1025app"
+        },
+        {
+          "name": "测试应用新增的接口",
+          "code": "MK-MODELING-newApp"
+        }
+      ]
+    },
+    {
+      "name": "linns分类",
+      "code": "MK-MODELING-1fhet7c2fwr6w8lwdm9n9j138bh991egdgw0",
+      "children":
+      [
+        {
+          "name": "考勤管理",
+          "code": "MK-MODELING-sys-attend"
+        }
+      ]
+    },
+    {
+      "name": "重复分类测试",
+      "code": "MK-MODELING-1fit7i0mvw1p4wbw3sufpt8343ca34517aw0",
+      "children":
+      [
+        {
+          "name": "重复分类测试01",
+          "code": "MK-MODELING-c001"
+        }
+      ]
+    },
+    {
+      "name": "lingy应用管理",
+      "code": "MK-MODELING-1fhmtqgcqwudwhiw3dd200q1u6jc8v1doew0",
+      "children":
+      [
+        {
+          "name": "lingy应用",
+          "code": "MK-MODELING-lycs001"
+        },
+        {
+          "name": "公共组件测试应用",
+          "code": "MK-MODELING-km-ggzuj"
+        }
+      ]
+    },
+    {
+      "name": "luo",
+      "code": "MK-MODELING-1fih398dqw1llw3tgw1ru7nbs1chup9v1uw0",
+      "children":
+      [
+        {
+          "name": "LuoYY",
+          "code": "MK-MODELING-12323"
+        },
+        {
+          "name": "LuoYY",
+          "code": "MK-MODELING-12323"
+        },
+        {
+          "name": "LuoYY",
+          "code": "MK-MODELING-12323"
+        },
+        {
+          "name": "蓝钉场景群",
+          "code": "MK-MODELING-ldcjq00991"
+        }
+      ]
+    }
+  ],
+  "creator": "1fgnmdvv0wilw6vvw2tm8sbm2fgft5k1ntw0"
+}
