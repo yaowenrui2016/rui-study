@@ -1,0 +1,41 @@
+{
+  "sourceId": "1",
+  "apps": [
+    {
+      "name": "系统D",
+      "code": "D",
+      "children": [
+        {
+          "name": "模块-21",
+          "code": "21"
+        },
+        {
+          "name": "模块21-",
+          "code": "21"
+        },
+        {
+          "name": "模块21",
+          "code": "21"
+        }
+      ]
+    },{
+      "name": "系统D",
+      "code": "D",
+      "children": [
+        {
+          "name": "模块-31",
+          "code": "31"
+        },
+        {
+          "name": "模块31-",
+          "code": "31"
+        },
+        {
+          "name": "MoKuai-31",
+          "code": "31"
+        }
+      ]
+    }
+  ],
+  "creator": "yaowr"
+}

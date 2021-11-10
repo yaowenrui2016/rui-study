@@ -27,9 +27,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class TestNotifySourceApp {
 
-    private static final String DEFAULT_ADDRESS = "http://localhost:8040";
+//    private static final String DEFAULT_ADDRESS = "http://localhost:8040";
+//
+//    private static final String DEFAULT_X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String DEFAULT_X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+    private static final String DEFAULT_ADDRESS = "http://10.253.0.228:8080";
+
+    private static final String DEFAULT_X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
 
     private static final int DEFAULT_EXECUTE_INTERVAL_MS = -1;
 
@@ -106,7 +110,7 @@ public class TestNotifySourceApp {
 
     private LinkedBlockingQueue<Integer> monitorQueue = new LinkedBlockingQueue<>(10);
 
-    private int usecaseAmount = 8;
+    private int usecaseAmount = 9;
 
     private AtomicInteger usecaseNum = new AtomicInteger(0);
 
