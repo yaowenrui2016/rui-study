@@ -88,6 +88,7 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
             buf.append("[subject=").append(todo.getFdSubject())
                     .append(", entityKey=").append(todo.getFdEntityKey())
                     .append(", corp=").append(todo.getFdCorp())
+                    .append(", link=").append(todo.getFdLink())
                     .append("]\n");
         }
         return buf.toString();

@@ -2,7 +2,7 @@ package indi.rui.study.unittest;
 
 import com.alibaba.fastjson.JSON;
 import indi.rui.study.unittest.netty.HttpResult;
-import indi.rui.study.unittest.netty.NettyHttpClient;
+import indi.rui.study.unittest.netty.HttpClient;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.URLEncoder;
@@ -38,7 +38,7 @@ public class TestNettyClientUsage {
                 String jsonStr = "{\"username\":\"" + username + "\", \"password\":\"1234\"}";
                 HttpResult result = null;
                 try {
-                    result = NettyHttpClient.post(url, JSON.parseObject(jsonStr));
+                    result = HttpClient.post(url, JSON.parseObject(jsonStr), null);
                     String content = (String) result.getContent();
                     nums.remove(getNum(content));
                     log.info("{}", content);

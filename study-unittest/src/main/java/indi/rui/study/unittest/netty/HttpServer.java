@@ -15,7 +15,7 @@ import io.netty.handler.logging.LoggingHandler;
  * @author: yaowr
  * @create: 2021-11-15
  */
-public class NettyHttpRedirectServer {
+public class HttpServer {
 
     private static final int PORT = Integer.valueOf(System.getProperty("port", "8848"));
 
@@ -32,7 +32,7 @@ public class NettyHttpRedirectServer {
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new HttpServerCodec());
                             ch.pipeline().addLast(new HttpObjectAggregator(65535));
-                            ch.pipeline().addLast(new NettyHttpRedirectServerChannelHandler());
+                            ch.pipeline().addLast(new HttpServerChannelHandler());
                         }
                     });
             ChannelFuture f = b.bind(PORT).sync();

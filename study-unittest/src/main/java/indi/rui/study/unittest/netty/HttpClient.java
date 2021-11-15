@@ -21,9 +21,9 @@ import java.net.URI;
  * @author: yaowr
  * @create: 2021-11-12
  */
-public class NettyHttpClient {
+public class HttpClient {
 
-    public static HttpResult post(String url, JSON body) throws Exception {
+    public static HttpResult post(String url, JSON body, HttpHeaders headers) throws Exception {
         // 解析URL
         URI uri = new URI(url);
         String schema = uri.getScheme() == null ? "http" : uri.getScheme();
@@ -63,7 +63,7 @@ public class NettyHttpClient {
                                 pipeline.addLast(sslCtx.newHandler(ch.alloc()));
                             }
                             pipeline.addLast(new HttpClientCodec());
-                            pipeline.addLast(new HttpChannelHandler(result));
+                            pipeline.addLast(new HttpClientChannelHandler(result));
                         }
                     });
             Channel ch = b.connect(host, port).sync().channel();
@@ -77,6 +77,9 @@ public class NettyHttpClient {
                     .set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE)
                     .set(HttpHeaderNames.ACCEPT_ENCODING, HttpHeaderValues.GZIP + "," + HttpHeaderValues.DEFLATE)
                     .set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
+            if (headers != null) {
+                request.headers().add(headers);
+            }
             ch.writeAndFlush(request);
 
             // 等待channel关闭

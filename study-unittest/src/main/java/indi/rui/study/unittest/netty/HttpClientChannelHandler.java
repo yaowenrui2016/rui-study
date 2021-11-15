@@ -14,11 +14,11 @@ import java.util.HashMap;
  * @create: 2021-11-12
  */
 @Slf4j
-public class HttpChannelHandler extends ChannelInboundHandlerAdapter {
+public class HttpClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     private HttpResult result;
 
-    public HttpChannelHandler(HttpResult result) {
+    public HttpClientChannelHandler(HttpResult result) {
         this.result = result;
     }
 

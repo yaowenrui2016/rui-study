@@ -12,6 +12,7 @@ import lombok.Setter;
 public class UserInfo {
     private String loginName;
     private String userName;
+    private String password;
     private String userId;
     private String oriId;
     private String curLang;
