@@ -70,7 +70,8 @@ public class NettyHttpClient {
             // 发起请求
             ByteBuf content = Unpooled.wrappedBuffer(body.toJSONString().getBytes());
             HttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST,
-                    uri.getRawPath(), content);
+                    uri.getRawPath() + "?" + uri.getRawQuery(),
+                    content);
             request.headers()
                     .set(HttpHeaderNames.HOST, host)
                     .set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE)

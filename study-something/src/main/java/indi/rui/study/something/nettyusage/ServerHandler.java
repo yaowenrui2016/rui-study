@@ -34,7 +34,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             this.req = (HttpRequest) msg;
             // 请求信息
             buf.append(req.protocolVersion()).append(" ")
-                    .append(req.method()).append(" ").append(req.uri());
+                    .append(req.method()).append(" ").append(req.uri()).append("\n");
             if (!req.headers().isEmpty()) {
                 for (String headerName : req.headers().names()) {
                     buf.append(headerName).append(": ")

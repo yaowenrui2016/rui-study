@@ -5,6 +5,7 @@ import indi.rui.study.unittest.netty.HttpResult;
 import indi.rui.study.unittest.netty.NettyHttpClient;
 import lombok.extern.slf4j.Slf4j;
 
+import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
@@ -25,11 +26,12 @@ public class TestNettyClientUsage {
                 return new Thread(r, "executor-" + threadNo.getAndIncrement());
             }
         });
-        String url = "Http://localhost:8848";
+        String queryString = URLEncoder.encode("param={\"username\":\"yaowr\"}", "utf-8");
+        String url = "Http://localhost:8848/web?" + queryString;
         List<Integer> nums = new CopyOnWriteArrayList<Integer>();
-        CountDownLatch countDownLatch = new CountDownLatch(1000);
+        CountDownLatch countDownLatch = new CountDownLatch(1);
         long beginTie = System.currentTimeMillis();
-        for (int i = 0; i < 3000; i++) {
+        for (int i = 0; i < 1; i++) {
             nums.add(i);
             String username = getUsername(i);
             executor.execute(() -> {
