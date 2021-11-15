@@ -46,16 +46,22 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             // 请求内容
             HttpContent content = (HttpContent) msg;
             String body = content.content().toString(CharsetUtil.UTF_8);
-            buf.append(body);
-            UserInfo userInfo = JSONObject.parseObject(body, UserInfo.class);
-            String responseStr = "你好, " + userInfo.getUsername() + "，登录成功！";
+            String responseStr;
+            if (body != null && body.length() > 0) {
+                buf.append(body);
+                UserInfo userInfo = JSONObject.parseObject(body, UserInfo.class);
+                responseStr = "你好, " + userInfo.getUsername() + "，登录成功！";
+            } else {
+
+                responseStr = "你好, [anonymous]登录成功！";
+            }
             // 处理响应
             boolean isKeepAlive = HttpUtil.isKeepAlive(req);
             FullHttpResponse response = new DefaultFullHttpResponse(req.protocolVersion(), HttpResponseStatus.OK,
                     Unpooled.wrappedBuffer(responseStr.getBytes("utf-8")));
 
             response.headers()
-                    .set(HttpHeaderNames.CONTENT_TYPE, HttpHeaderValues.TEXT_PLAIN)
+                    .set(HttpHeaderNames.CONTENT_TYPE, HttpHeaderValues.TEXT_PLAIN + ";charset=utf-8")
                     .set(HttpHeaderNames.CONTENT_LENGTH, response.content().readableBytes());
 
             if (isKeepAlive) {
