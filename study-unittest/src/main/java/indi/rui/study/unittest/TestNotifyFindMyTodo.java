@@ -64,12 +64,17 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         String response = null;
         try {
             response = HttpClientUtils.httpPost(url, body, header);
-            MkResponse mkResponse = JSONObject.parseObject(response, MkResponse.class);
+            MkResponse<String> mkResponse = JSONObject.parseObject(response, new TypeReference<MkResponse<String>>() {
+            });
             if (!mkResponse.isSuccess()) {
                 log.error("send todo failed! [url={}, body={}, response={}]",
                         url,
                         JSONObject.toJSONString(body),
                         response);
+            } else {
+                log.info("send todo success. [snid={}, context={}]",
+                        mkResponse.getData(),
+                        JSONObject.toJSONString(body));
             }
         } catch (Exception e) {
             log.error("send todo failed! [url={}, body={}, response={}]",
@@ -87,8 +92,9 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         for (NotifyTodo todo : todos) {
             buf.append("[subject=").append(todo.getFdSubject())
                     .append(", entityKey=").append(todo.getFdEntityKey())
-                    .append(", corp=").append(todo.getFdCorp())
-                    .append(", link=").append(todo.getFdLink())
+                    .append(", snid=").append(todo.getFdSnid())
+                    .append(", todoType=").append(todo.getFdType())
+                    .append(", todoLevel=").append(todo.getFdLevel())
                     .append("]\n");
         }
         return buf.toString();

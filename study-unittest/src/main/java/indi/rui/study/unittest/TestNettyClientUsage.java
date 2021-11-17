@@ -1,8 +1,8 @@
 package indi.rui.study.unittest;
 
 import com.alibaba.fastjson.JSON;
-import indi.rui.study.unittest.netty.HttpResult;
 import indi.rui.study.unittest.netty.HttpClient;
+import indi.rui.study.unittest.netty.HttpResult;
 import lombok.extern.slf4j.Slf4j;
 
 import java.net.URLEncoder;

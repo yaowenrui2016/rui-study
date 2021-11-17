@@ -68,15 +68,23 @@ public class HttpClient {
                     });
             Channel ch = b.connect(host, port).sync().channel();
             // 发起请求
-            ByteBuf content = Unpooled.wrappedBuffer(body.toJSONString().getBytes());
-            HttpRequest request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST,
-                    uri.getRawPath() + "?" + uri.getRawQuery(),
-                    content);
+            DefaultFullHttpRequest request;
+            if (body != null) {
+
+                ByteBuf content = Unpooled.wrappedBuffer(body.toJSONString().getBytes());
+                request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST,
+                        uri.getRawPath() + "?" + uri.getRawQuery(),
+                        content);
+                request.headers()
+                        .set(HttpHeaderNames.ACCEPT_ENCODING, HttpHeaderValues.GZIP + "," + HttpHeaderValues.DEFLATE)
+                        .set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
+            } else {
+                request = new DefaultFullHttpRequest(HttpVersion.HTTP_1_1, HttpMethod.POST,
+                        uri.getRawPath() + "?" + uri.getRawQuery());
+            }
             request.headers()
                     .set(HttpHeaderNames.HOST, host)
-                    .set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE)
-                    .set(HttpHeaderNames.ACCEPT_ENCODING, HttpHeaderValues.GZIP + "," + HttpHeaderValues.DEFLATE)
-                    .set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
+                    .set(HttpHeaderNames.CONNECTION, HttpHeaderValues.CLOSE);
             if (headers != null) {
                 request.headers().add(headers);
             }

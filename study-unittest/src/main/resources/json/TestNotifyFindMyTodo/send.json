@@ -1,8 +1,6 @@
 {
   "subject": "消息扩展顺序消息测试",
   "notifyType": "todo",
-  "todoType": 1,
-  "todoLevel": 3,
   "link": "https://mkf.countrygarden.com.cn/crm/#/newProblemDetail/9/0?from\u003dBIP\u0026userId\u003da32784e6-edf0-11ea-b657-005056baf923\u0026areaId\u003d54\u0026projectId\u003dA64164B5-1095-4F30-B178-9964CFFBF6EB\u0026quesTaskCode\u003dE桂东北20211100914\u0026biProblemCategory\u003d9\u0026openDetail\u003d{\"NO\":\"f3e450ac-d3fe-4bf8-a539-44526a94aee7\",\"show\":true,\"projectName\":\"桂林碧桂园\",\"btnDelay\":false}",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",

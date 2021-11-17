@@ -3,6 +3,7 @@ package indi.rui.study.unittest.netty;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -14,6 +15,6 @@ import java.util.Map;
 public class HttpResult {
     private String version;
     private Integer status;
-    private Map<String, Object> headers;
-    private Object content;
+    private Map<String, List<String>> headers;
+    private String content;
 }
