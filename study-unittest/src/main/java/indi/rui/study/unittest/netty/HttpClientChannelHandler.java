@@ -18,12 +18,15 @@ public class HttpClientChannelHandler extends ChannelInboundHandlerAdapter {
 
     private HttpResult result;
 
+    private StringBuffer buf = new StringBuffer();
+
     public HttpClientChannelHandler(HttpResult result) {
         this.result = result;
     }
 
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+        result.setContent(buf.toString());
         ctx.close();
     }
 
@@ -41,7 +44,7 @@ public class HttpClientChannelHandler extends ChannelInboundHandlerAdapter {
             }
         } else if (msg instanceof HttpContent) {
             HttpContent content = (HttpContent) msg;
-            result.setContent(content.content().toString(CharsetUtil.UTF_8));
+            buf.append(content.content().toString(CharsetUtil.UTF_8));
         }
     }
 

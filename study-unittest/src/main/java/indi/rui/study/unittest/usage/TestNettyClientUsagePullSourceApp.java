@@ -1,4 +1,4 @@
-package indi.rui.study.unittest;
+package indi.rui.study.unittest.usage;
 
 import indi.rui.study.unittest.netty.HttpClient;
 import indi.rui.study.unittest.netty.HttpResult;
