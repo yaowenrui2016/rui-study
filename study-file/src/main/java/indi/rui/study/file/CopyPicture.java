@@ -1,6 +1,6 @@
 package indi.rui.study.file;
 
-import org.apache.commons.io.FileUtils;
+//import org.apache.commons.io.FileUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,12 +13,12 @@ import java.util.List;
  */
 public class CopyPicture {
 
-    public static final String TARGET_PATH = "C:\\Users\\yao_2\\Pictures\\screen";
+    public static final String TARGET_PATH = "C:\\Users\\yaowr\\Pictures\\Saved Pictures";
     public static final String IMAGE_SUFFIX = ".jpg";
 
     public static void main(String[] args) throws IOException {
         List<String> sourcePaths = Arrays.asList(
-                "C:\\Users\\yao_2\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets");
+                "C:\\Users\\yaowr\\AppData\\Local\\Packages\\Microsoft.Windows.ContentDeliveryManager_cw5n1h2txyewy\\LocalState\\Assets");
         for (String sourcePath : sourcePaths) {
             File dir = new File(sourcePath);
             if (dir.isDirectory()) {
@@ -30,7 +30,7 @@ public class CopyPicture {
                         filename = filename + IMAGE_SUFFIX;
                     }
                     File dest = new File(TARGET_PATH, filename);
-                    FileUtils.copyFile(files[i], dest);
+//                    FileUtils.copyFile(files[i], dest);
                 }
             }
         }
