@@ -22,7 +22,8 @@ import java.util.List;
 @Slf4j
 public class TestNettyClientUsageKkSetting {
 
-    private static final String address = "Http://127.0.0.1:8040";
+//    private static final String address = "http://mksmoke.ywork.me";
+    private static final String address = "http://127.0.0.1:8040";
 
     public static void main(String[] args) throws Exception {
         // 获取待办同步扩展

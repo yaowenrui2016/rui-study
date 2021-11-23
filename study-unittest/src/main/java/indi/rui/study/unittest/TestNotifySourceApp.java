@@ -27,9 +27,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class TestNotifySourceApp {
 
-    private static final String DEFAULT_ADDRESS = "http://localhost:8040";
+//    private static final String DEFAULT_ADDRESS = "http://localhost:8040";
+//
+//    private static final String DEFAULT_X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String DEFAULT_X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+    private static final String DEFAULT_ADDRESS = "http://10.253.12.239:8080";
+
+    private static final String DEFAULT_X_SERVICE_NAME = "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d";
 
 //    private static final String DEFAULT_ADDRESS = "http://10.253.0.228:8080";
 //
