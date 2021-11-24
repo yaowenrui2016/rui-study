@@ -27,20 +27,19 @@ public class TestNotifySend {
 //
 //    private static final String TARGETS = "youwei,chenqianbin01,leikun02,penghe,youqingyang,yangqinggong,lizhaohua05";
 
+//
+//    private static final String ADDRESS = "http://192.168.51.202:8050";
+//
+//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+//
+//    private static final String TARGETS = "weilq,liuf,zz1,zz2,zz3,zz4,zz5,zz6,zz7,zz8,zz9";
 
-    private static final String ADDRESS = "http://192.168.51.202:8050";
+
+    private static final String ADDRESS = "http://localhost:8040";
 
     private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String TARGETS = "weilq,yuxd,zz1,zz2,zz3,zz4,zz5,zz6,zz7,zz8,zz9";
-
-
-//    private static final String ADDRESS = "http://localhost:8040";
-//
-//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
-
-//    private static final String TARGETS = "yaowr,cuipx,laow,zhangs,lis,gebilw";
-//    private static final String TARGETS = "yaowr";
+    private static final String TARGETS = "yaowr,cuipx,laow,zhangs,lis,gebilw";
 
     private static final int EXEC_INTERVAL = -1;
 
@@ -133,7 +132,7 @@ public class TestNotifySend {
                     String entityId = String.valueOf(counts.get(idx).incrementAndGet());
                     try {
                         send(entityId, person);
-//                        done(entityId, person);
+                        done(entityId, person);
                     } catch (Exception e) {
                         counts.get(idx).decrementAndGet();
                         log.error("send or done todo exception!", e);
