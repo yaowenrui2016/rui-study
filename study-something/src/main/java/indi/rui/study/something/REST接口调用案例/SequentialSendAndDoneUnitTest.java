@@ -32,12 +32,12 @@ public class SequentialSendAndDoneUnitTest {
         new Thread(() -> ThreadHelper.TimedRun(unitTest::monitor, 500),
                 "notify-monitor").start();
         // 按顺序执行发送和置已办
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 1; i++) {
             unitTest.send(i + "");
 //            unitTest.done(i + "");
 //            unitTest.removeTodo(i + "");
 //            unitTest.removeDone(i + "");
-            unitTest.removeAll(i + "");
+//            unitTest.removeAll(i + "");
 //            unitTest.suspend(i + "");
 //            unitTest.resume(i + "");
 //            unitTest.read(i + "");
@@ -45,7 +45,27 @@ public class SequentialSendAndDoneUnitTest {
     }
 
     private void send(String entityId) {
-        call("send", SEND_TODO_JSON_PATH, entityId);
+        String sendUrl = ADDRESS + "/api/sys-notifybus/sysNotifyComponent/send";
+        // 从JSON文件中获取请求体
+        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader()
+                .getResource(SEND_TODO_JSON_PATH)).getFile();
+        String sendJson = FileUtils.readFileToString(filePath, "utf-8");
+        JSONObject body = JSONObject.parseObject(sendJson);
+        body.put("entityId", entityId);
+        body.put("entityKey", System.currentTimeMillis());
+        // 需要x-service-name请求头验权
+        Map<String, String> header = Collections.singletonMap("x-service-name", X_SERVICE_NAME);
+        try {
+            String response = HttpClientUtils.httpPost(sendUrl, body, header);
+            MkResponse mkResponse = JSONObject.parseObject(response, MkResponse.class);
+            if (!mkResponse.isSuccess()) {
+                log.error("send todo failed! [request={}, response={}]",
+                        JSONUtils.toJSONString(body),
+                        response);
+            }
+        } catch (Exception e) {
+            log.error("send todo exception", e);
+        }
     }
 
     private void done(String entityId) {
@@ -79,14 +99,13 @@ public class SequentialSendAndDoneUnitTest {
     /**
      * 调用bus
      *
-     * @param method
-     * @param bodyPath
      * @param entityId
      */
     private void call(String method, String bodyPath, String entityId) {
         String sendUrl = ADDRESS + "/api/sys-notifybus/sysNotifyComponent/" + method;
         // 从JSON文件中获取请求体
-        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(bodyPath)).getFile();
+        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader()
+                .getResource(bodyPath)).getFile();
         String sendJson = FileUtils.readFileToString(filePath, "utf-8");
         JSONObject body = JSONObject.parseObject(sendJson);
         body.put("entityId", entityId);
@@ -102,7 +121,7 @@ public class SequentialSendAndDoneUnitTest {
                         response);
             }
         } catch (Exception e) {
-            log.error("{} exception", method, e);
+            log.error("{} todo exception", method, e);
         }
     }
 
@@ -121,7 +140,8 @@ public class SequentialSendAndDoneUnitTest {
     }
 
     private void callMonitor(String method) {
-        String monitorUrl = ADDRESS + "/api/sys-lbpm-approval/demoTodoExt/" + method;
+//        String monitorUrl = ADDRESS + "/api/sys-lbpm-approval/demoTodoExt/" + method;
+        String monitorUrl = ADDRESS + "/api/sys-notify/ekpInformTodoExtension/" + method;
         // 需要x-service-name请求头验权
         Map<String, String> header = Collections.singletonMap("x-service-name", X_SERVICE_NAME);
         try {

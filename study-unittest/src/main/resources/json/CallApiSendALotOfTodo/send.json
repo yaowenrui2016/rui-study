@@ -1,0 +1,15 @@
+{
+  "subject": "大量消息发送测试",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "***",
+  "entityName": "aLotOfTodo",
+  "entityKey": "***",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ]
+}

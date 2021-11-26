@@ -1,19 +1,15 @@
 {
-  "subject": "消息扩展顺序消息测试",
   "notifyType": "todo",
-  "link": "https://mkf.countrygarden.com.cn/crm/#/newProblemDetail/9/0?from\u003dBIP\u0026userId\u003da32784e6-edf0-11ea-b657-005056baf923\u0026areaId\u003d54\u0026projectId\u003dA64164B5-1095-4F30-B178-9964CFFBF6EB\u0026quesTaskCode\u003dE桂东北20211100914\u0026biProblemCategory\u003d9\u0026openDetail\u003d{\"NO\":\"f3e450ac-d3fe-4bf8-a539-44526a94aee7\",\"show\":true,\"projectName\":\"桂林碧桂园\",\"btnDelay\":false}",
-  "mobileLink": "http://www.taobao.com",
-  "appName": "MKPaaS",
-  "moduleName": "sys-notify",
-  "entityId": "1",
-  "entityName": "sequential_2",
-  "entityKey": "sss",
-  "orgProperty": "fdLoginName",
-  "targets": [
-    "yaowr"
+  "appName": "MK-MODELING-1flaugmqpwbvwa2dw3rp5i3fglqu051umpw0",
+  "moduleName": "MK-MODELING-mk-yewuchufa1125",
+  "entityName": "FormMeta:bindModules",
+  "entityId": "1flat9g8kwbvw6m3w1rj5u7n3bkm9qn2lkw0",
+  "entityKey": "1flasbg9lwbvw3g5w10t91q12up5fsj12uw0",
+  "targets":
+  [
+    "1fj7r9ptnw1pw1kbsw24k0r2ba538122kmw0"
   ],
-  "creator": "admin",
-  "corp": "Dingding",
-  "nodeName": "开发调试",
-  "docInfo": "{\"taskType\":1,\"instanceId\":\"1997\"}"
+  "link": "#/current/sys-modeling/mk-yewuchufa1125/edit/1flasbg9jwbvw3g1w3pu3u2p1pcacg31uhw0/1flat9g8kwbvw6m3w1rj5u7n3bkm9qn2lkw0",
+  "subject": "请处理-2021-11-25-待办：1125的日报",
+  "todoType": 1
 }

@@ -1,11 +1,13 @@
 package indi.rui.study.unittest.util;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 /**
  * @author: yaowr
@@ -37,5 +39,12 @@ public class FileUtils {
             }
         }
         return sb.toString();
+    }
+
+    public static JSONObject loadJSON(String jsonPath) {
+        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
+                jsonPath)).getFile();
+        String sendJson = FileUtils.readFileToString(filePath, "utf-8");
+        return JSONObject.parseObject(sendJson);
     }
 }

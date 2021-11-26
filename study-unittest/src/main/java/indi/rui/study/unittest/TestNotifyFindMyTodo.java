@@ -38,8 +38,8 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
     @Value("mk.address")
     private String address;
 
-    private static String xServiceName = System.getProperty("mk.xServiceName",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    @Value("mk.xServiceName")
+    private String xServiceName;
 
     private ThreadLocal<CookieStore> cookieStoreThreadLocal = ThreadLocal.withInitial(
             () -> new BasicCookieStore());

@@ -39,7 +39,8 @@ public class TestNotifySend {
 
     private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String TARGETS = "yaowr,cuipx,laow,zhangs,lis,gebilw";
+//    private static final String TARGETS = "yaowr,cuipx,laow,zhangs,lis,gebilw";
+    private static final String TARGETS = "yaowr";
 
     private static final int EXEC_INTERVAL = -1;
 
