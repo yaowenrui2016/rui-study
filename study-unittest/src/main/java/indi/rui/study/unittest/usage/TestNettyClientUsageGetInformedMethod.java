@@ -26,7 +26,11 @@ import java.util.Map;
 @Slf4j
 public class TestNettyClientUsageGetInformedMethod {
 
-    private static final String address = "Http://127.0.0.1:8040";
+//    private static final String address = "http://127.0.0.1:8040";
+    private static final String address = "http://10.253.0.252:8080";
+
+    private static final String username = "yuxd";
+    private static final String password = "1";
 
     public static void main(String[] args) throws Exception {
         // 获取通知方式
@@ -48,7 +52,7 @@ public class TestNettyClientUsageGetInformedMethod {
 
     private static List<NotifyTypeVO> get() throws Exception {
         // 登录用户
-        String xAuthToken = MkLoginHelper.login("yaowr", "1");
+        String xAuthToken = MkLoginHelper.login(address, username, password);
         // 拉取来源系统和模块
         String url = address + "/data/sys-notify/config/getInformedMethod";
         HttpHeaders httpHeaders = new DefaultHttpHeaders(true);
@@ -62,10 +66,10 @@ public class TestNettyClientUsageGetInformedMethod {
 
     private static void save(List<NotifyTypeVO> notifyTypes) throws Exception {
         // 登录用户
-        String xAuthToken = MkLoginHelper.login("yaowr", "1");
+        String xAuthToken = MkLoginHelper.login(address, username, password);
         // 保存来源系统和模块
         String url = address + "/data/sys-notify/config/saveInformedMethod";
-        Map<String,String> httpHeaders = new HashMap<>();
+        Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", xAuthToken);
         JSONObject body = new JSONObject();
         body.put("notifyTypes", notifyTypes);

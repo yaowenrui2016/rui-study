@@ -1,5 +1,8 @@
 package indi.rui.study.unittest.support;
 
+import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.TypeReference;
+import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.netty.HttpClient;
 import indi.rui.study.unittest.netty.HttpResult;
 import indi.rui.study.unittest.util.FileUtils;
@@ -32,6 +35,17 @@ public class MkLoginHelper {
      * @return X-Auth-Token
      */
     public static String login(String username, String password) {
+        return login(ADDRESS, username, password);
+    }
+
+    /**
+     * 登录，返回X-Auth-Token
+     *
+     * @param username
+     * @param password
+     * @return X-Auth-Token
+     */
+    public static String login(String address, String username, String password) {
         // 密码加密处理
         String pubKey = FileUtils.readFileToString(
                 Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
@@ -40,19 +54,39 @@ public class MkLoginHelper {
         // 请求地址
         String url = null;
         String xAuthToken = null;
+        boolean success = false;
+        String errorMsg = null;
         try {
-            url = ADDRESS + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
+            url = address + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
             HttpResult httpResult = HttpClient.post(url, null, null);
             if (Integer.valueOf(200).equals(httpResult.getStatus())) {
-                List<String> cookies = httpResult.getHeaders().get("Set-Cookie");
-                for (String cookie : cookies) {
-                    if (cookie.startsWith("X-AUTH-TOKEN")) {
-                        xAuthToken = cookie.substring(cookie.indexOf("=") + 1, cookie.indexOf(";"));
+                MkResponse<JSONObject> mkResponse = JSONObject.parseObject(httpResult.getContent(),
+                        new TypeReference<MkResponse<JSONObject>>() {
+                        });
+                if (mkResponse.isSuccess()) {
+                    List<String> cookies = httpResult.getHeaders().get("Set-Cookie");
+                    for (String cookie : cookies) {
+                        if (cookie.startsWith("X-AUTH-TOKEN")) {
+                            xAuthToken = cookie.substring(cookie.indexOf("=") + 1, cookie.indexOf(";"));
+                        }
                     }
+                    success = true;
+                } else {
+                    errorMsg = mkResponse.getMsg();
                 }
+            } else {
+                errorMsg = httpResult.getStatus().toString();
             }
         } catch (Exception e) {
-            log.error("Login exception! url={}", url, e);
+            Throwable thr = e;
+            while (thr.getCause() != null) {
+                thr = thr.getCause();
+            }
+            errorMsg = thr.getMessage();
+        }
+
+        if (!success) {
+            throw new RuntimeException("[" + username + "] at [" + address + "] login failed: " + errorMsg);
         }
         return xAuthToken;
     }
