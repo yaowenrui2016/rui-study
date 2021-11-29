@@ -1,0 +1,15 @@
+{
+  "subject": "sequentialSendAndDone测试消息",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "***",
+  "entityName": "seq",
+  "entityKey": "***",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ]
+}

@@ -47,4 +47,11 @@ public class FileUtils {
         String sendJson = FileUtils.readFileToString(filePath, "utf-8");
         return JSONObject.parseObject(sendJson);
     }
+
+    public static JSONObject loadJSON(String filename, Class clazz) {
+        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
+                "json/" + clazz.getSimpleName() + "/" + filename)).getFile();
+        String sendJson = FileUtils.readFileToString(filePath, "utf-8");
+        return JSONObject.parseObject(sendJson);
+    }
 }
