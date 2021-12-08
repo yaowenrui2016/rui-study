@@ -1,0 +1,7 @@
+{
+  "notifyType": "ekpv12,email,kkTodo,sms,todo,yuanbao",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "1",
+  "entityName": "TestNotifySendOrDoneMultiTypeAndMonitorOriginal"
+}

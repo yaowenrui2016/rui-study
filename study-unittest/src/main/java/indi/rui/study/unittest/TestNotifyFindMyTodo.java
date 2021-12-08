@@ -3,6 +3,7 @@ package indi.rui.study.unittest;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.NotifyTodo;
 import indi.rui.study.unittest.dto.QueryResult;
@@ -88,16 +89,17 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
     public String monitor() {
         login("yaowr", "1");
         List<NotifyTodo> todos = findMyTodo();
-        StringBuffer buf = new StringBuffer();
-        for (NotifyTodo todo : todos) {
-            buf.append("[subject=").append(todo.getFdSubject())
-                    .append(", entityKey=").append(todo.getFdEntityKey())
-                    .append(", snid=").append(todo.getFdSnid())
-                    .append(", todoType=").append(todo.getFdType())
-                    .append(", todoLevel=").append(todo.getFdLevel())
-                    .append("]\n");
-        }
-        return buf.toString();
+//        StringBuffer buf = new StringBuffer();
+//        for (NotifyTodo todo : todos) {
+//            buf.append("[subject=").append(todo.getFdSubject())
+//                    .append(", entityKey=").append(todo.getFdEntityKey())
+//                    .append(", snid=").append(todo.getFdSnid())
+//                    .append(", todoType=").append(todo.getFdType())
+//                    .append(", todoLevel=").append(todo.getFdLevel())
+//                    .append("]\n");
+//        }
+//        return buf.toString();
+        return JSONObject.toJSONString(todos, SerializerFeature.PrettyFormat);
     }
 
     private void login(String username, String password) {
@@ -129,7 +131,7 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         // 构造查询条件
         JSONObject body = new JSONObject();
         body.put("offset", 0);
-        body.put("pageSize", 1000);
+        body.put("pageSize", 5);
         Map<String, Object> conditions = new HashMap<>();
         body.put("conditions", conditions);
         ((Map) body.computeIfAbsent("sorts", (k) -> new HashMap<>()))
