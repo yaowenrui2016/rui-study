@@ -1,0 +1,14 @@
+{
+  "subject": "Mobile Link Find By Person",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "0",
+  "entityName": "mobile.link.find.by.person",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ]
+}

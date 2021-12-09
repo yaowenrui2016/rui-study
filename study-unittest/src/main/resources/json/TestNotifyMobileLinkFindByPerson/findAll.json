@@ -1,0 +1,10 @@
+{
+  "offset": 0,
+  "pageSize": 10,
+  "sorts": {
+    "fdCreateTime": "DESC"
+  },
+  "conditions": {
+    "fdOwnerId": "${userId}"
+  }
+}

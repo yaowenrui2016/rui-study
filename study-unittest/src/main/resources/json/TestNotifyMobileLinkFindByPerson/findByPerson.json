@@ -1,0 +1,11 @@
+{
+  "todoOrDone": "todo",
+  "orgProperty": "fdLoginName",
+  "sorts": {
+    "fdCreateTime": "DESC"
+  },
+  "pageSize": 10,
+  "targets": [
+    "yaowr"
+  ]
+}

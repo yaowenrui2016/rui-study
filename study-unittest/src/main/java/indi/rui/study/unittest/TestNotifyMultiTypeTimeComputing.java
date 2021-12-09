@@ -86,8 +86,7 @@ public class TestNotifyMultiTypeTimeComputing {
         if (!"send".equalsIgnoreCase(method)) {
             filename = "done.json";
         }
-        JSONObject json = FileUtils.loadJSON(filename,
-                TestNotifyMultiTypeTimeComputing.class);
+        JSONObject json = FileUtils.loadJSON(filename, TestNotifyMultiTypeTimeComputing.class);
         if ("send".equalsIgnoreCase(method)) {
             json.put("entityKey", System.currentTimeMillis());
         }
