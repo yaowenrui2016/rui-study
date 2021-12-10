@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import indi.rui.study.unittest.dto.MkNotifyTodo;
 import indi.rui.study.unittest.dto.MkResponse;
-import indi.rui.study.unittest.dto.NotifyTodo;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.interf.MonitorTestPlan;
@@ -88,7 +88,7 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
     @Override
     public String monitor() {
         login("yaowr", "1");
-        List<NotifyTodo> todos = findMyTodo();
+        List<MkNotifyTodo> todos = findMyTodo();
 //        StringBuffer buf = new StringBuffer();
 //        for (NotifyTodo todo : todos) {
 //            buf.append("[subject=").append(todo.getFdSubject())
@@ -125,7 +125,7 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         }
     }
 
-    public List<NotifyTodo> findMyTodo() {
+    public List<MkNotifyTodo> findMyTodo() {
         // 请求地址
         String url = address + "/data/sys-notify/sysNotifyTodo/my/list";
         // 构造查询条件
@@ -137,11 +137,11 @@ public class TestNotifyFindMyTodo implements MonitorTestPlan {
         ((Map) body.computeIfAbsent("sorts", (k) -> new HashMap<>()))
                 .put("fdCreateTime", "DESC");
         String response = null;
-        List<NotifyTodo> rtnList = Collections.emptyList();
+        List<MkNotifyTodo> rtnList = Collections.emptyList();
         try {
             response = HttpClientUtils.httpPost(url, body, null, cookieStoreThreadLocal.get());
-            MkResponse<QueryResult<NotifyTodo>> mkResponse = JSON.parseObject(response,
-                    new TypeReference<MkResponse<QueryResult<NotifyTodo>>>() {
+            MkResponse<QueryResult<MkNotifyTodo>> mkResponse = JSON.parseObject(response,
+                    new TypeReference<MkResponse<QueryResult<MkNotifyTodo>>>() {
                     });
             if (mkResponse.isSuccess()) {
                 rtnList = mkResponse.getData().getContent();

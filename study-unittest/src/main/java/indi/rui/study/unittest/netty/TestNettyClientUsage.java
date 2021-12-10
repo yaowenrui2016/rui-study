@@ -1,4 +1,4 @@
-package indi.rui.study.unittest.usage;
+package indi.rui.study.unittest.netty;
 
 import com.alibaba.fastjson.JSON;
 import indi.rui.study.unittest.netty.HttpClient;

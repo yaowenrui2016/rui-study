@@ -1,0 +1,15 @@
+{
+  "subject": "Test Notify Todo's New Field 'queryType'",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "0",
+  "entityName": "test.todo.new.field.queryType",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ],
+  "queryType": 1
+}

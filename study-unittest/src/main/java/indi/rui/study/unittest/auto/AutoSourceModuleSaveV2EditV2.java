@@ -1,4 +1,4 @@
-package indi.rui.study.unittest;
+package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
  * @create: 2021-10-22
  */
 @Slf4j
-public class TestNotifySourceModuleSaveV2EditV2 {
+public class AutoSourceModuleSaveV2EditV2 {
 
 //    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
 //    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";

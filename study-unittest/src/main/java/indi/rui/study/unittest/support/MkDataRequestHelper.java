@@ -24,16 +24,23 @@ public class MkDataRequestHelper {
 
     private final MkLoginResult loginResult;
 
+    private final String address;
+
     public MkDataRequestHelper(String address, String username, String password) {
+        this.address = address;
         // 登录用户
         this.loginResult = MkLoginHelper.doLogin(address, username, password);
     }
 
     // ====================== public method =======================
 
-    public <T> MkResponse<T> callData(String url, JSONObject json, Class<T> rtnClass) {
+    public MkResponse<?> callData(String path, JSONObject json) {
+        return callData(path, json, Void.class);
+    }
+
+    public <T> MkResponse<T> callData(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<T> mkResponse = null;
-        String httpResult = CallData(url, json);
+        String httpResult = CallDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<T>>(rtnClass) {
@@ -42,9 +49,9 @@ public class MkDataRequestHelper {
         return mkResponse;
     }
 
-    public <T> MkResponse<List<T>> callDataForList(String url, JSONObject json, Class<T> rtnClass) {
+    public <T> MkResponse<List<T>> callDataForList(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<List<T>> mkResponse = null;
-        String httpResult = CallData(url, json);
+        String httpResult = CallDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<List<T>>>(rtnClass) {
@@ -54,9 +61,9 @@ public class MkDataRequestHelper {
 
     }
 
-    public <T> MkResponse<QueryResult<T>> callDataForMkQueryResult(String url, JSONObject json, Class<T> rtnClass) {
+    public <T> MkResponse<QueryResult<T>> callDataForMkQueryResult(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<QueryResult<T>> mkResponse = null;
-        String httpResult = CallData(url, json);
+        String httpResult = CallDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<QueryResult<T>>>(rtnClass) {
@@ -66,18 +73,18 @@ public class MkDataRequestHelper {
 
     }
 
-    public String CallData(String url, JSONObject json) {
+    public String CallDataForString(String path, JSONObject body) {
+        String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         httpHeaders.put("content-type", "application/json;charset=utf-8");
         String httpResult = null;
         try {
-            httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
+            httpResult = HttpClientUtils.httpPost(url, body, httpHeaders);
         } catch (Exception e) {
-            log.error("call data request error! url={}, json={}, response={}",
+            log.error("Call mk data request error! [url={}, body={}]",
                     url,
-                    json.toString(SerializerFeature.PrettyFormat),
-                    httpResult,
+                    body != null ? body.toString(SerializerFeature.PrettyFormat) : null,
                     e);
         }
         return httpResult;

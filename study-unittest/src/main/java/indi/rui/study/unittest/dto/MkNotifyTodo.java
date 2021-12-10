@@ -11,7 +11,7 @@ import java.util.Date;
  */
 @Getter
 @Setter
-public class NotifyTodo {
+public class MkNotifyTodo {
 
     /**
      * 发送消息的唯一ID
@@ -182,4 +182,11 @@ public class NotifyTodo {
      * 主文档信息
      */
     private String fdDocInfo;
+
+    /**
+     * 用于查询的类型区分（针对类似于金科特殊场景，把待阅展示到待办页面）
+     * 1-待办
+     * 2-待阅
+     */
+    private Integer fdQueryType;
 }
