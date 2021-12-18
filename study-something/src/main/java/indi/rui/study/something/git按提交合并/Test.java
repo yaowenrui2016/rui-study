@@ -7,6 +7,11 @@ package indi.rui.study.something.git按提交合并;
 public class Test {
     public static void main(String[] args) {
         a();
+        b();
+    }
+
+    private static void b() {
+
     }
 
     private static void a() {
