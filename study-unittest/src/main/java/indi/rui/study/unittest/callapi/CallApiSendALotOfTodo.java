@@ -1,17 +1,13 @@
 package indi.rui.study.unittest.callapi;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.TypeReference;
 import indi.rui.study.unittest.dto.MkResponse;
+import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
-import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
@@ -25,10 +21,19 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class CallApiSendALotOfTodo {
 
-    private static final String address = "Http://127.0.0.1:8040";
-    private static final String xServiceName = "73456775666d4c416f73776139584a4131432f6847413d3d";
+    private static final int TOTAL = 2;
 
-    private static final int TOTAL = 5000;
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040", "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmoke.ywork.me", "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://mkdev01.ywork.me", "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://10.253.1.18:8080", "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     /**
      * 消息JSON文件路径
@@ -69,16 +74,17 @@ public class CallApiSendALotOfTodo {
             final int idx = i;
             senderPool.execute(() -> {
                 try {
-                    String url = address + "/api/sys-notifybus/sysNotifyComponent/send";
-                    Map<String, String> httpHeaders = new HashMap<>();
-                    httpHeaders.put("X-SERVICE-NAME", xServiceName);
-                    httpHeaders.put("content-type", "application/json;charset=utf-8");
                     JSONObject json = FileUtils.loadJSON(sendJsonPath);
+                    json.put("subject", json.get("subject") + "_" + idx);
                     json.put("entityId", idx);
-                    String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
-                    snidList.add(idx + ": " + JSON.parseObject(httpResult,
-                            new TypeReference<MkResponse<String>>() {
-                            }).getData());
+                    json.put("level", (idx % 3) + 1);
+                    MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
+                            "/api/sys-notifybus/sysNotifyComponent/send", json, String.class);
+                    String snid = null;
+                    if (mkResponse.isSuccess()) {
+                        snid = mkResponse.getData();
+                    }
+                    snidList.add(idx + ": " + snid);
                 } catch (Exception e) {
                     log.error("send exception", e);
                 }

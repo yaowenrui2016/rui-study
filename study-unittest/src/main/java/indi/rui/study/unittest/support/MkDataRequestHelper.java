@@ -58,7 +58,17 @@ public class MkDataRequestHelper {
                     });
         }
         return mkResponse;
+    }
 
+    public  MkResponse<List<?>> callDataForList(String path, JSONObject json) {
+        MkResponse<List<?>> mkResponse = null;
+        String httpResult = CallDataForString(path, json);
+        if (httpResult != null && httpResult.length() > 0) {
+            mkResponse = JSONObject.parseObject(httpResult,
+                    new TypeReference<MkResponse<List<?>>>() {
+                    });
+        }
+        return mkResponse;
     }
 
     public <T> MkResponse<QueryResult<T>> callDataForMkQueryResult(String path, JSONObject json, Class<T> rtnClass) {
@@ -70,7 +80,17 @@ public class MkDataRequestHelper {
                     });
         }
         return mkResponse;
+    }
 
+    public MkResponse<QueryResult<?>> callDataForMkQueryResult(String path, JSONObject json) {
+        MkResponse<QueryResult<?>> mkResponse = null;
+        String httpResult = CallDataForString(path, json);
+        if (httpResult != null && httpResult.length() > 0) {
+            mkResponse = JSONObject.parseObject(httpResult,
+                    new TypeReference<MkResponse<QueryResult<?>>>() {
+                    });
+        }
+        return mkResponse;
     }
 
     public String CallDataForString(String path, JSONObject body) {

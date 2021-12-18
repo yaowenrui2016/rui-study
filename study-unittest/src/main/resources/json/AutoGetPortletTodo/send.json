@@ -1,0 +1,18 @@
+{
+  "subject": "Test Portlet My Todo List Sorts",
+  "notifyType": "todo",
+  "todoType": 1,
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "0",
+  "entityName": "test.todo.new.field.queryType",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr",
+    "yuxd",
+    "yuxd001"
+  ],
+  "queryType": 1
+}

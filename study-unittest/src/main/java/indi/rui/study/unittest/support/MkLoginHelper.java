@@ -5,15 +5,16 @@ import com.alibaba.fastjson.TypeReference;
 import indi.rui.study.unittest.dto.MkLoginResult;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.UserInfo;
-import indi.rui.study.unittest.netty.HttpClient;
-import indi.rui.study.unittest.netty.HttpResult;
 import indi.rui.study.unittest.util.FileUtils;
 import indi.rui.study.unittest.util.Hex;
+import indi.rui.study.unittest.util.HttpClientUtils;
 import indi.rui.study.unittest.util.RsaHelper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.client.CookieStore;
+import org.apache.http.cookie.Cookie;
+import org.apache.http.impl.client.BasicCookieStore;
 
 import java.net.URLEncoder;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -83,17 +84,17 @@ public class MkLoginHelper {
         boolean success = false;
         String errorMsg = null;
         try {
+            CookieStore cookieStore = new BasicCookieStore();
             url = address + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
-            HttpResult httpResult = HttpClient.post(url, null, null);
-            if (Integer.valueOf(200).equals(httpResult.getStatus())) {
-                MkResponse<UserInfo> mkResponse = JSONObject.parseObject(httpResult.getContent(),
+            String httpResult = HttpClientUtils.httpPost(url, null, null, cookieStore);
+            if (httpResult != null) {
+                MkResponse<UserInfo> mkResponse = JSONObject.parseObject(httpResult,
                         new TypeReference<MkResponse<UserInfo>>() {
                         });
                 if (mkResponse.isSuccess()) {
-                    List<String> cookies = httpResult.getHeaders().get("Set-Cookie");
-                    for (String cookie : cookies) {
-                        if (cookie.startsWith("X-AUTH-TOKEN")) {
-                            xAuthToken = cookie.substring(cookie.indexOf("=") + 1, cookie.indexOf(";"));
+                    for (Cookie cookie : cookieStore.getCookies()) {
+                        if ("X-AUTH-TOKEN".equalsIgnoreCase(cookie.getName())) {
+                            xAuthToken = cookie.getValue();
                             success = true;
                             break;
                         }
@@ -102,8 +103,6 @@ public class MkLoginHelper {
                 } else {
                     errorMsg = mkResponse.getMsg();
                 }
-            } else {
-                errorMsg = httpResult.getStatus().toString();
             }
         } catch (Exception e) {
             Throwable thr = e;
@@ -114,7 +113,8 @@ public class MkLoginHelper {
         }
 
         if (!success) {
-            throw new RuntimeException("[" + username + "] at [" + address + "] login failed: " + errorMsg + "\nURL: " + url);
+            throw new RuntimeException("username=" + username + ", password=" + password +
+                    ", url=" + url + ", errMsg=" + errorMsg);
         }
         // 返回结果
         MkLoginResult result = new MkLoginResult();

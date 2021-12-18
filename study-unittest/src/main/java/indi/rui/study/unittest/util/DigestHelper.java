@@ -25,4 +25,8 @@ public class DigestHelper {
         String md5Str = new BigInteger(1, digest).toString(16);
         return md5Str;
     }
+
+    public static void main(String[] args) {
+        System.err.println(getMd5("Password_1"));
+    }
 }
