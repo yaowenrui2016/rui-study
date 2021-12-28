@@ -1,7 +1,7 @@
 {
-  "subject": "待阅重复测试",
-  "notifyType": "email",
-  "todoType": 2,
+  "subject": "Send A Lot Of Todo!",
+  "notifyType": "todo",
+  "todoType": 1,
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",
@@ -11,6 +11,9 @@
   "entityKey": "***",
   "orgProperty": "fdLoginName",
   "targets": [
-    "yuxd"
+    "yuxd",
+    "yaowr",
+    "laow",
+    "cuipx"
   ]
 }

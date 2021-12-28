@@ -6,6 +6,7 @@ import org.apache.http.client.CookieStore;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.config.CookieSpecs;
 import org.apache.http.client.config.RequestConfig;
+import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLContextBuilder;
@@ -29,6 +30,38 @@ import java.util.Map;
  */
 @Slf4j
 public class HttpClientUtils {
+
+    public static String httpGet(String url, Map<String, String> header)
+            throws Exception {
+        String response;
+        CloseableHttpClient httpClient = HttpClients.createDefault();
+        ResponseHandler<String> responseHandler = new BasicResponseHandler();
+        try {
+            HttpGet httpGet = new HttpGet(url);
+            httpGet.setHeader("Content-type", "application/json");
+            RequestConfig requestConfig = RequestConfig.custom()
+                    .setSocketTimeout(60000)
+                    .setConnectTimeout(60000)
+                    .setCookieSpec(CookieSpecs.STANDARD)
+                    .build();
+            httpGet.setConfig(requestConfig);
+            if (header != null) {
+                Iterator h = header.entrySet().iterator();
+                while (h.hasNext()) {
+                    Map.Entry<String, String> entry = (Map.Entry) h.next();
+                    httpGet.addHeader(entry.getKey(), entry.getValue());
+                }
+            }
+            response = httpClient.execute(httpGet, responseHandler);
+        } finally {
+            try {
+                httpClient.close();
+            } catch (IOException e) {
+                log.error("Close Failed", e);
+            }
+        }
+        return response;
+    }
 
     public static String httpPost(String url, JSON body, Map<String, String> header)
             throws Exception {

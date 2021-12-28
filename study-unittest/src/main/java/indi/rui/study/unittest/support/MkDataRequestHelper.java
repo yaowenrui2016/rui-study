@@ -6,6 +6,7 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkLoginResult;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
+import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
@@ -34,6 +35,10 @@ public class MkDataRequestHelper {
 
     // ====================== public method =======================
 
+    public UserInfo getUserInfo() {
+        return this.loginResult.getUserInfo();
+    }
+
     public MkResponse<?> callData(String path, JSONObject json) {
         return callData(path, json, Void.class);
     }
@@ -60,7 +65,7 @@ public class MkDataRequestHelper {
         return mkResponse;
     }
 
-    public  MkResponse<List<?>> callDataForList(String path, JSONObject json) {
+    public MkResponse<List<?>> callDataForList(String path, JSONObject json) {
         MkResponse<List<?>> mkResponse = null;
         String httpResult = CallDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
@@ -93,7 +98,20 @@ public class MkDataRequestHelper {
         return mkResponse;
     }
 
-    public String CallDataForString(String path, JSONObject body) {
+    public MkResponse<JSONObject> CallDataForJson(String path, JSONObject json) {
+        MkResponse<JSONObject> mkResponse = null;
+        String httpResult = CallDataForString(path, json);
+        if (httpResult != null && httpResult.length() > 0) {
+            mkResponse = JSONObject.parseObject(httpResult,
+                    new TypeReference<MkResponse<JSONObject>>() {
+                    });
+        }
+        return mkResponse;
+    }
+
+    // =================== 私有方法 ================== //
+
+    private String CallDataForString(String path, JSONObject body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());

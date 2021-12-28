@@ -17,6 +17,11 @@ import java.util.Map;
 @Slf4j
 public class MkApiRequestHelper {
 
+    public enum HttpMethod {
+        GET,
+        POST;
+    }
+
     private final String address;
 
     private final String xServiceName;
@@ -51,13 +56,24 @@ public class MkApiRequestHelper {
     }
 
     public String callApi(String path, JSONObject body) {
+        return callApi(HttpMethod.POST, path, body);
+    }
+
+    public String callApi(HttpMethod httpMethod, String path, JSONObject body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-SERVICE-NAME", xServiceName);
         httpHeaders.put("content-type", "application/json;charset=utf-8");
         String httpResult = null;
         try {
-            httpResult = HttpClientUtils.httpPost(url, body, httpHeaders);
+            switch (httpMethod) {
+                case GET:
+                    httpResult = HttpClientUtils.httpGet(url, httpHeaders);
+                    break;
+                case POST:
+                    httpResult = HttpClientUtils.httpPost(url, body, httpHeaders);
+                    break;
+            }
         } catch (Exception e) {
             log.error("Call mk api request error! [url={}, body={}]",
                     url,

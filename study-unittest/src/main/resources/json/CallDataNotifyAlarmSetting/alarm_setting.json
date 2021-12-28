@@ -1,0 +1,18 @@
+{
+  "email":false,
+  "enable":true,
+  "majorAlarmPercentage":80,
+  "minorAlarmPercentage":30,
+  "showMinorAlarm":true,
+  "sms":true,
+  "sourceApp":[
+    {
+      "fdId":"MKPaaS",
+      "fdName":"MKPaaS"
+    },
+    {
+      "fdId":"origin-ekp",
+      "fdName":"origin-ekp"
+    }
+  ]
+}

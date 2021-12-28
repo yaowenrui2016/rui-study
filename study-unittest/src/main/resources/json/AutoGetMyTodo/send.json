@@ -1,6 +1,6 @@
 {
   "subject": "Test Send Todo And Query My Todo List",
-  "notifyType": "todo",
+  "notifyType": "todo,kkTodo",
   "todoType": 1,
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
@@ -10,7 +10,9 @@
   "entityName": "test.todo.new.field.queryType",
   "orgProperty": "fdLoginName",
   "targets": [
-    "yaowr"
+    "yaowr",
+    "yuxd",
+    ""
   ],
   "queryType": 1
 }

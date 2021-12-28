@@ -26,9 +26,14 @@ public class AutoGetPortletTodo {
 //            "http://127.0.0.1:8040",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkdev02.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd001", "1");
+            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://mksmoke.ywork.me",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -38,8 +43,9 @@ public class AutoGetPortletTodo {
     private static final Random RANDOM = new Random(System.currentTimeMillis());
 
     public static void main(String[] args) {
-        String snid = sendTodoRPC();
-        getPortletTodo(snid);
+//        String snid = sendTodoRPC();
+//        getTodoForAwait(snid);
+        getPortletTodo();
     }
 
     private static String sendTodoRPC() {
@@ -56,7 +62,7 @@ public class AutoGetPortletTodo {
         return mkResponse.getData();
     }
 
-    private static void getPortletTodo(String snid) {
+    private static void getTodoForAwait(String snid) {
         long beginTime = System.currentTimeMillis();
         boolean timeout;
         List<MkNotifyTodo> content;
@@ -69,13 +75,16 @@ public class AutoGetPortletTodo {
             throw new RuntimeException("Query todo with snid '" + snid + "' found nothing!");
         }
         log.info("Get my todo: {}", JSONObject.toJSONString(content.get(0), SerializerFeature.PrettyFormat));
+    }
+
+    private static void getPortletTodo() {
         // 查询我的待办列表
         JSONObject json = new JSONObject();
         json.put("rowSize", 5);
         json.put("sorts", "fdCreateTime");
 //        json.put("sorts", "fdLevel");
-        json.put("direction", "DESC");
-//        json.put("direction", "ASC");
+//        json.put("direction", "DESC");
+        json.put("direction", "ASC");
         MkResponse<List<JSONObject>> mkResponse = mkDataRequestHelper.callDataForList(
                 "/data/sys-notify/portlet/todo/list", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {
@@ -104,6 +113,7 @@ public class AutoGetPortletTodo {
         JSONObject json = new JSONObject();
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent("conditions", (k) -> new HashMap<>());
         conditions.put("fdSnid", snid);
+        json.put("count", false);
         MkResponse<QueryResult<MkNotifyTodo>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTodo/my/list", json, MkNotifyTodo.class);
         if (!mkResponse.isSuccess()) {
