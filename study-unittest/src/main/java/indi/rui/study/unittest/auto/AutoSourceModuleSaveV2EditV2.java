@@ -25,7 +25,14 @@ public class AutoSourceModuleSaveV2EditV2 {
 //    private static final String ADDRESS = "http://192.168.51.202:8050";
 //    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String ADDRESS = "http://localhost:8040";
+//    private static final String ADDRESS = "http://localhost:8040";
+//    private static MkDataRequestHelper mkDataRequestHelper =
+//            new MkDataRequestHelper(ADDRESS, "yaowr", "1");
+//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+
+    private static final String ADDRESS = "http://mksmoke.ywork.me";
+    private static MkDataRequestHelper mkDataRequestHelper =
+            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
     private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
 //    private static final String ADDRESS = "https://p.landray.com.cn";
@@ -39,9 +46,6 @@ public class AutoSourceModuleSaveV2EditV2 {
 
     private static final String MODULE_NAME_PREFIX = "AutoTest-MkNotifyModule-";
     private static final String MODULE_CODE_PREFIX = "M";
-
-    private static MkDataRequestHelper mkDataRequestHelper =
-            new MkDataRequestHelper(ADDRESS, "yaowr", "1");
 
     static {
         // 清理历史数据
@@ -86,7 +90,17 @@ public class AutoSourceModuleSaveV2EditV2 {
         // 用例7.移除关联系统
         modifyModuleAssociatedAppRPC(moduleCode, appIdsNo1);
         checkModule(moduleCode, newModuleName, Boolean.TRUE, appIdsNo1);
+
+        // 用例8.新增带有domain的模块
+        String moduleNameWithDomain = MODULE_NAME_PREFIX + "Domain" + 0;
+        String moduleCodeWithDomain = MODULE_CODE_PREFIX + "Domain" + 0;
+        String domain = "oa.landray.com";
+        addModuleRPC(moduleNameWithDomain, moduleCodeWithDomain, domain, appIdsNo1);
+        checkModuleWithDomain(moduleCodeWithDomain, domain);
+
+        log.info("All passed!");
     }
+
     // ================== business method ================= //
 
     private static void cleanHistory(int fromCodeNo, int toCodeNo) {
@@ -161,6 +175,17 @@ public class AutoSourceModuleSaveV2EditV2 {
         }
     }
 
+    private static void checkModuleWithDomain(String moduleCode, String domain) {
+        // 获取模块
+        MkNotifySourceModuleVO moduleVO = getModuleByCodeRPC(moduleCode);
+        // 检查domain
+        if (!domain.equals(moduleVO.getFdDomain())) {
+            throw new RuntimeException("Check module domain error! [expect=" + domain
+                    + ", real=" + moduleVO.getFdDomain()
+                    + "]");
+        }
+    }
+
     private static void disable(String moduleCode) {
         enableOrDisableRPC("disable", moduleCode);
     }
@@ -188,11 +213,11 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static void addAppRPC(String name, String code) {
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceApp/add";
         JSONObject json = new JSONObject();
         json.put("fdName", name);
         json.put("fdCode", code);
-        MkResponse<Void> mkResponse = mkDataRequestHelper.callData(url, json, Void.class);
+        MkResponse<Void> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifySourceApp/add", json, Void.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Add app failure! [name=" + name
                     + ", code=" + code +
@@ -201,7 +226,7 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static List<MkNotifySourceAppVO> getAppByCodeRPC(List<String> appCodes) {
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceApp/list";
+        String url = "/data/sys-notify/sysNotifySourceApp/list";
         JSONObject json = new JSONObject();
         json.put("columns", Arrays.asList("fdId", "fdName", "fdCode"));
         json.put("pageSize", 1000);
@@ -217,10 +242,15 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static void addModuleRPC(String name, String code, List<String> appIds) {
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceModule/addV2";
+        addModuleRPC(name, code, null, appIds);
+    }
+
+    private static void addModuleRPC(String name, String code, String domain, List<String> appIds) {
+        String url = "/data/sys-notify/sysNotifySourceModule/addV2";
         JSONObject json = new JSONObject();
         json.put("fdName", name);
         json.put("fdCode", code);
+        json.put("fdDomain", domain);
         json.put("fdSourceApps", appIds);
         MkResponse<Void> mkResponse = mkDataRequestHelper.callData(url, json, Void.class);
         if (!mkResponse.isSuccess()) {
@@ -236,7 +266,7 @@ public class AutoSourceModuleSaveV2EditV2 {
         // 获取模块ID
         MkNotifySourceModuleVO moduleVO = getModuleByCodeRPC(moduleCode);
         // 请求地址
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceModule/" + method;
+        String url = "/data/sys-notify/sysNotifySourceModule/" + method;
         JSONObject json = new JSONObject();
         json.put("fdId", moduleVO.getFdId());
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
@@ -251,7 +281,7 @@ public class AutoSourceModuleSaveV2EditV2 {
     private static void modifyModuleNameRPC(String moduleCode, String newModuleName) {
         MkNotifySourceModuleVO moduleVO = getModuleByCodeRPC(moduleCode);
         // 请求地址
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceModule/updateV2";
+        String url = "/data/sys-notify/sysNotifySourceModule/updateV2";
         JSONObject json = new JSONObject();
         json.put("fdId", moduleVO.getFdId());
         // 更新模块修改名称
@@ -268,7 +298,7 @@ public class AutoSourceModuleSaveV2EditV2 {
     private static void modifyModuleAssociatedAppRPC(String moduleCode, List<String> appIds) {
         MkNotifySourceModuleVO moduleVO = getModuleByCodeRPC(moduleCode);
         // 请求地址
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceModule/updateV2";
+        String url = "/data/sys-notify/sysNotifySourceModule/updateV2";
         JSONObject json = new JSONObject();
         json.put("fdId", moduleVO.getFdId());
         json.put("fdName", moduleVO.getFdName());
@@ -283,9 +313,9 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static MkNotifySourceModuleVO getModuleByCodeRPC(String moduleCode) {
-        String url = ADDRESS + "/data/sys-notify/sysNotifySourceModule/list";
+        String url = "/data/sys-notify/sysNotifySourceModule/list";
         JSONObject json = new JSONObject();
-        json.put("columns", Arrays.asList("fdId", "fdName", "fdCode", "fdEnabled", "fdSourceId", "fdSourceApp"));
+        json.put("columns", Arrays.asList("fdId", "fdName", "fdCode", "fdDomain", "fdEnabled", "fdSourceId", "fdSourceApp"));
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent("conditions", (k) -> new HashMap<>());
         conditions.put("fdCode", moduleCode);
         json.put("pageSize", 1000);

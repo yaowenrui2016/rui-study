@@ -18,11 +18,11 @@ import java.util.List;
 @Slf4j
 public class AutoGetUserRoles {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://127.0.0.1:8040", "secadmin", "Password_1");
@@ -36,11 +36,11 @@ public class AutoGetUserRoles {
 //            "http://mkdev02.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mksmoke.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmoke.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
         UserInfo userInfo = mkDataRequestHelper.getUserInfo();

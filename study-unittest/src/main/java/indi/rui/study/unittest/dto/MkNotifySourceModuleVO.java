@@ -28,6 +28,11 @@ public class MkNotifySourceModuleVO {
     private String fdCode;
 
     /**
+     * 域名
+     */
+    private String fdDomain;
+
+    /**
      * 是否预置
      */
     private Boolean fdIsPreset;
