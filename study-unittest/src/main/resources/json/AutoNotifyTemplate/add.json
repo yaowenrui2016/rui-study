@@ -1,0 +1,6 @@
+{
+  "fdName": "Yao Test",
+  "fdCode": "TMP_",
+  "fdType": "HTML",
+  "fdHtml": "<div>hello ${entityName}<div>"
+}
