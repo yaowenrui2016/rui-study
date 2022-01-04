@@ -20,32 +20,36 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AutoNotifyTemplate {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
 
     public static void main(String[] args) {
-        addTemplateRPC();
+        String name = "Yao Test " + 0;
+        String code = "TMP_" + 0;
+        addTemplateRPC(name, code);
+        addTemplateRPC(name, code);
         List<JSONObject> temps = findTemplateRPC();
         for (String id : temps.stream()
                 .map(jsonObj -> (String) jsonObj.get("fdId"))
                 .collect(Collectors.toList())) {
             getTemplateRPC(id);
         }
-        for (String code : temps.stream()
+        for (String tmpCode : temps.stream()
                 .map(jsonObj -> (String) jsonObj.get("fdCode"))
                 .collect(Collectors.toList())) {
-            findByCodeRPC(code);
+            findByCodeRPC(tmpCode);
         }
+        findAvailable();
     }
 
-    private static void addTemplateRPC() {
+    private static void addTemplateRPC(String name, String code) {
         // 新建模板
         JSONObject json = FileUtils.loadJSON("add.json", AutoNotifyTemplate.class);
-        json.put("fdCode", (String) json.get("fdCode") + System.currentTimeMillis());
-        json.put("fdName", (String) json.get("fdName") + " " + System.currentTimeMillis());
+        json.put("fdCode", name);
+        json.put("fdName", code);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {
@@ -70,6 +74,16 @@ public class AutoNotifyTemplate {
         }
         log.info("Find template: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
         return mkResponse.getData().getContent();
+    }
+
+    private static void findAvailable() {
+        // 查询模板
+        MkResponse<List<JSONObject>> mkResponse = mkDataRequestHelper.callDataForList(
+                "/data/sys-notify/sysNotifyTemplate/findAvailable", null, JSONObject.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Find template error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("Find available template: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
     }
 
     private static void getTemplateRPC(String id) {

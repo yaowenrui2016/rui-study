@@ -2,9 +2,10 @@ package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.*;
+import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
-import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
@@ -19,24 +20,17 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AutoSourceModuleSaveV2EditV2 {
 
-//    private static final String ADDRESS = "https://bipnew-sit.countrygarden.com.cn";
-//    private static final String X_SERVICE_NAME = "43534c48566d654e5031674d355238395259346736673d3d";
+    private static final String ADDRESS = "http://localhost:8040";
+    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+            ADDRESS, "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static final String ADDRESS = "http://192.168.51.202:8050";
-//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
-
-//    private static final String ADDRESS = "http://localhost:8040";
+//    private static final String ADDRESS = "http://mksmoke.ywork.me";
 //    private static MkDataRequestHelper mkDataRequestHelper =
-//            new MkDataRequestHelper(ADDRESS, "yaowr", "1");
+//            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
 //    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
 
-    private static final String ADDRESS = "http://mksmoke.ywork.me";
-    private static MkDataRequestHelper mkDataRequestHelper =
-            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
-    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
-
-//    private static final String ADDRESS = "https://p.landray.com.cn";
-//    private static final String X_SERVICE_NAME = "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d";
 
     private static final int MIN_CODE_NO = 0;
     private static final int MAX_CODE_NO = 20;
@@ -66,20 +60,23 @@ public class AutoSourceModuleSaveV2EditV2 {
         addModuleRPC(moduleName, moduleCode, appIdsNo1);
         checkModule(moduleCode, moduleName, Boolean.TRUE, appIdsNo1);
 
-        // 用例3.禁用模块
+        // 用例3.编辑系统
+        updateApp(addAppNo1FromCodeNo);
+
+        // 用例4.禁用模块
         disable(moduleCode);
         checkModule(moduleCode, moduleName, Boolean.FALSE, appIdsNo1);
 
-        // 用例4.启用模块
+        // 用例5.启用模块
         enable(moduleCode);
         checkModule(moduleCode, moduleName, Boolean.TRUE, appIdsNo1);
 
-        // 用例5.修改模块名称
+        // 用例6.修改模块名称
         String newModuleName = MODULE_NAME_PREFIX + "XX" + 0;
         modifyModuleNameRPC(moduleCode, newModuleName);
         checkModule(moduleCode, newModuleName, Boolean.TRUE, appIdsNo1);
 
-        // 用例6.增加关联系统
+        // 用例7.增加关联系统
         int addAppNo2FromCodeNo = 10, addAppNo2ToCodeNo = 19;
         List<SimpleDTO> addAppsNo2 = addApp(addAppNo2FromCodeNo, addAppNo2ToCodeNo);
         addAppsNo2.addAll(addAppsNo1);
@@ -87,16 +84,28 @@ public class AutoSourceModuleSaveV2EditV2 {
         modifyModuleAssociatedAppRPC(moduleCode, appIdsNo2);
         checkModule(moduleCode, newModuleName, Boolean.TRUE, appIdsNo2);
 
-        // 用例7.移除关联系统
+        // 用例8.移除关联系统
         modifyModuleAssociatedAppRPC(moduleCode, appIdsNo1);
         checkModule(moduleCode, newModuleName, Boolean.TRUE, appIdsNo1);
 
-        // 用例8.新增带有domain的模块
+        // 用例9.新增带有domain的模块
         String moduleNameWithDomain = MODULE_NAME_PREFIX + "Domain" + 0;
         String moduleCodeWithDomain = MODULE_CODE_PREFIX + "Domain" + 0;
         String domain = "oa.landray.com";
         addModuleRPC(moduleNameWithDomain, moduleCodeWithDomain, domain, appIdsNo1);
         checkModuleWithDomain(moduleCodeWithDomain, domain);
+
+        // 用例10.新增重复domain的模块
+        try {
+            moduleNameWithDomain = MODULE_NAME_PREFIX + "Domain" + 1;
+            moduleCodeWithDomain = MODULE_CODE_PREFIX + "Domain" + 1;
+            addModuleRPC(moduleNameWithDomain, moduleCodeWithDomain, domain, appIdsNo1);
+        } catch (Exception e) {
+
+        }
+
+        // 用例11.根据domain查询
+        findByDomainRPC(domain);
 
         log.info("All passed!");
     }
@@ -128,6 +137,28 @@ public class AutoSourceModuleSaveV2EditV2 {
         return appVOs.stream()
                 .map((appVO) -> SimpleDTO.of(appVO.getFdId(), appVO.getFdName(), appVO.getFdCode()))
                 .collect(Collectors.toList());
+    }
+
+    private static void updateApp(int codeNo) {
+        String code = APP_CODE_PREFIX + codeNo;
+        MkNotifySourceAppVO appVO = findAppByCode(code);
+        String newName = appVO.getFdName() + "_updated";
+        appVO.setFdName(newName);
+        updateAppByCodeRPC(appVO);
+        MkNotifySourceAppVO appVOAfter = findAppByCode(code);
+        if (!appVOAfter.getFdName().equals(newName)) {
+            throw new RuntimeException("Update app usecase failure![expect="
+                    + newName + ", real="
+                    + appVOAfter.getFdName());
+        }
+    }
+
+    private static MkNotifySourceAppVO findAppByCode(String code) {
+        List<MkNotifySourceAppVO> appVOs = getAppByCodeRPC(Collections.singletonList(code));
+        if (appVOs == null || appVOs.isEmpty()) {
+            throw new RuntimeException("Query app not found");
+        }
+        return appVOs.get(0);
     }
 
     private static void checkModule(String moduleCode,
@@ -198,18 +229,10 @@ public class AutoSourceModuleSaveV2EditV2 {
     // ==================== RPC method ===================== //
 
     private static void deleteAppRPC(List<String> codes) {
-        // 请求地址
-        String url = ADDRESS + "/api/sys-notify/sysNotifySourceApp/deleteByCode";
         // 请求体
         JSONArray body = new JSONArray();
         body.addAll(codes);
-        // 需要x-service-name请求头验权
-        Map<String, String> header = Collections.singletonMap("x-service-name", X_SERVICE_NAME);
-        try {
-            HttpClientUtils.httpPost(url, body, header);
-        } catch (Exception e) {
-            log.error("Delete app exception! ", e);
-        }
+        mkApiRequestHelper.callApi("/api/sys-notify/sysNotifySourceApp/deleteByCode", body);
     }
 
     private static void addAppRPC(String name, String code) {
@@ -239,6 +262,17 @@ public class AutoSourceModuleSaveV2EditV2 {
             appVOs = mkResponse.getData().getContent();
         }
         return appVOs;
+    }
+
+    private static void updateAppByCodeRPC(MkNotifySourceAppVO appVO) {
+        String url = "/data/sys-notify/sysNotifySourceApp/update";
+        JSONObject json = (JSONObject) JSONObject.toJSON(appVO);
+        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.CallDataForJson(url, json);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Update app failure! [code=" + appVO.getFdCode()
+                    + ", errMsg=" + mkResponse.getMsg()
+                    + "]");
+        }
     }
 
     private static void addModuleRPC(String name, String code, List<String> appIds) {
@@ -332,5 +366,11 @@ public class AutoSourceModuleSaveV2EditV2 {
             throw new RuntimeException("Module with code '" + moduleCode + "' not found! errMsg: " + mkResponse.getMsg());
         }
         return rtnModule;
+    }
+
+    private static void findByDomainRPC(String domain) {
+        String url = "/api/sys-notify/sysNotifySourceModule/findByDomain?domain=" + domain;
+        String moduleVO = mkApiRequestHelper.callApi(url, null);
+        log.info("Find by domain: {}", JSONObject.toJSONString(moduleVO, SerializerFeature.PrettyFormat));
     }
 }

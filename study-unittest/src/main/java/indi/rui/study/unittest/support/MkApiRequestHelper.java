@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.support;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -33,7 +34,7 @@ public class MkApiRequestHelper {
 
     // ====================== public method =======================
 
-    public <T> T callApi(String path, JSONObject json, Class<T> rtnClass) {
+    public <T> T callApi(String path, JSON json, Class<T> rtnClass) {
         T rtn = null;
         String httpResult = callApi(path, json);
         if (httpResult != null && httpResult.length() > 0) {
@@ -44,7 +45,7 @@ public class MkApiRequestHelper {
         return rtn;
     }
 
-    public <T> MkResponse<T> callApiForMkResponse(String path, JSONObject json, Class<T> rtnClass) {
+    public <T> MkResponse<T> callApiForMkResponse(String path, JSON json, Class<T> rtnClass) {
         MkResponse<T> mkResponse = null;
         String httpResult = callApi(path, json);
         if (httpResult != null && httpResult.length() > 0) {
@@ -55,11 +56,11 @@ public class MkApiRequestHelper {
         return mkResponse;
     }
 
-    public String callApi(String path, JSONObject body) {
+    public String callApi(String path, JSON body) {
         return callApi(HttpMethod.POST, path, body);
     }
 
-    public String callApi(HttpMethod httpMethod, String path, JSONObject body) {
+    public String callApi(HttpMethod httpMethod, String path, JSON body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-SERVICE-NAME", xServiceName);

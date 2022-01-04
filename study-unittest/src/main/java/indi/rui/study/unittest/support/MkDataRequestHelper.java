@@ -45,7 +45,7 @@ public class MkDataRequestHelper {
 
     public <T> MkResponse<T> callData(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<T> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<T>>(rtnClass) {
@@ -56,7 +56,7 @@ public class MkDataRequestHelper {
 
     public <T> MkResponse<List<T>> callDataForList(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<List<T>> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<List<T>>>(rtnClass) {
@@ -67,7 +67,7 @@ public class MkDataRequestHelper {
 
     public MkResponse<List<?>> callDataForList(String path, JSONObject json) {
         MkResponse<List<?>> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<List<?>>>() {
@@ -78,7 +78,7 @@ public class MkDataRequestHelper {
 
     public <T> MkResponse<QueryResult<T>> callDataForMkQueryResult(String path, JSONObject json, Class<T> rtnClass) {
         MkResponse<QueryResult<T>> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<QueryResult<T>>>(rtnClass) {
@@ -89,7 +89,7 @@ public class MkDataRequestHelper {
 
     public MkResponse<QueryResult<?>> callDataForMkQueryResult(String path, JSONObject json) {
         MkResponse<QueryResult<?>> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<QueryResult<?>>>() {
@@ -100,7 +100,7 @@ public class MkDataRequestHelper {
 
     public MkResponse<JSONObject> CallDataForJson(String path, JSONObject json) {
         MkResponse<JSONObject> mkResponse = null;
-        String httpResult = CallDataForString(path, json);
+        String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<JSONObject>>() {
@@ -111,7 +111,7 @@ public class MkDataRequestHelper {
 
     // =================== 私有方法 ================== //
 
-    private String CallDataForString(String path, JSONObject body) {
+    private String callDataForString(String path, JSONObject body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
