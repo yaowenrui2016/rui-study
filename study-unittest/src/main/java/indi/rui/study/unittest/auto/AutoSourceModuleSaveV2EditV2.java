@@ -20,16 +20,17 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AutoSourceModuleSaveV2EditV2 {
 
-    private static final String ADDRESS = "http://localhost:8040";
-    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            ADDRESS, "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static final String ADDRESS = "http://localhost:8040";
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            ADDRESS, "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static final String ADDRESS = "http://mksmoke.ywork.me";
-//    private static MkDataRequestHelper mkDataRequestHelper =
-//            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
-//    private static final String X_SERVICE_NAME = "73456775666d4c416f73776139584a4131432f6847413d3d";
+    private static final String ADDRESS = "http://mksmoke.ywork.me";
+    private static MkDataRequestHelper mkDataRequestHelper =
+            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
+        private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
     private static final int MIN_CODE_NO = 0;
@@ -49,6 +50,11 @@ public class AutoSourceModuleSaveV2EditV2 {
 
 
     public static void main(String[] args) {
+        getModuleByCodeRPC(null);
+    }
+
+    private static void runAllUsecase() {
+
         // 用例1.新增系统
         int addAppNo1FromCodeNo = 0, addAppNo1ToCodeNo = 9;
         List<SimpleDTO> addAppsNo1 = addApp(addAppNo1FromCodeNo, addAppNo1ToCodeNo);
@@ -351,7 +357,9 @@ public class AutoSourceModuleSaveV2EditV2 {
         JSONObject json = new JSONObject();
         json.put("columns", Arrays.asList("fdId", "fdName", "fdCode", "fdDomain", "fdEnabled", "fdSourceId", "fdSourceApp"));
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent("conditions", (k) -> new HashMap<>());
-        conditions.put("fdCode", moduleCode);
+        if (moduleCode != null) {
+            conditions.put("fdCode", moduleCode);
+        }
         json.put("pageSize", 1000);
         MkResponse<QueryResult<MkNotifySourceModuleVO>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 url, json, MkNotifySourceModuleVO.class);

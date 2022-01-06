@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class CallApiSendALotOfTodo {
 
-    private static final int TOTAL = 30;
+    private static final int TOTAL = 1;
 
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040", "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -75,8 +75,10 @@ public class CallApiSendALotOfTodo {
             senderPool.execute(() -> {
                 try {
                     JSONObject json = FileUtils.loadJSON(sendJsonPath);
+                    json.put("notifyType", "todo");
                     json.put("subject", json.get("subject") + "_" + idx);
                     json.put("entityId", idx);
+                    json.put("entityKey", "XXX-" + System.currentTimeMillis() + "-XXX");
                     json.put("level", (idx % 3) + 1);
                     MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                             "/api/sys-notifybus/sysNotifyComponent/send", json, String.class);

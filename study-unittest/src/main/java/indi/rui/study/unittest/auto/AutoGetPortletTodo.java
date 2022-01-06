@@ -20,11 +20,11 @@ import java.util.*;
 @Slf4j
 public class AutoGetPortletTodo {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
@@ -32,11 +32,11 @@ public class AutoGetPortletTodo {
 //            "http://mkdev02.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mksmoke.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmoke.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     private static final int MAX_TIMEOUT_MS = 10000;
 
@@ -90,7 +90,8 @@ public class AutoGetPortletTodo {
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Get my todo error! errMsg=" + mkResponse.getMsg());
         }
-        List<JSONObject> showResult = check(mkResponse.getData());
+//        List<JSONObject> showResult = check(mkResponse.getData());
+        List<JSONObject> showResult = mkResponse.getData();
         log.info("Get portlet todo list: param={}, todos={}",
                 JSONObject.toJSONString(json, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(showResult, SerializerFeature.PrettyFormat));
