@@ -20,17 +20,17 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AutoSourceModuleSaveV2EditV2 {
 
-//    private static final String ADDRESS = "http://localhost:8040";
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            ADDRESS, "yaowr", "1");
+    private static final String ADDRESS = "http://localhost:8040";
+    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+            ADDRESS, "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static final String ADDRESS = "http://mksmoke.ywork.me";
+//    private static MkDataRequestHelper mkDataRequestHelper =
+//            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-    private static final String ADDRESS = "http://mksmoke.ywork.me";
-    private static MkDataRequestHelper mkDataRequestHelper =
-            new MkDataRequestHelper(ADDRESS, "yuxd", "1");
-        private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            ADDRESS, "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
     private static final int MIN_CODE_NO = 0;
@@ -50,7 +50,8 @@ public class AutoSourceModuleSaveV2EditV2 {
 
 
     public static void main(String[] args) {
-        getModuleByCodeRPC(null);
+//        getModuleByCodeRPC(null);
+        runAllUsecase();
     }
 
     private static void runAllUsecase() {
@@ -101,7 +102,12 @@ public class AutoSourceModuleSaveV2EditV2 {
         addModuleRPC(moduleNameWithDomain, moduleCodeWithDomain, domain, appIdsNo1);
         checkModuleWithDomain(moduleCodeWithDomain, domain);
 
-        // 用例10.新增重复domain的模块
+        // 用例10.编辑domain的模块
+        String domainModified = "java.landray.com";
+        modifyModuleDomainRPC(moduleCodeWithDomain, domainModified);
+        checkModuleWithDomain(moduleCodeWithDomain, domainModified);
+
+        // 用例11.新增重复domain的模块
         try {
             moduleNameWithDomain = MODULE_NAME_PREFIX + "Domain" + 1;
             moduleCodeWithDomain = MODULE_CODE_PREFIX + "Domain" + 1;
@@ -110,7 +116,7 @@ public class AutoSourceModuleSaveV2EditV2 {
 
         }
 
-        // 用例11.根据domain查询
+        // 用例12.根据domain查询
         findByDomainRPC(domain);
 
         log.info("All passed!");
@@ -326,7 +332,9 @@ public class AutoSourceModuleSaveV2EditV2 {
         json.put("fdId", moduleVO.getFdId());
         // 更新模块修改名称
         json.put("fdName", newModuleName);
-        json.put("fdSourceApps", moduleVO.getFdSourceApp().stream().map(IdNameProperty::getFdId).collect(Collectors.toList()));
+        json.put("fdSourceApps", moduleVO.getFdSourceApp().stream()
+                .map(IdNameProperty::getFdId)
+                .collect(Collectors.toList()));
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(url, json, Void.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Update module failure! [newModuleName=" + newModuleName
@@ -347,6 +355,26 @@ public class AutoSourceModuleSaveV2EditV2 {
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(url, json, Void.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Update module associated app! [appIds=" + Arrays.toString(appIds.toArray())
+                    + ", errMsg=" + mkResponse.getMsg()
+                    + "]");
+        }
+    }
+
+    private static void modifyModuleDomainRPC(String moduleCode, String domain) {
+        MkNotifySourceModuleVO moduleVO = getModuleByCodeRPC(moduleCode);
+        // 请求地址
+        String url = "/data/sys-notify/sysNotifySourceModule/updateV2";
+        JSONObject json = new JSONObject();
+        json.put("fdId", moduleVO.getFdId());
+        json.put("fdName", moduleVO.getFdName());
+        json.put("fdSourceApps", moduleVO.getFdSourceApp().stream()
+                .map(IdNameProperty::getFdId)
+                .collect(Collectors.toList()));
+        // 更新模块域名
+        json.put("fdDomain", domain);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(url, json, Void.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Update module domain! [domain=" + domain
                     + ", errMsg=" + mkResponse.getMsg()
                     + "]");
         }

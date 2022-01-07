@@ -13,8 +13,11 @@ public class CallApiDiscoveryCenter {
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://127.0.0.1:8010", "73456775666d4c416f73776139584a4131432f6847413d3d");
 
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://10.253.13.14:8010", "73456775666d4c416f73776139584a4131432f6847413d3d");
+
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://10.253.13.14:8010", "73456775666d4c416f73776139584a4131432f6847413d3d");
+            "http://192.168.51.202:8010", "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) throws Exception {
         // 初始化权限
