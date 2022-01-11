@@ -8,6 +8,8 @@ import indi.rui.study.unittest.support.MkDataRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,8 +31,8 @@ public class AutoNotifyTemplate {
     public static void main(String[] args) {
         String name = "Yao Test " + 0;
         String code = "TMP_" + 0;
-        addTemplateRPC(name, code);
-        addTemplateRPC(name, code);
+//        addTemplateRPC(name, code);
+//        addTemplateRPC(name, code);
         List<JSONObject> temps = findTemplateRPC();
         for (String id : temps.stream()
                 .map(jsonObj -> (String) jsonObj.get("fdId"))
@@ -43,6 +45,7 @@ public class AutoNotifyTemplate {
             findByCodeRPC(tmpCode);
         }
         findAvailable();
+        loadTempVars();
     }
 
     private static void addTemplateRPC(String name, String code) {
@@ -86,6 +89,16 @@ public class AutoNotifyTemplate {
         log.info("Find available template: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
     }
 
+    private static void loadTempVars() {
+        // 查询模板变量
+        MkResponse<List<JSONObject>> mkResponse = mkDataRequestHelper.callDataForList(
+                "/data/sys-notify/sysNotifyTemplate/loadTempVars", null, JSONObject.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Find template vars error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("Find available template vars: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
+    }
+
     private static void getTemplateRPC(String id) {
         // 获取模板
         JSONObject json = new JSONObject();
@@ -100,6 +113,11 @@ public class AutoNotifyTemplate {
 
     private static void findByCodeRPC(String code) {
         // 获取模板
+        try {
+            code = URLEncoder.encode(code, "utf-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new RuntimeException("查询模板失败", e);
+        }
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.CallDataForJson(
                 "/data/sys-notify/sysNotifyTemplate/findByCode?code=" + code, null);
         if (!mkResponse.isSuccess()) {

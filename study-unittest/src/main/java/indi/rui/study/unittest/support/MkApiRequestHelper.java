@@ -38,9 +38,7 @@ public class MkApiRequestHelper {
         T rtn = null;
         String httpResult = callApi(path, json);
         if (httpResult != null && httpResult.length() > 0) {
-            rtn = JSONObject.parseObject(httpResult,
-                    new TypeReference<T>(rtnClass) {
-                    });
+            rtn = JSONObject.parseObject(httpResult, rtnClass);
         }
         return rtn;
     }

@@ -2,7 +2,6 @@ package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.*;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
@@ -34,7 +33,7 @@ public class AutoSourceModuleSaveV2EditV2 {
 
 
     private static final int MIN_CODE_NO = 0;
-    private static final int MAX_CODE_NO = 20;
+    private static final int MAX_CODE_NO = 25;
 
     private static final String APP_NAME_PREFIX = "AutoTest-MkNotifyApp-";
     private static final String APP_CODE_PREFIX = "C";
@@ -55,10 +54,19 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static void runAllUsecase() {
-
         // 用例1.新增系统
         int addAppNo1FromCodeNo = 0, addAppNo1ToCodeNo = 9;
         List<SimpleDTO> addAppsNo1 = addApp(addAppNo1FromCodeNo, addAppNo1ToCodeNo);
+
+        // 用例2.新增系统，重复code
+        String appName = APP_NAME_PREFIX + addAppNo1FromCodeNo + "_dup";
+        String appCode = APP_CODE_PREFIX + addAppNo1FromCodeNo;
+        addDuplicatedAppRPC(appName, appCode);
+
+        // 用例2.新增系统，重复name
+        appName = APP_NAME_PREFIX + addAppNo1FromCodeNo;
+        appCode = APP_CODE_PREFIX + addAppNo1FromCodeNo + "_dup";
+        addDuplicatedAppRPC(appName, appCode);
 
         // 用例2.新增模块，并关联系统
         String moduleName = MODULE_NAME_PREFIX + 0;
@@ -69,6 +77,9 @@ public class AutoSourceModuleSaveV2EditV2 {
 
         // 用例3.编辑系统
         updateApp(addAppNo1FromCodeNo);
+
+        // 用例3.编辑系统，重复name
+        updateDuplicatedAppRPC(addAppNo1FromCodeNo);
 
         // 用例4.禁用模块
         disable(moduleCode);
@@ -260,6 +271,19 @@ public class AutoSourceModuleSaveV2EditV2 {
         }
     }
 
+    private static void addDuplicatedAppRPC(String name, String code) {
+        JSONObject json = new JSONObject();
+        json.put("fdName", name);
+        json.put("fdCode", code);
+        MkResponse<Void> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifySourceApp/add", json, Void.class);
+        if (mkResponse.isSuccess()) {
+            throw new RuntimeException("Add duplicated app error! [name=" + name
+                    + ", code=" + code +
+                    "], errMsg: " + mkResponse.getMsg());
+        }
+    }
+
     private static List<MkNotifySourceAppVO> getAppByCodeRPC(List<String> appCodes) {
         String url = "/data/sys-notify/sysNotifySourceApp/list";
         JSONObject json = new JSONObject();
@@ -284,6 +308,24 @@ public class AutoSourceModuleSaveV2EditV2 {
             throw new RuntimeException("Update app failure! [code=" + appVO.getFdCode()
                     + ", errMsg=" + mkResponse.getMsg()
                     + "]");
+        }
+    }
+
+    private static void updateDuplicatedAppRPC(int codeNo) {
+        String appCode = APP_CODE_PREFIX + codeNo;
+        MkNotifySourceAppVO prevApp = findAppByCode(appCode);
+        MkNotifySourceAppVO updateApp = new MkNotifySourceAppVO();
+        updateApp.setFdId(prevApp.getFdId());
+        // 已存在的name
+        String appName = APP_NAME_PREFIX + (codeNo + 1);
+        updateApp.setFdName(appName);
+        String url = "/data/sys-notify/sysNotifySourceApp/update";
+        JSONObject json = (JSONObject) JSONObject.toJSON(updateApp);
+        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.CallDataForJson(url, json);
+        if (mkResponse.isSuccess()) {
+            throw new RuntimeException("Update duplicated app error! [name=" + appName
+                    + ", code=" + appCode +
+                    "], errMsg: " + mkResponse.getMsg());
         }
     }
 
@@ -405,8 +447,11 @@ public class AutoSourceModuleSaveV2EditV2 {
     }
 
     private static void findByDomainRPC(String domain) {
-        String url = "/api/sys-notify/sysNotifySourceModule/findByDomain?domain=" + domain;
-        String moduleVO = mkApiRequestHelper.callApi(url, null);
-        log.info("Find by domain: {}", JSONObject.toJSONString(moduleVO, SerializerFeature.PrettyFormat));
+        MkNotifySourceModuleVO moduleVO = mkApiRequestHelper.callApi(
+                "/api/sys-notify/sysNotifySourceModule/findByDomain?domain=" + domain,
+                null, MkNotifySourceModuleVO.class);
+        if (moduleVO == null || !domain.equals(moduleVO.getFdDomain())) {
+            throw new RuntimeException("Find by domain failed");
+        }
     }
 }
