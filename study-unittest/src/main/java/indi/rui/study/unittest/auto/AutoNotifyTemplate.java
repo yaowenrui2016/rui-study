@@ -23,17 +23,19 @@ import java.util.stream.Collectors;
 public class AutoNotifyTemplate {
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "weilq", "1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
+
     public static void main(String[] args) {
-        String name = "Yao Test " + 0;
-        String code = "TMP_" + 0;
-//        addTemplateRPC(name, code);
-//        addTemplateRPC(name, code);
-        List<JSONObject> temps = findTemplateRPC();
+        String name = "Yao Test " + System.currentTimeMillis();
+        String code = "TMP_" + System.currentTimeMillis();
+        addTemplateRPC(name, code);
+        List<JSONObject> temps = findTemplateRPC("Yao Test ");
         for (String id : temps.stream()
                 .map(jsonObj -> (String) jsonObj.get("fdId"))
                 .collect(Collectors.toList())) {
@@ -51,8 +53,8 @@ public class AutoNotifyTemplate {
     private static void addTemplateRPC(String name, String code) {
         // 新建模板
         JSONObject json = FileUtils.loadJSON("add.json", AutoNotifyTemplate.class);
-        json.put("fdCode", name);
-        json.put("fdName", code);
+        json.put("fdName", name);
+        json.put("fdCode", code);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {
@@ -61,12 +63,15 @@ public class AutoNotifyTemplate {
         log.info("Add template: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
     }
 
-    private static List<JSONObject> findTemplateRPC() {
+    private static List<JSONObject> findTemplateRPC(String key) {
         // 查询模板
         JSONObject json = new JSONObject();
         json.put("pageSize", 1000);
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent(
                 "conditions", (k) -> new HashMap<>());
+        if (key != null) {
+            conditions.put("key", key);
+        }
         Map<String, Object> sorts = (Map<String, Object>) json.computeIfAbsent(
                 "sorts", (k) -> new HashMap<>());
         sorts.put("fdCreateTime", "DESC");

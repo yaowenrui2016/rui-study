@@ -1,10 +1,10 @@
 {
-  "email":false,
   "enable":true,
   "majorAlarmPercentage":80,
   "minorAlarmPercentage":30,
   "showMinorAlarm":true,
-  "sms":true,
+  "email":false,
+  "sms":false,
   "sourceApp":[
     {
       "fdId":"MKPaaS",

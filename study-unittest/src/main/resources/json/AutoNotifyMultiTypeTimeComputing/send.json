@@ -1,6 +1,6 @@
 {
   "subject": "Send Multi-Type Notify And Time Computing!",
-  "notifyType": "ekpv12,email,kkTodo,sms,todo,yuanbao",
+  "notifyType": "ekpv12,email,kkTodo,sms,todo,yuanbao,opending",
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",
@@ -9,6 +9,13 @@
   "entityName": "TestNotifySendOrDoneMultiTypeAndMonitorOriginal",
   "orgProperty": "fdLoginName",
   "targets": [
-    "yaowr"
+    "yaowr",
+    "yuxd",
+    "cuipx",
+    "zhangyl",
+    "chenp",
+    "lizj",
+    "weilq",
+    "laow"
   ]
 }

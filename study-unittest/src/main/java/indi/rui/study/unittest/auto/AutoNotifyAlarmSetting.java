@@ -1,4 +1,4 @@
-package indi.rui.study.unittest.calldata;
+package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
  * @create: 2021-11-12
  */
 @Slf4j
-public class CallDataNotifyAlarmSetting {
+public class AutoNotifyAlarmSetting {
 
     private static MkDataRequestHelper mkDataRequestHelper
             = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
@@ -40,7 +40,7 @@ public class CallDataNotifyAlarmSetting {
 
     private static void setAlarmSettingRPC() {
         // 保存消息告警设置
-        JSONObject json = FileUtils.loadJSON("alarm_setting.json", CallDataNotifyAlarmSetting.class);
+        JSONObject json = FileUtils.loadJSON("alarm_setting.json", AutoNotifyAlarmSetting.class);
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyAlarmSetting/setAlarmSetting", json);
         if (!mkResponse.isSuccess()) {

@@ -9,6 +9,7 @@ import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -49,6 +50,17 @@ public class MkApiRequestHelper {
         if (httpResult != null && httpResult.length() > 0) {
             mkResponse = JSONObject.parseObject(httpResult,
                     new TypeReference<MkResponse<T>>(rtnClass) {
+                    });
+        }
+        return mkResponse;
+    }
+
+    public <T> List<T> callApiForList(String path, JSON json, Class<T> rtnClass) {
+        List<T> mkResponse = null;
+        String httpResult = callApi(path, json);
+        if (httpResult != null && httpResult.length() > 0) {
+            mkResponse = JSONObject.parseObject(httpResult,
+                    new TypeReference<List<T>>(rtnClass) {
                     });
         }
         return mkResponse;
