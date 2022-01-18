@@ -98,6 +98,7 @@ public class AutoCreatePersonAndAuthorized {
         json.put("fdIsLogin", true);
         json.put("fdLoginName", loginName);
         json.put("fdName", name);
+        json.put("fdEmail", loginName + "@landray.com.cn");
         json.put("fdOrder", 0);
         json.put("fdPassword", 1);
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(

@@ -23,7 +23,7 @@ import java.util.stream.Collectors;
 public class AutoNotifyTemplate {
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "weilq", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
@@ -32,6 +32,10 @@ public class AutoNotifyTemplate {
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 
     public static void main(String[] args) {
+        addTemplate2RPC();
+    }
+
+    private static void runUsecase() {
         String name = "Yao Test " + System.currentTimeMillis();
         String code = "TMP_" + System.currentTimeMillis();
         addTemplateRPC(name, code);
@@ -55,6 +59,17 @@ public class AutoNotifyTemplate {
         JSONObject json = FileUtils.loadJSON("add.json", AutoNotifyTemplate.class);
         json.put("fdName", name);
         json.put("fdCode", code);
+        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Find template error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("Add template: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
+    }
+
+    private static void addTemplate2RPC() {
+        // 新建模板
+        JSONObject json = FileUtils.loadJSON("add2.json", AutoNotifyTemplate.class);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {

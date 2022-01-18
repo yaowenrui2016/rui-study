@@ -6,9 +6,16 @@ import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.TimeComputingDTO;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
+import indi.rui.study.unittest.util.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RAtomicLong;
+import org.redisson.api.RedissonClient;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * 碧桂园待办完整性测试程序
@@ -36,7 +43,44 @@ public class AutoNotifyMultiTypeTimeComputing {
             "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
 
 
+    private static RedissonClient redissonClient = RedisUtils.getRedis(
+            "redis://study.rui.ubuntu:6379", 3);
+    private static RAtomicLong counter = redissonClient.getAtomicLong(
+            "unittest:AutoNotifyMultiTypeTimeComputing:counter");
+
+    /**
+     * 存放多线程处理的结果
+     */
+    private static CopyOnWriteArrayList<Float> timeComputings = new CopyOnWriteArrayList<>();
+
+
     public static void main(String[] args) throws Exception {
+//        mutiThread();
+        run();
+    }
+
+    private static void mutiThread() {
+        int threadNum = 10;
+        CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+        for (int i = 0; i < threadNum; i++) {
+            new Thread(() -> {
+                try {
+                    run();
+                    countDownLatch.countDown();
+                } catch (Throwable e) {
+                    log.error("Run Exception");
+                }
+            }, "runner-" + i).start();
+        }
+        try {
+            countDownLatch.await();
+            Collections.sort(timeComputings);
+            log.info("({}):{}", timeComputings.size(), Arrays.toString(timeComputings.toArray()));
+        } catch (InterruptedException e) {
+        }
+    }
+
+    private static void run() {
         // 1.发送消息或置已办
         String snid = sendOrDone("removeAll");
 //        String snid = "1fpbsr2vqw36w2j51jw34j6svn2tljgnu9w0";
@@ -61,7 +105,7 @@ public class AutoNotifyMultiTypeTimeComputing {
         }
         JSONObject json = FileUtils.loadJSON(filename, AutoNotifyMultiTypeTimeComputing.class);
         if ("send".equalsIgnoreCase(method)) {
-            json.put("entityKey", System.currentTimeMillis());
+            json.put("entityKey", counter.getAndIncrement());
         }
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/" + method,
@@ -83,6 +127,11 @@ public class AutoNotifyMultiTypeTimeComputing {
                     snid,
                     JSONObject.toJSONString(computingDTOS, SerializerFeature.PrettyFormat));
             success = true;
+            for (TimeComputingDTO dto : computingDTOS) {
+                if ("todo".equals(dto.getProvider())) {
+                    timeComputings.add(dto.getTotalDuration());
+                }
+            }
         } else {
             log.info("Not found time computing! snid={}", snid);
         }

@@ -1,14 +1,18 @@
 {
-  "subject": "Send Multi-Type Notify And Time Computing!",
+  "subject": "Send With Template!",
   "notifyType": "todo",
+  "todoType": 1,
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",
   "moduleName": "sys-notify",
-  "entityId": "1",
-  "entityName": "TestNotifySendOrDoneMultiTypeAndMonitorOriginal",
+  "entityId": "0",
+  "entityName": "sendWithTemplate",
+  "entityKey": "0",
+  "template": "10001",
   "orgProperty": "fdLoginName",
   "targets": [
     "yaowr"
-  ]
+  ],
+  "creator": "yaowr"
 }

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "defaultFrom": "YaoWR_2020@126.com",
+  "host": "smtp.126.com",
+  "securityProtocol": "",
+  "useDefaultFrom": false,
+  "encoding": "UTF-8",
+  "timeout": "30000",
+  "fragmentSize": 100,
+  "smtpAuth": true,
+  "senderUsername": "YaoWR_2020@126.com",
+  "senderPassword": "PCGMFHGNWSVKIAFN"
+}
