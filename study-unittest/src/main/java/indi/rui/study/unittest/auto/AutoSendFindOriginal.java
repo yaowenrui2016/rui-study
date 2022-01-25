@@ -8,9 +8,15 @@ import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
+import indi.rui.study.unittest.util.RedisUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.redisson.api.RAtomicLong;
+import org.redisson.api.RedissonClient;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author: yaowr
@@ -26,6 +32,12 @@ public class AutoSendFindOriginal {
             "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmokemini.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmokemini.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
@@ -39,38 +51,38 @@ public class AutoSendFindOriginal {
 
     private static final int MAX_TIMEOUT_MS = 10000;
 
-    private static final Random RANDOM = new Random(System.currentTimeMillis());
+    private static RedissonClient redissonClient = RedisUtils.getRedis(
+            "redis://study.rui.ubuntu:6379", 3);
+    private static RAtomicLong counter = redissonClient.getAtomicLong(
+            "unittest:AutoNotifyMultiTypeTimeComputing:counter");
+
 
     public static void main(String[] args) {
-        // 发送消息并获取原始消息日志
-        getOriginal(sendTodoRPC());
-
-        // 置已办消息并获取原始消息日志
-        getOriginal(doneTodoRPC());
-    }
-
-    private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("send.json", AutoSendFindOriginal.class);
-        json.put("notifyType", "todo");
-        json.put("entityKey", System.currentTimeMillis());
-        json.put("todoLevel", 1 + RANDOM.nextInt(3));
-        MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
-                "/api/sys-notifybus/sysNotifyComponent/send",
-                json, String.class);
-        if (!mkResponse.isSuccess()) {
-            throw new RuntimeException("Send todo error! errMsg=" + mkResponse.getMsg());
+        try {
+            // 发送消息并获取原始消息日志
+            getOriginal(sendOrDoneRPC("send"));
+            // 置已办消息并获取原始消息日志
+//            getOriginal(sendOrDoneRPC("done"));
+        } finally {
+            redissonClient.shutdown();
         }
-        // 返回snid
-        return mkResponse.getData();
     }
 
-    private static String doneTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("done.json", AutoSendFindOriginal.class);
+    private static String sendOrDoneRPC(String method) {
+        JSONObject json;
+        if ("send".equals(method)) {
+            json = FileUtils.loadJSON("send.json", AutoSendFindOriginal.class);
+            json.put("notifyType", "todo");
+            json.put("entityKey", counter.getAndIncrement());
+            json.put("todoLevel", 1 + counter.get() % 3);
+        } else {
+            json = FileUtils.loadJSON("done.json", AutoSendFindOriginal.class);
+        }
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
-                "/api/sys-notifybus/sysNotifyComponent/done",
+                "/api/sys-notifybus/sysNotifyComponent/" + method,
                 json, String.class);
         if (!mkResponse.isSuccess()) {
-            throw new RuntimeException("Done todo error! errMsg=" + mkResponse.getMsg());
+            throw new RuntimeException("Send or Done todo error! errMsg=" + mkResponse.getMsg());
         }
         // 返回snid
         return mkResponse.getData();

@@ -1,6 +1,6 @@
 {
   "subject": "Send Multi-Type Notify And Time Computing!",
-  "notifyType": "todo",
+  "notifyType": "todo,testNotifyProvider",
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",

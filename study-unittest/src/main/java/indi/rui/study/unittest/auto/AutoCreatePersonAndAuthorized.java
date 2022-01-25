@@ -28,8 +28,11 @@ public class AutoCreatePersonAndAuthorized {
             "yuxd", "余小冬",
             "laow", "老王",};
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://127.0.0.1:8040", "secadmin", "Password_1");
+
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://127.0.0.1:8040", "secadmin", "Password_1");
+            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmoke.ywork.me", "secadmin", "Password_1");

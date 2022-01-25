@@ -24,9 +24,9 @@ public class AutoEmailSetting {
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 
     public static void main(String[] args) {
-//        getSetting();
+        getSetting();
 //        saveSetting();
-        verify();
+//        verify();
     }
 
     private static void getSetting() {

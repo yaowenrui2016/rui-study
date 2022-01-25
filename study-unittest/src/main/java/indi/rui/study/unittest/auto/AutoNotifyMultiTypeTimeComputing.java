@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.CyclicBarrier;
 
 /**
  * 碧桂园待办完整性测试程序
@@ -55,22 +56,29 @@ public class AutoNotifyMultiTypeTimeComputing {
 
 
     public static void main(String[] args) throws Exception {
-//        mutiThread();
-        run();
+//        mutiThread("send");
+        run("removeAll");
+        redissonClient.shutdown();
     }
 
-    private static void mutiThread() {
-        int threadNum = 10;
+    private static void mutiThread(String method) {
+        int threadNum = 100;
+        CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
         CountDownLatch countDownLatch = new CountDownLatch(threadNum);
         for (int i = 0; i < threadNum; i++) {
             new Thread(() -> {
                 try {
-                    run();
-                    countDownLatch.countDown();
+                    cyclicBarrier.await();
+                    run(method);
                 } catch (Throwable e) {
                     log.error("Run Exception");
                 }
+                countDownLatch.countDown();
             }, "runner-" + i).start();
+//            try {
+//                Thread.sleep(800);
+//            } catch (InterruptedException e) {
+//            }
         }
         try {
             countDownLatch.await();
@@ -80,11 +88,9 @@ public class AutoNotifyMultiTypeTimeComputing {
         }
     }
 
-    private static void run() {
+    private static void run(String method) {
         // 1.发送消息或置已办
-        String snid = sendOrDone("removeAll");
-//        String snid = "1fpbsr2vqw36w2j51jw34j6svn2tljgnu9w0";
-//        String snid = "1fpbt8id5w2uw1gt9mw3h3ffdv3amji2g3w0";
+        String snid = sendOrDone(method);
         // 2.计算消息耗时
         while (true) {
             try {

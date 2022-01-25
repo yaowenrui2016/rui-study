@@ -15,11 +15,11 @@ import java.util.List;
 @Slf4j
 public class CallDataGetTodoExtension {
 
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://127.0.0.1:8040", "yaowr", "1");
-
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mksmoke.ywork.me", "yuxd", "1");
+            "http://127.0.0.1:8040", "yaowr", "1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mksmoke.ywork.me", "yuxd", "1");
 
     public static void main(String[] args) throws Exception {
         // 获取待办同步扩展

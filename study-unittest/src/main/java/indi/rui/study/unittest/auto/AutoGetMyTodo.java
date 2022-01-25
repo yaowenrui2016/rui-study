@@ -28,6 +28,12 @@ public class AutoGetMyTodo {
             "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmokemini.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmokemini.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
@@ -50,6 +56,7 @@ public class AutoGetMyTodo {
     private static String sendTodoRPC() {
         JSONObject json = FileUtils.loadJSON("send.json", AutoGetMyTodo.class);
         json.put("entityKey", System.currentTimeMillis());
+        json.put("link", "#/current/kms-exam/kmsExamCandidateDetail/1fpt53o4hw18we7qew2hcuahj1b37iun1pw0");
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);

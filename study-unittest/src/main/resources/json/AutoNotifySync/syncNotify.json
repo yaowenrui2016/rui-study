@@ -1,0 +1,20 @@
+{
+  "subject": "Send And Get Original!",
+  "notifyType": "todo",
+  "todoType": 1,
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "0",
+  "entityName": "sendAndGetOriginal",
+  "targetType": 2,
+  "targets": [
+    "yuxd",
+    "yaowr"
+  ],
+  "targetsDone": [
+    "laow",
+    "cuipx"
+  ]
+}

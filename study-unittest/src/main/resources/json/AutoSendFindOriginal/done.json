@@ -2,6 +2,5 @@
   "appName": "MKPaaS",
   "moduleName": "sys-notify",
   "entityId": "0",
-  "entityName": "sendAndGetOriginal",
-  "entityKey": "0"
+  "entityName": "sendAndGetOriginal"
 }
