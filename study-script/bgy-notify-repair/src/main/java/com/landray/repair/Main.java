@@ -8,6 +8,7 @@ import com.landray.repair.entity.SourceAppModule;
 import com.landray.repair.entity.SourceModule;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -18,7 +19,10 @@ import org.hibernate.boot.registry.BootstrapServiceRegistryBuilder;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static indi.rui.study.unittest.util.SimpleIdGenerator.generateID;
 
@@ -99,48 +103,101 @@ public class Main {
                     sourceAppModule.setFdAppId(appId);
                     sourceAppModule.setFdModuleId(moduleId);
                     sourceAppModule.setFdTenantId(0);
-                    sourceAppModule.setFdSourceId("2");
+                    sourceAppModule.setFdSourceId("3");
                     sourceAppModule.setFdId(generateID());
                     session.save(sourceAppModule);
                 }
             }
+            // 提交事务
             session.getTransaction().commit();
         } catch (Exception e) {
-            if (session != null && session.getTransaction().isActive()) {
+            // 回滚事务
+            if (session != null) {
                 session.getTransaction().rollback();
+                log.error("Mock data rollback!", e);
+            } else {
+                log.error("Mock data error!", e);
             }
-            log.error("Mock data error!", e);
         } finally {
+            // 关闭session
             if (session != null) {
                 session.close();
             }
         }
     }
 
-    private static List<SourceModule> queryModule() {
-        Session session = sessionFactory.openSession();
-        session.beginTransaction();
-        List result = session.createQuery("from SourceModule", SourceModule.class).list();
-        session.getTransaction().commit();
-        session.close();
-        return result;
-    }
-
     private static void doWork() {
-        List<SourceModule> modules = queryModule();
-        Map<String, String> map = new HashMap<>();
-        List<String> delFdIds = new ArrayList<>();
-        for (SourceModule module : modules) {
-            String delFdId = map.put(module.getFdCode(), module.getFdId());
-            if (StringUtils.isNotEmpty(delFdId)) {
-                delFdIds.add(delFdId);
+        Session session = null;
+        try {
+            // 打开session并开启事务
+            session = sessionFactory.openSession();
+            session.beginTransaction();
+            // 查询SourceModule
+            List<SourceModule> modules = session.createQuery("from SourceModule", SourceModule.class).list();
+            Map<String, SourceModule> holdOn = new HashMap<>();
+            List<SourceModule> duplicate = new ArrayList<>();
+            // 筛选出code重复的SourceModule
+            for (SourceModule module : modules) {
+                SourceModule delModule = holdOn.put(module.getFdCode(), module);
+                if (delModule != null) {
+                    duplicate.add(delModule);
+                }
+            }
+            log.info("Find modules({}), duplicate({})",
+                    modules.size(),
+                    duplicate.size());
+            if (CollectionUtils.isNotEmpty(duplicate)) {
+                // 检查重复SourceModule是否被引用
+                String moduleIds = StringUtils.join(duplicate.stream().map(SourceModule::getFdId).toArray(), "','");
+                List<SourceAppModule> sourceAppModules = session.createQuery("from SourceAppModule where fdModuleId in ('" + moduleIds + "')", SourceAppModule.class).list();
+                if (CollectionUtils.isNotEmpty(sourceAppModules)) {
+                    for (SourceAppModule sourceAppModule : sourceAppModules) {
+                        // 寻找可替代的SourceModule
+                        SourceModule replace = null;
+                        for (SourceModule delModule : duplicate) {
+                            if (delModule.getFdId().equals(sourceAppModule.getFdModuleId())) {
+                                replace = holdOn.get(delModule.getFdCode());
+                                break;
+                            }
+                        }
+                        if (replace != null) {
+                            // 检测替换后是否违反唯一索引
+                            List<SourceAppModule> exists = session.createQuery(
+                                    "from SourceAppModule where fdAppId = '" + sourceAppModule.getFdAppId()
+                                            + "' and fdModuleId = '" + replace.getFdId()
+                                            + "' and fdSourceId = '" + sourceAppModule.getFdSourceId()
+                                            + "'", SourceAppModule.class).list();
+                            if (CollectionUtils.isNotEmpty(exists)) {
+                                session.delete(sourceAppModule);
+                            } else {
+                                // 替换SourceModule引用
+                                sourceAppModule.setFdModuleId(replace.getFdId());
+                                session.update(sourceAppModule);
+                            }
+                        }
+                    }
+                }
+                // 删除重复SourceModule
+                for (SourceModule delModule : duplicate) {
+                    session.delete(delModule);
+                }
+            }
+            // 提交事务
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            // 回滚事务
+            if (session != null) {
+                session.getTransaction().rollback();
+                log.error("Do work rollback!", e);
+            } else {
+                log.error("Do work error!", e);
+            }
+        } finally {
+            // 关闭session
+            if (session != null) {
+                session.close();
             }
         }
-        log.info("modules({}): {}, delFdIds({}): {}",
-                modules.size(),
-                JSONObject.toJSONString(modules, SerializerFeature.PrettyFormat),
-                delFdIds.size(),
-                JSONObject.toJSONString(delFdIds, SerializerFeature.PrettyFormat));
     }
 
     public static void main(String[] args) {
