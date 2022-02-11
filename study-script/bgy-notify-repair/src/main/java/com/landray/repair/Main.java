@@ -103,7 +103,7 @@ public class Main {
                     sourceAppModule.setFdAppId(appId);
                     sourceAppModule.setFdModuleId(moduleId);
                     sourceAppModule.setFdTenantId(0);
-                    sourceAppModule.setFdSourceId("3");
+                    sourceAppModule.setFdSourceId("4");
                     sourceAppModule.setFdId(generateID());
                     session.save(sourceAppModule);
                 }
