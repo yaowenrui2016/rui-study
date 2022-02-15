@@ -1,4 +1,6 @@
 {
-  "loginName": "cuipx",
-  "fdType": 1
+  "loginName": "yaowr",
+  "fdType": 1,
+  "fdAppModule": ["MKPaaS:sys-notify"],
+  "fdCategory": ["snake","giraffe"]
 }

@@ -24,6 +24,6 @@ public class CallApiNotifyCount {
 //        condition.put("fdType",1);
         JSONObject condition = FileUtils.loadJSON("conditions.json", CallApiNotifyCount.class);
         String result = mkApiRequestHelper.callApi("/api/sys-notify/sysNotifyTodo/count", condition);
-        log.info("Get notify count: {}", result);
+        log.info("Get notify count: condition={}, count={}", JSONObject.toJSONString(condition), result);
     }
 }

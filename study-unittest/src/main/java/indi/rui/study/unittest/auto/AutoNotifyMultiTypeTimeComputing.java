@@ -27,9 +27,9 @@ import java.util.concurrent.CyclicBarrier;
 @Slf4j
 public class AutoNotifyMultiTypeTimeComputing {
 
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
@@ -39,9 +39,9 @@ public class AutoNotifyMultiTypeTimeComputing {
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "https://p.landray.com.cn",
-            "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "https://p.landray.com.cn",
+//            "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
 
 
     private static RedissonClient redissonClient = RedisUtils.getRedis(
@@ -56,8 +56,8 @@ public class AutoNotifyMultiTypeTimeComputing {
 
 
     public static void main(String[] args) throws Exception {
-//        mutiThread("send");
-        run("removeAll");
+        mutiThread("send");
+//        run("removeAll");
         redissonClient.shutdown();
     }
 
