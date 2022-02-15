@@ -12,6 +12,7 @@
     <modules>
         <module>study-eureka-server</module>
         <module>study-react-server</module>
+        <module>study-antd-server</module>
     </modules>
 
 </project>
