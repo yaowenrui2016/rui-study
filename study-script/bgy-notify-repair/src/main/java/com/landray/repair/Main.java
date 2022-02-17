@@ -47,7 +47,6 @@ public class Main {
         try {
             MetadataSources sources = new MetadataSources(registry);
             sources.addAnnotatedClass(SourceApp.class);
-            sources.addAnnotatedClass(SourceAppModule.class);
             sources.addAnnotatedClass(SourceModule.class);
             MetadataBuilder metadataBuilder = sources.getMetadataBuilder();
             metadataBuilder.applyPhysicalNamingStrategy(new AcmePhysicalNamingStrategy());
@@ -76,8 +75,7 @@ public class Main {
                 SourceApp prevSourceApp = session.get(SourceApp.class, sourceApp.getFdId());
                 if (prevSourceApp == null) {
                     appIds.add((String) session.save(sourceApp));
-                    log.info("saved sourceApp success! sourceApp={}",
-                            JSONObject.toJSONString(sourceApp, SerializerFeature.PrettyFormat));
+                    log.info("saved sourceApp success! sourceApp={}", JSONObject.toJSONString(sourceApp));
                 } else {
                     appIds.add(prevSourceApp.getFdId());
                 }
@@ -103,7 +101,7 @@ public class Main {
                     sourceAppModule.setFdAppId(appId);
                     sourceAppModule.setFdModuleId(moduleId);
                     sourceAppModule.setFdTenantId(0);
-                    sourceAppModule.setFdSourceId("4");
+                    sourceAppModule.setFdSourceId("7");
                     sourceAppModule.setFdId(generateID());
                     session.save(sourceAppModule);
                 }
@@ -135,26 +133,30 @@ public class Main {
             // 查询SourceModule
             List<SourceModule> modules = session.createQuery("from SourceModule", SourceModule.class).list();
             Map<String, SourceModule> holdOn = new HashMap<>();
-            List<SourceModule> duplicate = new ArrayList<>();
+            List<SourceModule> duplicates = new ArrayList<>();
             // 筛选出code重复的SourceModule
             for (SourceModule module : modules) {
                 SourceModule delModule = holdOn.put(module.getFdCode(), module);
                 if (delModule != null) {
-                    duplicate.add(delModule);
+                    duplicates.add(delModule);
                 }
             }
-            log.info("Find modules({}), duplicate({})",
-                    modules.size(),
-                    duplicate.size());
-            if (CollectionUtils.isNotEmpty(duplicate)) {
+            if (log.isInfoEnabled()) {
+                log.info("find modules({}), duplicates({})",
+                        modules.size(), duplicates.size()
+                );
+            }
+            if (CollectionUtils.isNotEmpty(duplicates)) {
                 // 检查重复SourceModule是否被引用
-                String moduleIds = StringUtils.join(duplicate.stream().map(SourceModule::getFdId).toArray(), "','");
-                List<SourceAppModule> sourceAppModules = session.createQuery("from SourceAppModule where fdModuleId in ('" + moduleIds + "')", SourceAppModule.class).list();
+                String moduleIds = StringUtils.join(duplicates.stream().map(SourceModule::getFdId).toArray(), "','");
+                List<SourceAppModule> sourceAppModules = session.createQuery(
+                        "from SourceAppModule where fdModuleId in ('" + moduleIds + "')", SourceAppModule.class).list();
+                int updated = 0, deleted = 0;
                 if (CollectionUtils.isNotEmpty(sourceAppModules)) {
                     for (SourceAppModule sourceAppModule : sourceAppModules) {
                         // 寻找可替代的SourceModule
                         SourceModule replace = null;
-                        for (SourceModule delModule : duplicate) {
+                        for (SourceModule delModule : duplicates) {
                             if (delModule.getFdId().equals(sourceAppModule.getFdModuleId())) {
                                 replace = holdOn.get(delModule.getFdCode());
                                 break;
@@ -162,23 +164,31 @@ public class Main {
                         }
                         if (replace != null) {
                             // 检测替换后是否违反唯一索引
+                            String checkUniqueConstraint = "from SourceAppModule where fdAppId = '" + sourceAppModule.getFdAppId() + "'"
+                                    + " and fdModuleId = '" + replace.getFdId() + "'"
+                                    + (StringUtils.isNotEmpty(sourceAppModule.getFdSourceId()) ?
+                                    " and fdSourceId = '" + sourceAppModule.getFdSourceId() + "'" : "");
                             List<SourceAppModule> exists = session.createQuery(
-                                    "from SourceAppModule where fdAppId = '" + sourceAppModule.getFdAppId()
-                                            + "' and fdModuleId = '" + replace.getFdId()
-                                            + "' and fdSourceId = '" + sourceAppModule.getFdSourceId()
-                                            + "'", SourceAppModule.class).list();
-                            if (CollectionUtils.isNotEmpty(exists)) {
-                                session.delete(sourceAppModule);
-                            } else {
-                                // 替换SourceModule引用
+                                    checkUniqueConstraint, SourceAppModule.class).list();
+                            if (CollectionUtils.isEmpty(exists)) {
+                                // 替换SourceModule引用不违反唯一约束
                                 sourceAppModule.setFdModuleId(replace.getFdId());
                                 session.update(sourceAppModule);
+                                updated++;
+                            } else {
+                                session.delete(sourceAppModule);
+                                deleted++;
                             }
                         }
                     }
                 }
+                if (log.isInfoEnabled()) {
+                    log.info("check foreign key constraints({}), updated({}), deleted({})",
+                            sourceAppModules.size(), updated, deleted
+                    );
+                }
                 // 删除重复SourceModule
-                for (SourceModule delModule : duplicate) {
+                for (SourceModule delModule : duplicates) {
                     session.delete(delModule);
                 }
             }
@@ -203,7 +213,7 @@ public class Main {
     public static void main(String[] args) {
         log.info("Startup!");
         try {
-//            mockData();
+            mockData();
             doWork();
         } finally {
             sessionFactory.close();

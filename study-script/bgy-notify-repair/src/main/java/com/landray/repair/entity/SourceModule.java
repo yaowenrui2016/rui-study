@@ -28,8 +28,6 @@ public class SourceModule {
 
     private String fdCode;
 
-    private String fdDomain;
-
     private Boolean fdEnabled;
 
     private Boolean fdIsPreset;

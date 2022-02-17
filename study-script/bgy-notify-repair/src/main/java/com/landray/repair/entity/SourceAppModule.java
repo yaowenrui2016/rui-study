@@ -3,9 +3,7 @@ package com.landray.repair.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import java.io.Serializable;
 
 /**
  * @author: yaowr
@@ -13,10 +11,8 @@ import javax.persistence.Table;
  */
 @Getter
 @Setter
-@Entity
-@Table( name = "sys_notify_source_app_module" )
-public class SourceAppModule {
-    @Id
+public class SourceAppModule implements Serializable {
+
     private String fdId;
 
     private int fdTenantId;
