@@ -142,8 +142,8 @@ public class Main {
                 }
             }
             if (log.isInfoEnabled()) {
-                log.info("find modules({}), duplicates({})",
-                        modules.size(), duplicates.size()
+                log.info("find modules({}), duplicates({})={}",
+                        modules.size(), duplicates.size(), JSONObject.toJSONString(duplicates)
                 );
             }
             if (CollectionUtils.isNotEmpty(duplicates)) {
@@ -151,13 +151,18 @@ public class Main {
                 String moduleIds = StringUtils.join(duplicates.stream().map(SourceModule::getFdId).toArray(), "','");
                 List<SourceAppModule> sourceAppModules = session.createQuery(
                         "from SourceAppModule where fdModuleId in ('" + moduleIds + "')", SourceAppModule.class).list();
+                if (log.isInfoEnabled()) {
+                    log.info("check foreign key constraints({})={}",
+                            sourceAppModules.size(), JSONObject.toJSONString(sourceAppModules)
+                    );
+                }
                 int updated = 0, deleted = 0;
                 if (CollectionUtils.isNotEmpty(sourceAppModules)) {
                     for (SourceAppModule sourceAppModule : sourceAppModules) {
                         // 寻找可替代的SourceModule
                         SourceModule replace = null;
                         for (SourceModule delModule : duplicates) {
-                            if (delModule.getFdId().equals(sourceAppModule.getFdModuleId())) {
+                            if (sourceAppModule.getFdModuleId().equals(delModule.getFdId())) {
                                 replace = holdOn.get(delModule.getFdCode());
                                 break;
                             }

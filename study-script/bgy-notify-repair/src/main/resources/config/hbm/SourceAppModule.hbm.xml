@@ -16,8 +16,8 @@
         <composite-id>
             <key-property name="fdAppId"/>
             <key-property name="fdModuleId"/>
-            <key-property name="fdSourceId"/>
-            <key-property name="fdTenantId"/>
+<!--            <key-property name="fdSourceId"/>-->
+<!--            <key-property name="fdTenantId"/>-->
         </composite-id>
     </class>
 

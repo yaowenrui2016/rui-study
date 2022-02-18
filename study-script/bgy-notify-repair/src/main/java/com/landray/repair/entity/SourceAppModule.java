@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * @author: yaowr
@@ -22,4 +23,18 @@ public class SourceAppModule implements Serializable {
     private String fdModuleId;
 
     private String fdSourceId;
+
+    @Override
+    public boolean equals(Object obj) {
+        return this.hashCode() == obj.hashCode();
+    }
+
+    @Override
+    public int hashCode() {
+        if (fdId != null) {
+            return Objects.hashCode(fdId);
+        } else {
+            return Objects.hash(fdAppId, fdModuleId, fdSourceId);
+        }
+    }
 }
