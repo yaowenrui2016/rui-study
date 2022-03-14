@@ -1,4 +1,4 @@
-package indi.rui.study.unittest.callapi;
+package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONObject;
 import indi.rui.study.unittest.dto.MkResponse;
@@ -16,10 +16,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author: yaowr
- * @create: 2021-11-12
+ * @create: 2022-03-08
  */
 @Slf4j
-public class CallApiSendALotOfTodo {
+public class AutoNotifySendALotCheckAmount {
 
     private static final int TOTAL = 10;
 

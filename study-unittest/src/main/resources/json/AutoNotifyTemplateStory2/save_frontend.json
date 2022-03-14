@@ -1,0 +1,18 @@
+{
+  "fdPreset": "false",
+  "fdCode": "sys-notify-example:notify.template.audit",
+  "fdName": "常规审批节点",
+  "fdEnabled": false,
+  "fdDetails": [
+    {
+      "fdKey": "item1",
+      "notifyTypes": [
+        "todo",
+        "email"
+      ],
+      "fdType": "HTML",
+      "fdSubject": "${appName}123${moduleName}${entityName}${entityId}",
+      "fdContentHtml": "<p><a style=\"background: #e8f0fd; color: #4285f4;\" contenteditable=\"false\">${extendContents.opinion}</a><a style=\"background: transparent; color: #333333;\">&nbsp;</a><a style=\"background: #e8f0fd; color: #4285f4;\" contenteditable=\"false\">${extendContents.auditor}</a><a style=\"background: transparent; color: #333333;\">&nbsp;</a><a style=\"background: #e8f0fd; color: #4285f4;\" contenteditable=\"false\">${moduleName}</a><a style=\"background: transparent; color: #333333;\">&nbsp;</a><a style=\"background: #e8f0fd; color: #4285f4;\" contenteditable=\"false\">${appName}</a><a style=\"background: transparent; color: #333333;\">&nbsp;测试</a></p>"
+    }
+  ]
+}

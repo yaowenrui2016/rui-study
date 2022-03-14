@@ -27,9 +27,9 @@ import java.util.concurrent.CyclicBarrier;
 @Slf4j
 public class AutoNotifyMultiTypeTimeComputing {
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
@@ -39,9 +39,17 @@ public class AutoNotifyMultiTypeTimeComputing {
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://mktest.ywork.me",
+            "43534c48566d654e5031674d355238395259346736673d3d");
+
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "https://p.landray.com.cn",
 //            "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
+
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://192.168.51.160:8084",
+//            "624d65694c616b735a6e564576346c39584a67756f413d3d");
 
 
     private static RedissonClient redissonClient = RedisUtils.getRedis(
@@ -62,7 +70,7 @@ public class AutoNotifyMultiTypeTimeComputing {
     }
 
     private static void mutiThread(String method) {
-        int threadNum = 100;
+        int threadNum = 1;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
         CountDownLatch countDownLatch = new CountDownLatch(threadNum);
         for (int i = 0; i < threadNum; i++) {

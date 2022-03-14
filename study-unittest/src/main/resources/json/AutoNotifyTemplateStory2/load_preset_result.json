@@ -1,0 +1,116 @@
+{
+  "code": "return.optSuccess",
+  "data": {
+    "standard": [
+      {
+        "displayName": "来源系统",
+        "name": "appName"
+      },
+      {
+        "displayName": "来源模块",
+        "name": "moduleName"
+      },
+      {
+        "displayName": "业务名称",
+        "name": "entityName"
+      },
+      {
+        "displayName": "业务ID",
+        "name": "entityId"
+      },
+      {
+        "displayName": "业务关键字",
+        "name": "entityKey"
+      },
+      {
+        "displayName": "链接地址",
+        "name": "link"
+      },
+      {
+        "displayName": "移动端链接地址",
+        "name": "mobileLink"
+      },
+      {
+        "displayName": "节点名称",
+        "name": "nodeName"
+      },
+      {
+        "displayName": "所属企业",
+        "name": "corp"
+      },
+      {
+        "displayName": "发起人",
+        "name": "creator"
+      },
+      {
+        "displayName": "发起时间",
+        "name": "timestamp"
+      },
+      {
+        "displayName": "参数一",
+        "name": "parameter1"
+      },
+      {
+        "displayName": "参数二",
+        "name": "parameter2"
+      }
+    ],
+    "templateMetas": [
+      {
+        "code": "sys-notify-example:notify.template.audit",
+        "extend": [
+          {
+            "displayName": "审批人",
+            "name": "extendContents.auditor"
+          },
+          {
+            "displayName": "审批意见",
+            "name": "extendContents.opinion"
+          },
+          {
+            "displayName": "审批时间",
+            "name": "extendContents.auditTime"
+          },
+          {
+            "displayName": "节点名称",
+            "name": "replaceText.nodeName"
+          }
+        ],
+        "name": "常规审批节点"
+      },
+      {
+        "code": "sys-notify-example:notify.template.review",
+        "extend": [
+          {
+            "displayName": "合同等级",
+            "name": "extendContents.level"
+          },
+          {
+            "displayName": "区域",
+            "name": "extendContents.region"
+          },
+          {
+            "displayName": "申请人",
+            "name": "extendContents.applicator"
+          },
+          {
+            "displayName": "合同链接",
+            "name": "extendContents.contractLink"
+          },
+          {
+            "displayName": "合同名称",
+            "name": "replaceText.contractName"
+          },
+          {
+            "displayName": "合同签订日期",
+            "name": "replaceText.contractDate"
+          }
+        ],
+        "name": "合同签订通知模板"
+      }
+    ]
+  },
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1ft6rpgrsw4iwbfw1v0b8eu3ui735t2tvuw0"
+}

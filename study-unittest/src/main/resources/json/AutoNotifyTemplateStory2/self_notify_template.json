@@ -1,0 +1,70 @@
+{
+  "subject": "请审核${replaceText.contractName}合同",
+  "content": "该合同由${extendContents.applicator}负责您定，请各位领导以及专家组审核，详情请看${extendContents.contractLink}",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "TEST_{{notifyId}}",
+  "entityName": "sequential_1",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ],
+  "replaceText": {
+    "contractName": "PD-1免疫治疗"
+  },
+  "extendContents": [
+    {
+      "title": "申请人",
+      "key": "applicator",
+      "value": "Lucy"
+    },
+    {
+      "title": "合同链接",
+      "key": "contractLink",
+      "value": "http://aby.sss.com/contract/aa11"
+    }
+  ],
+  "langContent": {
+    "en_us": {
+      "subject": "Please review the ${replaceText.contractName} contract",
+      "content": "The contract is determined by ${extendContents.applicator}. Please review it by leaders and expert group. Please see ${extendContents.contractLink} for details",
+      "replaceText": {
+        "contractName": "PD-1 immunotherapy"
+      },
+      "extendContents": [
+        {
+          "title": "applicant",
+          "key": "applicator",
+          "value": "Lucy"
+        },
+        {
+          "title": "Contract link",
+          "key": "contractLink",
+          "value": "http://aby.sss.com/contract/aa11"
+        }
+      ]
+    },
+    "ja": {
+      "subject": "${replaceText.contractName}契約を確認してください",
+      "content": "この契約は${extendContents.applicator}が担当します。リーダーシップと専門家グループの審査をお願いします。詳細は${extendContents.contractLink}を参照してください。",
+      "replaceText": {
+        "contractName": "PD-1免疫治療"
+      },
+      "extendContents": [
+        {
+          "title": "申請者",
+          "key": "applicator",
+          "value": "Lucy"
+        },
+        {
+          "title": "契約リンク",
+          "key": "contractLink",
+          "value": "http://aby.sss.com/contract/aa11"
+        }
+      ]
+    }
+  }
+}

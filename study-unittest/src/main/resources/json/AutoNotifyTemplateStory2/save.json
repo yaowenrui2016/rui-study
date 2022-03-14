@@ -1,0 +1,19 @@
+{
+  "fdCode": "test_code_1001",
+  "fdName": "测试自定义模板1001",
+  "fdRefCode": "sys-notify-example:notify.template.audit",
+  "fdDetails": [
+    {
+      "fdNotifyType": "todo",
+      "fdType": "HTML",
+      "fdSubject": "最近${appName}疫情较为严峻，很多区域都已进行${extendContents.opinion}",
+      "fdContentHtml": "最近${extendContents.auditor}疫情较为严峻，很多区域都已进行${extendContents.auditTime},最近${replaceText.nodeName}疫情较为严峻，很多区域都已进行${entityName}"
+    },
+    {
+      "fdNotifyType": "email",
+      "fdType": "PIC_TXT",
+      "fdSubject": "最近${appName}疫情较为严峻，很多区域都已进行${extendContents.opinion}",
+      "fdText": "最近${extendContents.auditor}疫情较为严峻，很多区域都已进行${extendContents.auditTime},最近${replaceText.nodeName}疫情较为严峻，很多区域都已进行${entityName}"
+    }
+  ]
+}

@@ -35,6 +35,10 @@ public class MkApiRequestHelper {
 
     // ====================== public method =======================
 
+    public void callApi(String path) {
+        callApi(path, null);
+    }
+
     public <T> T callApi(String path, JSON json, Class<T> rtnClass) {
         T rtn = null;
         String httpResult = callApi(path, json);

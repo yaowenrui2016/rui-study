@@ -1,0 +1,40 @@
+{
+  "en_us": {
+    "subject": "Please review the PD-1 immunotherapy contract",
+    "content": "The contract is determined by Lucy. Please review it by leaders and expert group. Please see http://aby.sss.com/contract/aa11 for details",
+    "replaceText": {
+      "contractName": "PD-1 immunotherapy"
+    },
+    "extendContents": [
+      {
+        "title": "applicant",
+        "value": "Lucy",
+        "key": "applicator"
+      },
+      {
+        "title": "Contract link",
+        "value": "http://aby.sss.com/contract/aa11",
+        "key": "contractLink"
+      }
+    ]
+  },
+  "ja": {
+    "subject": "PD-1免疫治療契約を確認してください",
+    "content": "この契約はLucyが担当します。リーダーシップと専門家グループの審査をお願いします。詳細はhttp://aby.sss.com/contract/aa11を参照してください。",
+    "replaceText": {
+      "contractName": "PD-1免疫治療"
+    },
+    "extendContents": [
+      {
+        "title": "申請者",
+        "value": "Lucy",
+        "key": "applicator"
+      },
+      {
+        "title": "契約リンク",
+        "value": "http://aby.sss.com/contract/aa11",
+        "key": "contractLink"
+      }
+    ]
+  }
+}

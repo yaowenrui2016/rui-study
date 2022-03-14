@@ -1,0 +1,18 @@
+{
+  "fdPreset": false,
+  "fdCode": "hujh-code1",
+  "fdName": "hujh-test",
+  "fdEnabled": false,
+  "fdDetails": [
+    {
+      "fdKey": "item1",
+      "notifyTypes": [
+        "todo"
+      ],
+      "fdType": "PIC_TXT",
+      "fdSubject": "${appName}title",
+      "fdText": "${appName}${moduleName}connnn",
+      "fdAttachId": "1ftrqe6n7w1lw7dcw1rtcu2g3ggpu082acw0"
+    }
+  ]
+}

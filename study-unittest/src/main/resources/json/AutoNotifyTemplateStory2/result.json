@@ -1,0 +1,17 @@
+{
+  "code": "return.optSuccess",
+  "data": {
+    "totalSize": 1,
+    "offset": 0,
+    "pageSize": 1000,
+    "content": [
+      {
+        "fdCode": "moduleyao1",
+        "fdName": "yao"
+      }
+    ]
+  },
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1fsi6o0agw2uw79w1jbqssq2f6d48g1ardw0"
+}

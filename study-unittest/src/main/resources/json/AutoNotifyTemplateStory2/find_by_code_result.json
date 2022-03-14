@@ -1,0 +1,17 @@
+{
+  "code": "return.optSuccess",
+  "data": {
+    "content": [
+      {
+        "fdId": "1ft6scr07w4jwqw1cgg90e3fds9162sq3pw0",
+        "fdName": "测试自定义模板1001"
+      }
+    ],
+    "offset": 0,
+    "pageSize": 1000,
+    "totalSize": 1
+  },
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1ft6sh8fuw4jw1jw1hmn3jd3dp5b2614s6w0"
+}

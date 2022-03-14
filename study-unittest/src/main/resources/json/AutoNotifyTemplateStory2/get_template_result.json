@@ -1,0 +1,19 @@
+{
+  "code":"return.optSuccess",
+  "data":{
+    "fdCode":"sys-notify-example:notify.template.audit",
+    "fdCreateTime":1645774599000,
+    "fdCreatorId":"1d9bn74v4w0w4wokp10knfbukh25ccrt91w0",
+    "fdCreatorName":"匿名用户",
+    "fdDetails":[],
+    "fdEnabled":true,
+    "fdExtendContent":"[{\"key\":\"auditor\",\"title\":\"审批人\"},{\"key\":\"opinion\",\"title\":\"审批意见\"},{\"key\":\"auditTime\",\"title\":\"审批时间\"}]",
+    "fdId":"1fsnsut2dw3rw5w1thsps025l860l39t3gw0",
+    "fdName":"常规审批节点",
+    "fdPreset":true,
+    "fdReplaceVars":"[{\"name\":\"nodeName\",\"displayName\":\"节点名称\"}]"
+  },
+  "msg":"您的操作已成功！",
+  "success":true,
+  "traceId":"1fso2ilt3w3tw9kw942eje107e2uv1gl61w0"
+}

@@ -18,21 +18,27 @@ public class AutoCreatePersonAndAuthorized {
     //    private static final String GROUP_NAME = "ALL_ROLES";
     private static final String GROUP_NAME = "yao_test_1";
 
+//    private static final String[] USER_LOGIN_NAMES = new String[]{
+//            "yaowr", "姚文锐",
+//            "zhangyl", "张越良",
+//            "cuipx", "崔璞璇",
+//            "chenp", "陈鹏",
+//            "lizj", "李振佳",
+//            "weilq", "韦莉琦",
+//            "yuxd", "余小冬",
+//            "laow", "老王",};
+
     private static final String[] USER_LOGIN_NAMES = new String[]{
-            "yaowr", "姚文锐",
-            "zhangyl", "张越良",
-            "cuipx", "崔璞璇",
-            "chenp", "陈鹏",
-            "lizj", "李振佳",
-            "weilq", "韦莉琦",
-            "yuxd", "余小冬",
-            "laow", "老王",};
+            "yaowr", "姚文锐",};
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://127.0.0.1:8040", "secadmin", "Password_1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
+
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
+            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmoke.ywork.me", "secadmin", "Password_1");
