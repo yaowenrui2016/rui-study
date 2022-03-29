@@ -37,14 +37,17 @@ public class AutoCreatePersonAndAuthorized {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
 
-    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmoke.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkdev01.ywork.me", "secadmin", "Password_1");
+
+    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+            "http://mkdev02.ywork.me", "secadmin", "Password_1");
 
     public static void main(String[] args) {
         MkRightGroupVO group;

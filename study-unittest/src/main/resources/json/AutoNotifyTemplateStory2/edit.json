@@ -1,0 +1,71 @@
+{
+  "fdId": "1fu5jch42w4bw2ikw11i9v291lurjar1paw0",
+  "fdName": "name",
+  "fdCode": "testcode",
+  "fdDetails": [
+    {
+      "fdId": "1fu5k2grrw4bw2qnw1djp4td2915pme3jcw0",
+      "mechanisms": {
+        "attachment": [
+          {
+            "fdId": "1fu5kgnshw4cw2m2w1b4pprs2154o3t346w0",
+            "fdFileName": "170kb",
+            "fdFileExtName": "jpg",
+            "fdFileSize": 175338,
+            "fdMimeType": "image/jpeg",
+            "fdExtendInfo": "{\"uuid\":\"uploada9ckq75r9uw1647309247639\"}",
+            "fdWidth": 2062,
+            "fdHeight": 1080,
+            "fdCreatorId": "1ev6n3kt4w5nw7dvw3vl4r3epq93g32p07w0",
+            "fdCreator": "余小冬",
+            "fdAnonymous": true,
+            "fdSysAttachFile": {
+              "fdId": "1ftpf8kpswmwciiw2daniic3tpriqi1rq4w0"
+            },
+            "fdEffectType": "TRANSIENT",
+            "fdStatus": "VALID",
+            "fdExpirationTime": 1647395650000,
+            "fdIsExternal": false,
+            "fdVersion": 0,
+            "fdMd5": "a40d9bc983845fb38d8b8653d95acd81",
+            "downloadUrl": "http://mkdev02.ywork.me/data/sys-attach/download/1fu5kgnshw4cw2m2w1b4pprs2154o3t346w0",
+            "fullName": "170kb.jpg",
+            "mechanismName": "attachment",
+            "fdCreateTime": 1647309250000,
+            "fdEntityName": "com.landray.sys.notify.core.entity.SysNotifyTemplateDetail",
+            "fdBindType": "ADD",
+            "fdEntityKey": "Template"
+          }
+        ]
+      },
+      "fdMain": {
+        "fdId": "1fu5jch42w4bw2ikw11i9v291lurjar1paw0",
+        "fdName": "name"
+      },
+      "fdCode": "testcode",
+      "notifyTypes": [
+        "todo",
+        "email",
+        "openDing"
+      ],
+      "fdType": "PIC_TXT",
+      "fdKey": "item1",
+      "fdSubject": "123undefined",
+      "fdText": "undefinedundefined123777777777777777777777",
+      "fdCreateTime": 1647308785000
+    },
+    {
+      "fdKey": "item1609",
+      "notifyTypes": [
+        "email"
+      ],
+      "fdType": "HTML",
+      "fdContentHtml": "<p>是嗡嗡嗡</p>"
+    }
+  ],
+  "fdCreatorId": "1f0ioj1o8wqfw36gw159861h2l0dcpb2d7w0",
+  "fdCreatorName": "weilq",
+  "fdEnabled": false,
+  "fdPreset": false,
+  "fdCreateTime": 1647308064000
+}

@@ -13,6 +13,12 @@
     <artifactId>study-unittest</artifactId>
 
     <dependencies>
+        <!-- 主要用到StringUtils -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
         <!-- 主要用到FileUtils -->
         <dependency>
             <groupId>commons-io</groupId>

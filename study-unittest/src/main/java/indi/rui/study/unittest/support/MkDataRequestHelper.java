@@ -109,6 +109,22 @@ public class MkDataRequestHelper {
         return mkResponse;
     }
 
+    public String httpGet(String url) {
+        Map<String, String> httpHeaders = new HashMap<>();
+        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
+        httpHeaders.put("content-type", "application/json;charset=utf-8");
+        String httpResult = null;
+        try {
+            httpResult = HttpClientUtils.httpGet(url, httpHeaders);
+        } catch (Exception e) {
+            log.error("Http get request error! [url={}, httpHeaders={}]",
+                    url,
+                    JSONObject.toJSONString(httpHeaders),
+                    e);
+        }
+        return httpResult;
+    }
+
     // =================== 私有方法 ================== //
 
     private String callDataForString(String path, JSONObject body) {

@@ -81,6 +81,11 @@ public class MkNotifyTemplateDetailVO {
     private String fdText;
 
     /**
+     * 图文类型的附件ID
+     */
+    private String fdAttachId;
+
+    /**
      * 创建时间
      */
     private Date fdCreateTime;

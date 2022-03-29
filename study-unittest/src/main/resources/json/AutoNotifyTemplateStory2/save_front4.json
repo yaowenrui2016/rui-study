@@ -1,0 +1,40 @@
+{
+  "fdName": "name",
+  "fdCode": "testcode",
+  "fdDetails": [
+    {
+      "fdAttachId": "1fu5lv2q2w4cw2ugw3lsvrur2rlsq342cmw0",
+      "fdCode": "testcode",
+      "notifyTypes": [
+        "todo",
+        "email"
+      ],
+      "fdType": "PIC_TXT",
+      "fdKey": "item1",
+      "fdSubject": "123${entityName}零零零零",
+      "fdText": "${entityName}${entityId}123777777777777777777777"
+    },
+    {
+      "fdCode": "testcode",
+      "notifyTypes": [
+        "openDing"
+      ],
+      "fdType": "HTML",
+      "fdKey": "item8177",
+      "fdContentHtml": "<p>test</p>"
+    }
+  ],
+  "fdCreatorId": "1f0ioj1o8wqfw36gw159861h2l0dcpb2d7w0",
+  "fdCreatorName": "weilq",
+  "fdEnabled": false,
+  "fdPreset": false,
+  "mechanisms": {
+    "attachment": [
+      {
+        "fdId": "1fu5lv2q2w4cw2ugw3lsvrur2rlsq342cmw0",
+        "fdEntityKey": "Template",
+        "fdBindType": "ADD"
+      }
+    ]
+  }
+}

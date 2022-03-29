@@ -24,7 +24,7 @@
         </layout>
     </appender>
 
-    <logger name="indi.rui.study.unittest" level="debug"/>
+    <logger name="indi.rui.study.unittest" level="info"/>
 
     <root>
         <level value="info"/>

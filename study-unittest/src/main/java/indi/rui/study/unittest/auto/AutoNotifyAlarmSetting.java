@@ -23,11 +23,14 @@ public class AutoNotifyAlarmSetting {
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
 
     public static void main(String[] args) {
-//        getAlarmSettingRPC();
-        setAlarmSettingRPC();
+        MkNotifyAlarmSetting alarmSetting = getAlarmSettingRPC();
+        alarmSetting.setEnable(!alarmSetting.getEnable());
+        setAlarmSettingRPC(alarmSetting);
+        getAlarmSettingRPC();
+//        resetAlarmSettingRPC();
     }
 
-    private static void getAlarmSettingRPC() {
+    private static MkNotifyAlarmSetting getAlarmSettingRPC() {
         // 拉取来源系统和模块
         MkResponse<MkNotifyAlarmSetting> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyAlarmSetting/getAlarmSetting", null, MkNotifyAlarmSetting.class);
@@ -36,9 +39,21 @@ public class AutoNotifyAlarmSetting {
         }
         log.info("Get alarm setting: {}", JSON.toJSONString(mkResponse.getData(),
                 SerializerFeature.PrettyFormat));
+        return mkResponse.getData();
     }
 
-    private static void setAlarmSettingRPC() {
+    private static void setAlarmSettingRPC(MkNotifyAlarmSetting alarmSetting) {
+        // 保存消息告警设置
+        JSONObject json = (JSONObject) JSONObject.toJSON(alarmSetting);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyAlarmSetting/setAlarmSetting", json);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Get informed method error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("Set alarm setting: {}", JSON.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+    }
+
+    private static void resetAlarmSettingRPC() {
         // 保存消息告警设置
         JSONObject json = FileUtils.loadJSON("alarm_setting.json", AutoNotifyAlarmSetting.class);
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(

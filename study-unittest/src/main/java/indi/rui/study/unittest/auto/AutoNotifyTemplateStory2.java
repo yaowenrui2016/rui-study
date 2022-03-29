@@ -36,7 +36,7 @@ public class AutoNotifyTemplateStory2 {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yuxd", "1");
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -45,19 +45,30 @@ public class AutoNotifyTemplateStory2 {
 
     public static void main(String[] args) {
 //        loadPreset();
-//        checkExist();
-//        save();
+//        save("save.json");
+//        save("save_front3.json");
+//        save("save_front4.json");
 //        List<MkNotifyTemplate> templates = listNotifyTemplateDataRPC();
 //        if (templates != null && !templates.isEmpty()) {
-//            getTemplate(templates.get(0).getFdId());
+//            for (MkNotifyTemplate template : templates) {
+//                getTemplate(template.getFdId());
+//            }
 //        }
-//        loadByCode("test_code_1001");
+//        MkNotifyTemplate template = loadByCode("test_code_1001");
+        MkNotifyTemplate template = getByCode("test_code_1001");
+        if (template != null) {
+            updateStatus(template.getFdId(), true);
+            loadByCode(template.getFdCode());
+            updateStatus(template.getFdId(), false);
+            loadByCode(template.getFdCode());
+            edit(template);
+            loadByCode(template.getFdCode());
+        }
 //        sendTemplateNotify();
-        edit("test_code_1001");
+//        deleteAll(templates.stream().map(MkNotifyTemplate::getFdId).collect(Collectors.toList()));
     }
 
     private static List<MkNotifyTemplate> listNotifyTemplateDataRPC() {
-//        JSONObject request = FileUtils.loadJSON("notify-template-request.json", AutoNotifyTemplateStory2.class);
         JSONObject request = FileUtils.loadJSON("findAll.json", AutoNotifyTemplateStory2.class);
         MkResponse<QueryResult<MkNotifyTemplate>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/list", request, MkNotifyTemplate.class);
@@ -83,12 +94,14 @@ public class AutoNotifyTemplateStory2 {
 
     /**
      * 检查编码存在
+     *
+     * @param code
      */
-    private static void checkExist() {
-        String code = "module001";
+    private static boolean checkExist(String code) {
         MkResponse<Boolean> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyTemplate/checkCodeExist?code=" + code, null, Boolean.class);
-        log.info("check exist: {}", JSONObject.toJSONString(mkResponse));
+        boolean exist = mkResponse.getData();
+        return exist;
     }
 
     /**
@@ -105,14 +118,18 @@ public class AutoNotifyTemplateStory2 {
     /**
      * 保存模板
      */
-    private static void save() {
-        JSONObject json = FileUtils.loadJSON("save.json", AutoNotifyTemplateStory2.class);
+    private static void save(String jsonFileName) {
+        JSONObject json = FileUtils.loadJSON(jsonFileName, AutoNotifyTemplateStory2.class);
+//        String code = (String) json.get("fdCode");
+//        if (checkExist(code)) {
+//            log.warn("The template code [{}] have already exists.", code);
+//            return;
+//        }
         MkResponse<?> mkResponse = mkDataRequestHelper.callData("/data/sys-notify/sysNotifyTemplate/save", json);
         log.info("save template: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
     }
 
-    private static void edit(String code) {
-        MkNotifyTemplate template = loadByCode(code);
+    private static void edit(MkNotifyTemplate template) {
         template.setFdEnabled(false);
         template.setFdName(template.getFdName() + "_edit");
         List<MkNotifyTemplateDetailVO> details = template.getFdDetails();
@@ -131,6 +148,18 @@ public class AutoNotifyTemplateStory2 {
         log.info("edit template: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
     }
 
+    private static void updateStatus(String fdId, boolean enabled) {
+        MkNotifyTemplate _template = new MkNotifyTemplate();
+        _template.setFdId(fdId);
+        _template.setFdEnabled(enabled);
+        JSONObject json = (JSONObject) JSONObject.toJSON(_template);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyTemplate/updateStatus", json);
+        log.info("update template status for [{}] {}",
+                enabled,
+                mkResponse.isSuccess() ? "success" : "failed");
+    }
+
     /**
      * 根据编码获取模板
      *
@@ -140,6 +169,17 @@ public class AutoNotifyTemplateStory2 {
         MkNotifyTemplate template = mkApiRequestHelper.callApi(
                 "/api/sys-notify/sysNotifyTemplate/loadByCode?code=" + code, null, MkNotifyTemplate.class);
         log.info("load template by code: {}", JSONObject.toJSONString(template, SerializerFeature.PrettyFormat));
+        return template;
+    }
+
+    private static MkNotifyTemplate getByCode(String code) {
+        JSONObject json = new JSONObject();
+        json.put("fdCode", code);
+        MkResponse<MkNotifyTemplate> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyTemplate/getByCode", json, MkNotifyTemplate.class);
+        MkNotifyTemplate template = mkResponse.getData();
+        log.info("getByCode template: {}",
+                JSONObject.toJSONString(template, SerializerFeature.PrettyFormat));
         return template;
     }
 
@@ -154,12 +194,25 @@ public class AutoNotifyTemplateStory2 {
 
     private static void sendTemplateNotify() {
         JSONObject json = FileUtils.loadJSON("self_notify_template.json", AutoNotifyTemplateStory2.class);
-        json.put("timestamp", System.currentTimeMillis());
+        long timestamp = System.currentTimeMillis();
+        json.put("timestamp", timestamp);
+        json.put("entityKey", timestamp);
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Send or done todo error! errMsg=" + mkResponse.getMsg());
         }
+        log.info("send notify with template success!");
+    }
+
+    private static void deleteAll(List<String> ids) {
+        JSONObject json = new JSONObject();
+        json.put("fdIds", ids);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyTemplate/deleteAll", json);
+        log.info("delete template {}: {}",
+                mkResponse.isSuccess() ? "success" : "failed",
+                JSONObject.toJSONString(ids));
     }
 }

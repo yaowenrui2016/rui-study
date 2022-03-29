@@ -1,0 +1,51 @@
+{
+  "fdPreset": false,
+  "fdCode": "hujh-code9",
+  "fdName": "hujh-test9",
+  "fdEnabled": false,
+  "fdDetails": [
+    {
+      "fdKey": "item1",
+      "notifyTypes": [
+        "todo",
+        "email"
+      ],
+      "fdType": "PIC_TXT",
+      "fdSubject": "test${appName}",
+      "fdText": "${appName}${entityName}111",
+      "mechanisms": {
+        "attachment": [
+          {
+            "fdId": "1fu3sb4knw41w7j8w23jmkqnr7kten1mhjw0",
+            "fdFileName": "170kb",
+            "fdFileExtName": "jpg",
+            "fdFileSize": 175338,
+            "fdMimeType": "image/jpeg",
+            "fdExtendInfo": "{\"uuid\":\"uploadytq50s54gm1647250344649\"}",
+            "fdWidth": 2062,
+            "fdHeight": 1080,
+            "fdCreatorId": "1ev6n3kt4w5nw7dvw3vl4r3epq93g32p07w0",
+            "fdCreator": "余小冬",
+            "fdAnonymous": true,
+            "fdSysAttachFile": {
+              "fdId": "1ftpf8kpswmwciiw2daniic3tpriqi1rq4w0"
+            },
+            "fdEffectType": "TRANSIENT",
+            "fdStatus": "VALID",
+            "fdExpirationTime": 1647336747000,
+            "fdIsExternal": false,
+            "fdVersion": 0,
+            "fdMd5": "a40d9bc983845fb38d8b8653d95acd81",
+            "downloadUrl": "http://mkdev02.ywork.me/data/sys-attach/download/1fu3sb4knw41w7j8w23jmkqnr7kten1mhjw0",
+            "fullName": "170kb.jpg",
+            "mechanismName": "attachment",
+            "fdCreateTime": 1647250347000,
+            "fdEntityName": "com.landray.sys.notify.core.entity.SysNotifyTemplateDetail",
+            "fdBindType": "ADD",
+            "fdEntityKey": "Template"
+          }
+        ]
+      }
+    }
+  ]
+}

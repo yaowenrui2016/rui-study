@@ -1,0 +1,21 @@
+{
+  "appName": "origin-ekp",
+  "creator": "weilq",
+  "entityId": "17c304d23f9fe9fcb4be6c24aabb4860",
+  "entityName": "com.landray.kmss.km.calendar.model.KmCalendarAuth",
+  "extendContents": [],
+  "extendFields": [],
+  "link": "http://mktest-ekp.ywork.me/ekp/km/calendar/group.jsp?groupId=defaultGroup",
+  "moduleName": "km-calendar",
+  "notifyType": "todo",
+  "orgProperty": "fdLoginName",
+  "subject": "韦莉琦共享日程给您，请注意查看!",
+  "targets": [
+    "sunym",
+    "yaowr",
+    "yuxd"
+  ],
+  "timestamp": 1647507652055,
+  "todoLevel": 3,
+  "todoType": 2
+}

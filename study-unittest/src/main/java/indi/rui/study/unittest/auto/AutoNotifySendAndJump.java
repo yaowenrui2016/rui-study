@@ -21,18 +21,12 @@ import java.util.Map;
  * @create: 2021-11-12
  */
 @Slf4j
-public class AutoGetMyTodo {
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+public class AutoNotifySendAndJump {
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mktest.ywork.me", "jj01", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mktest.ywork.me",
+            "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
@@ -57,13 +51,16 @@ public class AutoGetMyTodo {
 
     public static void main(String[] args) {
         String snid = sendTodoRPC();
-        getMyTodo(snid);
+//        String snid = "1fudv0tvrw5qw2bw3il11v52ksglfk24mgw0";
+        String link = getMyTodoLink(snid);
+        jump(link);
         log.info("Finished!");
     }
 
     private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("km_review.json", AutoGetMyTodo.class);
-//        json.put("entityKey", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+        JSONObject json = FileUtils.loadJSON("send.json", AutoNotifySendAndJump.class);
+        json.put("todoType", 2);
+        json.put("entityKey", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);
@@ -74,7 +71,7 @@ public class AutoGetMyTodo {
         return mkResponse.getData();
     }
 
-    private static void getMyTodo(String snid) {
+    private static String getMyTodoLink(String snid) {
         long beginTime = System.currentTimeMillis();
         boolean timeout;
         List<MkNotifyTodo> content;
@@ -86,7 +83,9 @@ public class AutoGetMyTodo {
         if (content == null || content.isEmpty()) {
             throw new RuntimeException("Query todo with snid '" + snid + "' found nothing!");
         }
-        log.info("Get my todo: {}", JSONObject.toJSONString(content.get(0), SerializerFeature.PrettyFormat));
+        MkNotifyTodo todo = content.get(0);
+        log.info("Get my todo: {}", JSONObject.toJSONString(todo, SerializerFeature.PrettyFormat));
+        return todo.getFdLink();
     }
 
     private static QueryResult<MkNotifyTodo> getTodoRPC(String snid) {
@@ -100,5 +99,10 @@ public class AutoGetMyTodo {
             throw new RuntimeException("Get my todo error! errMsg=" + mkResponse.getMsg());
         }
         return mkResponse.getData();
+    }
+
+    private static void jump(String link) {
+        String response = mkDataRequestHelper.httpGet(link);
+        log.info("Jump response: {}", response);
     }
 }

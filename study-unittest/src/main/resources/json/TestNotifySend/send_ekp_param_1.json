@@ -1,0 +1,30 @@
+{
+  "appName": "origin-ekp-yonghe",
+  "creator": "admin",
+  "entityId": "17f8c6e7711d909e82f871c49299820a",
+  "entityKey": "17f8c6e7711d909e82f871c49299820a",
+  "entityName": "com.landray.kmss.km.review.model.KmReviewMain",
+  "extendContents": [],
+  "extendFields": [
+    {
+      "key": "lbpmCurrNode",
+      "titleMsgKey": "sys-lbpmservice:lbpmSupport.STATUS_RUNNING",
+      "value": "审批节点1",
+      "valueMode": "value",
+      "title": "处理节点"
+    }
+  ],
+  "link": "http://mktest-ekp.ywork.me/ekp/km/review/km_review_main/kmReviewMain.do?method=view&fdId=17f8c6e7711d909e82f871c49299820a&fdTaskInstanceId=17f8c6f5b01288b363e129844d7904a0",
+  "moduleName": "km-review",
+  "notifyType": "todo",
+  "orgProperty": "fdLoginName",
+  "parameter1": "17f8c6f5aa70af4a327f28c486b92a64",
+  "parameter2": "17f8c6f5b01288b363e129844d7904a0",
+  "subject": "请仔细审批[蓝凌机构08]管理员提交的流程：审批+抄送+签字审批+抄送+签字hzz",
+  "targets": [
+    "lizhenjia"
+  ],
+  "timestamp": 1647328582497,
+  "todoLevel": 3,
+  "todoType": 1
+}
