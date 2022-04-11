@@ -17,8 +17,11 @@ public class CallDataGetInformedMethod {
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
+
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
+            = new MkDataRequestHelper("http://mkoppo.ywork.me", "liq", "1");
 
     public static void main(String[] args) {
         getInformedMethodRPC();

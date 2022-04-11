@@ -1,20 +1,19 @@
 {
+  "subject": "请查阅管理员传阅的文档：MK融合待办测试(韦莉琦)2022030901",
   "appName": "origin-ekp",
   "moduleName": "km-review",
-  "entityId": "17f6ee1c73d25652370840b4405b8c27",
-  "entityKey": "sysCirculationMain",
+  "entityId": "1",
   "entityName": "com.landray.kmss.km.review.model.KmReviewMain",
+
+
+  "entityKey": "sysCirculationMain",
   "extendContents": [],
   "extendFields": [],
   "link": "http://mktest-ekp.ywork.me/ekp/km/review/km_review_main/kmReviewMain.do?method=view&fdId=17f6ee1c73d25652370840b4405b8c27&flag=circulation",
-  "notifyType": "todo",
+  "notifyType": "todo,openDing,sms,email,tt",
   "orgProperty": "fdLoginName",
-  "subject": "请查阅管理员传阅的文档：MK融合待办测试(韦莉琦)2022030901",
   "targets": [
-    "zhanghx",
-    "huangy",
-    "xiexingxing",
-    "sunym"
+    "yaowr"
   ],
   "timestamp": 1647842174271,
   "todoLevel": 3,

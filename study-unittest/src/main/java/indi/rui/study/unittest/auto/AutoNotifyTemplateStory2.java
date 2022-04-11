@@ -17,10 +17,16 @@ import java.util.List;
 @Slf4j
 public class AutoNotifyTemplateStory2 {
 
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1", "oppo");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
+            "http://mkoppo.ywork.me",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
@@ -44,7 +50,7 @@ public class AutoNotifyTemplateStory2 {
     private static final int MAX_TIMEOUT_MS = 10000;
 
     public static void main(String[] args) {
-//        loadPreset();
+        loadPreset();
 //        save("save.json");
 //        save("save_front3.json");
 //        save("save_front4.json");
@@ -55,21 +61,21 @@ public class AutoNotifyTemplateStory2 {
 //            }
 //        }
 //        MkNotifyTemplate template = loadByCode("test_code_1001");
-        MkNotifyTemplate template = getByCode("test_code_1001");
-        if (template != null) {
-            updateStatus(template.getFdId(), true);
-            loadByCode(template.getFdCode());
-            updateStatus(template.getFdId(), false);
-            loadByCode(template.getFdCode());
-            edit(template);
-            loadByCode(template.getFdCode());
-        }
-//        sendTemplateNotify();
+//        MkNotifyTemplate template = getByCode("test_code_1001");
+//        if (template != null) {
+//            updateStatus(template.getFdId(), true);
+//            loadByCode(template.getFdCode());
+//            updateStatus(template.getFdId(), false);
+//            loadByCode(template.getFdCode());
+//            edit(template);
+//            loadByCode(template.getFdCode());
+//        }
+        sendTemplateNotify();
 //        deleteAll(templates.stream().map(MkNotifyTemplate::getFdId).collect(Collectors.toList()));
     }
 
     private static List<MkNotifyTemplate> listNotifyTemplateDataRPC() {
-        JSONObject request = FileUtils.loadJSON("findAll.json", AutoNotifyTemplateStory2.class);
+        JSONObject request = FileUtils.loadJSON("AutoNotifyTemplateStory2/findAll.json");
         MkResponse<QueryResult<MkNotifyTemplate>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/list", request, MkNotifyTemplate.class);
         if (!mkResponse.isSuccess()) {
@@ -83,7 +89,7 @@ public class AutoNotifyTemplateStory2 {
     }
 
     private static void listNotifyTemplateApiRPC() {
-        JSONObject request = FileUtils.loadJSON("notify-template-request.json", AutoNotifyTemplateStory2.class);
+        JSONObject request = FileUtils.loadJSON("AutoNotifyTemplateStory2/notify-template-request.json");
         QueryResult result = mkApiRequestHelper.callApi(
                 "/api/sys-notify/sysNotifyTemplate/findAll", request, QueryResult.class);
         log.info("find notify template by '/api' interface: req={}, res={}",
@@ -119,7 +125,7 @@ public class AutoNotifyTemplateStory2 {
      * 保存模板
      */
     private static void save(String jsonFileName) {
-        JSONObject json = FileUtils.loadJSON(jsonFileName, AutoNotifyTemplateStory2.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory2/" + jsonFileName);
 //        String code = (String) json.get("fdCode");
 //        if (checkExist(code)) {
 //            log.warn("The template code [{}] have already exists.", code);
@@ -193,10 +199,11 @@ public class AutoNotifyTemplateStory2 {
     }
 
     private static void sendTemplateNotify() {
-        JSONObject json = FileUtils.loadJSON("self_notify_template.json", AutoNotifyTemplateStory2.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory2/self_notify_template.json");
         long timestamp = System.currentTimeMillis();
         json.put("timestamp", timestamp);
         json.put("entityKey", timestamp);
+        json.put("template", "test_code_1001");
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);

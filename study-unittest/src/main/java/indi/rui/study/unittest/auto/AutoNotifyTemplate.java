@@ -56,7 +56,7 @@ public class AutoNotifyTemplate {
 
     private static void addTemplateRPC(String name, String code) {
         // 新建模板
-        JSONObject json = FileUtils.loadJSON("add.json", AutoNotifyTemplate.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplate/add.json");
         json.put("fdName", name);
         json.put("fdCode", code);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
@@ -69,7 +69,7 @@ public class AutoNotifyTemplate {
 
     private static void addTemplate2RPC() {
         // 新建模板
-        JSONObject json = FileUtils.loadJSON("add2.json", AutoNotifyTemplate.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplate/add2.json");
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {

@@ -31,8 +31,13 @@ public class AutoCreatePersonAndAuthorized {
     private static final String[] USER_LOGIN_NAMES = new String[]{
             "yaowr", "姚文锐",};
 
+    /* ------------------ 各个环境 --------------- */
+
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://127.0.0.1:8040", "secadmin", "Password_1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mktest.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
@@ -46,8 +51,13 @@ public class AutoCreatePersonAndAuthorized {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkdev01.ywork.me", "secadmin", "Password_1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mkdev02.ywork.me", "secadmin", "Password_1");
+
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mkdev02.ywork.me", "secadmin", "Password_1");
+            "http://mkoppo.ywork.me", "secadmin", "Password_1");
+
+    /* ---------------------- */
 
     public static void main(String[] args) {
         MkRightGroupVO group;

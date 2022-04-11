@@ -28,15 +28,50 @@ public class MkDataRequestHelper {
     private final String address;
 
     public MkDataRequestHelper(String address, String username, String password) {
+        this(address, username, password, null);
+    }
+
+    public MkDataRequestHelper(String address, String username, String password, String pubKeyFile) {
         this.address = address;
         // 登录用户
-        this.loginResult = MkLoginHelper.doLogin(address, username, password);
+        this.loginResult = MkLoginHelper.doLogin(address, username, password, pubKeyFile);
     }
 
     // ====================== public method =======================
 
     public UserInfo getUserInfo() {
         return this.loginResult.getUserInfo();
+    }
+
+    public String httpGet(String url) {
+        Map<String, String> httpHeaders = new HashMap<>();
+        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
+        httpHeaders.put("content-type", "application/json;charset=utf-8");
+        String httpResult = null;
+        try {
+            httpResult = HttpClientUtils.httpGet(url, httpHeaders);
+        } catch (Exception e) {
+            log.error("Http get request error! [url={}, httpHeaders={}]",
+                    url,
+                    JSONObject.toJSONString(httpHeaders),
+                    e);
+        }
+        return httpResult;
+    }
+
+    public void callDataDownload(String path, JSONObject body, String downloadPath) {
+        String url = address + path;
+        Map<String, String> httpHeaders = new HashMap<>();
+        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
+        httpHeaders.put("content-type", "application/json;charset=utf-8");
+        try {
+            HttpClientUtils.httpPostDownload(url, body, httpHeaders, downloadPath);
+        } catch (Exception e) {
+            log.error("Call mk data request error! [url={}, body={}]",
+                    url,
+                    body != null ? body.toString(SerializerFeature.PrettyFormat) : null,
+                    e);
+        }
     }
 
     public MkResponse<?> callData(String path, JSONObject json) {
@@ -107,22 +142,6 @@ public class MkDataRequestHelper {
                     });
         }
         return mkResponse;
-    }
-
-    public String httpGet(String url) {
-        Map<String, String> httpHeaders = new HashMap<>();
-        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
-        httpHeaders.put("content-type", "application/json;charset=utf-8");
-        String httpResult = null;
-        try {
-            httpResult = HttpClientUtils.httpGet(url, httpHeaders);
-        } catch (Exception e) {
-            log.error("Http get request error! [url={}, httpHeaders={}]",
-                    url,
-                    JSONObject.toJSONString(httpHeaders),
-                    e);
-        }
-        return httpResult;
     }
 
     // =================== 私有方法 ================== //

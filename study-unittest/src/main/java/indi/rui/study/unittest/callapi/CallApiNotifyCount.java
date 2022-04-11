@@ -22,7 +22,7 @@ public class CallApiNotifyCount {
 //        JSONObject condition = new JSONObject();
 //        condition.put("loginName", "cuipx");
 //        condition.put("fdType",1);
-        JSONObject condition = FileUtils.loadJSON("conditions.json", CallApiNotifyCount.class);
+        JSONObject condition = FileUtils.loadJSON("CallApiNotifyCount/conditions.json");
         String result = mkApiRequestHelper.callApi("/api/sys-notify/sysNotifyTodo/count", condition);
         log.info("Get notify count: condition={}, count={}", JSONObject.toJSONString(condition), result);
     }

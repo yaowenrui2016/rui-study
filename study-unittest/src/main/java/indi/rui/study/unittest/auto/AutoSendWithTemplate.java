@@ -56,7 +56,7 @@ public class AutoSendWithTemplate {
     }
 
     private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("send.json", AutoSendWithTemplate.class);
+        JSONObject json = FileUtils.loadJSON("AutoSendWithTemplate/send.json");
         json.put("notifyType", "email");
         json.put("entityKey", redissonClient.getAtomicLong("mkpaas:notify:entityKey").getAndIncrement());
         json.put("todoLevel", 1 + RANDOM.nextInt(3));
@@ -71,7 +71,7 @@ public class AutoSendWithTemplate {
     }
 
     private static String doneTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("done.json", AutoSendWithTemplate.class);
+        JSONObject json = FileUtils.loadJSON("AutoSendWithTemplate/done.json");
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/done",
                 json, String.class);

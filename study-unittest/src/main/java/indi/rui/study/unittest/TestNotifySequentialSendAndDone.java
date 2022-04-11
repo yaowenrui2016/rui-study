@@ -46,7 +46,7 @@ public class TestNotifySequentialSendAndDone {
     private void send(String entityId) {
         String sendUrl = ADDRESS + "/api/sys-notifybus/sysNotifyComponent/send";
         // 从JSON文件中获取请求体
-        JSONObject body = loadJSON("send.json", this.getClass());
+        JSONObject body = loadJSON("TestNotifySequentialSendAndDone/send.json");
         body.put("entityId", entityId);
         body.put("entityKey", System.currentTimeMillis());
         // 需要x-service-name请求头验权
@@ -100,7 +100,7 @@ public class TestNotifySequentialSendAndDone {
     private void todoOpt(String method, String entityId) {
         String sendUrl = ADDRESS + "/api/sys-notifybus/sysNotifyComponent/" + method;
         // 从JSON文件中获取请求体
-        JSONObject body = FileUtils.loadJSON("done.json", this.getClass());
+        JSONObject body = FileUtils.loadJSON("TestNotifySequentialSendAndDone/done.json");
         body.put("entityId", entityId);
         // 需要x-service-name请求头验权
         Map<String, String> header = Collections.singletonMap("x-service-name", X_SERVICE_NAME);

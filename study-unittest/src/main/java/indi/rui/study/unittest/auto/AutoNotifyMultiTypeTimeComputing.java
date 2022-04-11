@@ -27,9 +27,9 @@ import java.util.concurrent.CyclicBarrier;
 @Slf4j
 public class AutoNotifyMultiTypeTimeComputing {
 
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
@@ -39,9 +39,9 @@ public class AutoNotifyMultiTypeTimeComputing {
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mktest.ywork.me",
-            "43534c48566d654e5031674d355238395259346736673d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mktest.ywork.me",
+//            "43534c48566d654e5031674d355238395259346736673d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "https://p.landray.com.cn",
@@ -99,6 +99,7 @@ public class AutoNotifyMultiTypeTimeComputing {
     private static void run(String method) {
         // 1.发送消息或置已办
         String snid = sendOrDone(method);
+//        String snid = "1fvfdss2iw81wgllw3inr8bi3lsl8quljcw0";
         // 2.计算消息耗时
         while (true) {
             try {
@@ -117,7 +118,7 @@ public class AutoNotifyMultiTypeTimeComputing {
         if (!"send".equalsIgnoreCase(method)) {
             filename = "done.json";
         }
-        JSONObject json = FileUtils.loadJSON(filename, AutoNotifyMultiTypeTimeComputing.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyMultiTypeTimeComputing/" + filename);
         if ("send".equalsIgnoreCase(method)) {
             json.put("entityKey", counter.getAndIncrement());
         }

@@ -21,12 +21,18 @@ import java.util.Map;
  * @create: 2021-11-12
  */
 @Slf4j
-public class AutoGetMyTodo {
+public class AutoGetMyTodoWithTemplate {
+
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+//            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1", "oppo");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
+//            "http://mkoppo.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
@@ -53,23 +59,20 @@ public class AutoGetMyTodo {
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mkoppo.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
     private static final int MAX_TIMEOUT_MS = 10000;
 
     public static void main(String[] args) {
         String snid = sendTodoRPC();
+//        String snid = "1g06jmdimw7qwq4w3c1mhhg1i0rlntmu9gw0";
         getMyTodo(snid);
         log.info("Finished!");
     }
 
     private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("AutoGetMyTodo/send.json");
+        JSONObject json = FileUtils.loadJSON("AutoGetMyTodoWithTemplate/send.json");
+        json.put("creator", "yuxd");
         json.put("entityKey", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
+//        json.put("template", "msg_lq_01");
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);

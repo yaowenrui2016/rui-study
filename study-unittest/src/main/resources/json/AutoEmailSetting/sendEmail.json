@@ -1,6 +1,6 @@
 {
-  "subject": "Test Send Todo And Query My Todo List",
-  "notifyType": "todo",
+  "subject": "Test Send Email ",
+  "notifyType": "email",
   "todoType": 1,
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
@@ -11,5 +11,6 @@
   "orgProperty": "fdLoginName",
   "targets": [
     "yaowr"
-  ]
+  ],
+  "creator": "lizhenjia"
 }

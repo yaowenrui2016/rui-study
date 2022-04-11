@@ -71,12 +71,12 @@ public class AutoSendFindOriginal {
     private static String sendOrDoneRPC(String method) {
         JSONObject json;
         if ("send".equals(method)) {
-            json = FileUtils.loadJSON("send.json", AutoSendFindOriginal.class);
+            json = FileUtils.loadJSON("AutoSendFindOriginal/send.json");
             json.put("notifyType", "todo");
             json.put("entityKey", counter.getAndIncrement());
             json.put("todoLevel", 1 + counter.get() % 3);
         } else {
-            json = FileUtils.loadJSON("done.json", AutoSendFindOriginal.class);
+            json = FileUtils.loadJSON("AutoSendFindOriginal/done.json");
         }
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/" + method,

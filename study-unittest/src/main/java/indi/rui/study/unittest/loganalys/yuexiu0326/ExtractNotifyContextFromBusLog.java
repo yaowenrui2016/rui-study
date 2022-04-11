@@ -1,4 +1,4 @@
-package indi.rui.study.unittest.loganalys;
+package indi.rui.study.unittest.loganalys.yuexiu0326;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;

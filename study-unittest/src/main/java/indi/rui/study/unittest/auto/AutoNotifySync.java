@@ -26,7 +26,7 @@ public class AutoNotifySync {
 
 
     public static void main(String[] args) {
-        JSONObject json = FileUtils.loadJSON("syncNotify.json", AutoNotifySync.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifySync/syncNotify.json");
         // 设置已办的完成时间
         List<Long> targetsFinish = new ArrayList<>();
         for (int i = 0; i < ((List<String>) json.get("targetsDone")).size(); i++) {

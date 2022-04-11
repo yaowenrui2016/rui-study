@@ -40,7 +40,7 @@ public class TestNotifyMobileLinkFindByPerson {
             Map<String, String> httpHeaders = new HashMap<>();
             httpHeaders.put("X-SERVICE-NAME", xServiceName);
             httpHeaders.put("content-type", "application/json;charset=utf-8");
-            JSONObject json = FileUtils.loadJSON("findByPerson.json", TestNotifyMobileLinkFindByPerson.class);
+            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/findByPerson.json");
             String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
             log.info("{}", JSONObject.parseObject(httpResult).toString(SerializerFeature.PrettyFormat));
         } catch (Exception e) {
@@ -54,7 +54,7 @@ public class TestNotifyMobileLinkFindByPerson {
             Map<String, String> httpHeaders = new HashMap<>();
             httpHeaders.put("X-SERVICE-NAME", xServiceName);
             httpHeaders.put("content-type", "application/json;charset=utf-8");
-            JSONObject json = FileUtils.loadJSON("findAll.json", TestNotifyMobileLinkFindByPerson.class);
+            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/findAll.json");
             ((JSONObject) json.get("conditions")).put("fdOwnerId", ownerId);
             String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
             log.info("{}", JSONObject.parseObject(httpResult).toString(SerializerFeature.PrettyFormat));
@@ -69,7 +69,7 @@ public class TestNotifyMobileLinkFindByPerson {
             Map<String, String> httpHeaders = new HashMap<>();
             httpHeaders.put("X-SERVICE-NAME", xServiceName);
             httpHeaders.put("content-type", "application/json;charset=utf-8");
-            JSONObject json = FileUtils.loadJSON("send.json", TestNotifyMobileLinkFindByPerson.class);
+            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/send.json");
             json.put("entityKey", System.currentTimeMillis());
             String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
             JSON.parseObject(httpResult,
@@ -86,7 +86,7 @@ public class TestNotifyMobileLinkFindByPerson {
             Map<String, String> httpHeaders = new HashMap<>();
             httpHeaders.put("X-SERVICE-NAME", xServiceName);
             httpHeaders.put("content-type", "application/json;charset=utf-8");
-            JSONObject json = FileUtils.loadJSON("remove.json", TestNotifyMobileLinkFindByPerson.class);
+            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/remove.json");
             String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
             JSON.parseObject(httpResult,
                     new TypeReference<MkResponse<String>>() {

@@ -49,7 +49,7 @@ public class AutoGetPortletTodo {
     }
 
     private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("send.json", AutoGetPortletTodo.class);
+        JSONObject json = FileUtils.loadJSON("AutoGetPortletTodo/send.json");
         json.put("entityKey", System.currentTimeMillis());
         json.put("todoLevel", 1 + RANDOM.nextInt(3));
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(

@@ -55,7 +55,7 @@ public class AutoNotifyAlarmSetting {
 
     private static void resetAlarmSettingRPC() {
         // 保存消息告警设置
-        JSONObject json = FileUtils.loadJSON("alarm_setting.json", AutoNotifyAlarmSetting.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyAlarmSetting/alarm_setting.json");
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyAlarmSetting/setAlarmSetting", json);
         if (!mkResponse.isSuccess()) {

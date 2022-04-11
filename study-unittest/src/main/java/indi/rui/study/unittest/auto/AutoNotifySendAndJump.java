@@ -58,7 +58,7 @@ public class AutoNotifySendAndJump {
     }
 
     private static String sendTodoRPC() {
-        JSONObject json = FileUtils.loadJSON("send.json", AutoNotifySendAndJump.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifySendAndJump/send.json");
         json.put("todoType", 2);
         json.put("entityKey", LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")));
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(

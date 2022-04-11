@@ -21,7 +21,7 @@ public class CallApiAddNotifyTemplate {
 
     public static void main(String[] args) throws Exception {
         // 新增消息模板
-        JSONObject json = FileUtils.loadJSON("add.json", CallApiAddNotifyTemplate.class);
+        JSONObject json = FileUtils.loadJSON("CallApiAddNotifyTemplate/add.json");
         JSONObject result = mkApiRequestHelper.callApi(
                 "/api/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
         log.info("Add notify template: {}", JSONObject.toJSONString(result, SerializerFeature.PrettyFormat));

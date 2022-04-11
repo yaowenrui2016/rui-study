@@ -39,7 +39,7 @@ public class AutoNotifyTodoQueryType {
     }
 
     private static String sendTodoRPC(int useCaseNo) {
-        JSONObject json = FileUtils.loadJSON("send.json", AutoNotifyTodoQueryType.class);
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTodoQueryType/send.json");
         json.put("entityKey", System.currentTimeMillis());
         switch (useCaseNo) {
             case 1: // 不传todoType，不传queryType

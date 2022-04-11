@@ -1,5 +1,5 @@
 {
-  "subject": "Test Send Todo And Query My Todo List",
+  "subject": "测试消息模板：${creator} - ${replaceText.nodeName}",
   "notifyType": "todo",
   "todoType": 1,
   "link": "http://www.baidu.com",
@@ -11,5 +11,10 @@
   "orgProperty": "fdLoginName",
   "targets": [
     "yaowr"
-  ]
+  ],
+  "replaceText": {
+    "nodeName": "HR审核节点"
+  },
+  "creator": "yaowr",
+  "template": "test_code_1001"
 }
