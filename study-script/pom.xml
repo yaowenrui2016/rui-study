@@ -17,5 +17,6 @@
     </properties>
     <modules>
         <module>bgy-notify-repair</module>
+        <module>bgy-notify-done-check</module>
     </modules>
 </project>

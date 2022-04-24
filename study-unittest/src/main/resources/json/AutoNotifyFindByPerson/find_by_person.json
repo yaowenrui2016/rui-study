@@ -1,0 +1,11 @@
+{
+  "conditions": {
+    "todoOrDone": "todo",
+    "targets": [
+      "yaowr"
+    ],
+    "orgProperty": "fdLoginName",
+    "fdType": 4
+  },
+  "content": false
+}

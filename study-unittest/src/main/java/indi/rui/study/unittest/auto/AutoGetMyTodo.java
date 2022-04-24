@@ -23,11 +23,11 @@ import java.util.Map;
 @Slf4j
 public class AutoGetMyTodo {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mktest.ywork.me", "jj01", "1");
@@ -53,11 +53,11 @@ public class AutoGetMyTodo {
 //            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mkoppo.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkoppo.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     private static final int MAX_TIMEOUT_MS = 10000;
 

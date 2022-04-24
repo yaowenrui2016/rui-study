@@ -1,0 +1,12 @@
+[
+  {
+    "fdId": "123",
+    "fdName": "审批模板",
+    "fdCode": "km_review"
+  },
+  {
+    "fdId": "456",
+    "fdName": "沟通模板",
+    "fdCode": "km_communication"
+  }
+]

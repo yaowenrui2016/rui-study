@@ -1,6 +1,7 @@
 package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
@@ -48,9 +49,26 @@ public class AutoMechTptEnvToEnv {
 
 
     public static void main(String[] args) {
-        offLineExport();
+//        loadApi("com.landray.sys.transport.demo.core.entity.ExampleEntity");
+        onlineSourceGenerate();
+//        offLineExport();
 //        offLineLoadEntity();
 //        offLineImportData();
+    }
+
+    private static void onlineSourceGenerate() {
+        JSONObject json = FileUtils.loadJSON("AutoMechTptEnvToEnv/exportRequest.json");
+        MkResponse<String> response = mkDataRequestHelper.callData(
+                "/data/sys-mech-transport/envToEnv/online/source/generate",
+                json, String.class);
+        log.info("generate: {}", JSONObject.toJSONString(response, SerializerFeature.PrettyFormat));
+    }
+
+    private static void loadApi(String entityName) {
+        String response = mkApiRequestHelper.callApi(
+                "/api/sys-mech-transport/envToEnv/online/source/loadApi?entityName=" + entityName,
+                null);
+        log.info("load api: {}", JSONObject.toJSONString(response, SerializerFeature.PrettyFormat));
     }
 
 

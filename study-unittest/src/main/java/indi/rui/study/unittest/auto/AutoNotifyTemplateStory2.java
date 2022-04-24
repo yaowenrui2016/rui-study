@@ -50,7 +50,7 @@ public class AutoNotifyTemplateStory2 {
     private static final int MAX_TIMEOUT_MS = 10000;
 
     public static void main(String[] args) {
-        loadPreset();
+//        loadPreset();
 //        save("save.json");
 //        save("save_front3.json");
 //        save("save_front4.json");
@@ -203,7 +203,7 @@ public class AutoNotifyTemplateStory2 {
         long timestamp = System.currentTimeMillis();
         json.put("timestamp", timestamp);
         json.put("entityKey", timestamp);
-        json.put("template", "test_code_1001");
+        json.put("template", "paas.lbpm:lbpm.notify.template.review");
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);

@@ -40,7 +40,8 @@ public class TestNotifyMobileLinkFindByPerson {
             Map<String, String> httpHeaders = new HashMap<>();
             httpHeaders.put("X-SERVICE-NAME", xServiceName);
             httpHeaders.put("content-type", "application/json;charset=utf-8");
-            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/findByPerson.json");
+//            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/findByPerson.json");
+            JSONObject json = FileUtils.loadJSON("TestNotifyMobileLinkFindByPerson/find_by_person.json");
             String httpResult = HttpClientUtils.httpPost(url, json, httpHeaders);
             log.info("{}", JSONObject.parseObject(httpResult).toString(SerializerFeature.PrettyFormat));
         } catch (Exception e) {

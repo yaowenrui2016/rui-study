@@ -26,6 +26,8 @@
 
     <logger name="indi.rui.study.unittest" level="debug"/>
 
+    <logger name="org.hibernate.engine.QueryParameters" level="debug"/>
+
     <root>
         <level value="info"/>
         <appender-ref ref="STDOUT"/>

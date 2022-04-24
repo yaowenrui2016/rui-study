@@ -1,0 +1,51 @@
+{
+  "entityName": "com.landray.sys.lbpm.",
+  "entities": [
+    {
+      "fdId": "",
+      "fdSubject": "",
+      "fdcreateor": "",
+      "fdContent": "",
+      "fdCreator": {
+        "fdId": "",
+        "fdName": ""
+      },
+      "fdRule": {
+        "fdId": "",
+        "fdCode": ""
+      },
+      "mechanisms": {
+        "sys-lbpm": {
+        }
+      }
+    }
+  ],
+  "referData": {
+    "SysOrgElement": [
+      {
+        "fdName": "",
+        "fdOrgType": "",
+        "fdOriId": "",
+        "fdNo": "",
+        "fdKeyword": "",
+        "fdFullPath": "",
+        "fdLoginName": "",
+        "fdMobileNo": ""
+      }
+    ],
+    "TicDefInterface": {
+      "Id": {
+        "fdName": "",
+        "fdCode": ""
+      }
+    }
+  },
+  "referPath": {
+    "SysOrgElement": {
+      "entityId": [
+        "fdCreator",
+        "mechanisms.sys-lbpm.fdPrivilege"
+      ]
+    }
+  }
+}

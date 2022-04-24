@@ -1,7 +1,7 @@
 {
   "subject": "Send Multi-Type Notify And Time Computing!",
   "notifyType": "todo",
-  "todoType": 4,
+  "todoType": 1,
   "link": "http://www.baidu.com",
   "mobileLink": "http://www.taobao.com",
   "appName": "MKPaaS",
@@ -10,7 +10,9 @@
   "entityName": "TestNotifySendOrDoneMultiTypeAndMonitorOriginal",
   "orgProperty": "fdLoginName",
   "targets": [
-    "zhanghx"
+    "yaowr",
+    "yuxd",
+    "cuipx"
   ],
   "category": "giraffe"
 }

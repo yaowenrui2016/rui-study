@@ -27,17 +27,17 @@ import java.util.concurrent.CyclicBarrier;
 @Slf4j
 public class AutoNotifyMultiTypeTimeComputing {
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://mksmoke.ywork.me",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mktest.ywork.me",
@@ -70,7 +70,7 @@ public class AutoNotifyMultiTypeTimeComputing {
     }
 
     private static void mutiThread(String method) {
-        int threadNum = 1;
+        int threadNum = 20;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
         CountDownLatch countDownLatch = new CountDownLatch(threadNum);
         for (int i = 0; i < threadNum; i++) {
