@@ -26,10 +26,7 @@ import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * @author: yaowr
@@ -224,6 +221,7 @@ public class Main {
         int batchSize = Integer.parseInt(properties.getProperty("batchSize"));
         int todoType = Integer.parseInt(properties.getProperty("todoType"));
         String targets = properties.getProperty("targets");
+        String appNames = properties.getProperty("appNames");
 
         Session session = null;
         try {
@@ -236,15 +234,24 @@ public class Main {
                     .setParameter(1, loginNames).list();
             String byPersonSql = "";
             if (CollectionUtils.isNotEmpty(personIds)) {
-//                personIds = summaryList.stream().map(SysOrgElementSummary::getFdId).collect(Collectors.toList());
                 byPersonSql = " and fdOwnerId in (:personIds)";
+            }
+
+            // 白名单系统
+            List<String> appNameList = Arrays.asList(appNames.split(","));
+            String byAppNameSql = "";
+            if (CollectionUtils.isNotEmpty(appNameList)) {
+                byAppNameSql = " and fdAppName in (:appNameList)";
             }
 
             // 查询已办数据
             Query<Long> totalQuery = session.createQuery("select count(1) from SysNotifyDone where fdType = "
-                    + todoType + byPersonSql + " and fdFinishTime >= :startTime and fdFinishTime < :endTime", Long.class);
+                    + todoType + byPersonSql + byAppNameSql + " and fdFinishTime >= :startTime and fdFinishTime < :endTime", Long.class);
             if (StringUtils.isNotBlank(byPersonSql)) {
                 totalQuery.setParameter("personIds", personIds);
+            }
+            if (StringUtils.isNotBlank(byAppNameSql)) {
+                totalQuery.setParameter("appNameList", appNameList);
             }
             totalQuery.setParameter("startTime", Date.from(LocalDateTime.parse(startTime, DEFAULT_DATE_FORMATTER)
                     .atZone(ZoneId.systemDefault())
@@ -254,9 +261,12 @@ public class Main {
                     .toInstant()));
             long total = totalQuery.getSingleResult();
             Query<SysNotifyDone> query = session.createQuery("from SysNotifyDone where fdType = "
-                    + todoType + byPersonSql + " and fdFinishTime >= :startTime and fdFinishTime < :endTime", SysNotifyDone.class);
+                    + todoType + byPersonSql + byAppNameSql + " and fdFinishTime >= :startTime and fdFinishTime < :endTime", SysNotifyDone.class);
             if (StringUtils.isNotBlank(byPersonSql)) {
                 query.setParameter("personIds", personIds);
+            }
+            if (StringUtils.isNotBlank(byAppNameSql)) {
+                query.setParameter("appNameList", appNameList);
             }
             query.setParameter("startTime", Date.from(LocalDateTime.parse(startTime, DEFAULT_DATE_FORMATTER)
                     .atZone(ZoneId.systemDefault())
@@ -264,11 +274,14 @@ public class Main {
             query.setParameter("endTime", Date.from(LocalDateTime.parse(endTime, DEFAULT_DATE_FORMATTER)
                     .atZone(ZoneId.systemDefault())
                     .toInstant()));
+            List<String> suppliedIds = new ArrayList<>();
+            List<String> rejectIds = new ArrayList<>();
             int offset = 0;
             int pageSize = batchSize;
             int doneCount = 0;
             int errorCount = 0;
             int insertCount = 0;
+            int rejectCount = 0;
             while (true) {
                 // 开启事务
                 try {
@@ -325,18 +338,22 @@ public class Main {
                                 Query<Long> todoQuery = session.createQuery(todoSql, Long.class);
                                 long todoCount = todoQuery.getSingleResult();
                                 if (todoCount > 0) {
-                                    log.warn("待办已存在，无需补发！doneId={}", done.getFdId());
+                                    rejectIds.add(done.getFdId());
+                                    rejectCount++;
                                     continue;
                                 }
                                 SysNotifyTodo todo = new SysNotifyTodo();
                                 BeanUtils.copyProperties(todo, done);
                                 session.save(todo);
+                                suppliedIds.add(todo.getFdId());
                                 insertCount++;
                             }
                         }
                     }
                     doneCount += doneList.size();
-                    log.info("checked {}/{}, error({}), insert({})", doneCount, total, errorCount, insertCount);
+                    log.info("checked({}/{}), error({}), reject({}), supplied({})",
+                            doneCount, total, errorCount, rejectCount,
+                            insertCount);
                     // 提交事务
                     session.getTransaction().commit();
                     if (doneList.size() < pageSize) {
@@ -348,7 +365,8 @@ public class Main {
                     break;
                 }
             }
-
+            log.info("...... rejectIds({})={} ......", rejectCount, JSONObject.toJSONString(rejectIds));
+            log.info("...... suppliedIds({})={} ......", insertCount, JSONObject.toJSONString(suppliedIds));
         } catch (Exception e) {
             // 回滚事务
             if (session != null) {
