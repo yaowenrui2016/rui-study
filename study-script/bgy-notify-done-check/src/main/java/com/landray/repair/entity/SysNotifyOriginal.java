@@ -18,8 +18,8 @@ import java.util.Map;
 @Getter
 @Setter
 @Entity
-@Table(name = "sys_notify_original_temp")
-//@Table(name = "sys_notify_original")
+//@Table(name = "sys_notify_original_temp")
+@Table(name = "sys_notify_original")
 public class SysNotifyOriginal {
 
     @Id

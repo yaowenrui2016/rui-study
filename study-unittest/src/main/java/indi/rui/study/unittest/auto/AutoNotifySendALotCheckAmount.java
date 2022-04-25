@@ -21,7 +21,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class AutoNotifySendALotCheckAmount {
 
-    private static final int TOTAL = 10;
+    private static final int TOTAL = 100;
 
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040", "73456775666d4c416f73776139584a4131432f6847413d3d");

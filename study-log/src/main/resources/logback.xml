@@ -26,7 +26,12 @@
 
     <logger name="indi.rui.study.unittest" level="debug"/>
 
-    <logger name="org.hibernate.engine.QueryParameters" level="debug"/>
+<!--    <logger name="org.hibernate.SQL" level="DEBUG"/>-->
+<!--    <logger name="org.hibernate.engine.QueryParameters" level="DEBUG"/>-->
+<!--    <logger name="org.hibernate.engine.query.HQLQueryPlan" level="DEBUG"/>-->
+<!--    <logger name="org.hibernate.type.descriptor.sql.BasicBinder" level="TRACE"/>-->
+<!--    <logger name="org.hibernate.type.descriptor.sql.BasicExtractor" level="TRACE"/>-->
+
 
     <root>
         <level value="info"/>

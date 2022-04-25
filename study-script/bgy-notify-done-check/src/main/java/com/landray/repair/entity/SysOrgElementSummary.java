@@ -23,4 +23,6 @@ public class SysOrgElementSummary {
     private String fdLoginName;
 
     private String fdName;
+
+    private Boolean fdIsAvailable;
 }

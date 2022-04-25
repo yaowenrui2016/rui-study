@@ -23,17 +23,17 @@
             <version>5.3.25.Final</version>
         </dependency>
         <!-- mysql -->
-<!--        <dependency>-->
-<!--            <groupId>mysql</groupId>-->
-<!--            <artifactId>mysql-connector-java</artifactId>-->
-<!--            <version>8.0.19</version>-->
-<!--        </dependency>-->
-        <!-- Oracle -->
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc7</artifactId>
-            <version>12.1.0.1</version>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.19</version>
         </dependency>
+        <!-- Oracle -->
+<!--        <dependency>-->
+<!--            <groupId>com.oracle</groupId>-->
+<!--            <artifactId>ojdbc7</artifactId>-->
+<!--            <version>12.1.0.1</version>-->
+<!--        </dependency>-->
         <!-- apache commons -->
         <dependency>
             <groupId>org.apache.commons</groupId>

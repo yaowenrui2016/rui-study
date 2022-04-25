@@ -26,6 +26,8 @@ public class AutoCreatePersonAndAuthorized {
             "lizj", "李振佳",
             "weilq", "韦莉琦",
             "yuxd", "余小冬",
+            "youqinghong", "游青洪",
+            "penghe", "彭贺",
             "laow", "老王",};
 
 //    private static final String[] USER_LOGIN_NAMES = new String[]{
@@ -33,8 +35,8 @@ public class AutoCreatePersonAndAuthorized {
 
     /* ------------------ 各个环境 --------------- */
 
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://127.0.0.1:8040", "secadmin", "Password_1");
+    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+            "http://127.0.0.1:8040", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mktest.ywork.me", "secadmin", "Password_1");
@@ -45,8 +47,8 @@ public class AutoCreatePersonAndAuthorized {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
 
-    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mksmoke.ywork.me", "secadmin", "Password_1");
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mksmoke.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkdev01.ywork.me", "secadmin", "Password_1");
