@@ -1,4 +1,4 @@
-package indi.rui.study.unittest;
+package indi.rui.study.unittest.test;
 
 import com.alibaba.fastjson.JSONObject;
 import indi.rui.study.unittest.dto.MkResponse;

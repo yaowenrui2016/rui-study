@@ -2,7 +2,6 @@ package indi.rui.study.unittest.util;
 
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-//import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
 import org.apache.http.client.CookieStore;
@@ -17,6 +16,8 @@ import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLContextBuilder;
 import org.apache.http.conn.ssl.TrustStrategy;
 import org.apache.http.entity.StringEntity;
+import org.apache.http.entity.mime.MultipartEntityBuilder;
+import org.apache.http.entity.mime.content.FileBody;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -29,6 +30,8 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Iterator;
 import java.util.Map;
+
+//import org.apache.commons.io.IOUtils;
 
 /**
  * @author: yaowr
@@ -144,9 +147,19 @@ public class HttpClientUtils {
         return response;
     }
 
-    public static void httpPostDownload(String url, JSON body, Map<String, String> header,
-                                        String downloadPath)
+    /**
+     * 文件下载
+     *
+     * @param url
+     * @param body
+     * @param header
+     * @param downloadDir
+     * @throws Exception
+     */
+    public static String httpPostDownload(String url, JSON body, Map<String, String> header,
+                                          String downloadDir)
             throws Exception {
+        String filename = null;
         try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader("Content-type", "application/json");
@@ -178,12 +191,58 @@ public class HttpClientUtils {
                     throw new HttpResponseException(statusLine.getStatusCode(), statusLine.getReasonPhrase());
                 }
                 in = response.getEntity().getContent();
-                out = new FileOutputStream(createDownloadFile(downloadPath, getFileName(response)), false);
+                filename = getFileName(response);
+                out = new FileOutputStream(createDownloadFile(downloadDir, filename), false);
                 IOUtils.copy(in, out);
             } finally {
                 IOUtils.closeQuietly(in);
                 IOUtils.closeQuietly(out);
             }
+        }
+        return filename;
+    }
+
+    /**
+     * 文件上传
+     *
+     * @param url
+     * @param header
+     * @param uploadFile
+     * @throws Exception
+     */
+    public static String httpPostUpload(String url, Map<String, String> header,
+                                        File uploadFile)
+            throws Exception {
+        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+            HttpPost httpPost = new HttpPost(url);
+            // 不能设置content-type: multipart/form-data，否则导致"the request was rejected because no multipart boundary was found"
+//            httpPost.setHeader("content-type", "multipart/form-data;");
+            RequestConfig requestConfig = RequestConfig.custom()
+                    .setCookieSpec(CookieSpecs.STANDARD)
+                    .setSocketTimeout(30000)
+                    .setConnectTimeout(30000)
+                    .build();
+            httpPost.setConfig(requestConfig);
+            if (header != null) {
+                Iterator h = header.entrySet().iterator();
+                while (h.hasNext()) {
+                    Map.Entry<String, String> entry = (Map.Entry) h.next();
+                    httpPost.addHeader(entry.getKey(), entry.getValue());
+                }
+            }
+            if (uploadFile != null && uploadFile.exists()) {
+                FileBody fileBody = new FileBody(uploadFile);
+                HttpEntity httpEntity = MultipartEntityBuilder.create()
+                        .addBinaryBody("fdFile", uploadFile)
+                        .addTextBody("fdFileFullName", uploadFile.getName())
+//                        .addPart("fdFile", fileBody)
+//                        .addPart("fdFileFullName", new StringBody(uploadFile.getName(), ContentType.TEXT_PLAIN))
+                        .build();
+                httpPost.setEntity(httpEntity);
+            }
+            ResponseHandler<String> responseHandler = new BasicResponseHandler();
+
+            return httpClient.execute(httpPost, responseHandler);
         }
     }
 

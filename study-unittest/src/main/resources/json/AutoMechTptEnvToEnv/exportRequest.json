@@ -1,9 +1,9 @@
 {
-"entityName": "com.landray.sys.notify.core.entity.SysNotifyTodo",
-  "idNameList": [
+  "entityName": "com.landray.sys.transport.demo.core.entity.ExampleEntity",
+  "briefEntityList": [
     {
-      "fdId": "q1123",
-      "fdName": "yaosdf"
+      "fdId": "0ff10220w0",
+      "fdName": "审批模板"
     }
   ]
 }

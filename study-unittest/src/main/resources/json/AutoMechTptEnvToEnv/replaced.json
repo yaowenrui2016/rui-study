@@ -1,0 +1,46 @@
+{
+  "fdEnabled": true,
+  "fdEditors": [
+    {
+      "fdId": "1et1m04hdwdw173w1kt1ijtsfk2so1hl54w0",
+      "fdName": "郭敏"
+    }
+  ],
+  "fdCode": "10050",
+  "fdEnableChildren": false,
+  "fdEffectiveScope": 0,
+  "dynamicProps": {
+    "fdNameUs": "",
+    "fdNameCn": "lzj测试0501001"
+  },
+  "fdUniqueScope": 1,
+  "fdSource": true,
+  "fdItemSource": 1,
+  "fdReaders": [],
+  "fdReaderFlag": true,
+  "fdCreateTime": 1651389574000,
+  "fdCreator": {
+    "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+    "fdName": "刘芬CN"
+  },
+  "fdNotReaderFlag": false,
+  "fdAllReaders": [
+    {
+      "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+      "fdName": "所有用户"
+    }
+  ],
+  "fdAllEditors": [
+    {
+      "fdId": "1et1m04hdwdw173w1kt1ijtsfk2so1hl54w0",
+      "fdName": "郭敏"
+    },
+    {
+      "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+      "fdName": "刘芬CN"
+    }
+  ],
+  "fdId": "1g1v7qaoiw3svw67twv88i2h9ei8v623fkw0",
+  "fdName": "lzj测试0501001",
+  "fdIsPreset": false
+}

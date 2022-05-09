@@ -15,17 +15,17 @@
 
         <!-- Database connection settings -->
         <!-- MYSQL -->
-        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://study.rui.ubuntu:3306/mkpaas_0425?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</property>
-        <property name="connection.username">root</property>
-        <property name="connection.password">password</property>
-        <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
-        <!-- MYSQL -->
 <!--        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>-->
-<!--        <property name="connection.url">jdbc:mysql://192.168.51.225:3306/mktest?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>-->
-<!--        <property name="connection.username">mktest_read</property>-->
-<!--        <property name="connection.password">QFh&amp;JAdMGBV286Cv</property>-->
+<!--        <property name="connection.url">jdbc:mysql://study.rui.ubuntu:3306/mkpaas_0425?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false&amp;serverTimezone=Asia/Shanghai</property>-->
+<!--        <property name="connection.username">root</property>-->
+<!--        <property name="connection.password">password</property>-->
 <!--        <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>-->
+        <!-- MYSQL -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://192.168.51.225:3306/mktest?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>
+        <property name="connection.username">mktest_read</property>
+        <property name="connection.password">QFh&amp;JAdMGBV286Cv</property>
+        <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
         <!-- ORACLE -->
 <!--        <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>-->
 <!--        <property name="connection.url">jdbc:oracle:thin:@192.168.2.189:1521:oracle12</property>-->

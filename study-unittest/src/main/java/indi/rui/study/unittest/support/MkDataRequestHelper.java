@@ -10,6 +10,7 @@ import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +44,12 @@ public class MkDataRequestHelper {
         return this.loginResult.getUserInfo();
     }
 
+    /**
+     * 发送GET请求
+     *
+     * @param url
+     * @return
+     */
     public String httpGet(String url) {
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
@@ -59,19 +66,51 @@ public class MkDataRequestHelper {
         return httpResult;
     }
 
-    public void callDataDownload(String path, JSONObject body, String downloadPath) {
+    /**
+     * 文件下载
+     *
+     * @param path
+     * @param body
+     * @param downloadPath
+     */
+    public String callDataDownload(String path, JSONObject body, String downloadPath) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         httpHeaders.put("content-type", "application/json;charset=utf-8");
+        String filename = null;
         try {
-            HttpClientUtils.httpPostDownload(url, body, httpHeaders, downloadPath);
+            filename = HttpClientUtils.httpPostDownload(url, body, httpHeaders, downloadPath);
         } catch (Exception e) {
-            log.error("Call mk data request error! [url={}, body={}]",
+            log.error("Call mk data download file error! [url={}, body={}]",
                     url,
                     body != null ? body.toString(SerializerFeature.PrettyFormat) : null,
                     e);
         }
+        return filename;
+    }
+
+    /**
+     * 文件上传
+     *
+     * @param path
+     * @param uploadFile
+     */
+    public String callDataUpload(String path, File uploadFile) {
+        String url = address + path;
+        Map<String, String> httpHeaders = new HashMap<>();
+        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
+        // 不能设置content-type: multipart/form-data，否则导致"the request was rejected because no multipart boundary was found"
+//        httpHeaders.put("content-type", "multipart/form-data");
+        try {
+            return HttpClientUtils.httpPostUpload(url, httpHeaders, uploadFile);
+        } catch (Exception e) {
+            log.error("Call mk data upload file error! [url={}, uploadFile={}]",
+                    url,
+                    uploadFile.getName(),
+                    e);
+        }
+        return null;
     }
 
     public MkResponse<?> callData(String path, JSONObject json) {

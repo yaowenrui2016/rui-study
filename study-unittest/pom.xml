@@ -33,6 +33,11 @@
         <!--        </dependency>-->
         <!-- netty -->
         <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.9.4</version>
+        </dependency>
+        <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>4.1.48.Final</version>
@@ -67,7 +72,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
-                            <mainClass>indi.rui.study.unittest.TestNotifySourceApp</mainClass>
+                            <mainClass>indi.rui.study.unittest.test.TestNotifySourceApp</mainClass>
                         </manifest>
                         <manifestEntries>
                             <!--MANIFEST.MF 中 Class-Path 加入配置目录信息-->

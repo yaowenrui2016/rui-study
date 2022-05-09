@@ -1,4 +1,4 @@
-package indi.rui.study.unittest;
+package indi.rui.study.unittest.test;
 
 import indi.rui.study.unittest.interf.MonitorTestPlan;
 import lombok.extern.slf4j.Slf4j;
