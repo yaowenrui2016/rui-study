@@ -1,11 +1,11 @@
 package indi.rui.study.unittest.dto;
 
-import com.alibaba.fastjson.JSONObject;
+import indi.rui.study.unittest.dto.e2e.MkReferGroup;
+import indi.rui.study.unittest.dto.e2e.MkReferTreeNode;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * @author: yaowr
@@ -14,6 +14,12 @@ import java.util.Map;
 @Getter
 @Setter
 public class MkEnvToEnvContext {
+
+    /**
+     * 离线导入的附件id
+     */
+    private String attachId;
+
     /**
      * 加密的在线导出口令
      */
@@ -25,49 +31,29 @@ public class MkEnvToEnvContext {
     private String entityName;
 
     /**
-     * 简明主文档数据{fdId,fdName,fdCode}
+     * 主文档节点列表
      */
-    private List<JSONObject> briefEntityList;
+    private List<MkReferTreeNode> entityNodes;
 
     /**
-     * 完整主文档数据
+     * 关联项分组
      */
-    private List<JSONObject> completeEntityList;
+    private List<MkReferGroup> referGroupList;
 
     /**
-     * 简明关联数据{fdId,fdName,fdCode}
+     * 关联树
      */
-    private List<ReferDataGroup> briefReferList;
+    private List<MkReferTreeNode> referTree;
 
     /**
-     * 完整关联数据
+     * 组织架构节点列表
      */
-    private List<ReferDataGroup> completeReferList;
+    private List<MkReferTreeNode> orgNodes;
 
     /**
-     * 关联信息
+     * 导入中数据记录
      */
-    private List<MkReferParseEntry> referEntryList;
-
-    /**
-     * 导入状态
-     */
-    private Map<String, String> status;
-
-    /**
-     * 导入进度
-     */
-    private Integer progress;
-
-    /**
-     * 导入结果统计
-     */
-    private ResultStatistic resultStatistic;
-
-    /**
-     * 执行步骤
-     */
-    private MkExportStep exportStep;
+    private List<ImportingData> importingDataList;
 
     /**
      * 任务id
@@ -82,26 +68,49 @@ public class MkEnvToEnvContext {
 
     @Getter
     @Setter
-    public static class ReferDataGroup {
+    public static class ImportingData {
 
-        private String entityName;
+        /**
+         * 导入数据记录id
+         */
+        private String fdId;
 
-        private String dispName;
+        /**
+         * 主文档id
+         */
+        private String fdEntityId;
 
-        private List<JSONObject> referData;
-    }
+        /**
+         * 主文档名称
+         */
+        private String fdName;
 
+        /**
+         * 主文档实体类名
+         */
+        private String fdEntityName;
 
-    @Getter
-    @Setter
-    public static class ResultStatistic {
+        /**
+         * 任务标记取 attachId 或 encOlCmd
+         */
+        private String fdFlag;
 
-        private Integer accomplish;
+        /**
+         * 执行顺序，小的优先
+         */
+        private Integer fdOrder;
 
-        private Integer add;
+        /**
+         * 1-等待中
+         * 2-导入中
+         * 3-成功
+         * 4-失败
+         */
+        private String fdState;
 
-        private Integer override;
-
-        private Integer failed;
+        /**
+         * 错误信息
+         */
+        private String errMsg;
     }
 }

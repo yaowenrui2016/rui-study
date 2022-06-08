@@ -1,0 +1,45 @@
+{
+  "snid": "1g41jqfcgw2awb493w31318012fltoe417w0",
+  "notifyType": "todo",
+  "appName": "MKPaaS",
+  "moduleName": "sys-modeling",
+  "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+  "entityId": "1g41jq5b5w3cw3h9aw33jndbf28hhhje1tw0",
+  "entityKey": "NodeInstance",
+  "notifyId": "1g41jq5clw3cw3h9iw20rr3hm1gi3cqj18w0",
+  "parameter1": "1g40b034gw2swj5bbw15ml6me39hu4h0l5w0",
+  "targets": [
+    "1fcqvsuekwsjwmjqw1tv61ok1jk1b9k29lw0"
+  ],
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "https://lbpm.jinke.com:8501/web/sys-lbpm/desktop/static/transfer.html?processId=1g40b034gw2swj5bbw15ml6me39hu4h0l5w0",
+  "providerIds": [
+    "todo"
+  ],
+  "requestTime": 1653616754064,
+  "subject": "请审批流程[川云成都-温江博翠湾-内部薪酬/激励核发审批单-]",
+  "extendFields": [
+    {
+      "supportFastApproval": "false"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "nodeName": "Approval Node"
+    },
+    "zh-CN": {
+      "subject": "请审批流程[川云成都-温江博翠湾-内部薪酬/激励核发审批单-]"
+    }
+  },
+  "todoType": 1,
+  "todoLevel": 3,
+  "creator": "1f4gkoo99wpwflu1w3od138r1hr8ng386tw0",
+  "mobileLink": "https://lbpm.jinke.com:8501/web/sys-lbpm/desktop/static/transfer.html?processId=1g40b034gw2swj5bbw15ml6me39hu4h0l5w0",
+  "nodeName": "项目会签",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdProcessNo\":\"jinke_OMcCbm22052622050002\",\"fdStatus\":\"20\",\"fdModuleName\":\"sys-modeling\",\"fdTemplateId\":\"1f6mqvi2pw18wmfaqw2f1g25b15eqcrf2cw0\",\"fdTitle\":\"川云成都-温江博翠湾-内部薪酬/激励核发审批单-\",\"fdApplicantId\":\"1fomgmogewpbw1qvd6vwkpmn3736fstl81w0\",\"fdApplicationTime\":1653573996428,\"fdLink\":{\"PAD\":\"https://lbpm.jinke.com:8501/web/sys-lbpm/desktop/static/transfer.html?processId=1g40b034gw2swj5bbw15ml6me39hu4h0l5w0\",\"PC\":\"https://lbpm.jinke.com:8501/web/sys-lbpm/desktop/static/transfer.html?processId=1g40b034gw2swj5bbw15ml6me39hu4h0l5w0\",\"MOBILE\":\"https://lbpm.jinke.com:8501/web/sys-lbpm/desktop/static/transfer.html?processId=1g40b034gw2swj5bbw15ml6me39hu4h0l5w0\"},\"fdInstanceId\":\"1g40b033sw2bw145fhw2ip6u5krm4ul11bw0\"}",
+  "queryType": 1
+}

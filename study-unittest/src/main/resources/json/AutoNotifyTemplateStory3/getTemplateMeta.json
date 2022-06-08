@@ -1,0 +1,240 @@
+{
+  "providersDisplay": [
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "name": "待办",
+      "provider": "todo",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "name": "邮件",
+      "provider": "email",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        },
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            },
+            {
+              "name": "摘要",
+              "property": "content",
+              "required": true,
+              "type": "MULTI_LINE_TEXT"
+            },
+            {
+              "name": "图片",
+              "property": "image",
+              "required": true,
+              "type": "IMAGE"
+            }
+          ],
+          "style": "IMAGE_CARD"
+        }
+      ],
+      "name": "测试消息扩展",
+      "provider": "testNotifyProvider",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "name": "MK待办置已办通知EKP",
+      "provider": "ekpInform",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        },
+        {
+          "dispProps": [
+            {
+              "name": "摘要",
+              "property": "content",
+              "required": true,
+              "type": "MULTI_LINE_TEXT"
+            },
+            {
+              "name": "图片",
+              "property": "image",
+              "required": true,
+              "type": "IMAGE"
+            }
+          ],
+          "style": "TEXT_CARD"
+        }
+      ],
+      "name": "测试待办扩展",
+      "provider": "testTodoExt",
+      "todoExt": true
+    }
+  ],
+  "standardVars": [
+    {
+      "displayName": "来源系统",
+      "varName": "appName"
+    },
+    {
+      "displayName": "来源模块",
+      "varName": "moduleName"
+    },
+    {
+      "displayName": "业务名称",
+      "varName": "entityName"
+    },
+    {
+      "displayName": "业务ID",
+      "varName": "entityId"
+    },
+    {
+      "displayName": "业务关键字",
+      "varName": "entityKey"
+    },
+    {
+      "displayName": "链接地址",
+      "varName": "link"
+    },
+    {
+      "displayName": "移动端链接",
+      "varName": "mobileLink"
+    },
+    {
+      "displayName": "节点名称",
+      "varName": "nodeName"
+    },
+    {
+      "displayName": "所属企业",
+      "varName": "corp"
+    },
+    {
+      "displayName": "发起人",
+      "varName": "creator"
+    },
+    {
+      "displayName": "发起时间",
+      "varName": "timestamp"
+    },
+    {
+      "displayName": "参数一",
+      "varName": "parameter1"
+    },
+    {
+      "displayName": "参数二",
+      "varName": "parameter2"
+    }
+  ],
+  "systemTemplates": [
+    {
+      "code": "sys-notify-example:notify.template.audit",
+      "extendVars": [
+        {
+          "displayName": "审批人",
+          "varName": "extendContents.auditor"
+        },
+        {
+          "displayName": "审批意见",
+          "varName": "extendContents.opinion"
+        },
+        {
+          "displayName": "审批时间",
+          "varName": "extendContents.auditTime"
+        },
+        {
+          "displayName": "节点名称",
+          "varName": "replaceText.nodeName"
+        }
+      ]
+    },
+    {
+      "code": "sys-notify-example:notify.template.review",
+      "extendVars": [
+        {
+          "displayName": "合同等级",
+          "varName": "extendContents.level"
+        },
+        {
+          "displayName": "区域",
+          "varName": "extendContents.region"
+        },
+        {
+          "displayName": "申请人",
+          "varName": "extendContents.applicator"
+        },
+        {
+          "displayName": "合同链接",
+          "varName": "extendContents.contractLink"
+        },
+        {
+          "displayName": "合同名称",
+          "varName": "replaceText.contractName"
+        },
+        {
+          "displayName": "合同签订日期",
+          "varName": "replaceText.contractDate"
+        }
+      ]
+    }
+  ]
+}

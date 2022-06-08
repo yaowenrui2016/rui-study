@@ -18,27 +18,27 @@ public class AutoCreatePersonAndAuthorized {
     //    private static final String GROUP_NAME = "ALL_ROLES";
     private static final String GROUP_NAME = "yao_test_1";
 
-    private static final String[] USER_LOGIN_NAMES = new String[]{
-            "yaowr", "姚文锐",
-            "zhangyl", "张越良",
-            "cuipx", "崔璞璇",
-            "chenp", "陈鹏",
-            "zhugr", "朱国荣",
-            "zhoum", "周勉"
-    };
-
 //    private static final String[] USER_LOGIN_NAMES = new String[]{
 //            "yaowr", "姚文锐",
 //            "zhangyl", "张越良",
 //            "cuipx", "崔璞璇",
 //            "chenp", "陈鹏",
 //            "zhugr", "朱国荣",
-//            "lizj", "李振佳",
-//            "weilq", "韦莉琦",
-//            "yuxd", "余小冬",
-//            "youqinghong", "游青洪",
-//            "penghe", "彭贺",
-//            "laow", "老王",};
+//            "zhoum", "周勉"
+//    };
+
+    private static final String[] USER_LOGIN_NAMES = new String[]{
+            "yaowr", "姚文锐",
+            "zhangyl", "张越良",
+            "cuipx", "崔璞璇",
+            "chenp", "陈鹏",
+            "zhugr", "朱国荣",
+            "lizj", "李振佳",
+            "weilq", "韦莉琦",
+            "yuxd", "余小冬",
+            "youqinghong", "游青洪",
+            "penghe", "彭贺",
+            "laow", "老王",};
 
 //    private static final String[] USER_LOGIN_NAMES = new String[]{
 //            "yaowr", "姚文锐",};

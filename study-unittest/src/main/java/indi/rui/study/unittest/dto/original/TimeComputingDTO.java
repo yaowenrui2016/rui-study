@@ -1,4 +1,4 @@
-package indi.rui.study.unittest.dto;
+package indi.rui.study.unittest.dto.original;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,10 +1,11 @@
-package indi.rui.study.unittest.dto;
+package indi.rui.study.unittest.dto.original;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -16,10 +17,8 @@ import java.util.Map;
 @Getter
 @Setter
 @ToString
-public class MkNotifyOriginal {
-    /**
-     * 唯一标识
-     */
+public class SysNotifyOriginalVO {
+
     private String fdId;
 
     /**
@@ -57,7 +56,12 @@ public class MkNotifyOriginal {
      * 各个通知类型到达时间
      * 格式：{\"todo\":16112992904990,\"email\":16112991864071}
      */
-    private Map<String, MkOriginalAdditional> fdAdditional;
+    private Map<String, OriginalAdditional> fdAdditional;
+
+    /**
+     * 各个扩展点处理耗时情况
+     */
+    private List<TimeComputingDTO> timeSpends;
 
 
     // ================== 冗余消息内容字段 ======================

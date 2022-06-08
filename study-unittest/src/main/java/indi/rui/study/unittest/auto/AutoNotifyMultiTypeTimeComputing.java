@@ -3,7 +3,8 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkResponse;
-import indi.rui.study.unittest.dto.TimeComputingDTO;
+import indi.rui.study.unittest.dto.original.SysNotifyOriginalVO;
+import indi.rui.study.unittest.dto.original.TimeComputingDTO;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import indi.rui.study.unittest.util.RedisUtils;
@@ -64,13 +65,13 @@ public class AutoNotifyMultiTypeTimeComputing {
 
 
     public static void main(String[] args) throws Exception {
-//        mutiThread("send");
-        run("done");
+        mutiThread("send");
+//        run("done");
         redissonClient.shutdown();
     }
 
     private static void mutiThread(String method) {
-        int threadNum = 50;
+        int threadNum = 1;
         CyclicBarrier cyclicBarrier = new CyclicBarrier(threadNum);
         CountDownLatch countDownLatch = new CountDownLatch(threadNum);
         for (int i = 0; i < threadNum; i++) {
@@ -120,6 +121,7 @@ public class AutoNotifyMultiTypeTimeComputing {
         }
         JSONObject json = FileUtils.loadJSON("AutoNotifyMultiTypeTimeComputing/" + filename);
         if ("send".equalsIgnoreCase(method)) {
+            json.put("notifyType", "sms");
             json.put("entityKey", counter.getAndIncrement());
         }
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
@@ -133,22 +135,25 @@ public class AutoNotifyMultiTypeTimeComputing {
     }
 
     private static boolean loadOriginalBySnid(String snid) {
-        List<TimeComputingDTO> computingDTOS = mkApiRequestHelper.callApiForList(
+        SysNotifyOriginalVO originalVO = mkApiRequestHelper.callApi(
                 "/api/sys-notify/sysNotifyOriginal/timeComputing?snid=" + snid,
-                null, TimeComputingDTO.class);
+                null, SysNotifyOriginalVO.class);
         boolean success = false;
-        if (computingDTOS != null && computingDTOS.size() > 0) {
-            log.info("Find time computing: snid={}, time={}",
-                    snid,
-                    JSONObject.toJSONString(computingDTOS, SerializerFeature.PrettyFormat));
-            success = true;
-            for (TimeComputingDTO dto : computingDTOS) {
-                if ("todo".equals(dto.getProvider())) {
-                    timeComputings.add(dto.getTotalDuration());
+        if (originalVO != null) {
+            List<TimeComputingDTO> computingDTOS = originalVO.getTimeSpends();
+            if (computingDTOS != null && computingDTOS.size() > 0) {
+                log.info("Find original timeComputing: snid={}, time={}",
+                        snid,
+                        JSONObject.toJSONString(computingDTOS, SerializerFeature.PrettyFormat));
+                success = true;
+                for (TimeComputingDTO dto : computingDTOS) {
+                    if ("todo".equals(dto.getProvider())) {
+                        timeComputings.add(dto.getTotalDuration());
+                    }
                 }
             }
         } else {
-            log.info("Not found time computing! snid={}", snid);
+            log.info("Not found original timeComputing yet! snid={}", snid);
         }
         return success;
     }

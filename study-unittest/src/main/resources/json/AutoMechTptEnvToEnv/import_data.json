@@ -1,0 +1,39 @@
+{
+  "fdEnabled": true,
+  "fdEditors": [
+    {
+      "fdId": "1fvu9q2j5w2ncwgmdw1qevvh52401bm126w0",
+      "fdName": "武林"
+    }
+  ],
+  "fdCode": "5120936",
+  "fdEnableChildren": false,
+  "fdEffectiveScope": 0,
+  "dynamicProps": {
+    "fdNameUs": "",
+    "fdNameCn": "lzj测试导入0523008"
+  },
+  "fdUniqueScope": 1,
+  "fdSource": true,
+  "fdItemSource": 1,
+  "fdReaderFlag": true,
+  "fdCreateTime": 1653290796000,
+  "fdCreator": {
+    "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+    "fdName": "刘芬CN"
+  },
+  "fdNotReaderFlag": false,
+  "fdAllEditors": [
+    {
+      "fdId": "1fvu9q2j5w2ncwgmdw1qevvh52401bm126w0",
+      "fdName": "武林"
+    },
+    {
+      "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+      "fdName": "刘芬CN"
+    }
+  ],
+  "fdId": "1g3nsv146w4jlwhrw1kcaoali3j9171arnw0",
+  "fdName": "lzj测试导入0523008",
+  "fdIsPreset": false
+}

@@ -1,0 +1,1268 @@
+[
+  {
+    "data": {
+      "fdDesc": "",
+      "fdEditors": [],
+      "fdBuildNew": false,
+      "fdSimpleName": "规则分类",
+      "fdTableName": "mk_model_20220525p2k6p",
+      "fdCode": "template_l7lrx4",
+      "dynamicProps": {
+        "fdSimpleNameCn": "规则分类",
+        "fdNameCn": "规则分类"
+      },
+      "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+      "fdCategory": {
+        "fdAllReaders": [
+          {
+            "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+            "fdName": "所有用户"
+          }
+        ],
+        "fdEditors": [],
+        "fdAllEditors": [],
+        "dynamicProps": {},
+        "fdId": "1f0l1nvm4wrgw46w15kkq303950m5l2n41w0",
+        "fdReaders": [],
+        "fdCreateTime": 1651568660000,
+        "fdReaderFlag": true,
+        "fdHierarchyId": "x1f0l1nvm4wrgw46w15kkq303950m5l2n41w0x",
+        "fdName": "迪迦迦迦迦迦迦",
+        "fdNotReaderFlag": false
+      },
+      "fdStatus": 1,
+      "fdReaders": [],
+      "fdReaderFlag": true,
+      "fdAlterTime": 1653460424000,
+      "fdNumberType": 0,
+      "fdNotReaderFlag": false,
+      "fdNumberDesc": "",
+      "fdAllReaders": [
+        {
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "fdName": "所有用户"
+        }
+      ],
+      "fdAllEditors": [],
+      "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+      "fdVersionId": "1g3sunla0w4kvw176w12c71sa2e25von1bw0",
+      "lbpmFormCategoryVO": {
+        "fdSystemCode": "INNER_SYSTEM",
+        "fdFormParentCategory": {},
+        "dynamicProps": {},
+        "fdFormCategoryId": "1f0l1nvm4wrgw46w15kkq303950m5l2n41w0",
+        "fdModuleCode": "km-review",
+        "fdName": "迪迦迦迦迦迦迦"
+      },
+      "mechanisms": {
+        "sys-xform": {
+          "fdDescribe": "",
+          "fdBuildNew": false,
+          "fdTableName": "mk_model_20220525p2k6p",
+          "fdEntityKey": "sys-xform",
+          "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+          "fdOuterMapping": false,
+          "fdStatus": "official",
+          "fdCreateTime": 1653460372000,
+          "fdConfig": "{\"auth\":[{\"fdIsAvailable\":true,\"add\":{\"mk_model_20220525p2k6p\":{\"fields\":{\"fd_col_sdtexa\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"view\":{\"mk_model_20220525p2k6p\":{\"fields\":{\"fd_col_sdtexa\":{\"visible\":true}}}},\"edit\":{\"mk_model_20220525p2k6p\":{\"fields\":{\"fd_col_sdtexa\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"authOrg\":[],\"fdCreateTime\":1653460374815,\"fdName\":\":publicLang.sysFormAuth\",\"fdCreator\":{\"fdId\":\"1fgnmcgcawilw6mtw22eqsn013dipflckdw0\",\"fdName\":\"刘芬CN\"}}],\"extendMap\":{},\"authFilter\":{\"detailAuthDefine\":{}},\"dataModel\":[{\"fdTableName\":\"mk_model_20220525p2k6p\",\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdFields\":[{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"编号\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"text\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum28bw4knw9tvw341q6oq3bq2fiqd2w0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdNumber\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdNumber\",\"fdColumn\":\"fd_number\",\"fdLength\":200,\"fdOrder\":1},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"创建时间\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"timestamp\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2e0w4knw9u0w2f7jaku3sug8b02cw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreateTime\\\"}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdCreateTime\",\"fdColumn\":\"fd_create_time\",\"fdLength\":0,\"fdOrder\":2},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"创建人\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2eew4knw9u1w1on94n1cdr0mh3gaw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreator\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdCreator\",\"fdColumn\":\"fd_creator_id\",\"fdLength\":60,\"fdOrder\":3},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"附件可拷贝者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2ehw4knw9u2w35453rf2ppn82o2aw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttCopys\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAttCopys\",\"fdLength\":60,\"fdOrder\":4},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"附件可打印者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2elw4knw9u3w366n8472vd63oq20w0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttPrints\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAttPrints\",\"fdLength\":60,\"fdOrder\":5},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"传阅对象\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2eow4knw9u4w36hvjbd3985k1velw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCirculatedReceiver\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdCirculatedReceiver\",\"fdLength\":60,\"fdOrder\":6},{\"fdFontExtendData\":\"{\\\"options\\\":[{\\\"value\\\":\\\"01\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Init\\\",\\\"label\\\":\\\"新建未提交\\\"},{\\\"value\\\":\\\"00\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Discard\\\",\\\"label\\\":\\\"废弃\\\"},{\\\"value\\\":\\\"02\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.PublishReject\\\",\\\"label\\\":\\\"废弃\\\"},{\\\"value\\\":\\\"10\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.DraftTemp\\\",\\\"label\\\":\\\"草稿\\\"},{\\\"value\\\":\\\"11\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.DraftExamine\\\",\\\"label\\\":\\\"驳回\\\"},{\\\"value\\\":\\\"12\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.DraftRetract\\\",\\\"label\\\":\\\"草稿\\\"},{\\\"value\\\":\\\"20\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Examine\\\",\\\"label\\\":\\\"待审\\\"},{\\\"value\\\":\\\"21\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Suspend\\\",\\\"label\\\":\\\"挂起\\\"},{\\\"value\\\":\\\"29\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Exception\\\",\\\"label\\\":\\\"异常\\\"},{\\\"value\\\":\\\"30\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Publish\\\",\\\"label\\\":\\\"发布\\\"},{\\\"value\\\":\\\"39\\\",\\\"messageKey\\\":\\\"paas-lbpm:property.fdProcessStatus.Publish\\\",\\\"label\\\":\\\"发布\\\"}]}\",\"fdOuterMapping\":false,\"fdLabel\":\"流程状态\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"radio\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2evw4knw9u5w224hmhv169jfqc2tw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdProcessStatus\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"optionDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdProcessStatus\",\"fdColumn\":\"fd_process_status\",\"fdLength\":200,\"fdOrder\":7},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"标题\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"text\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2faw4knw9u6w2n5qnhu28beuul2pw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdSubject\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdSubject\",\"fdColumn\":\"fd_subject\",\"fdLength\":200,\"fdOrder\":8},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"外部文档Mobile链接\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"text\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2fdw4knw9u7wfuom7i2vgvucr19uw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterMobileLink\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdOuterMobileLink\",\"fdColumn\":\"fd_outer_mobile_link\",\"fdLength\":200,\"fdOrder\":9},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"修改人\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2flw4knw9u8w3gvj4f92krn3rl1iw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAlter\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAlter\",\"fdColumn\":\"fd_alter_id\",\"fdLength\":60,\"fdOrder\":10},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"编辑者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2fsw4knw9u9w37ig8gq1fdeji81mw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdEditors\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdEditors\",\"fdLength\":60,\"fdOrder\":11},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"拥有者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2g2w4knw9uaw2udcce52q46dor3mw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOwner\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdOwner\",\"fdColumn\":\"fd_owner_id\",\"fdLength\":60,\"fdOrder\":12},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"最后修改时间\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"timestamp\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2g6w4knw9ubw3o2poqh1foucci3fw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdLastModifiedTime\\\"}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdLastModifiedTime\",\"fdColumn\":\"fd_last_modified_time\",\"fdLength\":0,\"fdOrder\":13},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"附件可下载者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2g8w4knw9ucw28ms74g2a11hb2cmw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttDownloads\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAttDownloads\",\"fdLength\":60,\"fdOrder\":14},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"阅读者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2g9w4knw9udw3ndl9i918vtl9efqw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdReaders\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdReaders\",\"fdLength\":60,\"fdOrder\":15},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"修改时间\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"timestamp\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gbw4knw9uew123d2b62pkpd9n1uw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAlterTime\\\"}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAlterTime\",\"fdColumn\":\"fd_alter_time\",\"fdLength\":0,\"fdOrder\":16},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"创建者部门\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gcw4knw9ufw29ss1464g94ga1cow0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreatorDept\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdCreatorDept\",\"fdColumn\":\"fd_creator_dept\",\"fdLength\":60,\"fdOrder\":17},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"外部文档主键\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"text\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gdw4knw9ugw4rqq9q1kf3kl429ew0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterDocId\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdOuterDocId\",\"fdColumn\":\"fd_outer_doc_id\",\"fdLength\":200,\"fdOrder\":18},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"所有可阅读者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gew4knw9uhwat1p5125t236qdagw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAllReaders\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAllReaders\",\"fdLength\":60,\"fdOrder\":19},{\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdOuterMapping\":false,\"fdLabel\":\"所有可编辑者\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2ggw4knw9uiw1ed3gdp367f66htaw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAllEditors\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdAllEditors\",\"fdLength\":60,\"fdOrder\":20},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"拥有者部门\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"address\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2giw4knw9ujw3edsinha3r9dn2cmw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOwnerDept\\\"}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdOwnerDept\",\"fdColumn\":\"fd_owner_dept\",\"fdLength\":60,\"fdOrder\":21},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"外部文档PC链接\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"text\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gjw4knw9ukwlrarus2d7cfb32cnw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterPcLink\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdOuterPcLink\",\"fdColumn\":\"fd_outer_pc_link\",\"fdLength\":200,\"fdOrder\":22},{\"fdFontExtendData\":\"{}\",\"fdOuterMapping\":false,\"fdLabel\":\"发布时间\",\"fdMechanismType\":\"KmReviewMain\",\"fdType\":\"timestamp\",\"fdIsStored\":false,\"fdDisplay\":true,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gkw4knw9ulw2s6gbrk328fnhs1iw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdPublishTime\\\"}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fdPublishTime\",\"fdColumn\":\"fd_publish_time\",\"fdLength\":0,\"fdOrder\":23},{\"fdOuterMapping\":false,\"fdLabel\":\"对应版本\",\"fdMechanismType\":\"SYS-XFORM\",\"fdType\":\"text\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdVersion\",\"fdIsStored\":true,\"fdDisplay\":false,\"fdIsSystem\":true,\"fdId\":\"1g3sum2glw4knw9umw19uc8rnnnveh3ajdw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_version\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fd_version\",\"fdLength\":36,\"fdOrder\":24},{\"fdOuterMapping\":false,\"fdLabel\":\"主键ID\",\"fdMechanismType\":\"SYS-XFORM\",\"fdType\":\"text\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdId\",\"fdIsStored\":true,\"fdDisplay\":false,\"fdIsSystem\":true,\"fdId\":\"1g3sum2gpw4knw9unwvu0njv29pd4712jkw0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_id\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fd_id\",\"fdLength\":36,\"fdOrder\":25},{\"fdFontExtendData\":\"{\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"encryptDefinition\\\":{}}\",\"fdOuterMapping\":false,\"fdLabel\":\"单行文本1\",\"fdMechanismType\":\"SYS-XFORM\",\"fdType\":\"text\",\"fdLabelLangKey\":\"!{l3l7m970gi98rxtn4d9}\",\"fdIsStored\":true,\"fdDisplay\":true,\"fdIsSystem\":false,\"fdId\":\"1g3sunmclw4knwa00w2b2oamb2nrj29218w0\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_sdtexa\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-input~v3cr33\\\",\\\"type\\\":\\\"text\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l3l7m970gi98rxtn4d9}\\\",\\\"$$tableName\\\":\\\"mk_model_20220525p2k6p\\\",\\\"maxLength\\\":100,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_sdtexa\\\",\\\"uuid\\\":\\\"fd_col_sdtexa\\\",\\\"id\\\":\\\"@elem/xform-input~v3cr33\\\",\\\"placeholder\\\":\\\"!{l3l7m97473gk2jqbbjq}\\\",\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"maskFormatType\\\":\\\"********\\\",\\\"encryptMonth\\\":9999,\\\"failureRule\\\":\\\"ANONYMIZE\\\",\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-input\\\"},\\\"mobile\\\":{\\\"type\\\":\\\"@elem/xform-m-input\\\"}},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l3l7m970gi98rxtn4d9}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l3l7m970gi98rxtn4d9}\\\"}}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdDataModel\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdState\":\"effective\",\"fdIsIndex\":false,\"fdName\":\"fd_col_sdtexa\",\"fdLength\":100,\"fdOrder\":26}],\"fdXForm\":{\"fdId\":\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0\",\"fdName\":\"规则分类\"},\"fdOuterMapping\":false,\"fdCreateTime\":1653460372000,\"fdAlterTime\":1653460425393,\"fdName\":\"规则分类\",\"fdCreator\":{\"fdId\":\"1fgnmcgcawilw6mtw22eqsn013dipflckdw0\",\"fdName\":\"刘芬CN\"},\"needDelete\":false,\"fdAlter\":{\"fdId\":\"1fgnmcgcawilw6mtw22eqsn013dipflckdw0\",\"fdName\":\"刘芬CN\"},\"fdType\":\"main\"}],\"attribute\":{\"subjectRule\":{},\"dataUnique\":{},\"formAttr\":\"{\\\"subjectRule\\\":{},\\\"formRule\\\":{\\\"pattern\\\":{}},\\\"abstract\\\":[],\\\"dataUnique\\\":{},\\\"controlAction\\\":{}}\"},\"error\":\"{}\",\"lang\":\"{\\\"!{l3l7m970gi98rxtn4d9}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_sdtexa\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"单行文本1\\\",\\\"default\\\":\\\"单行文本1\\\"}},\\\"!{l3l7m97473gk2jqbbjq}\\\":{\\\"prop\\\":\\\"placeholder\\\",\\\"name\\\":\\\"fd_col_sdtexa\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"请输入\\\"}}}\",\"views\":\"[{\\\"id\\\":\\\"c52c417a-c90f-46ff-93eb-19e244fc6b45\\\",\\\"name\\\":\\\"表单1\\\",\\\"viewAttr\\\":{\\\"desktopLayout\\\":\\\"vertical\\\",\\\"mobileLayout\\\":\\\"vertical\\\",\\\"logo\\\":{}},\\\"useDataField\\\":{\\\"desktop\\\":[\\\"fd_col_sdtexa\\\"],\\\"mobile\\\":[]},\\\"render\\\":{\\\"desktop\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[{\\\"key\\\":\\\"layout~5gicpi\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~5gicpi\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~44f1dg\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~sa4gpi\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_sdtexa\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~sa4gpi\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~44f1dg\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"}]}]}],\\\"mobile\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[]}]}]}}]\"}",
+          "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+          "fdAlterTime": 1653460425000,
+          "fdCreator": {
+            "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+            "fdName": "刘芬CN"
+          },
+          "fdEntityId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+          "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+          "fdVersionId": "1g3sunla0w4kvw176w12c71sa2e25von1bw0",
+          "fdName": "规则分类",
+          "fdRunEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+          "fdAlter": {
+            "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+            "fdName": "刘芬CN"
+          }
+        },
+        "lbpmTemplate": [
+          {
+            "fdEnable": true,
+            "fdTemplateCode": "template_l7lrx4",
+            "businessMethodList": [],
+            "fdMobileEnable": true,
+            "fdEntityKey": "KmReviewMain",
+            "fdIntegrateFormMode": 0,
+            "fdDefinitionId": "1g3sunm2sw4kuw152wm5fouq2pfnmpl37rw0",
+            "fdCategory": {
+              "fdEditors": [],
+              "fdSystemCode": "INNER_SYSTEM",
+              "dynamicProps": {},
+              "fdChildFlag": false,
+              "fdFormCategoryId": "1f0l1nvm4wrgw46w15kkq303950m5l2n41w0",
+              "fdReaders": [],
+              "fdHierarchyId": "x1epfuagaiwagw6w2c09vk020oim1rmcro2w0x1g24ijjhrw423w7hw1cnl3a5a91lk8e2p1w0x",
+              "fdType": 2,
+              "fdAllReaders": [
+                {
+                  "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+                  "fdName": "所有用户"
+                }
+              ],
+              "fdAllEditors": [],
+              "fdId": "1g24ijjhrw423w7hw1cnl3a5a91lk8e2p1w0",
+              "fdName": "迪迦迦迦迦迦迦",
+              "fdModuleCode": "km-review",
+              "fdParent": {
+                "fdId": "1epfuagaiwagw6w2c09vk020oim1rmcro2w0",
+                "fdName": "审批流程"
+              }
+            },
+            "isDraft": false,
+            "fdTempVariables": [],
+            "fdStatus": "published",
+            "fdTimeoutStrategiesOfNode": [],
+            "fdRunType": "1",
+            "common": false,
+            "fdId": "1g3sum1lnw4l0wp6w4vou643j1reca2jpuw0",
+            "fdTemplateFormAuths": [],
+            "fdTimeoutStrategiesOfProcess": [],
+            "fdModuleCode": "km-review",
+            "fdName": "规则分类",
+            "fdMessageNotifyType": "{\"system\":\"todo\"}",
+            "isImport": false,
+            "fdFavorites": false,
+            "fdEditors": [],
+            "mechanismName": "lbpmTemplate",
+            "fdSystemCode": "",
+            "fdContentType": "json",
+            "dynamicProps": {
+              "fdNameCn": "规则分类"
+            },
+            "fdTemplateForms": [
+              {
+                "fdFormCode": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+                "fdSystemCode": "INNER_SYSTEM",
+                "fdConfigType": "2",
+                "fdIntegratedMode": 0,
+                "fdFormKey": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+                "fdName": "内置表单",
+                "fdModuleCode": "km-review",
+                "fdIsDefault": true
+              }
+            ],
+            "isAudit": false,
+            "fdReaders": [],
+            "fdPcEnable": true,
+            "fdPublishType": "instant",
+            "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+            "fdAlterTime": 1653460425000,
+            "fdFormFields": {},
+            "fdCommonId": "",
+            "fdEntityId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdContent": "{\"name\":\"规则分类\",\"elements\":[{\"type\":\"generalStart\",\"id\":\"N1\",\"name\":\"开始节点\",\"element\":\"startEvent\",\"bounds\":{\"x\":525.5,\"y\":100,\"width\":34,\"height\":34,\"relative\":false},\"operations\":[],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"开始节点\",\"nameUs\":\"Start Node\"},\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"draft\",\"id\":\"N2\",\"name\":\"起草节点\",\"element\":\"manualTask\",\"bounds\":{\"x\":462.5,\"y\":200,\"width\":160,\"height\":40,\"relative\":false},\"formKey\":\"default\",\"formName\":\"默认表单\",\"operationRefId\":\"custom\",\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"false\",\"modifyProcessAuthority\":\"2\",\"nodeAuthority\":\"0\",\"canAbandonRejectedProcess\":\"true\",\"number\":\"N2\",\"operations\":[{\"identity\":\"1\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_abandon\",\"name\":\"废弃\",\"srcName\":\"废弃\"}]},{\"identity\":\"2\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_submit\",\"name\":\"提交\",\"srcName\":\"提交\",\"isAlway\":true}]},{\"identity\":\"3\",\"elements\":[]}],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"起草节点\",\"nameUs\":\"Drafting Node\"},\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyTypeMethod\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"generalEnd\",\"id\":\"N3\",\"name\":\"结束节点\",\"element\":\"endEvent\",\"bounds\":{\"x\":525.5,\"y\":460,\"width\":34,\"height\":34,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"operations\":[],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"结束节点\",\"nameUs\":\"End Node\"},\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"language\":{\"nameCn\":\"审批节点1\",\"nameUs\":\"Approval Node\"},\"formKey\":\"default\",\"handlers\":{\"id\":\"handlers\",\"type\":\"formula\",\"source\":\"2\",\"ruleKey\":\"{\\\"vo\\\":{\\\"mode\\\":\\\"rule\\\"},\\\"type\\\":\\\"Batch\\\",\\\"vars\\\":[],\\\"result\\\":{\\\"vo\\\":{\\\"fdDataType\\\":\\\"array\\\",\\\"fdType\\\":\\\"array\\\",\\\"fdValueType\\\":\\\"Dynamic#/data/sys-rule/ruleController/findDynamicFunction\\\",\\\"fdValue\\\":{\\\"engine\\\":\\\"dynamic\\\",\\\"returnType\\\":{\\\"type\\\":\\\"any\\\",\\\"extends\\\":[{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test1\\\",\\\"required\\\":true,\\\"description\\\":\\\"处理人\\\",\\\"items\\\":{\\\"type\\\":\\\"object\\\",\\\"$ref\\\":\\\"ORG_ALL\\\",\\\"properties\\\":{\\\"fdId\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"fdId\\\",\\\"required\\\":true,\\\"description\\\":\\\"ID\\\"},\\\"fdName\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"fdName\\\",\\\"required\\\":true,\\\"description\\\":\\\"名称\\\"},\\\"fdOrgType\\\":{\\\"type\\\":\\\"integer\\\",\\\"id\\\":\\\"fdOrgType\\\",\\\"required\\\":true,\\\"description\\\":\\\"类型\\\"}}}}]},\\\"arguments\\\":[{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"}],\\\"value\\\":\\\"sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0\\\",\\\"text\\\":\\\"规则导出关系\\\",\\\"nodeType\\\":\\\"TEMPLATE\\\"},\\\"fdFuncArguments\\\":[{\\\"rawData\\\":{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},\\\"fdId\\\":\\\"test\\\",\\\"fdName\\\":\\\"测试\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Var\\\",\\\"fdValue\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\"},{\\\"rawData\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"},\\\"fdId\\\":\\\"resultCodes\\\",\\\"fdName\\\":\\\"选择结果\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Fixed\\\",\\\"dataSource\\\":[{\\\"label\\\":\\\"处理人\\\",\\\"value\\\":\\\"test1\\\"}],\\\"fdValue\\\":\\\"test1\\\"}],\\\"fdFetchApi\\\":\\\"/data/sys-rule/ruleController/findDynamicFunction\\\"},\\\"type\\\":\\\"Function\\\",\\\"value\\\":\\\"sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0\\\",\\\"arguments\\\":[{\\\"vo\\\":{\\\"rawData\\\":{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},\\\"fdId\\\":\\\"test\\\",\\\"fdName\\\":\\\"测试\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Var\\\",\\\"fdValue\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\"},\\\"type\\\":\\\"Var\\\",\\\"value\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\",\\\"resultType\\\":{\\\"type\\\":\\\"string\\\"},\\\"key\\\":\\\"test\\\"},{\\\"vo\\\":{\\\"rawData\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"},\\\"fdId\\\":\\\"resultCodes\\\",\\\"fdName\\\":\\\"选择结果\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Fixed\\\",\\\"dataSource\\\":[{\\\"label\\\":\\\"处理人\\\",\\\"value\\\":\\\"test1\\\"}],\\\"fdValue\\\":\\\"test1\\\"},\\\"type\\\":\\\"Fixed\\\",\\\"value\\\":\\\"test1\\\",\\\"resultType\\\":{\\\"type\\\":\\\"string\\\"},\\\"key\\\":\\\"resultCodes\\\"}],\\\"resultType\\\":{\\\"type\\\":\\\"array\\\",\\\"items\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"fdId\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"ID\\\"},\\\"fdName\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"名称\\\"},\\\"fdOrgType\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"组织机构类型\\\"}}}}}}\",\"ruleName\":\"复杂公式暂不支持显示\",\"members\":[],\"element\":\"users\",\"ruleMode\":\"rule\",\"formulaType\":\"rule\"},\"operationRefId\":\"default\",\"operations\":[],\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"true\",\"modifyProcessAuthority\":\"1\",\"nodeAuthority\":\"2\",\"allowUploadAttachments\":\"true\",\"canModifyCommentViewPermission\":\"false\",\"canModifyProcess\":\"false\",\"handSignRequired\":\"false\",\"fdScene\":{\"fdMode\":0},\"canCirculated\":\"false\",\"allowQuickApproval\":\"false\",\"allowSendDing\":\"true\",\"allowMobileHandle\":\"true\",\"name\":\"审批节点1\",\"type\":\"review\",\"bounds\":{\"x\":462.5,\"y\":280,\"width\":160,\"height\":40,\"relative\":false},\"number\":\"N4\",\"relateId\":\"N4\",\"emptyHandlerType\":2,\"cooperateType\":\"3\",\"ignoreOnSameIdentity\":\"3\",\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyContentType\":\"system\",\"timeoutStrategies\":\"[]\",\"element\":\"manualTask\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"id\":\"N4\"},{\"language\":{\"nameCn\":\"审批节点2\",\"nameUs\":\"Approval Node\"},\"formKey\":\"default\",\"handlers\":{\"id\":\"handlers\",\"type\":\"formula\",\"source\":\"2\",\"ruleKey\":\"{\\\"vo\\\":{\\\"mode\\\":\\\"rule\\\"},\\\"type\\\":\\\"Batch\\\",\\\"vars\\\":[],\\\"result\\\":{\\\"vo\\\":{\\\"fdDataType\\\":\\\"array\\\",\\\"fdType\\\":\\\"array\\\",\\\"fdValueType\\\":\\\"Dynamic#/data/sys-rule/ruleController/findDynamicFunction\\\",\\\"fdValue\\\":{\\\"engine\\\":\\\"dynamic\\\",\\\"returnType\\\":{\\\"type\\\":\\\"any\\\",\\\"extends\\\":[{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test1\\\",\\\"required\\\":true,\\\"description\\\":\\\"处理人\\\",\\\"items\\\":{\\\"type\\\":\\\"object\\\",\\\"$ref\\\":\\\"ORG_ALL\\\",\\\"properties\\\":{\\\"fdId\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"fdId\\\",\\\"required\\\":true,\\\"description\\\":\\\"ID\\\"},\\\"fdName\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"fdName\\\",\\\"required\\\":true,\\\"description\\\":\\\"名称\\\"},\\\"fdOrgType\\\":{\\\"type\\\":\\\"integer\\\",\\\"id\\\":\\\"fdOrgType\\\",\\\"required\\\":true,\\\"description\\\":\\\"类型\\\"}}}}]},\\\"arguments\\\":[{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"}],\\\"value\\\":\\\"sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0\\\",\\\"text\\\":\\\"规则导出关系\\\",\\\"nodeType\\\":\\\"TEMPLATE\\\"},\\\"fdFuncArguments\\\":[{\\\"rawData\\\":{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},\\\"fdId\\\":\\\"test\\\",\\\"fdName\\\":\\\"测试\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Var\\\",\\\"fdValue\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\"},{\\\"rawData\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"},\\\"fdId\\\":\\\"resultCodes\\\",\\\"fdName\\\":\\\"选择结果\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Fixed\\\",\\\"dataSource\\\":[{\\\"label\\\":\\\"处理人\\\",\\\"value\\\":\\\"test1\\\"}],\\\"fdValue\\\":\\\"test1\\\"}],\\\"fdFetchApi\\\":\\\"/data/sys-rule/ruleController/findDynamicFunction\\\"},\\\"type\\\":\\\"Function\\\",\\\"value\\\":\\\"sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0\\\",\\\"arguments\\\":[{\\\"vo\\\":{\\\"rawData\\\":{\\\"type\\\":\\\"array\\\",\\\"id\\\":\\\"test\\\",\\\"required\\\":false,\\\"description\\\":\\\"测试\\\",\\\"items\\\":{\\\"type\\\":\\\"string\\\"}},\\\"fdId\\\":\\\"test\\\",\\\"fdName\\\":\\\"测试\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Var\\\",\\\"fdValue\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\"},\\\"type\\\":\\\"Var\\\",\\\"value\\\":\\\"1g3sulihqw4kvw167w2pveg5tsc76i912hw0-fd_col_sdtexa\\\",\\\"resultType\\\":{\\\"type\\\":\\\"string\\\"},\\\"key\\\":\\\"test\\\"},{\\\"vo\\\":{\\\"rawData\\\":{\\\"type\\\":\\\"string\\\",\\\"id\\\":\\\"resultCodes\\\",\\\"$ref\\\":\\\"returntype\\\",\\\"required\\\":true,\\\"description\\\":\\\"选择结果\\\"},\\\"fdId\\\":\\\"resultCodes\\\",\\\"fdName\\\":\\\"选择结果\\\",\\\"fdDataType\\\":\\\"string\\\",\\\"fdValueType\\\":\\\"Fixed\\\",\\\"dataSource\\\":[{\\\"label\\\":\\\"处理人\\\",\\\"value\\\":\\\"test1\\\"}],\\\"fdValue\\\":\\\"test1\\\"},\\\"type\\\":\\\"Fixed\\\",\\\"value\\\":\\\"test1\\\",\\\"resultType\\\":{\\\"type\\\":\\\"string\\\"},\\\"key\\\":\\\"resultCodes\\\"}],\\\"resultType\\\":{\\\"type\\\":\\\"array\\\",\\\"items\\\":{\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"fdId\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"ID\\\"},\\\"fdName\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"名称\\\"},\\\"fdOrgType\\\":{\\\"type\\\":\\\"string\\\",\\\"description\\\":\\\"组织机构类型\\\"}}}}}}\",\"ruleName\":\"复杂公式暂不支持显示\",\"members\":[],\"element\":\"users\",\"ruleMode\":\"rule\",\"formulaType\":\"rule\"},\"operationRefId\":\"default\",\"operations\":[],\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"true\",\"modifyProcessAuthority\":\"1\",\"nodeAuthority\":\"2\",\"allowUploadAttachments\":\"true\",\"canModifyCommentViewPermission\":\"false\",\"canModifyProcess\":\"false\",\"handSignRequired\":\"false\",\"fdScene\":{\"fdMode\":0},\"canCirculated\":\"false\",\"allowQuickApproval\":\"false\",\"allowSendDing\":\"true\",\"allowMobileHandle\":\"true\",\"name\":\"审批节点2\",\"type\":\"review\",\"bounds\":{\"x\":462.5,\"y\":360,\"width\":160,\"height\":40,\"relative\":false},\"number\":\"N7\",\"relateId\":\"N7\",\"emptyHandlerType\":2,\"cooperateType\":\"3\",\"ignoreOnSameIdentity\":\"3\",\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyContentType\":\"system\",\"timeoutStrategies\":\"[]\",\"element\":\"manualTask\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"id\":\"N7\"},{\"type\":\"sequenceFlow\",\"id\":\"E4\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N1\",\"targetRef\":\"N2\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"id\":\"E5\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N2\",\"targetRef\":\"N4\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"id\":\"E6\",\"sourceRef\":\"N4\",\"targetRef\":\"N7\",\"wayPoints\":null},{\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"id\":\"E8\",\"sourceRef\":\"N7\",\"targetRef\":\"N3\",\"wayPoints\":null}],\"events\":[],\"default\":[],\"diagram\":\"\",\"flowType\":\"0\",\"notifyDrafterOnEnd\":\"true\",\"notifyParticipantOnEnd\":\"false\",\"notifyDrafterOnException\":\"false\",\"notifyAdminOnException\":\"false\",\"adminFormAuth\":\"{\\\"view\\\":true,\\\"editable\\\":false,\\\"deletable\\\":false}\",\"processEndIsCirculated\":\"true\",\"rejectDenyRetract\":\"false\",\"canCirculationIdentity\":\"draft\",\"fdHighLights\":{\"fdColorCode\":\"#FF943E\"},\"groupChat\":{\"isEnabled\":false}}",
+            "fdAllEditors": [],
+            "fdAllReaders": [
+              {
+                "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+                "fdName": "所有用户"
+              }
+            ],
+            "fdFlowType": "0",
+            "isAllSubNew": true
+          }
+        ],
+        "sysnumber": [
+          {
+            "fdSysNumber": {
+              "fdTemplateFlag": true,
+              "fdVirtualNumberValue": "00001",
+              "refCount": 0,
+              "dynamicProps": {},
+              "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+              "fdCreateTime": 1653460424000,
+              "fdEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+              "authReaders": [],
+              "fdName": "自定义",
+              "fdCreator": {
+                "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+                "fdName": "刘芬CN"
+              },
+              "fdContentClob": "[{\"name\":\"00001\",\"type\":\"flow\",\"error\":false,\"ruleData\":{\"period\":\"none\",\"start\":\"1\",\"len\":\"5\",\"step\":\"1\",\"isZeroFill\":true,\"isAutoElevation\":true,\"areas\":[],\"values\":[]},\"id\":\"1\"}]",
+              "fdDefaultFlag": false
+            },
+            "fdEntityId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdEntityKey": "kmReviewTemplate",
+            "fdId": "1g3sunlk2w4l4wkcw1ph3b8q2c5mu3i1omw0",
+            "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+            "fdType": "2"
+          }
+        ]
+      },
+      "fdName": "规则分类"
+    },
+    "entityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+    "exist": true,
+    "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+    "fdName": "规则分类",
+    "isCopy": false,
+    "isMain": true,
+    "isOrg": false,
+    "operation": "COVER",
+    "referDispName": "流程管理-模板管理",
+    "referNodes": [
+      {
+        "data": {
+          "fdTemplateFlag": true,
+          "fdVirtualNumberValue": "00001",
+          "refCount": 0,
+          "dynamicProps": {},
+          "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+          "fdCreateTime": 1653460424000,
+          "fdEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+          "authReaders": [],
+          "fdName": "自定义",
+          "fdCreator": {
+            "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+            "fdName": "刘芬CN"
+          },
+          "fdContentClob": "[{\"name\":\"00001\",\"type\":\"flow\",\"error\":false,\"ruleData\":{\"period\":\"none\",\"start\":\"1\",\"len\":\"5\",\"step\":\"1\",\"isZeroFill\":true,\"isAutoElevation\":true,\"areas\":[],\"values\":[]},\"id\":\"1\"}]",
+          "fdDefaultFlag": false
+        },
+        "entityName": "com.landray.sys.mech.number.core.entity.SysNumberMain",
+        "exist": true,
+        "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+        "fdName": "自定义",
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": false,
+        "localData": {
+          "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+          "fdName": "自定义"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sysnumber[0].fdSysNumber",
+            "pathDesc": "编号规则",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "编号机制",
+        "referNodes": [
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": true,
+            "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+            "fdName": "刘芬CN",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "localData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            },
+            "operation": "COVER",
+            "referByNodes": [
+              {
+                "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+                "fdName": "自定义",
+                "path": "fdCreator",
+                "pathDesc": "创建人",
+                "referDispName": "编号机制",
+                "referType": "SysNumberMain"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            }
+          }
+        ],
+        "referType": "SysNumberMain",
+        "tranData": {
+          "fdId": "1g3sunlhkw4l4wk9w1jiua6ocp0hpg1a6ew0",
+          "fdName": "自定义"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+        "fdName": "所有用户",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdCategory.fdAllReaders[0]",
+            "pathDesc": "流程设计/模板分类/组织架构",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        }
+      },
+      {
+        "data": {
+          "fdEditors": [],
+          "fdCode": "rule",
+          "setEdit": false,
+          "fdDescription": "",
+          "fdCategory": {
+            "fdId": "1g3sucvbaw4kswp9w2fobplj180kkrebt3w0",
+            "fdName": "规则分类"
+          },
+          "fdDataGroups": [
+            {
+              "fdMaintainer": [],
+              "fdRuleSetId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+              "fdId": "1g3suh2j5w4kswpuw1rulms068ciku39chw0",
+              "extendProps": {
+                "fdRuleSetId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "默认分组"
+              },
+              "fdCreateTime": 1653460209000,
+              "fdName": "默认分组",
+              "fdCreator": {
+                "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+                "fdName": "刘芬CN"
+              },
+              "fdIsDefault": true
+            }
+          ],
+          "ruleSetCategory": {
+            "fdAllReaders": [
+              {
+                "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+                "fdName": "所有用户"
+              }
+            ],
+            "fdEditors": [],
+            "fdAllEditors": [
+              {
+                "fdId": "1g15fk047w34gwrw3finb1ai3knpa2bk33w0",
+                "fdName": "机构88771"
+              }
+            ],
+            "dynamicProps": {},
+            "fdId": "1g3sucvbaw4kswp9w2fobplj180kkrebt3w0",
+            "fdReaders": [],
+            "fdCreateTime": 1653460074000,
+            "fdReaderFlag": true,
+            "fdHierarchyId": "x1g3sucvbaw4kswp9w2fobplj180kkrebt3w0x",
+            "fdName": "规则分类",
+            "fdNotReaderFlag": false
+          },
+          "fdReaders": [
+            {
+              "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+              "fdName": "刘芬CN"
+            }
+          ],
+          "fdReaderFlag": true,
+          "dataEdit": false,
+          "fdDataEditors": [],
+          "fdNotReaderFlag": false,
+          "fdType": "DATA_RULE",
+          "fdAllEditors": [],
+          "fdAllReaders": [
+            {
+              "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+              "fdName": "刘芬CN"
+            }
+          ],
+          "fdContent": "[{\"key\":\"condition-fsikpi\",\"form\":{\"fdType\":\"condition\",\"fdName\":\"测试\",\"fdCode\":\"test\",\"fdDataType\":\"string\",\"dataSource\":[],\"fdColType\":\"String\"}},{\"key\":\"result-fsikpmf\",\"form\":{\"fdType\":\"result\",\"fdRequire\":true,\"fdName\":\"处理人\",\"fdCode\":\"test1\",\"fdDataType\":\"organization&post&person\",\"fdMatchResult\":1,\"dataSource\":[],\"fdColType\":\"ORG_TYPE_ORGORDEPTORPOSTORPERSON\"}}]",
+          "fdGroupEnabled": false,
+          "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "extendProps": {
+            "fdName": "规则导出关系"
+          },
+          "fdIsEnabled": true,
+          "fdName": "规则导出关系"
+        },
+        "entityName": "com.landray.sys.rule.core.entity.SysRuleSet",
+        "exist": false,
+        "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+        "fdName": "规则导出关系",
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": false,
+        "operation": "NEW",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdContent.elements[3].handlers.ruleKey.result.value",
+            "pathDesc": "流程设计/流程信息/审批节点/处理人/公式",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType",
+            "replaceStrategy": "formula"
+          },
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdContent.elements[4].handlers.ruleKey.result.value",
+            "pathDesc": "流程设计/流程信息/审批节点/处理人/公式",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType",
+            "replaceStrategy": "formula"
+          }
+        ],
+        "referDispName": "规则管理",
+        "referNodes": [
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+            "fdName": "lwl_100",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdEditors[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "lwl_100",
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "parentFullName": "A1cn/lwl_100",
+              "fdAvailable": true,
+              "fdName": "lwl_100"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1g15fk047w34gwrw3finb1ai3knpa2bk33w0",
+            "fdName": "机构88771",
+            "fdOrgType": 1,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "ruleSetCategory.fdEditors[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 1,
+              "fdId": "1g15fk047w34gwrw3finb1ai3knpa2bk33w0",
+              "parentFullName": "机构88771",
+              "fdAvailable": true,
+              "fdName": "机构88771"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": true,
+            "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+            "fdName": "刘芬CN",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "localData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            },
+            "operation": "COVER",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdReaders[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+            "fdName": "lwl_100",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdReaders[1]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "lwl_100",
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "parentFullName": "A1cn/lwl_100",
+              "fdAvailable": true,
+              "fdName": "lwl_100"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+            "fdName": "黄药师",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdReaders[2]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "huangys",
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "parentFullName": "前端开发/业务建模研发部/业务建模(勿删)/黄药师",
+              "fdAvailable": true,
+              "fdName": "黄药师"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+            "fdName": "黄药师",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdDataEditors[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "huangys",
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "parentFullName": "前端开发/业务建模研发部/业务建模(勿删)/黄药师",
+              "fdAvailable": true,
+              "fdName": "黄药师"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+            "fdName": "lwl_100",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdAllEditors[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "lwl_100",
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "parentFullName": "A1cn/lwl_100",
+              "fdAvailable": true,
+              "fdName": "lwl_100"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": true,
+            "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+            "fdName": "刘芬CN",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "localData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            },
+            "operation": "COVER",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdAllReaders[0]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdNo": "lf000003",
+              "fdOrgType": 8,
+              "fdLoginName": "liuf",
+              "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+              "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+              "fdAvailable": true,
+              "fdName": "刘芬CN"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+            "fdName": "lwl_100",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdAllReaders[1]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "lwl_100",
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "parentFullName": "A1cn/lwl_100",
+              "fdAvailable": true,
+              "fdName": "lwl_100"
+            }
+          },
+          {
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "exist": false,
+            "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+            "fdName": "黄药师",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "isMain": false,
+            "isOrg": true,
+            "operation": "EMPTY",
+            "referByNodes": [
+              {
+                "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "规则导出关系",
+                "path": "fdAllReaders[2]",
+                "pathDesc": "组织架构",
+                "referDispName": "规则管理",
+                "referType": "sysRuleSetType"
+              }
+            ],
+            "referDispName": "组织架构导入导出",
+            "referType": "SysOrgElement",
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "huangys",
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "parentFullName": "前端开发/业务建模研发部/业务建模(勿删)/黄药师",
+              "fdAvailable": true,
+              "fdName": "黄药师"
+            }
+          }
+        ],
+        "referType": "sysRuleSetType",
+        "tranData": {
+          "fdCode": "rule",
+          "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "formulaPrefix": "sys.rule",
+          "id": "sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "fdName": "规则导出关系",
+          "fdType": 0
+        }
+      },
+      {
+        "data": {
+          "fdEditors": [
+            {
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "fdName": "lwl_100"
+            }
+          ],
+          "fdCode": "rule",
+          "setEdit": false,
+          "fdDescription": "",
+          "fdCategory": {
+            "fdId": "1g3sucvbaw4kswp9w2fobplj180kkrebt3w0",
+            "fdName": "规则分类"
+          },
+          "fdDataGroups": [
+            {
+              "fdMaintainer": [],
+              "fdRuleSetId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+              "fdId": "1g3suh2j5w4kswpuw1rulms068ciku39chw0",
+              "extendProps": {
+                "fdRuleSetId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+                "fdName": "默认分组"
+              },
+              "fdCreateTime": 1653460209000,
+              "fdName": "默认分组",
+              "fdCreator": {
+                "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+                "fdName": "刘芬CN"
+              },
+              "fdIsDefault": true
+            }
+          ],
+          "ruleSetCategory": {
+            "fdAllReaders": [
+              {
+                "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+                "fdName": "所有用户"
+              }
+            ],
+            "fdEditors": [
+              {
+                "fdId": "1g15fk047w34gwrw3finb1ai3knpa2bk33w0",
+                "fdName": "机构88771"
+              }
+            ],
+            "fdAllEditors": [
+              {
+                "fdId": "1g15fk047w34gwrw3finb1ai3knpa2bk33w0",
+                "fdName": "机构88771"
+              }
+            ],
+            "dynamicProps": {},
+            "fdId": "1g3sucvbaw4kswp9w2fobplj180kkrebt3w0",
+            "fdReaders": [],
+            "fdCreateTime": 1653460074000,
+            "fdReaderFlag": true,
+            "fdHierarchyId": "x1g3sucvbaw4kswp9w2fobplj180kkrebt3w0x",
+            "fdName": "规则分类",
+            "fdNotReaderFlag": false
+          },
+          "fdReaders": [
+            {
+              "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+              "fdName": "刘芬CN"
+            },
+            {
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "fdName": "lwl_100"
+            },
+            {
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "fdName": "黄药师"
+            }
+          ],
+          "fdReaderFlag": true,
+          "dataEdit": false,
+          "fdDataEditors": [
+            {
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "fdName": "黄药师"
+            }
+          ],
+          "fdNotReaderFlag": false,
+          "fdType": "DATA_RULE",
+          "fdAllEditors": [
+            {
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "fdName": "lwl_100"
+            }
+          ],
+          "fdAllReaders": [
+            {
+              "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+              "fdName": "刘芬CN"
+            },
+            {
+              "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+              "fdName": "lwl_100"
+            },
+            {
+              "fdId": "1f2qnteg7w6mw3dlw57bs1u13tu6du666tw0",
+              "fdName": "黄药师"
+            }
+          ],
+          "fdContent": "[{\"key\":\"condition-fsikpi\",\"form\":{\"fdType\":\"condition\",\"fdName\":\"测试\",\"fdCode\":\"test\",\"fdDataType\":\"string\",\"dataSource\":[],\"fdColType\":\"String\"}},{\"key\":\"result-fsikpmf\",\"form\":{\"fdType\":\"result\",\"fdRequire\":true,\"fdName\":\"处理人\",\"fdCode\":\"test1\",\"fdDataType\":\"organization&post&person\",\"fdMatchResult\":1,\"dataSource\":[],\"fdColType\":\"ORG_TYPE_ORGORDEPTORPOSTORPERSON\"}}]",
+          "fdGroupEnabled": false,
+          "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "extendProps": {
+            "fdName": "规则导出关系"
+          },
+          "fdIsEnabled": true,
+          "fdName": "规则导出关系"
+        },
+        "entityName": "com.landray.sys.rule.core.entity.SysRuleSet",
+        "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+        "fdName": "规则导出关系",
+        "isCopy": true,
+        "isMain": false,
+        "isOrg": false,
+        "operation": "NEW",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdContent.elements[3].handlers.ruleKey.result.value",
+            "pathDesc": "流程设计/流程信息/审批节点/处理人/公式",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType",
+            "replaceStrategy": "formula"
+          },
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdContent.elements[4].handlers.ruleKey.result.value",
+            "pathDesc": "流程设计/流程信息/审批节点/处理人/公式",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType",
+            "replaceStrategy": "formula"
+          }
+        ],
+        "referDispName": "规则管理",
+        "referType": "sysRuleSetType",
+        "tranData": {
+          "fdCode": "rule",
+          "fdId": "1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "formulaPrefix": "sys.rule",
+          "id": "sys.rule#1g3suh2djw4kswppw1ojqln22aedl8o3r9w0",
+          "fdName": "规则导出关系",
+          "fdType": 0
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+        "fdName": "所有用户",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.lbpmTemplate[0].fdAllReaders[0]",
+            "pathDesc": "流程设计/组织架构",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+        "fdName": "刘芬CN",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sys-xform.fdCreator",
+            "pathDesc": "创建人",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+        "fdName": "刘芬CN",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sys-xform.fdAlter",
+            "pathDesc": "修改人",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+        "fdName": "刘芬CN",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sys-xform.fdConfig.auth[0].fdCreator",
+            "pathDesc": "表单设计/权限设置/创建人",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+        "fdName": "刘芬CN",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sys-xform.fdConfig.dataModel[0].fdCreator",
+            "pathDesc": "表单设计/数据模型/创建人",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+        "fdName": "刘芬CN",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "mechanisms.sys-xform.fdConfig.dataModel[0].fdAlter",
+            "pathDesc": "表单设计/数据模型/修改人",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdNo": "lf000003",
+          "fdOrgType": 8,
+          "fdLoginName": "liuf",
+          "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+          "parentFullName": "liuf子部门1/A1cn/刘芬CN",
+          "fdAvailable": true,
+          "fdName": "刘芬CN"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+        "fdName": "所有用户",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "fdCategory.fdAllReaders[0]",
+            "pathDesc": "模板分类/组织架构",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        }
+      },
+      {
+        "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+        "exist": true,
+        "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+        "fdName": "所有用户",
+        "fdOrgType": 8,
+        "isCopy": false,
+        "isMain": false,
+        "isOrg": true,
+        "localData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        },
+        "operation": "COVER",
+        "referByNodes": [
+          {
+            "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+            "fdName": "规则分类",
+            "path": "fdAllReaders[0]",
+            "pathDesc": "组织架构",
+            "referDispName": "流程管理-模板管理",
+            "referType": "kmReviewTemplateType"
+          }
+        ],
+        "referDispName": "组织架构导入导出",
+        "referType": "SysOrgElement",
+        "tranData": {
+          "fdOrgType": 8,
+          "fdLoginName": "everyone",
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "parentFullName": "A1cn/所有用户",
+          "fdAvailable": true,
+          "fdName": "所有用户"
+        }
+      }
+    ],
+    "referType": "kmReviewTemplateType",
+    "tranData": {
+      "fdId": "1g3sulihqw4kvw167w2pveg5tsc76i912hw0",
+      "fdName": "规则分类"
+    }
+  }
+]

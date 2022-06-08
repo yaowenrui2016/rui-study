@@ -1,0 +1,74 @@
+[
+  {
+    "path": "fdEditors[0]",
+    "pathDesc": "编辑者",
+    "tranData": {
+      "fdOrgType": 8,
+      "fdLoginName": "lwl_100",
+      "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+      "parentFullName": "nullA1cn/",
+      "fdAvailable": true,
+      "fdName": "lwl_100"
+    },
+    "type": "SysOrgElement"
+  },
+  {
+    "path": "fdAllEditors[0]",
+    "pathDesc": "所有可编辑者",
+    "tranData": {
+      "fdOrgType": 8,
+      "fdLoginName": "lwl_100",
+      "fdId": "1evrshlb0wcmw1kcw1bdega73joojru6t8w0",
+      "parentFullName": "nullA1cn/",
+      "fdAvailable": true,
+      "fdName": "lwl_100"
+    },
+    "type": "SysOrgElement"
+  },
+  {
+    "localData": {
+      "fdNo": "lf000003",
+      "fdOrgType": 8,
+      "fdLoginName": "liuf",
+      "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+      "parentFullName": "nullliuf子部门1/A1cn/",
+      "fdAvailable": true,
+      "fdName": "刘芬CN"
+    },
+    "path": "fdAllEditors[1]",
+    "pathDesc": "所有可编辑者",
+    "tranData": {
+      "fdNo": "lf000003",
+      "fdOrgType": 8,
+      "fdLoginName": "liuf",
+      "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+      "parentFullName": "nullliuf子部门1/A1cn/",
+      "fdAvailable": true,
+      "fdName": "刘芬CN"
+    },
+    "type": "SysOrgElement"
+  },
+  {
+    "localData": {
+      "fdNo": "lf000003",
+      "fdOrgType": 8,
+      "fdLoginName": "liuf",
+      "fdId": "1fgnmcgcawilw6mtw22eqsn013dipflckdw0",
+      "parentFullName": "nullliuf子部门1/A1cn/",
+      "fdAvailable": true,
+      "fdName": "刘芬CN"
+    },
+    "path": "fdCreator",
+    "pathDesc": "创建人",
+    "tranData": {
+      "fdNo": "lf000003",
+      "fdOrgType": 8,
+      "fdLoginName": "liuf",
+      "fdId": "1f0d2e1krwmiw1b5w17fm2u1m3i58j18fow0",
+      "parentFullName": "nullliuf子部门1/A1cn/",
+      "fdAvailable": true,
+      "fdName": "刘芬CN"
+    },
+    "type": "SysOrgElement"
+  }
+]

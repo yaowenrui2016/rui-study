@@ -1,0 +1,175 @@
+{
+  "fdType": "SYSTEM",
+  "fdName": "系统模板-流程模板样例",
+  "fdCode": "sys-notify-example:notify.template.audit",
+  "fdRefCode": "sys-notify-example:notify.template.audit",
+  "providersDisplay": [
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}"
+              }
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey":"sys-notify:notifyType.todo",
+      "name": "待办",
+      "provider": "todo",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "邮件标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "zh-HK": "郵件標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                "en-US": "Email subject: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}"
+              }
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey":"sys-notify:notifyType.email",
+      "name": "邮件",
+      "provider": "email",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "测试消息扩展标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "zh-HK": "測試消息擴展標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                "en-US": "Test notify extension subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+              }
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        },
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "测试消息扩展标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "zh-HK": "測試消息擴展標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                "en-US": "Test notify extension subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+              }
+            },
+            {
+              "name": "摘要",
+              "property": "content",
+              "required": true,
+              "type": "MULTI_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "测试消息扩展摘要内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}",
+                "zh-HK": "測試消息擴展摘要內容：\n本產品由${appName}提供\n藍凌軟體${timestamp}",
+                "en-US": "Test notify extension Abstract content:\nThis product is provided by ${appName}\nLanling Software${timestamp}"
+              }
+            },
+            {
+              "name": "图片",
+              "property": "image",
+              "required": true,
+              "type": "IMAGE",
+              "value4Lang": {
+                "zh-CN": "测试消息扩展:附件id_中文",
+                "zh-HK": "測試消息擴展：附件id_中文",
+                "en-US": "Test notify extension:attach_id_en"
+              }
+            }
+          ],
+          "style": "IMAGE_CARD"
+        }
+      ],
+      "messageKey":"sys-notify-example:notify.provider.test",
+      "name": "测试消息扩展",
+      "provider": "testNotifyProvider",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "测试待办扩展标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "zh-HK": "測試待辦擴展標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                "en-US": "Test todo extension title: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+              }
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        },
+        {
+          "dispProps": [
+            {
+              "name": "摘要",
+              "property": "content",
+              "required": true,
+              "type": "MULTI_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "测试待办扩展摘要内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}",
+                "zh-HK": "測試待辦擴展摘要內容：\n本產品由${appName}提供\n藍凌軟體${timestamp}",
+                "en-US": "Test todo extension Abstract content:\nThis product is provided by ${appName}\nLanling Software${timestamp}"
+              }
+            },
+            {
+              "name": "图片",
+              "property": "image",
+              "required": true,
+              "type": "IMAGE",
+              "value4Lang": {
+                "zh-CN": "测试待办扩展:附件id_中文",
+                "zh-HK": "測試待辦擴展：附件id_中文",
+                "en-US": "Test todo extension:attach_id_en"
+              }
+            }
+          ],
+          "style": "TEXT_CARD"
+        }
+      ],
+      "messageKey":"sys-notify-example:todo.provider.test",
+      "name": "测试待办扩展",
+      "provider": "testTodoExt",
+      "todoExt": true
+    }
+  ],
+  "customVars": [
+    {
+      "varName": "replaceText.money",
+      "displayName": "合同金额"
+    }
+  ]
+}

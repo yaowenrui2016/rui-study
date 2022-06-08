@@ -1,0 +1,47 @@
+{
+  "subject": "测试消息模板",
+  "notifyType": "todo",
+  "link": "http://www.baidu.com",
+  "mobileLink": "http://www.taobao.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "1",
+  "entityName": "testNotifyTemplate",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    "yaowr"
+  ],
+  "replaceText": {
+    "money": "998.00"
+  },
+  "extendContents": [
+    {
+      "key": "auditor",
+      "value": "老王"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "replaceText": {
+        "money": "9980.00"
+      },
+      "extendContents": [
+        {
+          "key": "auditor",
+          "value": "Old Wang"
+        }
+      ]
+    },
+    "zh-HK": {
+      "replaceText": {
+        "money": "99800.00"
+      },
+      "extendContents": [
+        {
+          "key": "auditor",
+          "value": "老王（繁體）"
+        }
+      ]
+    }
+  }
+}

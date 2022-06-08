@@ -2,9 +2,9 @@ package indi.rui.study.unittest.auto;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import indi.rui.study.unittest.dto.MkNotifyOriginal;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
+import indi.rui.study.unittest.dto.original.SysNotifyOriginalVO;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
@@ -59,8 +59,11 @@ public class AutoSendFindOriginal {
 
     public static void main(String[] args) {
         try {
-            // 发送消息并获取原始消息日志
-            getOriginal(sendOrDoneRPC("send"));
+            // 发送消息
+//            String snid = sendOrDoneRPC("send");
+            // 获取原始消息日志
+            String snid = "1g515hjqvw64w56wu8i0t8tnnk3gvjqqetw0";
+            getOriginal(snid);
             // 置已办消息并获取原始消息日志
 //            getOriginal(sendOrDoneRPC("done"));
         } finally {
@@ -92,7 +95,7 @@ public class AutoSendFindOriginal {
         long beginTime = System.currentTimeMillis();
         boolean timeout;
         int count = 0;
-        MkNotifyOriginal original;
+        SysNotifyOriginalVO original;
         do {
             count++;
             original = findOriginalIdRPC(snid);
@@ -107,7 +110,7 @@ public class AutoSendFindOriginal {
         log.info("Get original [{}]: {}", count, JSONObject.toJSONString(original, SerializerFeature.PrettyFormat));
     }
 
-    private static boolean isAllArrived(MkNotifyOriginal original) {
+    private static boolean isAllArrived(SysNotifyOriginalVO original) {
         if (original == null) {
             return false;
         }
@@ -115,7 +118,7 @@ public class AutoSendFindOriginal {
         return providerIds.size() == original.getFdNotifyType().split(",").length;
     }
 
-    private static MkNotifyOriginal findOriginalIdRPC(String snid) {
+    private static SysNotifyOriginalVO findOriginalIdRPC(String snid) {
         // 查询原始消息记录
         JSONObject json = new JSONObject();
         json.put("pageSize", 1);
@@ -124,24 +127,24 @@ public class AutoSendFindOriginal {
         sorts.put("fdCreateTime", "DESC");
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent("conditions", (k) -> new HashMap<>());
         conditions.put("fdSnid", snid);
-        MkResponse<QueryResult<MkNotifyOriginal>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-                "/data/sys-notify/sysNotifyOriginal/list", json, MkNotifyOriginal.class);
+        MkResponse<QueryResult<SysNotifyOriginalVO>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-notify/sysNotifyOriginal/list", json, SysNotifyOriginalVO.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("find original error! errMsg=" + mkResponse.getMsg());
         }
-        List<MkNotifyOriginal> originals = mkResponse.getData().getContent();
+        List<SysNotifyOriginalVO> originals = mkResponse.getData().getContent();
         if (originals == null || originals.isEmpty()) {
             return null;
         }
         return originals.get(0);
     }
 
-    private static MkNotifyOriginal loadOriginal(String fdId) {
+    private static SysNotifyOriginalVO loadOriginal(String fdId) {
         // 查询原始消息记录
         JSONObject json = new JSONObject();
         json.put("fdId", fdId);
-        MkResponse<MkNotifyOriginal> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-notify/sysNotifyOriginal/get", json, MkNotifyOriginal.class);
+        MkResponse<SysNotifyOriginalVO> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyOriginal/get", json, SysNotifyOriginalVO.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Load original error! errMsg=" + mkResponse.getMsg());
         }

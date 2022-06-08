@@ -1,5 +1,6 @@
-package indi.rui.study.unittest.dto;
+package indi.rui.study.unittest.dto.original;
 
+import indi.rui.study.unittest.dto.MkOriginalStatus;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,7 +10,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class MkOriginalAdditional {
+public class OriginalAdditional {
     /**
      * 入队时间，即进入消息队列的时间
      */

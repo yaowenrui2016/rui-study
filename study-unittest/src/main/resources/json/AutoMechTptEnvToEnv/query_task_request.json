@@ -1,0 +1,13 @@
+{
+  "columns": [
+    "fdId",
+    "fdName"
+  ],
+  "offset": 0,
+  "pageSize": 1000,
+  "conditions": {
+    "fdSubject": {
+      "$contains": "abc"
+    }
+  }
+}
