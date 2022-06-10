@@ -2,10 +2,10 @@ package indi.rui.study.something.REST接口调用案例;
 
 import com.alibaba.druid.support.json.JSONUtils;
 import com.alibaba.fastjson.JSONObject;
-import indi.rui.study.something.FileUtils;
 import indi.rui.study.something.HttpClientUtils;
 import indi.rui.study.something.REST接口调用案例.DTO.QueryResult;
 import indi.rui.study.something.ThreadHelper;
+import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;

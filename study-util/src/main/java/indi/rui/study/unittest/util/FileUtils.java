@@ -43,6 +43,13 @@ public class FileUtils {
         return sb.toString();
     }
 
+    public static JSONObject loadJSON(ClassLoader classLoader, String filename) {
+        String filePath = Objects.requireNonNull(classLoader.getResource(
+                "json/" + filename)).getFile();
+        String sendJson = FileUtils.readFileToString(filePath, "utf-8");
+        return JSONObject.parseObject(sendJson);
+    }
+
     public static JSONObject loadJSON(String filename) {
         String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
                 "json/" + filename)).getFile();

@@ -1,0 +1,395 @@
+[
+  {
+    "fdTemplateFlag": true,
+    "fdVirtualNumberValue": "2020031413:30",
+    "refCount": 0,
+    "dynamicProps": {},
+    "fdId": "1g4uq0pvcw4ruw3jiw5rl69d6qs069r1s9w0",
+    "fdCreateTime": 1654596332000,
+    "fdEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+    "authReaders": [],
+    "fdName": "自定义",
+    "fdCreator": {
+      "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+      "fdName": "朱国荣cn"
+    },
+    "fdContentClob": "[{\"name\":\"20200314\",\"type\":\"date\",\"error\":false,\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"yyyyMMdd\"},\"id\":\"1\"},{\"name\":\"13:30\",\"error\":false,\"type\":\"time\",\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"HH:mm\"},\"id\":\"2\"}]",
+    "fdDefaultFlag": false
+  },
+  {
+    "fdDesc": "",
+    "fdEditors": [],
+    "fdBuildNew": false,
+    "fdSimpleName": "23432",
+    "fdTableName": "mk_model_20220607h03ke",
+    "fdCode": "template_3zwkft",
+    "dynamicProps": {
+      "fdSimpleNameCn": "23432",
+      "fdNameCn": "样例附件"
+    },
+    "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+    "fdCategory": {
+      "fdId": "1ev6qmfrtw61w1m1w22nk6et21o4c473gkw0",
+      "dynamicProps": {},
+      "fdCreateTime": 1614034488000,
+      "fdAlterTime": 1615327413000,
+      "fdReaders": [],
+      "fdReaderFlag": true,
+      "fdNotReaderFlag": false,
+      "fdAllReaders": [
+        {
+          "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+          "fdName": "朱国荣cn"
+        }
+      ],
+      "fdEditors": [],
+      "fdAllEditors": [],
+      "fdName": "common",
+      "fdHierarchyId": "x1ev6qmfrtw61w1m1w22nk6et21o4c473gkw0x",
+      "fdIcon": "{\"name\":\"aircraft\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}"
+    },
+    "fdStatus": 1,
+    "fdReaders": [],
+    "fdReaderFlag": true,
+    "fdAlterTime": 1654596331000,
+    "fdNumberType": 0,
+    "fdNotReaderFlag": false,
+    "fdNumberDesc": "",
+    "fdAllReaders": [
+      {
+        "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+        "fdName": "所有用户"
+      }
+    ],
+    "fdAllEditors": [],
+    "fdId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+    "fdVersionId": "1g4uq0pn5w4s1w2ew1gv9qls2cm3lll13aw0",
+    "lbpmFormCategoryVO": {
+      "dynamicProps": {},
+      "fdSystemCode": "INNER_SYSTEM",
+      "fdModuleCode": "km-review",
+      "fdFormCategoryId": "1ev6qmfrtw61w1m1w22nk6et21o4c473gkw0",
+      "fdFormParentCategory": {},
+      "fdName": "common"
+    },
+    "mechanisms": {
+      "lbpmTemplate": [
+        {
+          "fdId": "1g4upvhisw4quw5flw2udr1bk2ksrv3o2gw0",
+          "dynamicProps": {
+            "fdNameCn": "样例附件"
+          },
+          "mechanisms": {},
+          "fdContentType": "json",
+          "fdContent": "{\"name\":\"流程模板\",\"elements\":[{\"id\":\"N1\",\"name\":\"开始节点\",\"type\":\"generalStart\",\"element\":\"startEvent\",\"bounds\":{\"x\":525.5,\"y\":100,\"width\":34,\"height\":34,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"timeoutStrategies\":\"[]\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"N2\",\"name\":\"起草节点\",\"type\":\"draft\",\"element\":\"manualTask\",\"bounds\":{\"x\":462.5,\"y\":200,\"width\":160,\"height\":40,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"formKey\":\"default\",\"formName\":\"默认表单\",\"operationRefId\":\"custom\",\"operations\":[{\"identity\":\"1\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_abandon\",\"name\":\"废弃\",\"srcName\":\"废弃\"}]},{\"identity\":\"2\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_submit\",\"name\":\"提交\",\"srcName\":\"提交\",\"isAlway\":true}]},{\"identity\":\"3\",\"elements\":[]}],\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"false\",\"modifyProcessAuthority\":\"2\",\"nodeAuthority\":\"0\",\"canAbandonRejectedProcess\":\"true\",\"number\":\"N2\",\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"timeoutStrategies\":\"[]\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"N3\",\"name\":\"结束节点\",\"type\":\"generalEnd\",\"element\":\"endEvent\",\"bounds\":{\"x\":525.5,\"y\":300,\"width\":34,\"height\":34,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"timeoutStrategies\":\"[]\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"E4\",\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N1\",\"targetRef\":\"N2\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"wayPoints\":[],\"style\":\"sequenceFlow\"},{\"id\":\"E5\",\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N2\",\"targetRef\":\"N3\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"wayPoints\":[],\"style\":\"sequenceFlow\"}],\"events\":[],\"diagram\":\"\",\"flowType\":\"0\",\"notifyDrafterOnEnd\":\"true\",\"notifyParticipantOnEnd\":\"false\"}",
+          "fdTemplateCode": "template_3zwkft",
+          "fdDefinitionId": "1g4uq0qnhw4qtw5klw958qa93ha26if1fcw0",
+          "fdCategory": {
+            "fdId": "1f4b78s4awfjwb40w9f0pdg2vijkv81pt5w0",
+            "dynamicProps": {},
+            "fdName": "common",
+            "fdParent": {
+              "fdId": "1epfuagaiwagw6w2c09vk020oim1rmcro2w0",
+              "fdName": "审批流程"
+            },
+            "fdHierarchyId": "x1epfuagaiwagw6w2c09vk020oim1rmcro2w0x1f4b78s4awfjwb40w9f0pdg2vijkv81pt5w0x",
+            "fdType": 2,
+            "fdSystemCode": "INNER_SYSTEM",
+            "fdModuleCode": "km-review",
+            "fdFormCategoryId": "1ev6qmfrtw61w1m1w22nk6et21o4c473gkw0",
+            "fdChildFlag": false,
+            "fdAllReaders": [
+              {
+                "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+                "fdName": "所有用户"
+              }
+            ],
+            "fdAllEditors": [],
+            "fdReaders": [],
+            "fdEditors": []
+          },
+          "fdFormFields": {},
+          "fdTempVariables": [],
+          "businessMethodList": [],
+          "fdTemplateForms": [
+            {
+              "fdName": "样例附件",
+              "fdFormKey": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+              "fdFormCode": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+              "fdModuleCode": "km-review",
+              "fdSystemCode": "INNER_SYSTEM",
+              "fdIsDefault": true,
+              "fdConfigType": "2",
+              "fdIntegratedMode": 0
+            }
+          ],
+          "fdTemplateFormAuths": [],
+          "fdTimeoutStrategiesOfNode": [],
+          "fdTimeoutStrategiesOfProcess": [],
+          "fdSystemCode": "INNER_SYSTEM",
+          "fdModuleCode": "km-review",
+          "fdMessageNotifyType": "{\"system\":\"todo\"}",
+          "fdFlowType": "0",
+          "fdRunType": "1",
+          "fdEnable": true,
+          "fdPcEnable": true,
+          "fdMobileEnable": true,
+          "isAudit": false,
+          "isDraft": false,
+          "isAllSubNew": true,
+          "isImport": false,
+          "fdFavorites": false,
+          "fdStatus": "published",
+          "fdIntegrateFormMode": 0,
+          "fdPublishType": "instant",
+          "fdEditors": [],
+          "fdAllEditors": [],
+          "fdReaders": [],
+          "fdAllReaders": [
+            {
+              "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+              "fdName": "所有用户"
+            }
+          ],
+          "mechanismName": "lbpmTemplate",
+          "common": false,
+          "fdName": "样例附件",
+          "fdAlterTime": 1654596332000,
+          "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+          "fdEntityKey": "KmReviewMain",
+          "fdEntityId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0"
+        }
+      ],
+      "sys-xform": {
+        "fdId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+        "mechanisms": {
+          "load": "*",
+          "attachment": [
+            {
+              "fdId": "1g4uq09eaw4s0w6ugws0gd6rd83bs924dtw0",
+              "fdFileName": "EnvToEnv_KmReviewTemplate_20220607171331",
+              "fdFileExtName": "zip",
+              "fdFileSize": 7012,
+              "fdMimeType": "application/zip",
+              "fdExtendInfo": "{\"uuid\":\"uploadbhkkrgaq7d1654596314451\"}",
+              "fdCreatorId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+              "fdCreator": "朱国荣",
+              "fdAnonymous": false,
+              "fdSysAttachFile": {
+                "fdId": "1g4uq09dnw4s0w6uewt85kju2aqklfi1t8w0"
+              },
+              "fdEffectType": "PERSISTENT",
+              "fdStatus": "VALID",
+              "fdExpirationTime": 1654682715000,
+              "fdIsExternal": false,
+              "fdVersion": 0,
+              "fdMd5": "9719b4bb79ad8a13d31f284275d2aff9",
+              "downloadUrl": "http://mkdev02.ywork.me/data/sys-attach/download/1g4uq09eaw4s0w6ugws0gd6rd83bs924dtw0",
+              "fullName": "EnvToEnv_KmReviewTemplate_20220607171331.zip",
+              "mechanismName": "attachment",
+              "fdCreateTime": 1654596315000,
+              "fdEntityId": "1g4uq0pn5w4s1w2ew1gv9qls2cm3lll13aw0",
+              "fdEntityName": "com.landray.sys.xform.core.entity.official.SysXFormOfficial",
+              "fdEntityKey": "fd_col_uffuw1"
+            }
+          ]
+        },
+        "fdCreator": {
+          "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+          "fdName": "朱国荣cn"
+        },
+        "fdCreateTime": 1654596291000,
+        "fdAlter": {
+          "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+          "fdName": "朱国荣cn"
+        },
+        "fdAlterTime": 1654596334000,
+        "fdName": "样例附件",
+        "fdTableName": "mk_model_20220607h03ke",
+        "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+        "fdConfig": "{\"authFilter\":{\"detailAuthDefine\":{}},\"auth\":[{\"fdName\":\"系统表单权限\",\"authOrg\":[],\"fdIsAvailable\":true,\"add\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true,\"editable\":true,\"required\":false},\"fd_col_uffuw1\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"edit\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true,\"editable\":true,\"required\":false},\"fd_col_uffuw1\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"view\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true},\"fd_col_uffuw1\":{\"visible\":true}}}},\"fdCreator\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣\"},\"fdCreateTime\":1654596294974}],\"attribute\":{\"subjectRule\":{\"expression\":\"${data.biz.fd_col_gmnggn}\",\"type\":\"Eval\"},\"dataUnique\":{},\"formAttr\":\"{\\\"subjectRule\\\":{\\\"type\\\":\\\"Eval\\\",\\\"script\\\":\\\"${data.biz.fd_col_gmnggn}\\\",\\\"vo\\\":{\\\"mode\\\":\\\"formula\\\",\\\"content\\\":\\\"$样例附件.单行文本1$\\\"}},\\\"formRule\\\":{\\\"pattern\\\":{}},\\\"abstract\\\":[],\\\"dataUnique\\\":{},\\\"controlAction\\\":{}}\"},\"dataModel\":[{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdCreator\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣cn\"},\"fdCreateTime\":1654596291000,\"fdAlter\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣cn\"},\"fdAlterTime\":1654596333621,\"fdName\":\"样例附件\",\"fdTableName\":\"mk_model_20220607h03ke\",\"fdType\":\"main\",\"fdFields\":[{\"fdId\":\"1g4uq0s1nw4s2w67w1acabeu3b4tcml1avw0\",\"fdLabel\":\"编号\",\"fdName\":\"fdNumber\",\"fdColumn\":\"fd_number\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1ow4s2w68w351ai453emk9ik3uiw0\",\"fdLabel\":\"创建时间\",\"fdName\":\"fdCreateTime\",\"fdColumn\":\"fd_create_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1qw4s2w69w17jv8059ohrv418jkw0\",\"fdLabel\":\"创建人\",\"fdName\":\"fdCreator\",\"fdColumn\":\"fd_creator_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1sw4s2w6aw31koij123d7arl2qsw0\",\"fdLabel\":\"附件可拷贝者\",\"fdName\":\"fdAttCopys\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1uw4s2w6bw2l8cuur2qoafu2199w0\",\"fdLabel\":\"附件可打印者\",\"fdName\":\"fdAttPrints\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s20w4s2w6cw3hlchk32koqc3mi37w0\",\"fdLabel\":\"传阅对象\",\"fdName\":\"fdCirculatedReceiver\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s22w4s2w6dw3ausglo35ra88eekow0\",\"fdLabel\":\"流程状态\",\"fdName\":\"fdProcessStatus\",\"fdColumn\":\"fd_process_status\",\"fdType\":\"radio\",\"fdDataType\":\"varchar\",\"fdDictType\":\"optionDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s23w4s2w6ew27aftma1oaq2qb3m6w0\",\"fdLabel\":\"标题\",\"fdName\":\"fdSubject\",\"fdColumn\":\"fd_subject\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s25w4s2w6fw1i0i9jonsbcia2u8bw0\",\"fdLabel\":\"对应版本\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdVersion\",\"fdName\":\"fd_version\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\"},{\"fdId\":\"1g4uq0s27w4s2w6gw3pn706n36jg523j8ow0\",\"fdLabel\":\"外部文档Mobile链接\",\"fdName\":\"fdOuterMobileLink\",\"fdColumn\":\"fd_outer_mobile_link\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0rfnw4s2w44w3sd6v6d1h8vg2g3kmw0\",\"fdLabel\":\"样例模板1\",\"fdLabelLangKey\":\"!{l43zx3z44kgbkmk22fn}\",\"fdName\":\"fd_col_uffuw1\",\"fdType\":\"attdemo\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_uffuw1\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-attach-demo~ol87u9\\\",\\\"type\\\":\\\"attdemo\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\",\\\"$$tableName\\\":\\\"mk_model_20220607h03ke\\\",\\\"maxLength\\\":0,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_uffuw1\\\",\\\"uuid\\\":\\\"fd_col_uffuw1\\\",\\\"id\\\":\\\"@elem/xform-attach-demo~ol87u9\\\",\\\"supportTemplateData\\\":true,\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-attach-demo\\\"},\\\"mobile\\\":{\\\"type\\\":\\\"@elem/xform-attach-demo~mobile\\\"},\\\"defaultValue\\\":\\\"attachment\\\"},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\"}}\",\"fdFontExtendData\":\"{\\\"supportTemplateData\\\":true}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"attachmentDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":false,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":11},{\"fdId\":\"1g4uq0s29w4s2w6hw11di97t260r6oj6nrw0\",\"fdLabel\":\"修改人\",\"fdName\":\"fdAlter\",\"fdColumn\":\"fd_alter_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2bw4s2w6iw3s0lfob1v8ivlc2g2w0\",\"fdLabel\":\"编辑者\",\"fdName\":\"fdEditors\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2cw4s2w6jw12ndtue3f57jlhjsmw0\",\"fdLabel\":\"拥有者\",\"fdName\":\"fdOwner\",\"fdColumn\":\"fd_owner_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2ew4s2w6kw32ltb3u3jokkdi17cw0\",\"fdLabel\":\"最后修改时间\",\"fdName\":\"fdLastModifiedTime\",\"fdColumn\":\"fd_last_modified_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2fw4s2w6lw3ok6i112sf76qm266w0\",\"fdLabel\":\"附件可下载者\",\"fdName\":\"fdAttDownloads\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2hw4s2w6mw25d0crsh7n4eh1h7kw0\",\"fdLabel\":\"阅读者\",\"fdName\":\"fdReaders\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2jw4s2w6nw2sm50kv2t7cejv3hpw0\",\"fdLabel\":\"修改时间\",\"fdName\":\"fdAlterTime\",\"fdColumn\":\"fd_alter_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2lw4s2w6ow2bopv31k0mpn4kuuhw0\",\"fdLabel\":\"创建者部门\",\"fdName\":\"fdCreatorDept\",\"fdColumn\":\"fd_creator_dept\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2nw4s2w6pwoflrmm19bc56q30g8w0\",\"fdLabel\":\"外部文档主键\",\"fdName\":\"fdOuterDocId\",\"fdColumn\":\"fd_outer_doc_id\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2pw4s2w6qw3ro41ab3gkkqneeplw0\",\"fdLabel\":\"主键ID\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdId\",\"fdName\":\"fd_id\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\"},{\"fdId\":\"1g4uq0s2qw4s2w6rw33tshh0103alim3dgw0\",\"fdLabel\":\"所有可阅读者\",\"fdName\":\"fdAllReaders\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2sw4s2w6sw1300unr2vvkl8p3clw0\",\"fdLabel\":\"所有可编辑者\",\"fdName\":\"fdAllEditors\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0rikw4s2w4hw2fe92ll25p2sndfhiw0\",\"fdLabel\":\"单行文本1\",\"fdLabelLangKey\":\"!{l43zx0218jvzdjuwo55}\",\"fdName\":\"fd_col_gmnggn\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_gmnggn\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-input~57fhus\\\",\\\"type\\\":\\\"text\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l43zx0218jvzdjuwo55}\\\",\\\"$$tableName\\\":\\\"mk_model_20220607h03ke\\\",\\\"maxLength\\\":100,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"uuid\\\":\\\"fd_col_gmnggn\\\",\\\"id\\\":\\\"@elem/xform-input~57fhus\\\",\\\"placeholder\\\":\\\"!{l43zx023b8ldme1h90v}\\\",\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"maskFormatType\\\":\\\"********\\\",\\\"encryptMonth\\\":9999,\\\"failureRule\\\":\\\"ANONYMIZE\\\",\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-input\\\"},\\\"mobile\\\":{\\\"type\\\":\\\"@elem/xform-m-input\\\"}},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l43zx0218jvzdjuwo55}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l43zx0218jvzdjuwo55}\\\"}}\",\"fdFontExtendData\":\"{\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"encryptDefinition\\\":{}}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":100,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":false,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":24},{\"fdId\":\"1g4uq0s2uw4s2w6tw2mp449j1pf4qkr2maw0\",\"fdLabel\":\"拥有者部门\",\"fdName\":\"fdOwnerDept\",\"fdColumn\":\"fd_owner_dept\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2vw4s2w6uw3leoe472eneouh2sdw0\",\"fdLabel\":\"外部文档PC链接\",\"fdName\":\"fdOuterPcLink\",\"fdColumn\":\"fd_outer_pc_link\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s31w4s2w6vw3cp20lt3jj8ctf328w0\",\"fdLabel\":\"发布时间\",\"fdName\":\"fdPublishTime\",\"fdColumn\":\"fd_publish_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"}],\"fdXForm\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdOuterMapping\":false,\"needDelete\":false}],\"views\":\"[{\\\"id\\\":\\\"07ea8a24-1e3f-4da8-a4c9-55c9e3c83c27\\\",\\\"name\\\":\\\"表单1\\\",\\\"viewAttr\\\":{\\\"desktopLayout\\\":\\\"vertical\\\",\\\"mobileLayout\\\":\\\"vertical\\\",\\\"logo\\\":{}},\\\"useDataField\\\":{\\\"desktop\\\":[\\\"fd_col_gmnggn\\\",\\\"fd_col_uffuw1\\\"],\\\"mobile\\\":[]},\\\"render\\\":{\\\"desktop\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[{\\\"key\\\":\\\"layout~8aeu8o\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~8aeu8o\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~ggh0tt\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~scu5xp\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_gmnggn\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~scu5xp\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~ggh0tt\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"},{\\\"key\\\":\\\"layout~x66d9s\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~x66d9s\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~im069m\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~u91p2n\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_uffuw1\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~u91p2n\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~im069m\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"}]}]}],\\\"mobile\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[]}]}]}}]\",\"error\":\"{}\",\"lang\":\"{\\\"!{l43zx0218jvzdjuwo55}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"单行文本1\\\",\\\"default\\\":\\\"单行文本1\\\"}},\\\"!{l43zx023b8ldme1h90v}\\\":{\\\"prop\\\":\\\"placeholder\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"请输入\\\"}},\\\"!{l43zx3z44kgbkmk22fn}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_uffuw1\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"样例模板1\\\",\\\"default\\\":\\\"样例模板1\\\"}}}\",\"extendMap\":{}}",
+        "fdStatus": "official",
+        "fdVersionId": "1g4uq0pn5w4s1w2ew1gv9qls2cm3lll13aw0",
+        "fdDescribe": "",
+        "fdOuterMapping": false,
+        "fdEntityId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+        "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+        "fdEntityKey": "sys-xform",
+        "fdRunEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+        "fdBuildNew": false
+      },
+      "sysnumber": [
+        {
+          "fdId": "1g4uq0q4sw4ruw3jow3r0eoi5134bepqqpw0",
+          "fdType": "2",
+          "fdSysNumber": {
+            "fdId": "1g4uq0pvcw4ruw3jiw5rl69d6qs069r1s9w0",
+            "dynamicProps": {},
+            "fdCreator": {
+              "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+              "fdName": "朱国荣cn"
+            },
+            "fdCreateTime": 1654596332000,
+            "fdContentClob": "[{\"name\":\"20200314\",\"type\":\"date\",\"error\":false,\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"yyyyMMdd\"},\"id\":\"1\"},{\"name\":\"13:30\",\"error\":false,\"type\":\"time\",\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"HH:mm\"},\"id\":\"2\"}]",
+            "fdEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+            "fdDefaultFlag": false,
+            "fdTemplateFlag": true,
+            "fdVirtualNumberValue": "2020031413:30",
+            "authReaders": [],
+            "refCount": 0,
+            "fdName": "自定义"
+          },
+          "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+          "fdEntityId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+          "fdEntityKey": "kmReviewTemplate"
+        }
+      ]
+    },
+    "fdName": "样例附件"
+  },
+  [
+    {
+      "fdId": "1g4upvhisw4quw5flw2udr1bk2ksrv3o2gw0",
+      "dynamicProps": {
+        "fdNameCn": "样例附件"
+      },
+      "mechanisms": {},
+      "fdContentType": "json",
+      "fdContent": "{\"name\":\"流程模板\",\"elements\":[{\"id\":\"N1\",\"name\":\"开始节点\",\"type\":\"generalStart\",\"element\":\"startEvent\",\"bounds\":{\"x\":525.5,\"y\":100,\"width\":34,\"height\":34,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"timeoutStrategies\":\"[]\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"N2\",\"name\":\"起草节点\",\"type\":\"draft\",\"element\":\"manualTask\",\"bounds\":{\"x\":462.5,\"y\":200,\"width\":160,\"height\":40,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"formKey\":\"default\",\"formName\":\"默认表单\",\"operationRefId\":\"custom\",\"operations\":[{\"identity\":\"1\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_abandon\",\"name\":\"废弃\",\"srcName\":\"废弃\"}]},{\"identity\":\"2\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_submit\",\"name\":\"提交\",\"srcName\":\"提交\",\"isAlway\":true}]},{\"identity\":\"3\",\"elements\":[]}],\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"false\",\"modifyProcessAuthority\":\"2\",\"nodeAuthority\":\"0\",\"canAbandonRejectedProcess\":\"true\",\"number\":\"N2\",\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"timeoutStrategies\":\"[]\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"N3\",\"name\":\"结束节点\",\"type\":\"generalEnd\",\"element\":\"endEvent\",\"bounds\":{\"x\":525.5,\"y\":300,\"width\":34,\"height\":34,\"relative\":false,\"TRANSLATE_CONTROL_POINTS\":true,\"alternateBounds\":null,\"sourcePoint\":null,\"targetPoint\":null,\"points\":null,\"offset\":null},\"timeoutStrategies\":\"[]\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"id\":\"E4\",\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N1\",\"targetRef\":\"N2\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"wayPoints\":[],\"style\":\"sequenceFlow\"},{\"id\":\"E5\",\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N2\",\"targetRef\":\"N3\",\"timeoutStrategies\":\"[]\",\"name\":\"\",\"operations\":[],\"config\":\"{}\",\"componentOriginalValue\":\"{}\",\"wayPoints\":[],\"style\":\"sequenceFlow\"}],\"events\":[],\"diagram\":\"\",\"flowType\":\"0\",\"notifyDrafterOnEnd\":\"true\",\"notifyParticipantOnEnd\":\"false\"}",
+      "fdTemplateCode": "template_3zwkft",
+      "fdDefinitionId": "1g4uq0qnhw4qtw5klw958qa93ha26if1fcw0",
+      "fdCategory": {
+        "fdId": "1f4b78s4awfjwb40w9f0pdg2vijkv81pt5w0",
+        "dynamicProps": {},
+        "fdName": "common",
+        "fdParent": {
+          "fdId": "1epfuagaiwagw6w2c09vk020oim1rmcro2w0",
+          "fdName": "审批流程"
+        },
+        "fdHierarchyId": "x1epfuagaiwagw6w2c09vk020oim1rmcro2w0x1f4b78s4awfjwb40w9f0pdg2vijkv81pt5w0x",
+        "fdType": 2,
+        "fdSystemCode": "INNER_SYSTEM",
+        "fdModuleCode": "km-review",
+        "fdFormCategoryId": "1ev6qmfrtw61w1m1w22nk6et21o4c473gkw0",
+        "fdChildFlag": false,
+        "fdAllReaders": [
+          {
+            "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+            "fdName": "所有用户"
+          }
+        ],
+        "fdAllEditors": [],
+        "fdReaders": [],
+        "fdEditors": []
+      },
+      "fdFormFields": {},
+      "fdTempVariables": [],
+      "businessMethodList": [],
+      "fdTemplateForms": [
+        {
+          "fdName": "样例附件",
+          "fdFormKey": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+          "fdFormCode": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+          "fdModuleCode": "km-review",
+          "fdSystemCode": "INNER_SYSTEM",
+          "fdIsDefault": true,
+          "fdConfigType": "2",
+          "fdIntegratedMode": 0
+        }
+      ],
+      "fdTemplateFormAuths": [],
+      "fdTimeoutStrategiesOfNode": [],
+      "fdTimeoutStrategiesOfProcess": [],
+      "fdSystemCode": "INNER_SYSTEM",
+      "fdModuleCode": "km-review",
+      "fdMessageNotifyType": "{\"system\":\"todo\"}",
+      "fdFlowType": "0",
+      "fdRunType": "1",
+      "fdEnable": true,
+      "fdPcEnable": true,
+      "fdMobileEnable": true,
+      "isAudit": false,
+      "isDraft": false,
+      "isAllSubNew": true,
+      "isImport": false,
+      "fdFavorites": false,
+      "fdStatus": "published",
+      "fdIntegrateFormMode": 0,
+      "fdPublishType": "instant",
+      "fdEditors": [],
+      "fdAllEditors": [],
+      "fdReaders": [],
+      "fdAllReaders": [
+        {
+          "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+          "fdName": "所有用户"
+        }
+      ],
+      "mechanismName": "lbpmTemplate",
+      "common": false,
+      "fdName": "样例附件",
+      "fdAlterTime": 1654596332000,
+      "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+      "fdEntityKey": "KmReviewMain",
+      "fdEntityId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0"
+    }
+  ],
+  {
+    "fdId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+    "mechanisms": {
+      "load": "*",
+      "attachment": [
+        {
+          "fdId": "1g4uq09eaw4s0w6ugws0gd6rd83bs924dtw0",
+          "fdFileName": "EnvToEnv_KmReviewTemplate_20220607171331",
+          "fdFileExtName": "zip",
+          "fdFileSize": 7012,
+          "fdMimeType": "application/zip",
+          "fdExtendInfo": "{\"uuid\":\"uploadbhkkrgaq7d1654596314451\"}",
+          "fdCreatorId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+          "fdCreator": "朱国荣",
+          "fdAnonymous": false,
+          "fdSysAttachFile": {
+            "fdId": "1g4uq09dnw4s0w6uewt85kju2aqklfi1t8w0"
+          },
+          "fdEffectType": "PERSISTENT",
+          "fdStatus": "VALID",
+          "fdExpirationTime": 1654682715000,
+          "fdIsExternal": false,
+          "fdVersion": 0,
+          "fdMd5": "9719b4bb79ad8a13d31f284275d2aff9",
+          "downloadUrl": "http://mkdev02.ywork.me/data/sys-attach/download/1g4uq09eaw4s0w6ugws0gd6rd83bs924dtw0",
+          "fullName": "EnvToEnv_KmReviewTemplate_20220607171331.zip",
+          "mechanismName": "attachment",
+          "fdCreateTime": 1654596315000,
+          "fdEntityId": "1g4uq0pn5w4s1w2ew1gv9qls2cm3lll13aw0",
+          "fdEntityName": "com.landray.sys.xform.core.entity.official.SysXFormOfficial",
+          "fdEntityKey": "fd_col_uffuw1"
+        }
+      ]
+    },
+    "fdCreator": {
+      "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+      "fdName": "朱国荣cn"
+    },
+    "fdCreateTime": 1654596291000,
+    "fdAlter": {
+      "fdId": "1et1ad5tcwdwhowl22a683a9uejgtl3remw0",
+      "fdName": "朱国荣cn"
+    },
+    "fdAlterTime": 1654596334000,
+    "fdName": "样例附件",
+    "fdTableName": "mk_model_20220607h03ke",
+    "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+    "fdConfig": "{\"authFilter\":{\"detailAuthDefine\":{}},\"auth\":[{\"fdName\":\"系统表单权限\",\"authOrg\":[],\"fdIsAvailable\":true,\"add\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true,\"editable\":true,\"required\":false},\"fd_col_uffuw1\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"edit\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true,\"editable\":true,\"required\":false},\"fd_col_uffuw1\":{\"visible\":true,\"editable\":true,\"required\":false}}}},\"view\":{\"mk_model_20220607h03ke\":{\"fields\":{\"fd_col_gmnggn\":{\"visible\":true},\"fd_col_uffuw1\":{\"visible\":true}}}},\"fdCreator\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣\"},\"fdCreateTime\":1654596294974}],\"attribute\":{\"subjectRule\":{\"expression\":\"${data.biz.fd_col_gmnggn}\",\"type\":\"Eval\"},\"dataUnique\":{},\"formAttr\":\"{\\\"subjectRule\\\":{\\\"type\\\":\\\"Eval\\\",\\\"script\\\":\\\"${data.biz.fd_col_gmnggn}\\\",\\\"vo\\\":{\\\"mode\\\":\\\"formula\\\",\\\"content\\\":\\\"$样例附件.单行文本1$\\\"}},\\\"formRule\\\":{\\\"pattern\\\":{}},\\\"abstract\\\":[],\\\"dataUnique\\\":{},\\\"controlAction\\\":{}}\"},\"dataModel\":[{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdCreator\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣cn\"},\"fdCreateTime\":1654596291000,\"fdAlter\":{\"fdId\":\"1et1ad5tcwdwhowl22a683a9uejgtl3remw0\",\"fdName\":\"朱国荣cn\"},\"fdAlterTime\":1654596333621,\"fdName\":\"样例附件\",\"fdTableName\":\"mk_model_20220607h03ke\",\"fdType\":\"main\",\"fdFields\":[{\"fdId\":\"1g4uq0s1nw4s2w67w1acabeu3b4tcml1avw0\",\"fdLabel\":\"编号\",\"fdName\":\"fdNumber\",\"fdColumn\":\"fd_number\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1ow4s2w68w351ai453emk9ik3uiw0\",\"fdLabel\":\"创建时间\",\"fdName\":\"fdCreateTime\",\"fdColumn\":\"fd_create_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1qw4s2w69w17jv8059ohrv418jkw0\",\"fdLabel\":\"创建人\",\"fdName\":\"fdCreator\",\"fdColumn\":\"fd_creator_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1sw4s2w6aw31koij123d7arl2qsw0\",\"fdLabel\":\"附件可拷贝者\",\"fdName\":\"fdAttCopys\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s1uw4s2w6bw2l8cuur2qoafu2199w0\",\"fdLabel\":\"附件可打印者\",\"fdName\":\"fdAttPrints\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s20w4s2w6cw3hlchk32koqc3mi37w0\",\"fdLabel\":\"传阅对象\",\"fdName\":\"fdCirculatedReceiver\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s22w4s2w6dw3ausglo35ra88eekow0\",\"fdLabel\":\"流程状态\",\"fdName\":\"fdProcessStatus\",\"fdColumn\":\"fd_process_status\",\"fdType\":\"radio\",\"fdDataType\":\"varchar\",\"fdDictType\":\"optionDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s23w4s2w6ew27aftma1oaq2qb3m6w0\",\"fdLabel\":\"标题\",\"fdName\":\"fdSubject\",\"fdColumn\":\"fd_subject\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s25w4s2w6fw1i0i9jonsbcia2u8bw0\",\"fdLabel\":\"对应版本\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdVersion\",\"fdName\":\"fd_version\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\"},{\"fdId\":\"1g4uq0s27w4s2w6gw3pn706n36jg523j8ow0\",\"fdLabel\":\"外部文档Mobile链接\",\"fdName\":\"fdOuterMobileLink\",\"fdColumn\":\"fd_outer_mobile_link\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0rfnw4s2w44w3sd6v6d1h8vg2g3kmw0\",\"fdLabel\":\"样例模板1\",\"fdLabelLangKey\":\"!{l43zx3z44kgbkmk22fn}\",\"fdName\":\"fd_col_uffuw1\",\"fdType\":\"attdemo\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_uffuw1\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-attach-demo~ol87u9\\\",\\\"type\\\":\\\"attdemo\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\",\\\"$$tableName\\\":\\\"mk_model_20220607h03ke\\\",\\\"maxLength\\\":0,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_uffuw1\\\",\\\"uuid\\\":\\\"fd_col_uffuw1\\\",\\\"id\\\":\\\"@elem/xform-attach-demo~ol87u9\\\",\\\"supportTemplateData\\\":true,\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-attach-demo\\\"},\\\"mobile\\\":{\\\"type\\\":\\\"@elem/xform-attach-demo~mobile\\\"},\\\"defaultValue\\\":\\\"attachment\\\"},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l43zx3z44kgbkmk22fn}\\\"}}\",\"fdFontExtendData\":\"{\\\"supportTemplateData\\\":true}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"attachmentDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":false,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":11},{\"fdId\":\"1g4uq0s29w4s2w6hw11di97t260r6oj6nrw0\",\"fdLabel\":\"修改人\",\"fdName\":\"fdAlter\",\"fdColumn\":\"fd_alter_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2bw4s2w6iw3s0lfob1v8ivlc2g2w0\",\"fdLabel\":\"编辑者\",\"fdName\":\"fdEditors\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2cw4s2w6jw12ndtue3f57jlhjsmw0\",\"fdLabel\":\"拥有者\",\"fdName\":\"fdOwner\",\"fdColumn\":\"fd_owner_id\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2ew4s2w6kw32ltb3u3jokkdi17cw0\",\"fdLabel\":\"最后修改时间\",\"fdName\":\"fdLastModifiedTime\",\"fdColumn\":\"fd_last_modified_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2fw4s2w6lw3ok6i112sf76qm266w0\",\"fdLabel\":\"附件可下载者\",\"fdName\":\"fdAttDownloads\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2hw4s2w6mw25d0crsh7n4eh1h7kw0\",\"fdLabel\":\"阅读者\",\"fdName\":\"fdReaders\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2jw4s2w6nw2sm50kv2t7cejv3hpw0\",\"fdLabel\":\"修改时间\",\"fdName\":\"fdAlterTime\",\"fdColumn\":\"fd_alter_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2lw4s2w6ow2bopv31k0mpn4kuuhw0\",\"fdLabel\":\"创建者部门\",\"fdName\":\"fdCreatorDept\",\"fdColumn\":\"fd_creator_dept\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2nw4s2w6pwoflrmm19bc56q30g8w0\",\"fdLabel\":\"外部文档主键\",\"fdName\":\"fdOuterDocId\",\"fdColumn\":\"fd_outer_doc_id\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2pw4s2w6qw3ro41ab3gkkqneeplw0\",\"fdLabel\":\"主键ID\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdId\",\"fdName\":\"fd_id\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\"},{\"fdId\":\"1g4uq0s2qw4s2w6rw33tshh0103alim3dgw0\",\"fdLabel\":\"所有可阅读者\",\"fdName\":\"fdAllReaders\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2sw4s2w6sw1300unr2vvkl8p3clw0\",\"fdLabel\":\"所有可编辑者\",\"fdName\":\"fdAllEditors\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0rikw4s2w4hw2fe92ll25p2sndfhiw0\",\"fdLabel\":\"单行文本1\",\"fdLabelLangKey\":\"!{l43zx0218jvzdjuwo55}\",\"fdName\":\"fd_col_gmnggn\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_gmnggn\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-input~57fhus\\\",\\\"type\\\":\\\"text\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l43zx0218jvzdjuwo55}\\\",\\\"$$tableName\\\":\\\"mk_model_20220607h03ke\\\",\\\"maxLength\\\":100,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"uuid\\\":\\\"fd_col_gmnggn\\\",\\\"id\\\":\\\"@elem/xform-input~57fhus\\\",\\\"placeholder\\\":\\\"!{l43zx023b8ldme1h90v}\\\",\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"maskFormatType\\\":\\\"********\\\",\\\"encryptMonth\\\":9999,\\\"failureRule\\\":\\\"ANONYMIZE\\\",\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-input\\\"},\\\"mobile\\\":{\\\"type\\\":\\\"@elem/xform-m-input\\\"}},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l43zx0218jvzdjuwo55}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l43zx0218jvzdjuwo55}\\\"}}\",\"fdFontExtendData\":\"{\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"encryptDefinition\\\":{}}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":100,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":false,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":24},{\"fdId\":\"1g4uq0s2uw4s2w6tw2mp449j1pf4qkr2maw0\",\"fdLabel\":\"拥有者部门\",\"fdName\":\"fdOwnerDept\",\"fdColumn\":\"fd_owner_dept\",\"fdType\":\"address\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s2vw4s2w6uw3leoe472eneouh2sdw0\",\"fdLabel\":\"外部文档PC链接\",\"fdName\":\"fdOuterPcLink\",\"fdColumn\":\"fd_outer_pc_link\",\"fdType\":\"text\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"},{\"fdId\":\"1g4uq0s31w4s2w6vw3cp20lt3jj8ctf328w0\",\"fdLabel\":\"发布时间\",\"fdName\":\"fdPublishTime\",\"fdColumn\":\"fd_publish_time\",\"fdType\":\"timestamp\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdMechanismType\":\"KmReviewMain\"}],\"fdXForm\":{\"fdId\":\"1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0\",\"fdName\":\"样例附件\"},\"fdOuterMapping\":false,\"needDelete\":false}],\"views\":\"[{\\\"id\\\":\\\"07ea8a24-1e3f-4da8-a4c9-55c9e3c83c27\\\",\\\"name\\\":\\\"表单1\\\",\\\"viewAttr\\\":{\\\"desktopLayout\\\":\\\"vertical\\\",\\\"mobileLayout\\\":\\\"vertical\\\",\\\"logo\\\":{}},\\\"useDataField\\\":{\\\"desktop\\\":[\\\"fd_col_gmnggn\\\",\\\"fd_col_uffuw1\\\"],\\\"mobile\\\":[]},\\\"render\\\":{\\\"desktop\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[{\\\"key\\\":\\\"layout~8aeu8o\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~8aeu8o\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~ggh0tt\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~scu5xp\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_gmnggn\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~scu5xp\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~ggh0tt\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"},{\\\"key\\\":\\\"layout~x66d9s\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~x66d9s\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~im069m\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~u91p2n\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_uffuw1\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~u91p2n\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~im069m\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"}]}]}],\\\"mobile\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[]}]}]}}]\",\"error\":\"{}\",\"lang\":\"{\\\"!{l43zx0218jvzdjuwo55}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"单行文本1\\\",\\\"default\\\":\\\"单行文本1\\\"}},\\\"!{l43zx023b8ldme1h90v}\\\":{\\\"prop\\\":\\\"placeholder\\\",\\\"name\\\":\\\"fd_col_gmnggn\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"请输入\\\"}},\\\"!{l43zx3z44kgbkmk22fn}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_uffuw1\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"样例模板1\\\",\\\"default\\\":\\\"样例模板1\\\"}}}\",\"extendMap\":{}}",
+    "fdStatus": "official",
+    "fdVersionId": "1g4uq0pn5w4s1w2ew1gv9qls2cm3lll13aw0",
+    "fdDescribe": "",
+    "fdOuterMapping": false,
+    "fdEntityId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+    "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+    "fdEntityKey": "sys-xform",
+    "fdRunEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+    "fdBuildNew": false
+  }
+]

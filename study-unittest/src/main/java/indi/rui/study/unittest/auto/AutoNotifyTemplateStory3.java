@@ -13,6 +13,8 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author: yaowr
@@ -22,10 +24,16 @@ import java.util.Date;
 public class AutoNotifyTemplateStory3 {
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yuxd", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkdev02.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1", "oppo");
@@ -40,12 +48,6 @@ public class AutoNotifyTemplateStory3 {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkdev02.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mksmoke.ywork.me",
@@ -54,11 +56,26 @@ public class AutoNotifyTemplateStory3 {
     private static final int MAX_TIMEOUT_MS = 10000;
 
     public static void main(String[] args) {
-        getTemplateMeta();
-        String code = save("new_system_template.json");
-        findByCode(code);
-        String snid = send(code);
-        timeComputing(snid);
+//        // 获取模板元数据
+//        getTemplateMeta();
+
+//        // 新建系统模板
+//        String code = save("new_system_template.json");
+//
+//        // 根据编码查找模板
+//        findByCode(code);
+
+        // 创建会议将消息模板作为机制保存
+        String conferenceId = createConference();
+
+        // 查询会议将消息模板作为机制加载
+        getConference(conferenceId);
+
+//        // 使用模板发送待办
+//        String snid = send(code);
+//
+//        // 查看待办原始记录
+//        timeComputing(snid);
     }
 
     /**
@@ -108,6 +125,53 @@ public class AutoNotifyTemplateStory3 {
         MkResponse<SysNotifyTemplateVO> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyTemplate/findByCode", json, SysNotifyTemplateVO.class);
         log.info("findByCode: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+    }
+
+//    /**
+//     * 创建会议将消息模板作为机制保存
+//     */
+//    private static String createConference() {
+//        MkResponse<JSONObject> mkResponse = mkApiRequestHelper.callApiForMkResponse(
+//                "/data/sys-notify-example/conference/create", null, JSONObject.class);
+//        if (mkResponse.isSuccess()) {
+//            log.info("createConference success: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
+//        } else {
+//            log.error("createConference failed!");
+//        }
+//        return mkResponse.getData().getString("fdId");
+//    }
+
+    /**
+     * 创建会议将消息模板作为机制保存
+     */
+    private static String createConference() {
+        JSONObject idVO = mkApiRequestHelper.callApi(
+                "/api/sys-notify-example/conference/create?template=P001", null, JSONObject.class);
+        if (idVO != null) {
+            log.info("createConference success: {}", JSONObject.toJSONString(idVO, SerializerFeature.PrettyFormat));
+        } else {
+            log.error("createConference failed!");
+        }
+        return idVO.getString("fdId");
+    }
+
+    /**
+     * 查询会议将消息模板作为机制加载
+     */
+    private static JSONObject getConference(String conferenceId) {
+        Map<String, Object> mechanisms = new HashMap<>();
+        mechanisms.put("load", "*");
+        JSONObject idVO = new JSONObject();
+        idVO.put("fdId", conferenceId);
+        idVO.put("mechanisms", mechanisms);
+        JSONObject conference = mkApiRequestHelper.callApi(
+                "/api/sys-notify-example/conference/loadById", idVO, JSONObject.class);
+        if (conference != null) {
+            log.info("getConference success: {}", JSONObject.toJSONString(conference, SerializerFeature.PrettyFormat));
+        } else {
+            log.error("getConference failed!");
+        }
+        return conference;
     }
 
     private static String send(String code) {

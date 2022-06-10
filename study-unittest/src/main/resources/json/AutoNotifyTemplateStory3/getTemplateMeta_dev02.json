@@ -1,0 +1,611 @@
+{
+  "providersDisplay": [
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notifyType.todo",
+      "name": "待办",
+      "provider": "todo",
+      "todoExt": false
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notifyType.email",
+      "name": "邮件",
+      "provider": "email",
+      "todoExt": false
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "tic-ding:notifyType.dingTalk.workNotify",
+      "name": "钉钉工作通知",
+      "provider": "ticDingTalkWorkNotify",
+      "todoExt": false
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "tic-kk:provider.name.kkTodo",
+      "name": "KK待办",
+      "provider": "kkTodo",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+      "name": "MK待办置已办通知EKP",
+      "provider": "ekpInform",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "tic-ding:label.DingTalkTodoProvider.provider.message",
+      "name": "钉钉待办",
+      "provider": "ticDingTalkTodo",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "tic-wechatwork:label.notify.provider.message",
+      "name": "企业微信待办|待阅",
+      "provider": "ticWeChatTodo",
+      "todoExt": true
+    }
+  ],
+  "standardVars": [
+    {
+      "displayName": "来源系统",
+      "varName": "appName"
+    },
+    {
+      "displayName": "来源模块",
+      "varName": "moduleName"
+    },
+    {
+      "displayName": "业务名称",
+      "varName": "entityName"
+    },
+    {
+      "displayName": "业务ID",
+      "varName": "entityId"
+    },
+    {
+      "displayName": "业务关键字",
+      "varName": "entityKey"
+    },
+    {
+      "displayName": "链接地址",
+      "varName": "link"
+    },
+    {
+      "displayName": "移动端链接",
+      "varName": "mobileLink"
+    },
+    {
+      "displayName": "节点名称",
+      "varName": "nodeName"
+    },
+    {
+      "displayName": "所属企业",
+      "varName": "corp"
+    },
+    {
+      "displayName": "发起人",
+      "varName": "creator"
+    },
+    {
+      "displayName": "发起时间",
+      "varName": "timestamp"
+    },
+    {
+      "displayName": "参数一",
+      "varName": "parameter1"
+    },
+    {
+      "displayName": "参数二",
+      "varName": "parameter2"
+    }
+  ],
+  "systemTemplates": [
+    {
+      "code": "paas-lbpm:lbpm.notify.template.append",
+      "extendVars": [
+        {
+          "displayName": "操作人",
+          "varName": "replaceText.operator"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "补签操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.assign",
+      "extendVars": [
+        {
+          "displayName": "操作名称",
+          "varName": "replaceText.operation"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "分发操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.at",
+      "extendVars": [
+        {
+          "displayName": "操作人",
+          "varName": "replaceText.operator"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "处理意见",
+          "varName": "replaceText.comment"
+        }
+      ],
+      "name": "\"@\"已处理人通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.authorize.task.finish",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "授权人任务完成通知消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.circulation",
+      "extendVars": [
+        {
+          "displayName": "操作人",
+          "varName": "replaceText.operator"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "传阅操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.communicate",
+      "extendVars": [
+        {
+          "displayName": "操作人",
+          "varName": "replaceText.operator"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "沟通回复操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.cooperate",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "起草协同消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.end.drafter",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "流程结束通知起草人默认消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.end.participant",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "流程结束通知参与人默认消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.error",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "流程异常通知特权人消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.prepend",
+      "extendVars": [
+        {
+          "displayName": "操作名称",
+          "varName": "replaceText.operation"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "加签操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.reject.draft",
+      "extendVars": [
+        {
+          "displayName": "操作",
+          "varName": "replaceText.operation"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "驳回起草默认模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.reject.review",
+      "extendVars": [
+        {
+          "displayName": "标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "驳回审批默认模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.reject.sign",
+      "extendVars": [
+        {
+          "displayName": "标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "驳回签字默认模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.review",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "流程平台审批默认消息"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.send",
+      "extendVars": [
+        {
+          "displayName": "起草人",
+          "varName": "replaceText.creator"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "流程平台抄送默认消息"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.sign",
+      "extendVars": [
+        {
+          "displayName": "操作名称",
+          "varName": "replaceText.operation"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "签字操作默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.sub.error.admin",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "子流程出现异常,给特权人发送通知消息"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.sub.error.drafter",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "父流程流程标题",
+          "varName": "replaceText.parentSubject"
+        }
+      ],
+      "name": "子流程异常通知起草人消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.sub.start.auto",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "子流程自动启动通知消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.sub.start.manual",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "子流程手动起草通知消息模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.timeout",
+      "extendVars": [
+        {
+          "displayName": "创建人",
+          "varName": "replaceText.creator"
+        },
+        {
+          "displayName": "天数",
+          "varName": "replaceText.day"
+        },
+        {
+          "displayName": "小时数",
+          "varName": "replaceText.hour"
+        },
+        {
+          "displayName": "分钟数",
+          "varName": "replaceText.minute"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "流程平台超时默认通知消息"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.timeout.admin",
+      "extendVars": [
+        {
+          "displayName": "创建人",
+          "varName": "replaceText.creator"
+        },
+        {
+          "displayName": "天数",
+          "varName": "replaceText.day"
+        },
+        {
+          "displayName": "小时数",
+          "varName": "replaceText.hour"
+        },
+        {
+          "displayName": "分钟数",
+          "varName": "replaceText.minute"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "超时通知特权人默认通知主题"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.timeout.drafter",
+      "extendVars": [
+        {
+          "displayName": "天数",
+          "varName": "replaceText.day"
+        },
+        {
+          "displayName": "小时数",
+          "varName": "replaceText.hour"
+        },
+        {
+          "displayName": "分钟数",
+          "varName": "replaceText.minute"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        }
+      ],
+      "name": "超时通知起草人默认通知"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.transfer",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "转办消息默认模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.urg",
+      "extendVars": [
+        {
+          "displayName": "起草人",
+          "varName": "replaceText.drafter"
+        },
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "催办消息默认模板"
+    },
+    {
+      "code": "paas-lbpm:lbpm.notify.template.vote",
+      "extendVars": [
+        {
+          "displayName": "流程标题",
+          "varName": "replaceText.subject"
+        },
+        {
+          "displayName": "摘要内容",
+          "varName": "replaceText.summary"
+        }
+      ],
+      "name": "投票消息默认模板"
+    }
+  ]
+}

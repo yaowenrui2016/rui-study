@@ -1,0 +1,17 @@
+{
+  "sys-xform": {
+    "fdId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+    "mechanisms": {
+      "load": "*",
+      "attachment": [
+        {
+          "fdId": "1g4uq09eaw4s0w6ugws0gd6rd83bs924dtw0",
+          "fdSysAttachFile": {
+            "fdId": "1g4uq09dnw4s0w6uewt85kju2aqklfi1t8w0"
+          },
+          "fullName": "EnvToEnv_KmReviewTemplate_20220607171331.zip"
+        }
+      ]
+    }
+  }
+}

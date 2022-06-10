@@ -3,7 +3,9 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import indi.rui.study.unittest.dto.*;
+import indi.rui.study.unittest.dto.MkEnvToEnvContext;
+import indi.rui.study.unittest.dto.MkResponse;
+import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.e2e.MkReferGroup;
 import indi.rui.study.unittest.dto.e2e.MkReferTreeNode;
 import indi.rui.study.unittest.dto.e2e.MkSysMechTptEnvToEnvTaskVO;
@@ -34,15 +36,15 @@ public class AutoMechTptEnvToEnv {
             "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yuxd", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mksmoke.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
@@ -71,12 +73,12 @@ public class AutoMechTptEnvToEnv {
 //        context = onlineTargetExportData(encOlCmd, context);
 //        onlineTargetStartImport(encOlCmd, context);
 
-
-        // 离线
-        MkEnvToEnvContext context = offLineLoadReferTree();
+        // 离线导出（本地）
+        MkEnvToEnvContext context = offLineLoadReferTree("exportRequest.json");
         String filename = offLineExport(context.getReferGroupList());
 //        String filename = "EnvToEnv_ExampleEntity.zip";
 //        uploadAttach("C:\\Users\\yaowr\\Pictures\\temp\\2.jpg");
+//        uploadAttach("D:\\project\\rui-study\\downloadTemp\\EnvToEnv_ExampleEntity_20220609160427.zip");
         String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
 //        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
         context = loadEntityNodes(attachId);
@@ -87,6 +89,10 @@ public class AutoMechTptEnvToEnv {
         // 加载任务
         Thread.sleep(3000);
         findTask(taskId);
+
+//        // 离线导出（dev02）
+//        MkEnvToEnvContext context = offLineLoadReferTree("test/request_body.json");
+//        String filename = offLineExport(context.getReferGroupList());
     }
 
     private static void loadApi(String entityName) {
@@ -105,7 +111,6 @@ public class AutoMechTptEnvToEnv {
         return response.getData();
     }
 
-    //
     private static MkEnvToEnvContext onlineTargetLoadEntity(String encOlCmd) {
         JSONObject json = new JSONObject();
         json.put("encOlCmd", encOlCmd);
@@ -149,8 +154,8 @@ public class AutoMechTptEnvToEnv {
     /**
      * 离线获取关联树
      */
-    private static MkEnvToEnvContext offLineLoadReferTree() {
-        JSONObject json = FileUtils.loadJSON("AutoMechTptEnvToEnv/exportRequest.json");
+    private static MkEnvToEnvContext offLineLoadReferTree(String filename) {
+        JSONObject json = FileUtils.loadJSON("AutoMechTptEnvToEnv/" + filename);
         MkResponse<MkEnvToEnvContext> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-admin/e2e/offline/source/loadReferTree", json, MkEnvToEnvContext.class);
         log.info("loadReferTree: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
