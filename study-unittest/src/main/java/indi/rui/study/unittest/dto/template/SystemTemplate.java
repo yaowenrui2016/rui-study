@@ -26,6 +26,11 @@ public class SystemTemplate {
     private String name;
 
     /**
+     * 所属模块
+     */
+    private String module;
+
+    /**
      * 扩展参数，来自于模板定义的extendContents和replaceText
      */
     private List<RepVariable> extendVars;

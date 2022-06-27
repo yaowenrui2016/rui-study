@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
 import org.apache.http.client.CookieStore;
+import org.apache.http.client.HttpClient;
 import org.apache.http.client.HttpResponseException;
 import org.apache.http.client.ResponseHandler;
 import org.apache.http.client.config.CookieSpecs;
@@ -43,7 +44,7 @@ public class HttpClientUtils {
     public static String httpGet(String url, Map<String, String> header)
             throws Exception {
         String response;
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CloseableHttpClient httpClient = createHttpClient(url);
         ResponseHandler<String> responseHandler = new BasicResponseHandler();
         try {
             HttpGet httpGet = new HttpGet(url);
@@ -75,7 +76,7 @@ public class HttpClientUtils {
     public static String httpPost(String url, JSON body, Map<String, String> header)
             throws Exception {
         String response;
-        CloseableHttpClient httpClient = HttpClients.createDefault();
+        CloseableHttpClient httpClient = createHttpClient(url);
         ResponseHandler<String> responseHandler = new BasicResponseHandler();
         try {
             HttpPost httpPost = new HttpPost(url);
@@ -160,7 +161,7 @@ public class HttpClientUtils {
                                           String downloadDir)
             throws Exception {
         String filename = null;
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+        try (CloseableHttpClient httpClient = createHttpClient(url)) {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader("Content-type", "application/json");
             RequestConfig requestConfig = RequestConfig.custom()
@@ -213,7 +214,7 @@ public class HttpClientUtils {
     public static String httpPostUpload(String url, Map<String, String> header,
                                         File uploadFile)
             throws Exception {
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+        try (CloseableHttpClient httpClient = createHttpClient(url)) {
             HttpPost httpPost = new HttpPost(url);
             // 不能设置content-type: multipart/form-data，否则导致"the request was rejected because no multipart boundary was found"
 //            httpPost.setHeader("content-type", "multipart/form-data;");
@@ -275,6 +276,15 @@ public class HttpClientUtils {
         return filename;
     }
 
+    private static CloseableHttpClient createHttpClient(String url) {
+        CloseableHttpClient httpClient;
+        if (url.startsWith("https")) {
+            httpClient = createSSLClientDefault();
+        } else {
+            httpClient = HttpClients.createDefault();
+        }
+        return httpClient;
+    }
 
     public static CloseableHttpClient createSSLClientDefault() {
         try {

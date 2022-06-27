@@ -1,0 +1,9 @@
+[
+  {
+    "fdSubject": "测试邮件发送接口",
+    "fdContent": "邮件内容",
+    "fdRecipientName": "张三",
+    "fdRecipientType": "to",
+    "fdRecipientAddr": "yaowr@landray.com.cn"
+  }
+]

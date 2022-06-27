@@ -27,7 +27,7 @@ import java.util.Map;
  * @create: 2022-04-07
  */
 @Slf4j
-public class AutoMechTptEnvToEnv {
+public class AutoAdminE2E {
 
     private static MkDataRequestHelper mkDataRequestHelper
             = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
@@ -103,7 +103,7 @@ public class AutoMechTptEnvToEnv {
     }
 
     private static String onlineSourceGenerate() {
-        JSONObject json = FileUtils.loadJSON("AutoMechTptEnvToEnv/exportRequest.json");
+        JSONObject json = FileUtils.loadJSON("AutoAdminE2E/exportRequest.json");
         MkResponse<String> response = mkDataRequestHelper.callData(
                 "/data/sys-admin/e2e/online/source/generate",
                 json, String.class);
@@ -155,7 +155,7 @@ public class AutoMechTptEnvToEnv {
      * 离线获取关联树
      */
     private static MkEnvToEnvContext offLineLoadReferTree(String filename) {
-        JSONObject json = FileUtils.loadJSON("AutoMechTptEnvToEnv/" + filename);
+        JSONObject json = FileUtils.loadJSON("AutoAdminE2E/" + filename);
         MkResponse<MkEnvToEnvContext> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-admin/e2e/offline/source/loadReferTree", json, MkEnvToEnvContext.class);
         log.info("loadReferTree: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));

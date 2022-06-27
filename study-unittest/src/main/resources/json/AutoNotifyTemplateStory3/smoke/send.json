@@ -1,0 +1,56 @@
+{
+  "snid": "1g5oh0cntw31kw4prw2hhr65t21prlqv1pw0",
+  "notifyType": "todo",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityName": "testNotifyTemplate",
+  "entityId": "1",
+  "entityKey": "20220617174815",
+  "targets": [
+    "yaowr"
+  ],
+  "orgProperty": "fdLoginName",
+  "link": "http://www.baidu.com",
+  "providerIds": [
+    "todo",
+    "ticDingTalkWorkNotify",
+    "ticExclding3TalkWorkNotify"
+  ],
+  "requestTime": 1655459295997,
+  "subject": "测试消息模板",
+  "replaceText": {
+    "money": "998.00"
+  },
+  "extendContents": [
+    {
+      "value": "老王",
+      "key": "auditor"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "replaceText": {
+        "money": "9980.00"
+      },
+      "extendContents": [
+        {
+          "value": "Old Wang",
+          "key": "auditor"
+        }
+      ]
+    },
+    "zh-HK": {
+      "replaceText": {
+        "money": "99800.00"
+      },
+      "extendContents": [
+        {
+          "value": "老王（繁體）",
+          "key": "auditor"
+        }
+      ]
+    }
+  },
+  "template": "$common:msg123",
+  "mobileLink": "http://www.taobao.com"
+}

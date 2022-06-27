@@ -1,0 +1,522 @@
+[
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作人",
+          "key": "operator"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.append",
+      "id": "paas-lbpm:lbpm.notify.template.append",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.AppendMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作名称",
+          "key": "operation"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.assign",
+      "id": "paas-lbpm:lbpm.notify.template.assign",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.AssignMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作人",
+          "key": "operator"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        },
+        {
+          "title": "处理意见",
+          "key": "comment"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.at",
+      "id": "paas-lbpm:lbpm.notify.template.at",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.AtMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.authorize.task.finish",
+      "id": "paas-lbpm:lbpm.notify.template.authorize.task.finish",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.AuthorizeTaskFinishTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作人",
+          "key": "operator"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.circulation",
+      "id": "paas-lbpm:lbpm.notify.template.circulation",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.CirculationMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作人",
+          "key": "operator"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.communicate",
+      "id": "paas-lbpm:lbpm.notify.template.communicate",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.CommunicateMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.cooperate",
+      "id": "paas-lbpm:lbpm.notify.template.cooperate",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.CooperateMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.end.drafter",
+      "id": "paas-lbpm:lbpm.notify.template.end.drafter",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.process.EndDrafterTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.end.participant",
+      "id": "paas-lbpm:lbpm.notify.template.end.participant",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.process.EndParticipantTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.error",
+      "id": "paas-lbpm:lbpm.notify.template.error",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.error.ErrorAdminMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作名称",
+          "key": "operation"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.prepend",
+      "id": "paas-lbpm:lbpm.notify.template.prepend",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.PrePendMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作",
+          "key": "operation"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.reject.draft",
+      "id": "paas-lbpm:lbpm.notify.template.reject.draft",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.RejectDraftMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.reject.review",
+      "id": "paas-lbpm:lbpm.notify.template.reject.review",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.RejectReviewMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.reject.sign",
+      "id": "paas-lbpm:lbpm.notify.template.reject.sign",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.RejectSignMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.review",
+      "id": "paas-lbpm:lbpm.notify.template.review",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.ReviewMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "起草人",
+          "key": "creator"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.send",
+      "id": "paas-lbpm:lbpm.notify.template.send",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.SendMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "操作名称",
+          "key": "operation"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.sign",
+      "id": "paas-lbpm:lbpm.notify.template.sign",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.SignMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.sub.error.admin",
+      "id": "paas-lbpm:lbpm.notify.template.sub.error.admin",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.error.SubErrorAdminMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        },
+        {
+          "title": "父流程流程标题",
+          "key": "parentSubject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.sub.error.drafter",
+      "id": "paas-lbpm:lbpm.notify.template.sub.error.drafter",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.error.SubErrorDrafterMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.sub.start.auto",
+      "id": "paas-lbpm:lbpm.notify.template.sub.start.auto",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.subStart.SubStartAutoMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.sub.start.manual",
+      "id": "paas-lbpm:lbpm.notify.template.sub.start.manual",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.subStart.SubStartManualMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "创建人",
+          "key": "creator"
+        },
+        {
+          "title": "天数",
+          "key": "day"
+        },
+        {
+          "title": "小时数",
+          "key": "hour"
+        },
+        {
+          "title": "分钟数",
+          "key": "minute"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.timeout",
+      "id": "paas-lbpm:lbpm.notify.template.timeout",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.process.TimeoutMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "创建人",
+          "key": "creator"
+        },
+        {
+          "title": "天数",
+          "key": "day"
+        },
+        {
+          "title": "小时数",
+          "key": "hour"
+        },
+        {
+          "title": "分钟数",
+          "key": "minute"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.timeout.admin",
+      "id": "paas-lbpm:lbpm.notify.template.timeout.admin",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.process.TimeoutAdminMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "天数",
+          "key": "day"
+        },
+        {
+          "title": "小时数",
+          "key": "hour"
+        },
+        {
+          "title": "分钟数",
+          "key": "minute"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.timeout.drafter",
+      "id": "paas-lbpm:lbpm.notify.template.timeout.drafter",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.process.TimeoutDrafterMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.transfer",
+      "id": "paas-lbpm:lbpm.notify.template.transfer",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.TransferMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "起草人",
+          "key": "drafter"
+        },
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.urg",
+      "id": "paas-lbpm:lbpm.notify.template.urg",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.UrgMessageTemplate",
+    "elementType": "TYPE"
+  },
+  {
+    "module": "paas-lbpm",
+    "config": {
+      "replaceText": [
+        {
+          "title": "流程标题",
+          "key": "subject"
+        }
+      ],
+      "name": "paas-lbpm:lbpm.notify.template.vote",
+      "id": "paas-lbpm:lbpm.notify.template.vote",
+      "extendContents": []
+    },
+    "refName": "com.landray.paas.lbpm.providers.message.template.task.VoteMessageTemplate",
+    "elementType": "TYPE"
+  }
+]

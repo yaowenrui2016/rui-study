@@ -1,0 +1,51 @@
+{
+  "fdType": "CUSTOM",
+  "fdName": "123",
+  "dynamicProps": {
+    "fdNameCn": "123",
+    "fdNameUs": "测试",
+    "fdNameHk": "繁体"
+  },
+  "fdCode": "$common:code",
+  "providersDisplay": [
+    {
+      "provider": "email",
+      "messageKey": "sys-notify:notifyType.email",
+      "name": "邮件",
+      "todoExt": false,
+      "displayStyles": [
+        {
+          "style": "TEXT_CARD",
+          "dispProps": [
+            {
+              "property": "subject",
+              "name": "邮件标题",
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.subject",
+              "type": "SINGLE_LINE_TEXT",
+              "required": true,
+              "value4Lang": {
+                "zh-CN": "${entityName}${entityId}"
+              }
+            },
+            {
+              "property": "content",
+              "name": "邮件正文",
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.content",
+              "type": "RICH_TEXT",
+              "required": true,
+              "value4Lang": {
+                "zh-CN": "<p><span>${moduleName}</span><span>${appName}</span></p>",
+                "en-US": "",
+                "zh-HK": ""
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "customVars": [],
+  "mechanisms": {
+    "attachment": []
+  }
+}

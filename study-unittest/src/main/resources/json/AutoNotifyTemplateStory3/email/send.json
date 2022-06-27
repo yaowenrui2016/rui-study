@@ -1,13 +1,13 @@
 {
-  "subject": "测试消息模板",
-  "notifyType": "todo",
-  "link": "http://www.baidu.com",
-  "mobileLink": "http://www.taobao.com",
+  "subject": "测试邮件模板--${extendContents.auditor}",
+  "content": "消息模板专项行动开始${replaceText.money}",
+  "notifyType": "email",
   "appName": "MKPaaS",
   "moduleName": "sys-notify",
   "entityId": "1",
   "entityName": "testNotifyTemplate",
   "orgProperty": "fdLoginName",
+  "template": "sys-notify-example:notify.template.audit",
   "targets": [
     "yaowr"
   ],
@@ -20,9 +20,6 @@
       "value": "老王"
     }
   ],
-  "customVars": {
-    "dinner": "订餐券"
-  },
   "langContent": {
     "en-US": {
       "replaceText": {
@@ -33,10 +30,7 @@
           "key": "auditor",
           "value": "Old Wang"
         }
-      ],
-      "customVars": {
-        "dinner": "Meal vouchers"
-      }
+      ]
     },
     "zh-HK": {
       "replaceText": {
@@ -47,10 +41,7 @@
           "key": "auditor",
           "value": "老王（繁體）"
         }
-      ],
-      "customVars": {
-        "dinner": "訂餐券"
-      }
+      ]
     }
   }
 }

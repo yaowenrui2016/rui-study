@@ -31,10 +31,10 @@ public class AutoEmailSetting {
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 
     public static void main(String[] args) {
-//        getSetting();
 //        saveSetting();
-//        verify();
-        sendEmail();
+        getSetting();
+        verify();
+//        sendEmail();
     }
 
     private static void getSetting() {

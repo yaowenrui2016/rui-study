@@ -31,6 +31,11 @@ public class DisplayProperty {
     private String name;
 
     /**
+     * 多语言KEY
+     */
+    private String messageKey;
+
+    /**
      * 属性值
      */
     private String value;

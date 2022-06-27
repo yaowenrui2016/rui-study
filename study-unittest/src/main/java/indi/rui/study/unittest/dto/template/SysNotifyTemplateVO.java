@@ -34,6 +34,11 @@ public class SysNotifyTemplateVO {
     private String fdModule;
 
     /**
+     * 系统模板所属模块名称
+     */
+    private String moduleName;
+
+    /**
      * 指定引用的模板编码，可以使用模板的可替换参数
      */
     private String fdRefCode;
@@ -71,6 +76,11 @@ public class SysNotifyTemplateVO {
      * 自定义变量
      */
     private List<RepVariable> customVars;
+
+    /**
+     * 使用到的变量
+     */
+    private List<RepVariable> usedVars;
 
     private Date fdCreateTime;
 }

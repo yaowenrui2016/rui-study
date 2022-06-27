@@ -1,0 +1,68 @@
+{
+  "fdName": "研发总结会议",
+  "fdCode": "001",
+  "mechanisms": {
+    "notify-template": [
+      {
+        "fdName": "系统模板-会议总结",
+        "fdCode": "P001",
+        "providersDisplay": [
+          {
+            "displayStyles": [
+              {
+                "dispProps": [
+                  {
+                    "name": "标题",
+                    "property": "subject",
+                    "required": true,
+                    "type": "SINGLE_LINE_TEXT",
+                    "value4Lang": {
+                      "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                      "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                      "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}"
+                    }
+                  }
+                ],
+                "style": "PLAIN_TEXT"
+              }
+            ],
+            "messageKey": "sys-notify:notifyType.todo",
+            "name": "待办",
+            "provider": "todo",
+            "todoExt": true
+          }
+        ]
+      },
+      {
+        "fdName": "系统模板-会议总结02",
+        "fdCode": "P002",
+        "providersDisplay": [
+          {
+            "displayStyles": [
+              {
+                "dispProps": [
+                  {
+                    "name": "标题",
+                    "property": "subject",
+                    "required": true,
+                    "type": "SINGLE_LINE_TEXT",
+                    "value4Lang": {
+                      "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                      "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                      "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}"
+                    }
+                  }
+                ],
+                "style": "PLAIN_TEXT"
+              }
+            ],
+            "messageKey": "sys-notify:notifyType.todo",
+            "name": "待办",
+            "provider": "todo",
+            "todoExt": true
+          }
+        ]
+      }
+    ]
+  }
+}

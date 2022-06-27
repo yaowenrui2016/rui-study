@@ -5,6 +5,7 @@
         {
           "dispProps": [
             {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
               "name": "标题",
               "property": "subject",
               "required": true,
@@ -14,34 +15,45 @@
           "style": "PLAIN_TEXT"
         }
       ],
+      "messageKey": "sys-notify:notifyType.todo",
       "name": "待办",
       "provider": "todo",
-      "todoExt": true
+      "todoExt": false
     },
     {
       "displayStyles": [
         {
           "dispProps": [
             {
-              "name": "标题",
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.subject",
+              "name": "邮件标题",
               "property": "subject",
               "required": true,
               "type": "SINGLE_LINE_TEXT"
+            },
+            {
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.content",
+              "name": "邮件正文",
+              "property": "content",
+              "required": true,
+              "type": "RICH_TEXT"
             }
           ],
-          "style": "PLAIN_TEXT"
+          "style": "TEXT_CARD"
         }
       ],
+      "messageKey": "sys-notify:notifyType.email",
       "name": "邮件",
       "provider": "email",
-      "todoExt": true
+      "todoExt": false
     },
     {
       "displayStyles": [
         {
           "dispProps": [
             {
-              "name": "标题",
+              "messageKey": "sys-notify-example:sys.notify.conference.displayProperty.subject",
+              "name": "会议标题",
               "property": "subject",
               "required": true,
               "type": "SINGLE_LINE_TEXT"
@@ -52,19 +64,22 @@
         {
           "dispProps": [
             {
-              "name": "标题",
+              "messageKey": "sys-notify-example:sys.notify.conference.displayProperty.subject",
+              "name": "会议标题",
               "property": "subject",
               "required": true,
               "type": "SINGLE_LINE_TEXT"
             },
             {
-              "name": "摘要",
+              "messageKey": "sys-notify-example:sys.notify.conference.displayProperty.content",
+              "name": "会议摘要",
               "property": "content",
               "required": true,
               "type": "MULTI_LINE_TEXT"
             },
             {
-              "name": "图片",
+              "messageKey": "sys-notify-example:sys.notify.conference.displayProperty.image",
+              "name": "会议背景图",
               "property": "image",
               "required": true,
               "type": "IMAGE"
@@ -73,34 +88,18 @@
           "style": "IMAGE_CARD"
         }
       ],
-      "name": "测试消息扩展",
-      "provider": "testNotifyProvider",
-      "todoExt": true
+      "messageKey": "sys-notify-example:notify.provider.conference",
+      "name": "会议消息扩展",
+      "provider": "conference",
+      "todoExt": false
     },
     {
       "displayStyles": [
         {
           "dispProps": [
             {
-              "name": "标题",
-              "property": "subject",
-              "required": true,
-              "type": "SINGLE_LINE_TEXT"
-            }
-          ],
-          "style": "PLAIN_TEXT"
-        }
-      ],
-      "name": "MK待办置已办通知EKP",
-      "provider": "ekpInform",
-      "todoExt": true
-    },
-    {
-      "displayStyles": [
-        {
-          "dispProps": [
-            {
-              "name": "标题",
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.subject",
+              "name": "待办同步标题",
               "property": "subject",
               "required": true,
               "type": "SINGLE_LINE_TEXT"
@@ -111,13 +110,15 @@
         {
           "dispProps": [
             {
-              "name": "摘要",
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.content",
+              "name": "待办同步内容",
               "property": "content",
               "required": true,
-              "type": "MULTI_LINE_TEXT"
+              "type": "RICH_TEXT"
             },
             {
-              "name": "图片",
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.image",
+              "name": "待办同步图片",
               "property": "image",
               "required": true,
               "type": "IMAGE"
@@ -126,8 +127,29 @@
           "style": "TEXT_CARD"
         }
       ],
-      "name": "测试待办扩展",
-      "provider": "testTodoExt",
+      "messageKey": "sys-notify-example:todo.provider.conferenceSync",
+      "name": "会议待办同步",
+      "provider": "conferenceSync",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+      "name": "MK待办置已办通知EKP",
+      "provider": "ekpInform",
       "todoExt": true
     }
   ],
@@ -203,9 +225,10 @@
         },
         {
           "displayName": "节点名称",
-          "varName": "replaceText.nodeName"
+          "varName": ".replaceTextnodeName"
         }
-      ]
+      ],
+      "module": "sys-notify-example"
     },
     {
       "code": "sys-notify-example:notify.template.review",
@@ -228,13 +251,14 @@
         },
         {
           "displayName": "合同名称",
-          "varName": "replaceText.contractName"
+          "varName": ".replaceTextcontractName"
         },
         {
           "displayName": "合同签订日期",
-          "varName": "replaceText.contractDate"
+          "varName": ".replaceTextcontractDate"
         }
-      ]
+      ],
+      "module": "sys-notify-example"
     }
   ]
 }

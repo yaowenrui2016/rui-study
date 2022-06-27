@@ -1,13 +1,19 @@
 {
-  "fdType": "CUSTOM",
-  "fdName": "姚的自定义模板:001",
-  "dynamicProps": {
-    "fdNameCn": "系统模板-会议模板样例",
-    "fdNameUs": "SystemTemplate:ConferenceExample",
-    "fdNameHk": "系統模板-會議模板樣例"
-  },
+  "creatorName": "姚文锐",
+  "customVars": [
+    {
+      "displayName": "合同金额",
+      "varName": "money"
+    }
+  ],
   "fdCode": "P001",
+  "fdCreateTime": 1655954432000,
+  "fdCreatorId": "1g1k79uriwvwaw1jjcp1q1ujltkq306hjdw0",
+  "fdEnabled": true,
+  "fdId": "1g6796nn5w8pw11w3bgjpek307n6u72jj4w0",
   "fdModule": "sys-notify-example",
+  "fdName": "系统模板-会议模板样例",
+  "fdType": "CUSTOM",
   "providersDisplay": [
     {
       "displayStyles": [
@@ -20,9 +26,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}",
                 "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}"
               }
             }
           ],
@@ -45,9 +51,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "邮件标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "郵件標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Email subject: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
+                "en-US": "Email subject: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}",
+                "zh-HK": "郵���標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "zh-CN": "邮件标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}"
               }
             },
             {
@@ -57,9 +63,9 @@
               "required": true,
               "type": "RICH_TEXT",
               "value4Lang": {
-                "zh-CN": "邮件正文：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "en-US": "Email Content: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}",
                 "zh-HK": "郵件正文：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Email Content: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "邮件正文：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}"
               }
             }
           ],
@@ -82,9 +88,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}",
+                "zh-HK": "會議標題���由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}"
               }
             }
           ],
@@ -99,9 +105,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}",
+                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊���者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}"
               }
             },
             {
@@ -111,9 +117,9 @@
               "required": true,
               "type": "MULTI_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "会议内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}",
+                "en-US": "Conference Content:\nThis product is provided by ${appName}\nLanling Software${timestamp}",
                 "zh-HK": "會議内容：\n本產品由${appName}提供\n藍凌軟體${timestamp}",
-                "en-US": "Conference Content:\nThis product is provided by ${appName}\nLanling Software${timestamp}"
+                "zh-CN": "会议内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}"
               }
             },
             {
@@ -123,9 +129,9 @@
               "required": true,
               "type": "IMAGE",
               "value4Lang": {
-                "zh-CN": "会议背景图附件id：123",
+                "en-US": "Attach id: 123",
                 "zh-HK": "會議背景圖附件id：123",
-                "en-US": "Attach id: 123"
+                "zh-CN": "会议背景图附件id：123"
               }
             }
           ],
@@ -148,9 +154,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办同步标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                "en-US": "Todo sync subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}",
                 "zh-HK": "待辦同步標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
-                "en-US": "Todo sync subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+                "zh-CN": "待办同步标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}"
               }
             }
           ],
@@ -165,9 +171,9 @@
               "required": true,
               "type": "MULTI_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办同步内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}",
+                "en-US": "Todo sync Content:\nThis product is provided by ${appName}\nLanling Software${timestamp}",
                 "zh-HK": "待辦同步內容：\n本產品由${appName}提供\n藍凌軟體${timestamp}",
-                "en-US": "Todo sync Content:\nThis product is provided by ${appName}\nLanling Software${timestamp}"
+                "zh-CN": "待办同步内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}"
               }
             },
             {
@@ -177,9 +183,9 @@
               "required": true,
               "type": "IMAGE",
               "value4Lang": {
-                "zh-CN": "待办同步图片id：456",
+                "en-US": "Todo sync Attach id: 456",
                 "zh-HK": "待辦同步图片id：456",
-                "en-US": "Todo sync Attach id: 456"
+                "zh-CN": "待办同步图片id：456"
               }
             }
           ],
@@ -192,10 +198,10 @@
       "todoExt": true
     }
   ],
-  "customVars": [
+  "usedVars": [
     {
-      "varName": "money",
-      "displayName": "合同金额"
+      "displayName": "晚餐",
+      "varName": "dinner"
     }
   ]
 }

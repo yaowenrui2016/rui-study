@@ -1,0 +1,12 @@
+{
+  "offset": 0,
+  "pageSize": 1000,
+  "conditions": {
+    "todoOrDone": "todo",
+    "targets": [
+      "[用户登录名]"
+    ],
+    "orgProperty": "fdLoginName",
+    "fdType": 1
+  }
+}

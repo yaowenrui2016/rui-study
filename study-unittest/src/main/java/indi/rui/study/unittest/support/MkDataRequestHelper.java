@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.support;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
@@ -113,11 +114,11 @@ public class MkDataRequestHelper {
         return null;
     }
 
-    public MkResponse<?> callData(String path, JSONObject json) {
+    public MkResponse<?> callData(String path, JSON json) {
         return callData(path, json, Void.class);
     }
 
-    public <T> MkResponse<T> callData(String path, JSONObject json, Class<T> rtnClass) {
+    public <T> MkResponse<T> callData(String path, JSON json, Class<T> rtnClass) {
         MkResponse<T> mkResponse = null;
         String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
@@ -128,7 +129,7 @@ public class MkDataRequestHelper {
         return mkResponse;
     }
 
-    public <T> MkResponse<List<T>> callDataForList(String path, JSONObject json, Class<T> rtnClass) {
+    public <T> MkResponse<List<T>> callDataForList(String path, JSON json, Class<T> rtnClass) {
         MkResponse<List<T>> mkResponse = null;
         String httpResult = callDataForString(path, json);
         if (httpResult != null && httpResult.length() > 0) {
@@ -185,7 +186,7 @@ public class MkDataRequestHelper {
 
     // =================== 私有方法 ================== //
 
-    private String callDataForString(String path, JSONObject body) {
+    private String callDataForString(String path, JSON body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());

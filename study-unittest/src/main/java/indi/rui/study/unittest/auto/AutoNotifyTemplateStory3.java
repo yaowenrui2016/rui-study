@@ -3,6 +3,7 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkResponse;
+import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.original.SysNotifyOriginalVO;
 import indi.rui.study.unittest.dto.template.SysNotifyTemplateVO;
 import indi.rui.study.unittest.dto.template.TemplateMetaDTO;
@@ -12,9 +13,7 @@ import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @author: yaowr
@@ -50,32 +49,61 @@ public class AutoNotifyTemplateStory3 {
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me",
+//            "http://10.253.2.124:8080",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static final int MAX_TIMEOUT_MS = 10000;
 
     public static void main(String[] args) {
 //        // 获取模板元数据
 //        getTemplateMeta();
-
 //        // 新建系统模板
 //        String code = save("new_system_template.json");
-//
 //        // 根据编码查找模板
 //        findByCode(code);
+//        // 查询模板列表
+//        findAll();
+
 
         // 创建会议将消息模板作为机制保存
         String conferenceId = createConference();
-
         // 查询会议将消息模板作为机制加载
         getConference(conferenceId);
+        // 修改会议并修改消息模板机制
+        editConference(conferenceId);
+        // 查询会议将消息模板作为机制加载
+        getConference(conferenceId);
+        // 删除会议并删除消息模板机制
+        deleteConference(conferenceId);
+
 
 //        // 使用模板发送待办
 //        String snid = send(code);
-//
 //        // 查看待办原始记录
 //        timeComputing(snid);
+
+
+//        // 获取默认邮件底板
+//        getDefaultBaseplate();
+//        // 保存默认邮件底板
+//        setDefaultBaseplate();
+
+
+//        // 使用模板发送邮件
+//        String snid = sendEmail("$common:code008");
+//        // 查看邮件原始记录
+//        timeComputing(snid);
+
+
+//        // 发送待办
+//        String snid = sendTodo("test/send.json");
+//        // 查看待办原始记录
+//        timeComputing(snid);
+
+
+//        // 根据编码查找模板
+//        SysNotifyTemplateVO templateVO = findByCode("P001");
+//        // 删除模板
+//        delete(templateVO.getFdId());
     }
 
     /**
@@ -119,40 +147,100 @@ public class AutoNotifyTemplateStory3 {
     /**
      * 根据编码查找模板
      */
-    private static void findByCode(String code) {
+    private static SysNotifyTemplateVO findByCode(String code) {
         JSONObject json = new JSONObject();
         json.put("fdCode", code);
         MkResponse<SysNotifyTemplateVO> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-notify/sysNotifyTemplate/findByCode", json, SysNotifyTemplateVO.class);
         log.info("findByCode: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+        return mkResponse.getData();
     }
 
-//    /**
-//     * 创建会议将消息模板作为机制保存
-//     */
-//    private static String createConference() {
-//        MkResponse<JSONObject> mkResponse = mkApiRequestHelper.callApiForMkResponse(
-//                "/data/sys-notify-example/conference/create", null, JSONObject.class);
-//        if (mkResponse.isSuccess()) {
-//            log.info("createConference success: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
-//        } else {
-//            log.error("createConference failed!");
-//        }
-//        return mkResponse.getData().getString("fdId");
-//    }
+    private static void findAll() {
+        JSONObject queryRequest = new JSONObject();
+        queryRequest.put("pageSize", 1000);
+        MkResponse<QueryResult<SysNotifyTemplateVO>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-notify/sysNotifyTemplate/list", queryRequest, SysNotifyTemplateVO.class);
+        log.info("findAll: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
+    }
+
+    private static void delete(String fdId) {
+        JSONObject idsDTO = new JSONObject();
+        idsDTO.put("fdIds", Collections.singletonList(fdId));
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyTemplate/deleteAll", idsDTO);
+        log.info("delete: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+    }
 
     /**
      * 创建会议将消息模板作为机制保存
      */
     private static String createConference() {
-        JSONObject idVO = mkApiRequestHelper.callApi(
-                "/api/sys-notify-example/conference/create?template=P001", null, JSONObject.class);
-        if (idVO != null) {
-            log.info("createConference success: {}", JSONObject.toJSONString(idVO, SerializerFeature.PrettyFormat));
+        JSONObject newConference = FileUtils.loadJSON("AutoNotifyTemplateStory3/mechanisms/createTemplateByMechanisms.json");
+        newConference.put("fdCode", new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        MkResponse<JSONObject> mkResponse = mkApiRequestHelper.callApiForMkResponse(
+                "/data/sys-notify-example/conference/create", newConference, JSONObject.class);
+        if (mkResponse.isSuccess()) {
+            log.info("createConference success: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
         } else {
             log.error("createConference failed!");
         }
-        return idVO.getString("fdId");
+        return mkResponse.getData().getString("fdId");
+    }
+
+    /**
+     * 修改会议并修改消息模板机制
+     */
+    private static void editConference(String conferenceId) {
+        JSONObject editConference = FileUtils.loadJSON("AutoNotifyTemplateStory3/mechanisms/editTemplateByMechanisms.json");
+        editConference.put("fdId", conferenceId);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify-example/conference/edit", editConference);
+        if (mkResponse.isSuccess()) {
+            log.info("editConference success: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+        } else {
+            log.error("editConference failed!");
+        }
+    }
+
+    /**
+     * 删除会议并删除消息模板机制
+     */
+    private static void deleteConference(String conferenceId) {
+        JSONObject idVO = new JSONObject();
+        idVO.put("fdId", conferenceId);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify-example/conference/delete", idVO);
+        if (mkResponse.isSuccess()) {
+            log.info("deleteConference success: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
+        } else {
+            log.error("deleteConference failed!");
+        }
+    }
+
+    /**
+     * 获取默认邮件底板
+     */
+    private static JSONObject getDefaultBaseplate() {
+        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/emailSetting/getDefaultBaseplate", null, JSONObject.class);
+        log.info("getDefaultBaseplate: {}", JSONObject.toJSONString(mkResponse.getData(), SerializerFeature.PrettyFormat));
+        return mkResponse.getData();
+    }
+
+
+    /**
+     * 保存默认邮件底板
+     */
+    private static void setDefaultBaseplate() {
+        String filepath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
+                "json/AutoNotifyTemplateStory3/email/default_email_base.html")).getFile();
+        String html = FileUtils.readFileToString(filepath, "utf-8");
+        JSONObject body = new JSONObject();
+        body.put("fdBaseplate", html);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/emailSetting/setDefaultBaseplate", body, JSONObject.class);
+        log.info("setDefaultBaseplate: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
     }
 
     /**
@@ -188,6 +276,34 @@ public class AutoNotifyTemplateStory3 {
         return mkResponse.getData();
     }
 
+    private static String sendTodo(String filename) {
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory3/" + filename);
+        MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
+                "/api/sys-notifybus/sysNotifyComponent/send",
+                json, String.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Send todo error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("send notify success! snid={}", mkResponse.getData());
+        return mkResponse.getData();
+    }
+
+    private static String sendEmail(String templateCode) {
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory3/email/send.json");
+        json.put("entityKey", new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
+        if (templateCode != null) {
+            json.put("template", templateCode);
+        }
+        MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
+                "/api/sys-notifybus/sysNotifyComponent/send",
+                json, String.class);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Send or done todo error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("send email success! snid={}", mkResponse.getData());
+        return mkResponse.getData();
+    }
+
     private static void timeComputing(String snid) {
         SysNotifyOriginalVO originalVO;
         while (true) {
@@ -206,59 +322,4 @@ public class AutoNotifyTemplateStory3 {
             }
         }
     }
-
-//    private static List<MkNotifyTemplate> listNotifyTemplateDataRPC() {
-//        JSONObject request = FileUtils.loadJSON("AutoNotifyTemplateStory3/findAll.json");
-//        MkResponse<QueryResult<MkNotifyTemplate>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-//                "/data/sys-notify/sysNotifyTemplate/list", request, MkNotifyTemplate.class);
-//        if (!mkResponse.isSuccess()) {
-//            throw new RuntimeException("list notify template error! errMsg=" + mkResponse.getMsg());
-//        }
-//        log.info("find notify template by '/data' interface: req={}, res={}",
-//                JSONObject.toJSONString(request),
-//                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
-//        );
-//        return mkResponse.getData().getContent();
-//    }
-
-//    private static void edit(SysNotifyTemplateVO template) {
-//        template.setFdEnabled(false);
-//        template.setFdName(template.getFdName() + "_edit");
-//        List<NotifyTemplateDetailVO> details = template.getFdDetails();
-//        for (NotifyTemplateDetailVO detailVO : details) {
-//            List<String> notifyTypes = detailVO.getNotifyTypes();
-//            if (notifyTypes.contains("todo")) {
-//                notifyTypes.add("sms");
-//                continue;
-//            }
-//            if (notifyTypes.contains("email")) {
-//                notifyTypes.add("TT");
-//            }
-//        }
-//        JSONObject json = (JSONObject) JSONObject.toJSON(template);
-//        MkResponse<?> mkResponse = mkDataRequestHelper.callData("/data/sys-notify/sysNotifyTemplate/edit", json);
-//        log.info("edit template: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
-//    }
-
-//    private static void updateStatus(String fdId, boolean enabled) {
-//        MkNotifyTemplate _template = new MkNotifyTemplate();
-//        _template.setFdId(fdId);
-//        _template.setFdEnabled(enabled);
-//        JSONObject json = (JSONObject) JSONObject.toJSON(_template);
-//        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-//                "/data/sys-notify/sysNotifyTemplate/updateStatus", json);
-//        log.info("update template status for [{}] {}",
-//                enabled,
-//                mkResponse.isSuccess() ? "success" : "failed");
-//    }
-
-//    private static void deleteAll(List<String> ids) {
-//        JSONObject json = new JSONObject();
-//        json.put("fdIds", ids);
-//        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-//                "/data/sys-notify/sysNotifyTemplate/deleteAll", json);
-//        log.info("delete template {}: {}",
-//                mkResponse.isSuccess() ? "success" : "failed",
-//                JSONObject.toJSONString(ids));
-//    }
 }

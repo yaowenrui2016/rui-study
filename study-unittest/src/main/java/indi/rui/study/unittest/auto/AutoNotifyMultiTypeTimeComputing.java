@@ -121,7 +121,6 @@ public class AutoNotifyMultiTypeTimeComputing {
         }
         JSONObject json = FileUtils.loadJSON("AutoNotifyMultiTypeTimeComputing/" + filename);
         if ("send".equalsIgnoreCase(method)) {
-            json.put("notifyType", "sms");
             json.put("entityKey", counter.getAndIncrement());
         }
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(

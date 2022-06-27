@@ -1,0 +1,76 @@
+{
+  "fdName": "研发总结会议——001",
+  "fdCode": "001",
+  "mechanisms": {
+    "notify-template": [
+      {
+        "fdName": "系统模板-会议模板",
+        "fdCode": "P001",
+        "providersDisplay": [
+          {
+            "displayStyles": [
+              {
+                "dispProps": [
+                  {
+                    "name": "待办标题",
+                    "property": "subject",
+                    "required": true,
+                    "type": "SINGLE_LINE_TEXT",
+                    "value4Lang": {
+                      "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                      "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                      "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}"
+                    }
+                  }
+                ],
+                "style": "PLAIN_TEXT"
+              },
+              {
+                "dispProps": [
+                  {
+                    "name": "待办标题",
+                    "property": "subject",
+                    "required": true,
+                    "type": "SINGLE_LINE_TEXT",
+                    "value4Lang": {
+                      "zh-CN": "测试消息扩展标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
+                      "zh-HK": "測試消息擴展標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
+                      "en-US": "Test notify extension subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+                    }
+                  },
+                  {
+                    "name": "待办摘要",
+                    "property": "content",
+                    "required": true,
+                    "type": "MULTI_LINE_TEXT",
+                    "value4Lang": {
+                      "zh-CN": "测试消息扩展摘要内容：\n本产品由${appName}提供\n蓝凌软件${timestamp}",
+                      "zh-HK": "測試消息擴展摘要內容：\n本產品由${appName}提供\n藍凌軟體${timestamp}",
+                      "en-US": "Test notify extension Abstract content:\nThis product is provided by ${appName}\nLanling Software${timestamp}"
+                    }
+                  },
+                  {
+                    "name": "待办图片",
+                    "property": "image",
+                    "required": true,
+                    "type": "IMAGE",
+                    "value4Lang": {
+                      "zh-CN": "测试消息扩展:附件id_中文",
+                      "zh-HK": "測試消息擴展：附件id_中文",
+                      "en-US": "Test notify extension:attach_id_en"
+                    }
+                  }
+                ],
+                "style": "IMAGE_CARD"
+              }
+            ],
+            "messageKey": "sys-notify:notifyType.todo",
+            "name": "待办",
+            "provider": "todo",
+            "todoExt": true
+          }
+        ]
+      }
+    ]
+  }
+}

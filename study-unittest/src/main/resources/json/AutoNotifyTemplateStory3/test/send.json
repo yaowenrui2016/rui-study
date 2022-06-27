@@ -1,0 +1,96 @@
+{
+  "notifyType": "todo",
+  "appName": "MKPaaS",
+  "moduleName": "km-review",
+  "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+  "entityId": "1g5m2eiquw316w119wtijldffs3ot42b0vw0",
+  "entityKey": "NodeInstance",
+  "notifyId": "1g5m2ej1pw316w11hw2ip0q1q39a3nj51qw0",
+  "parameter1": "1g5m2e914w316wv3w2fidel58u6blu1jc3w0",
+  "targets": [
+    "yaowr"
+  ],
+  "orgProperty": "fdLoginName",
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "http://mksmoke.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1g5m2e914w316wv3w2fidel58u6blu1jc3w0",
+  "subject": "${replaceText.delegate}请审批流程:${replaceText.subject}${replaceText.summary}",
+  "replaceText": {
+    "delegate": "",
+    "summary": "",
+    "creator": "李琦测试",
+    "subject": "引用通知模板1",
+    "operator": "李琦测试"
+  },
+  "extendFields": [
+    {
+      "supportFastApproval": "false"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "subject": "${replaceText.delegate}Please approve the process: {replaceText.subject}{replaceText.summary}",
+      "content": "${replaceText.delegate}Please approve the process: {replaceText.subject}{replaceText.summary}",
+      "replaceText": {
+        "delegate": "",
+        "summary": "",
+        "creator": "李琦测试",
+        "subject": "引用通知模板1",
+        "operator": "李琦测试"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1g5m2eiquw316w119wtijldffs3ot42b0vw0",
+      "entityKey": "NodeInstance",
+      "nodeName": "审批节点",
+      "parameter1": "1g5m2e914w316wv3w2fidel58u6blu1jc3w0"
+    },
+    "zh-HK": {
+      "subject": "${replaceText.delegate}請審批流程:${replaceText.subject}${replaceText.summary}",
+      "content": "${replaceText.delegate}請審批流程:${replaceText.subject}${replaceText.summary}",
+      "replaceText": {
+        "delegate": "",
+        "summary": "",
+        "creator": "李琦测试",
+        "subject": "引用通知模板1",
+        "operator": "李琦测试"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1g5m2eiquw316w119wtijldffs3ot42b0vw0",
+      "entityKey": "NodeInstance",
+      "nodeName": "审批节点",
+      "parameter1": "1g5m2e914w316wv3w2fidel58u6blu1jc3w0"
+    },
+    "zh-CN": {
+      "subject": "${replaceText.delegate}请审批流程:${replaceText.subject}${replaceText.summary}",
+      "content": "${replaceText.delegate}请审批流程:${replaceText.subject}${replaceText.summary}",
+      "replaceText": {
+        "delegate": "",
+        "summary": "",
+        "creator": "李琦测试",
+        "subject": "引用通知模板1",
+        "operator": "李琦测试"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1g5m2eiquw316w119wtijldffs3ot42b0vw0",
+      "entityKey": "NodeInstance",
+      "nodeName": "审批节点",
+      "parameter1": "1g5m2e914w316wv3w2fidel58u6blu1jc3w0"
+    }
+  },
+  "todoType": 1,
+  "todoLevel": 3,
+  "creator": "1fgnmerhgwilw77qw18mjspmmdjfm63nsow0",
+  "mobileLink": "http://mksmoke.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1g5m2e914w316wv3w2fidel58u6blu1jc3w0",
+  "nodeName": "审批节点",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdProcessNo\":\"T202206161855220001\",\"fdStatus\":\"20\",\"fdModuleName\":\"km-review\",\"fdTemplateId\":\"1g5m22uauw315w12bwjjrrd17lkkeol1lpw0\",\"fdTitle\":\"引用通知模板1\",\"fdApplicantId\":\"1fgnmerhgwilw77qw18mjspmmdjfm63nsow0\",\"fdApplicationTime\":1655376913444,\"fdLink\":{\"PAD\":\"http://mksmoke.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1g5m2e914w316wv3w2fidel58u6blu1jc3w0\",\"PC\":\"http://mksmoke.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1g5m2e914w316wv3w2fidel58u6blu1jc3w0\",\"MOBILE\":\"http://mksmoke.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1g5m2e914w316wv3w2fidel58u6blu1jc3w0\"},\"fdInstanceId\":\"1g5m2e8v2w315w1q9w3geip0c3jaubk16vw0\"}",
+  "queryType": 1
+}

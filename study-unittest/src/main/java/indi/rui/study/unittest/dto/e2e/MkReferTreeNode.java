@@ -32,9 +32,19 @@ public class MkReferTreeNode {
     private String entityName;
 
     /**
+     * 实体是否是组织架构
+     */
+    private Boolean isOrg;
+
+    /**
      * 实体是否是主文档
      */
     private Boolean isMain;
+
+    /**
+     * 是否存在该引用类型的导出provider实现
+     */
+    private Boolean existTransport;
 
     // ======================== 冗余实体数据 ======================== //
     private String fdId;
