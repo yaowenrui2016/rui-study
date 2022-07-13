@@ -9,7 +9,8 @@
   "entityName": "testNotifyTemplate",
   "orgProperty": "fdLoginName",
   "targets": [
-    "yaowr"
+    "yaowr",
+    "liq"
   ],
   "replaceText": {
     "money": "998.00"
@@ -21,7 +22,8 @@
     }
   ],
   "customVars": {
-    "dinner": "订餐券"
+    "dinner": "订餐券",
+    "708d66a922e940edb03147e20004e935": "测试自定义表里"
   },
   "langContent": {
     "en-US": {
@@ -35,7 +37,8 @@
         }
       ],
       "customVars": {
-        "dinner": "Meal vouchers"
+        "dinner": "Meal vouchers",
+        "708d66a922e940edb03147e20004e935": "Test custom var"
       }
     },
     "zh-HK": {
@@ -49,7 +52,8 @@
         }
       ],
       "customVars": {
-        "dinner": "訂餐券"
+        "dinner": "訂餐券",
+        "708d66a922e940edb03147e20004e935": "測試自定義表裏"
       }
     }
   }

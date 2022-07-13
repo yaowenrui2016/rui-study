@@ -1,0 +1,114 @@
+[
+  {
+    "appName": "base-server",
+    "mkBase": true,
+    "dbId": "1fivvi2sew5w1w15d24mc352m4sm21q9klw0"
+  },
+  {
+    "appName": "discovery-center",
+    "mkBase": true,
+    "dbId": "1fivsso9pw1w1w28516381v4eunr2kcsd7w0"
+  },
+  {
+    "appName": "gateway-server",
+    "mkBase": true,
+    "dbId": "1fivv8veuw4w1w1h8j96lk96ccngdth7tjw0"
+  },
+  {
+    "appName": "km-missive",
+    "mkBase": true,
+    "dbId": "1fivvian9w6w1w20ddna0r3e8j83bbpnmvw0"
+  },
+  {
+    "appName": "km-review",
+    "mkBase": true,
+    "dbId": "1fivvian9w6w1w20ddna0r3e8j83bbpnmvw0"
+  },
+  {
+    "appName": "lbpm-engine",
+    "mkBase": true,
+    "dbId": "1fj005nvvwiw1w1b2svoi3b6ndmk21pl2cw0"
+  },
+  {
+    "appName": "mk-associate-server",
+    "mkBase": true,
+    "dbId": "1fvi5h53dw250w1w26svnncc9eggb33rsew0"
+  },
+  {
+    "appName": "mk-dbc-server",
+    "mkBase": true,
+    "dbId": "1g0hu284hw2cjw1w3od6e6k2dtvsei2himw0"
+  },
+  {
+    "appName": "mk-paas-all",
+    "mkBase": true,
+    "dbId": "1fivsso9pw1w1w28516381v4eunr2kcsd7w0"
+  },
+  {
+    "appName": "mk-portal-server",
+    "mkBase": true,
+    "dbId": "1fivvtk23w8w1wqsov9g3a791693s4cuigw0"
+  },
+  {
+    "appName": "oppo-associate-server",
+    "mkBase": true,
+    "dbId": "1g3npomtcw33aw2w72c61i35d2oh52v6flw0"
+  },
+  {
+    "appName": "oppo-bpm"
+  },
+  {
+    "appName": "oppo-missive",
+    "mkBase": true,
+    "dbId": "1g3nqfn8gw33bw1w303uq3a4cmn1715tq4w0"
+  },
+  {
+    "appName": "rule-engine",
+    "mkBase": true,
+    "dbId": "1g388f4new2u8w1w2ij0k9912ku2kj12olw0"
+  },
+  {
+    "appName": "sys-log",
+    "mkBase": true,
+    "dbId": "1fivvtibkwbw1wik40ec12koq7k3f104ftw0"
+  },
+  {
+    "appName": "sys-mdm",
+    "mkBase": true,
+    "dbId": "1fj00gv7gw12w1whs09a32f8dvl21tgrf6w0"
+  },
+  {
+    "appName": "sys-modeling",
+    "dbId": "1fivvian9w6w1w20ddna0r3e8j83bbpnmvw0"
+  },
+  {
+    "appName": "sys-monitor",
+    "mkBase": true,
+    "dbId": "1fj055gd6w3vw1w1hcq81h2v99gr83l01lw0"
+  },
+  {
+    "appName": "sys-notify",
+    "mkBase": true,
+    "dbId": "1fvked90qw264w1w2rq0udfar2ese25bhdw0"
+  },
+  {
+    "appName": "sys-notifybus",
+    "mkBase": true,
+    "dbId": "1fvkegrcaw265w1w1davmo62vppgmq21dow0"
+  },
+  {
+    "appName": "sys-org-right-auth",
+    "mkBase": true,
+    "dbId": "1fivv8veuw4w1w1h8j96lk96ccngdth7tjw0"
+  },
+  {
+    "appName": "sys-rule",
+    "mkBase": true,
+    "dbId": "1fj00e295wtw1w3gq9b9po8nrcg36fdj7rw0"
+  },
+  {
+    "appName": "tic-server",
+    "mkBase": true,
+    "dbId": "1fj0d73q4w4gw1w4g8qmo39k2b712brjb5w0"
+  }
+]

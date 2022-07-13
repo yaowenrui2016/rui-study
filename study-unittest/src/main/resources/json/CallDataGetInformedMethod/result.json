@@ -1,0 +1,10 @@
+[
+  {
+    "displayName": "待办",
+    "notifyType": "todo"
+  },
+  {
+    "displayName": "邮件",
+    "notifyType": "email"
+  }
+]

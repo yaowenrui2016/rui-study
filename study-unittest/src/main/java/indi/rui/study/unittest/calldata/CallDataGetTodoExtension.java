@@ -21,6 +21,9 @@ public class CallDataGetTodoExtension {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmoke.ywork.me", "yuxd", "1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
+
     public static void main(String[] args) throws Exception {
         // 获取待办同步扩展
         MkResponse<List<?>> mkResponse = mkDataRequestHelper.callDataForList(

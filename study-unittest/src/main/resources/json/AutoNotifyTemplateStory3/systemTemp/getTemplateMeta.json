@@ -1,0 +1,248 @@
+{
+  "providersDisplay": [
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notifyType.todo",
+      "name": "待办",
+      "provider": "todo",
+      "todoExt": false
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.subject",
+              "name": "邮件标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            },
+            {
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.content",
+              "name": "邮件正文",
+              "property": "content",
+              "required": true,
+              "type": "RICH_TEXT"
+            }
+          ],
+          "style": "TEXT_CARD"
+        }
+      ],
+      "messageKey": "sys-notify:notifyType.email",
+      "name": "邮件",
+      "provider": "email",
+      "todoExt": false
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.subject",
+              "name": "待办同步标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        },
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.content",
+              "name": "待办同步内容",
+              "property": "content",
+              "required": true,
+              "type": "RICH_TEXT"
+            },
+            {
+              "messageKey": "sys-notify-example:sys.notify.todoExt.conferenceSync.displayProperty.image",
+              "name": "待办同步图片",
+              "property": "image",
+              "required": true,
+              "type": "IMAGE"
+            }
+          ],
+          "style": "TEXT_CARD"
+        }
+      ],
+      "messageKey": "sys-notify-example:todo.provider.conferenceSync",
+      "name": "会议待办同步",
+      "provider": "conferenceSync",
+      "todoExt": true
+    },
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "name": "标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT"
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ],
+      "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+      "name": "MK待办置已办通知EKP",
+      "provider": "ekpInform",
+      "todoExt": true
+    }
+  ],
+  "standardVars": [
+    {
+      "displayName": "来源系统",
+      "varName": "appName"
+    },
+    {
+      "displayName": "来源模块",
+      "varName": "moduleName"
+    },
+    {
+      "displayName": "业务名称",
+      "varName": "entityName"
+    },
+    {
+      "displayName": "业务ID",
+      "varName": "entityId"
+    },
+    {
+      "displayName": "业务关键字",
+      "varName": "entityKey"
+    },
+    {
+      "displayName": "链接地址",
+      "varName": "link"
+    },
+    {
+      "displayName": "移动端链接",
+      "varName": "mobileLink"
+    },
+    {
+      "displayName": "节点名称",
+      "varName": "nodeName"
+    },
+    {
+      "displayName": "所属企业",
+      "varName": "corp"
+    },
+    {
+      "displayName": "发起人",
+      "varName": "creator"
+    },
+    {
+      "displayName": "发起时间",
+      "varName": "timestamp"
+    },
+    {
+      "displayName": "参数一",
+      "varName": "parameter1"
+    },
+    {
+      "displayName": "参数二",
+      "varName": "parameter2"
+    }
+  ],
+  "systemTemplates": [
+    {
+      "code": "sys-notify-example:notify.template.define1",
+      "extendVars": [
+        {
+          "displayName": "合同等级",
+          "varName": "extendContents.level"
+        },
+        {
+          "displayName": "区域",
+          "varName": "extendContents.region"
+        },
+        {
+          "displayName": "申请人",
+          "varName": "extendContents.applicator"
+        },
+        {
+          "displayName": "合同链接",
+          "varName": "extendContents.contractLink"
+        },
+        {
+          "displayName": "合同名称",
+          "varName": "replaceText.contractName"
+        },
+        {
+          "displayName": "合同签订日期",
+          "varName": "replaceText.contractDate"
+        }
+      ],
+      "module": "sys-notify-example",
+      "name4Lang": {
+        "en-US": "conference template 1",
+        "zh-HK": "会议系统模板1",
+        "zh-CN": "会议系统模板1"
+      },
+      "subject4Lang": {
+        "en-US": "conference template 1 --- Please approve the '${replaceText.contractDate}' contract for ${replaceText.contractName}",
+        "zh-HK": "会议系统模板1-请审批${replaceText.contractName}的'${replaceText.contractDate}'合同",
+        "zh-CN": "会议系统模板1-请审批${replaceText.contractName}的'${replaceText.contractDate}'合同"
+      },
+      "content4Lang": {
+        "en-US": "I am the content template of the message, the contract is the rectification case of this quarter's ${extendContents.level}, and now it is responsible for the ${extendContents.region} business team and ${extendContents.applicator}, please be aware of the leaders and the expert group, please see ${extendContents.contractLink} for details",
+        "zh-HK": "我是消息的内容模板，该合同是本季度${extendContents.level}的整改案例，现在由${extendContents.region}业务团队以及${extendContents.applicator}负责，请各位领导以及专家组知悉，详情请看${extendContents.contractLink} ",
+        "zh-CN": "我是消息的内容模板，该合同是本季度${extendContents.level}的整改案例，现在由${extendContents.region}业务团队以及${extendContents.applicator}负责，请各位领导以及专家组知悉，详情请看${extendContents.contractLink} "
+      }
+    },
+    {
+      "code": "sys-notify-example:notify.template.define2",
+      "content4Lang": {
+        "en-US": "I am the content template of the message, the contract is the rectification case of this quarter's ${extendContents.level}, and now it is responsible for the ${extendContents.region} business team and ${extendContents.applicator}, please be aware of the leaders and the expert group, please see ${extendContents.contractLink} for details",
+        "zh-HK": "我是消息的内容模板，该合同是本季度${extendContents.auditTime}的整改案例，现在由${extendContents.auditor}业务团队以及${extendContents.auditor}负责，请各位领导以及专家组知悉，详情请看${extendContents.opinion} ",
+        "zh-CN": "我是消息的内容模板，该合同是本季度${extendContents.auditTime}的整改案例，现在由${extendContents.auditor}业务团队以及${extendContents.auditor}负责，请各位领导以及专家组知悉，详情请看${extendContents.opinion} "
+      },
+      "extendVars": [
+        {
+          "displayName": "审批人",
+          "varName": "extendContents.auditor"
+        },
+        {
+          "displayName": "审批意见",
+          "varName": "extendContents.opinion"
+        },
+        {
+          "displayName": "审批时间",
+          "varName": "extendContents.auditTime"
+        },
+        {
+          "displayName": "节点名称",
+          "varName": "replaceText.nodeName"
+        }
+      ],
+      "module": "sys-notify-example",
+      "name4Lang": {
+        "en-US": "conference template 2",
+        "zh-HK": "会议系统模板2",
+        "zh-CN": "会议系统模板2"
+      },
+      "subject4Lang": {
+        "en-US": "conference template 2 --- Please approve the '${replaceText.contractDate}' contract for ${replaceText.contractName}",
+        "zh-HK": "会议系统模板2-请审批${replaceText.nodeName}的'${extendContents.auditTime}'合同",
+        "zh-CN": "会议系统模板2-请审批${replaceText.nodeName}的'${extendContents.auditTime}'合同"
+      }
+    }
+  ]
+}

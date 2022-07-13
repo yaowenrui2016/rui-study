@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 系统模板
@@ -23,7 +24,17 @@ public class SystemTemplate {
     /**
      * 模板名称
      */
-    private String name;
+    private Map<String, String> name4Lang;
+
+    /**
+     * 标题模板
+     */
+    private Map<String, String> subject4Lang;
+
+    /**
+     * 内容模板
+     */
+    private Map<String, String> content4Lang;
 
     /**
      * 所属模块

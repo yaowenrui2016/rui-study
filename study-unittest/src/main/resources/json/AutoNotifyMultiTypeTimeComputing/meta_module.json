@@ -1,0 +1,344 @@
+[
+  {
+    "messageKey": "cloud-mall:module.name",
+    "id": "MetaModule:cloud-mall",
+    "label": "云商城",
+    "md5": "ac310a9481351a82de03c1189f6b01eb76d0eab7:80"
+  },
+  {
+    "messageKey": "dbc-analysis:module.name",
+    "id": "MetaModule:dbc-analysis",
+    "label": "统计分析",
+    "md5": "d373d1271d63725a4b567d7b240d3307347f0768:ee"
+  },
+  {
+    "messageKey": "dbc-bpmstat:module.name",
+    "id": "MetaModule:dbc-bpmstat",
+    "label": "流程效率统计",
+    "md5": "40de309fb04bb544a9c799ec3ed26954931c99b7:87"
+  },
+  {
+    "messageKey": "dbc-datahandle:module.name",
+    "id": "MetaModule:dbc-datahandle",
+    "label": "流程统计分析数据处理器",
+    "md5": "64af065753c4b4aaf0bb74558cad1c5da7044ae3:95"
+  },
+  {
+    "messageKey": "km-calendar:module.name",
+    "id": "MetaModule:km-calendar",
+    "label": "日程管理",
+    "md5": "a57b308b47dd9d85f96979469aa6aeb3ef33bcc2:189"
+  },
+  {
+    "messageKey": "km-missive:module.name",
+    "id": "MetaModule:km-missive",
+    "label": "公文管理",
+    "md5": "fce1e9f459c503d7c45a03c6bf9ec0a4fe27c18:185"
+  },
+  {
+    "messageKey": "km-news:module.name",
+    "id": "MetaModule:km-news",
+    "label": "新闻管理",
+    "md5": "b4e0efe61a85abc89fe6f442bf55b90fa42c52c0:12d"
+  },
+  {
+    "messageKey": "km-review:module.name",
+    "id": "MetaModule:km-review",
+    "label": "流程管理",
+    "md5": "04719c9d306a8dc81d86aa204ba0013e52e159e8:180"
+  },
+  {
+    "messageKey": "oppo-content:module.name",
+    "id": "MetaModule:oppo-content",
+    "label": "Mo内容管理",
+    "md5": "055d76bad5f9b8af7bdd934d58e46610f34308db:92"
+  },
+  {
+    "messageKey": "oppo-institution:module.name",
+    "id": "MetaModule:oppo-institution",
+    "label": "MO制度管理",
+    "md5": "0a129026e1c0b55d1398568556bab7148796564d:24f"
+  },
+  {
+    "messageKey": "oppo-integration:module.name",
+    "id": "MetaModule:oppo-integration",
+    "label": "应用归集",
+    "md5": "2ae3bdb4188429383e5664395678f0f222eb0008:196"
+  },
+  {
+    "messageKey": "oppo-missive:module.name",
+    "id": "MetaModule:oppo-missive",
+    "label": "MO公文管理",
+    "md5": "48b7087cc3541d2ab0a3b9ec161b0feab4012a69:185"
+  },
+  {
+    "messageKey": "oppo-news:module.name",
+    "id": "MetaModule:oppo-news",
+    "label": "MO资讯管理",
+    "md5": "231c4c4bb210a8c13396bcfdcad22ff810f7d226:1e8"
+  },
+  {
+    "messageKey": "paas-lbpm:module.name",
+    "id": "MetaModule:paas-lbpm",
+    "label": "流程核心引擎",
+    "md5": "1cf8ae7c93d2c689709f23b53f6f0058b621a88e:c5"
+  },
+  {
+    "messageKey": "paas-rule:module.name",
+    "id": "MetaModule:paas-rule",
+    "label": "规则核心引擎",
+    "md5": "b5b2d28825dc6609a6bee5f12c658847fd301f79:c5"
+  },
+  {
+    "messageKey": "sys-admin:module.name",
+    "id": "MetaModule:sys-admin",
+    "label": "运维管理",
+    "md5": "afa4151385dfcb4f5a7bdae50c3a84ef79ee5a3:c2"
+  },
+  {
+    "messageKey": "sys-attach:module.name",
+    "id": "MetaModule:sys-attach",
+    "label": "附件机制",
+    "md5": "6a5767440805a4d5df6cfce17c44bbb03b2a0772:131"
+  },
+  {
+    "messageKey": "sys-auth:module.name",
+    "id": "MetaModule:sys-auth",
+    "label": "安全管控",
+    "md5": "f5b4ec80a33213055657b2088742654a17073aea:d2"
+  },
+  {
+    "messageKey": "sys-cfg:module.name",
+    "id": "MetaModule:sys-cfg",
+    "label": "基础数据字典",
+    "md5": "29995000afd2ba8740c6a1caf6f12c1bf9d6e13e:ae"
+  },
+  {
+    "messageKey": "sys-circulation:module.name",
+    "id": "MetaModule:sys-circulation",
+    "label": "传阅机制",
+    "md5": "e943a68f7541c4d5a72e5df9a32d638ad3418fec:8f"
+  },
+  {
+    "messageKey": "sys-console:module.name",
+    "id": "MetaModule:sys-console",
+    "label": "菜单管理",
+    "md5": "f1f56b21e5e5af55b7a64285a760d93ba129253a:85"
+  },
+  {
+    "messageKey": "sys-content:module.name",
+    "id": "MetaModule:sys-content",
+    "label": "内容管理",
+    "md5": "b39a0f6a8c59381bc16e5e63fad47cecc3d51acb:83"
+  },
+  {
+    "messageKey": "sys-data-manage:module.name",
+    "id": "MetaModule:sys-data-manage",
+    "label": "数据管理",
+    "md5": "5ca9ec49d29eb9490da70a9f5168c56fe69ba2d5:e8"
+  },
+  {
+    "messageKey": "sys-favorites:module.name",
+    "id": "MetaModule:sys-favorites",
+    "label": "门户个人收藏夹管理",
+    "md5": "2ef4c27e6376da09d5ec11012fcce27b9c531b0e:b1"
+  },
+  {
+    "messageKey": "sys-formula:module.name",
+    "id": "MetaModule:sys-formula",
+    "label": "公式定义器管理",
+    "md5": "303cc54d457ea100488b824eef11cf797da44407:86"
+  },
+  {
+    "messageKey": "sys-handover:module.name",
+    "id": "MetaModule:sys-handover",
+    "label": "工作交接",
+    "md5": "e512754de333c0e66a557b001cdea90e105127b4:144"
+  },
+  {
+    "messageKey": "sys-im:module.name",
+    "id": "MetaModule:sys-im",
+    "label": "即时通讯机制",
+    "md5": "6440102cff6394306d2d3fdbe14dc8593ec6e22d:159"
+  },
+  {
+    "messageKey": "sys-job:module.name",
+    "id": "MetaModule:sys-job",
+    "label": "定时任务",
+    "md5": "7b52db4c833139036755b8b0803661456aba0bb8:bc"
+  },
+  {
+    "messageKey": "sys-lang:module.name",
+    "id": "MetaModule:sys-lang",
+    "label": "多语言服务",
+    "md5": "eea69829713470f0c3f83cc453e7c94c47148b4e:b8"
+  },
+  {
+    "messageKey": "sys-lbpm:module.name",
+    "id": "MetaModule:sys-lbpm",
+    "label": "流程平台",
+    "md5": "b677ba00799e30848582fd15d320b7fd3ab6040d:d3"
+  },
+  {
+    "messageKey": "sys-log:module.name",
+    "id": "MetaModule:sys-log",
+    "label": "日志管理",
+    "md5": "41b99b5194454ec64d9b822eb455bd8e6687f13f:d8"
+  },
+  {
+    "messageKey": "sys-mdm:module.name",
+    "id": "MetaModule:sys-mdm",
+    "label": "主数据管理",
+    "md5": "6d5a2fcc05d318d2a754cf39ce8cdade1f63c0bd:bb"
+  },
+  {
+    "messageKey": "sys-mech-number:module.name",
+    "id": "MetaModule:sys-mech-number",
+    "label": "编号机制",
+    "md5": "cda7cbf38c451311fbc0913d6d385995279ccd61:18a"
+  },
+  {
+    "messageKey": "sys-mech-print:module.name",
+    "id": "MetaModule:sys-mech-print",
+    "label": "打印机制",
+    "md5": "56e2236c58e4b3e5e76838d2adeeaa86982f5ca:8c"
+  },
+  {
+    "messageKey": "sys-mech-transport:module.name",
+    "id": "MetaModule:sys-mech-transport",
+    "label": "导入导出机制",
+    "md5": "f1d2228d6282a631cf10cd72ac63e22cc9bb2dc6:1b6"
+  },
+  {
+    "messageKey": "sys-meta-data:module.name",
+    "id": "MetaModule:sys-meta-data",
+    "label": "元数据管理",
+    "md5": "d8951fc53fc2edaee3a31772304b16816f0466bf:8a"
+  },
+  {
+    "messageKey": "sys-modeling:module.name",
+    "id": "MetaModule:sys-modeling",
+    "label": "低代码平台",
+    "md5": "58f0518a4b4b8a86235420b45bfa73c5c6d589f2:1ce"
+  },
+  {
+    "messageKey": "sys-monitor:module.name",
+    "id": "MetaModule:sys-monitor",
+    "label": "系统监控",
+    "md5": "a5dd042aa2ce457fd96268b4ff805d466e375737:83"
+  },
+  {
+    "messageKey": "sys-notify:module.name",
+    "id": "MetaModule:sys-notify",
+    "label": "消息中心",
+    "md5": "a6eb8a07ede3974b1827540275c96b6c77618dd:140"
+  },
+  {
+    "messageKey": "sys-notifybus:module.name",
+    "id": "MetaModule:sys-notifybus",
+    "label": "消息总线",
+    "md5": "0d3e29fef17adb6a2dc4455860faccc3fe1a4f67:ad"
+  },
+  {
+    "messageKey": "sys-org:module.name",
+    "id": "MetaModule:sys-org",
+    "label": "组织管理",
+    "md5": "96cf2c7a2b7124e0ddc6225462e6139154c97694:118"
+  },
+  {
+    "messageKey": "sys-person:module.name",
+    "id": "MetaModule:sys-person",
+    "label": "person",
+    "md5": "5a96bb5bbd93394a5bdb396f07d5394531d351d6:cb"
+  },
+  {
+    "messageKey": "sys-portal:module.name",
+    "id": "MetaModule:sys-portal",
+    "label": "门户管理",
+    "md5": "0b3e8faac08cef1215be64963a797527acd23c2c:ce"
+  },
+  {
+    "messageKey": "sys-read:module.name",
+    "id": "MetaModule:sys-read",
+    "label": "阅读机制",
+    "md5": "4ca515c4d75ed729ede12d9ba92b64897f7fd51c:84"
+  },
+  {
+    "messageKey": "sys-recycle:module.name",
+    "id": "MetaModule:sys-recycle",
+    "label": "回收站",
+    "md5": "ada0e86a96165e81027150b2bee92d42d2b12e3c:82"
+  },
+  {
+    "messageKey": "sys-refer:module.name",
+    "id": "MetaModule:sys-refer",
+    "label": "数据关系",
+    "md5": "55d742193949ff2dc973db3f91db38576849bcb8:7d"
+  },
+  {
+    "messageKey": "sys-right:module.name",
+    "id": "MetaModule:sys-right",
+    "label": "权限管理",
+    "md5": "9aefdec9d91dff1662839d07a382912066ab5727:e9"
+  },
+  {
+    "messageKey": "sys-rule:module.name",
+    "id": "MetaModule:sys-rule",
+    "label": "规则管理",
+    "md5": "72594677f0425d4e0e53c648b44d82b2dcdce1d:eb"
+  },
+  {
+    "messageKey": "sys-security:module.name",
+    "id": "MetaModule:sys-security",
+    "label": "安全管控",
+    "md5": "b9d4ce7bbccc3326eb5e41e747a757524af1f55e:cb"
+  },
+  {
+    "messageKey": "sys-time:module.name",
+    "id": "MetaModule:sys-time",
+    "label": "节假日设置",
+    "md5": "59ec29a4af92c8cd87d18c4701bdcb63d2111c5e:13f"
+  },
+  {
+    "messageKey": "sys-ui:module.name",
+    "id": "MetaModule:sys-ui",
+    "label": "前端运行时环境",
+    "md5": "8167f264b33d6bb6962b46bc5e3ec2c989e5b974:a0"
+  },
+  {
+    "messageKey": "sys-xform:module.name",
+    "id": "MetaModule:sys-xform",
+    "label": "表单管理",
+    "md5": "699f8175b81db4c0cb3bab1c1355395529ac8005:c6"
+  },
+  {
+    "messageKey": "tic-base:module.name",
+    "id": "MetaModule:tic-base",
+    "label": "集成平台",
+    "md5": "da98ad996f9a1b5e70c88f6a2e68cb539875d8a9:d3"
+  },
+  {
+    "messageKey": "tic-definition:module.name",
+    "id": "MetaModule:tic-definition",
+    "label": "接口管理",
+    "md5": "9baf4abd6370c4e2af15189eb6d34b6877a63fc2:e6"
+  },
+  {
+    "messageKey": "tic-gateway:module.name",
+    "id": "MetaModule:tic-gateway",
+    "label": "API网关管理",
+    "md5": "bac4cd91db70ae60b0c9388d432bf56b6254df80:e0"
+  },
+  {
+    "messageKey": "tic-monitor:module.name",
+    "id": "MetaModule:tic-monitor",
+    "label": "集成监控",
+    "md5": "dd29ef2b1fe5418767fbc10043d41d10ec7d8c1f:de"
+  },
+  {
+    "messageKey": "tic-plugin:module.name",
+    "id": "MetaModule:tic-plugin",
+    "label": "高级功能",
+    "md5": "9cdd30c64f9ee8acebe5f3a1aa07d5643322bd8d:da"
+  }
+]

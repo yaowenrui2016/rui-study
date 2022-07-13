@@ -11,9 +11,14 @@ import indi.rui.study.unittest.util.FileUtils;
 public class Main {
 
     public static void main(String[] args) {
-        ClassLoader classLoader = Main.class.getClassLoader();
-        JSONObject jsonObject = FileUtils.loadJSON(classLoader, "test.json");
-        recursive(jsonObject);
+//        ClassLoader classLoader = Main.class.getClassLoader();
+//        JSONObject jsonObject = FileUtils.loadJSON(classLoader, "test.json");
+//        recursive(jsonObject);
+
+        // 测试打印JSON
+        System.out.println(JSONObject.toJSONString(null));
+        JSONObject json = null;
+        System.out.println(json.toJSONString());
     }
 
     private static void test1() {

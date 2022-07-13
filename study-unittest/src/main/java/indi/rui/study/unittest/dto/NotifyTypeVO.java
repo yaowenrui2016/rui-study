@@ -15,4 +15,9 @@ public class NotifyTypeVO {
     private String displayName;
     private String configPageUrl;
     private Boolean enabled;
+
+    /**
+     * 是否作为一种通知方式
+     */
+    private boolean informedMethod;
 }

@@ -1,0 +1,23 @@
+{
+  "conditions": {
+    "fdType": {
+      "$eq": 2
+    },
+    "orgProperty": {
+      "$eq": "fdLoginName"
+    },
+    "targets": {
+      "$eq": [
+        "test_chengshijie"
+      ]
+    },
+    "todoOrDone": {
+      "$eq": "todo"
+    }
+  },
+  "content": true,
+  "count": true,
+  "filterTenant": true,
+  "offset": 0,
+  "pageSize": 1000
+}

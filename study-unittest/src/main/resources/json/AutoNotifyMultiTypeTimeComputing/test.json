@@ -1,0 +1,79 @@
+{
+  "snid": "1g6i5ad5gwi5mw2p9wqfvei722o4fs6fhew0",
+  "notifyType": "TT",
+  "appName": "MKPaaS",
+  "moduleName": "km-review",
+  "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+  "entityId": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0",
+  "entityKey": "custom",
+  "notifyId": "1g6i5ad2vwi6lwdrw16glpj123sgkgtvh4w0",
+  "parameter1": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0",
+  "targets": [
+    "1ff2ubhj8w4jqw1hdw1ss5kgq1hhnh3r24w0"
+  ],
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "https://mov2-dev.wanyol.com/web/sys-lbpm/desktop/static/transfer.html?processId=1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0&sceneName=%E5%AE%A1%E6%89%B9",
+  "providerIds": [
+    "TT"
+  ],
+  "requestTime": 1656319456432,
+  "subject": "业务方法消息通知",
+  "replaceText": {
+    "creator": "周建明",
+    "subject": "卡片消息推送-3",
+    "operator": "周建明"
+  },
+  "customVars": {
+    "1g69s3ssqwi08wvhw2ijon62cpmaej2qibw0-fdSubject": "卡片消息推送-3",
+    "1g69s3ssqwi08wvhw2ijon62cpmaej2qibw0-fdCreator.fdName": "周建明"
+  },
+  "extendFields": [
+    {
+      "supportFastApproval": "false"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "replaceText": {
+        "creator": "周建明",
+        "subject": "卡片消息推送-3",
+        "operator": "周建明"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0",
+      "entityKey": "custom",
+      "parameter1": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0"
+    },
+    "zh-CN": {
+      "replaceText": {
+        "creator": "周建明",
+        "subject": "卡片消息推送-3",
+        "operator": "周建明"
+      },
+      "customVars": {
+        "1g69s3ssqwi08wvhw2ijon62cpmaej2qibw0-fdSubject": "卡片消息推送-3",
+        "1g69s3ssqwi08wvhw2ijon62cpmaej2qibw0-fdCreator.fdName": "周建明"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0",
+      "entityKey": "custom",
+      "parameter1": "1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0"
+    }
+  },
+  "template": "ec311db5b70b43979e83bdc733c98e98",
+  "todoType": 2,
+  "todoLevel": 3,
+  "creator": "1ff2ubhj8w4jqw1hdw1ss5kgq1hhnh3r24w0",
+  "mobileLink": "https://mov2-dev.wanyol.com/web/sys-lbpm/desktop/static/transfer.html?processId=1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0&sceneName=%E5%AE%A1%E6%89%B9",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdStatus\":\"20\",\"fdModuleName\":\"km-review\",\"fdTemplateId\":\"1g69s4b2twi0fw278w28rh28932apouo3vw0\",\"fdTitle\":\"卡片消息推送-3\",\"fdApplicantId\":\"1ff2ubhj8w4jqw1hdw1ss5kgq1hhnh3r24w0\",\"fdApplicationTime\":1656318472232,\"fdLink\":{\"PAD\":\"https://mov2-dev.wanyol.com/web/sys-lbpm/desktop/static/transfer.html?processId=1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0\",\"PC\":\"https://mov2-dev.wanyol.com/web/sys-lbpm/desktop/static/transfer.html?processId=1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0\",\"MOBILE\":\"https://mov2-dev.wanyol.com/web/sys-lbpm/desktop/static/transfer.html?processId=1g6i4bhojwi60wb9gw2v7sq411kvm3a91nw0\"},\"fdInstanceId\":\"1g6i4bhnswi5pw614w2dc4bbbgdfjk3nmkw0\"}",
+  "queryType": 2
+}

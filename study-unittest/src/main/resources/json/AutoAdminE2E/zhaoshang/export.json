@@ -1,0 +1,154 @@
+{
+  "nodeOperList": [
+    {
+      "fdId": "1ft7mokd5w6kwk3a3w3fi6kd918fodrt11w0",
+      "referType": "SysNumberMain",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftigsj0hw77w1lpcw30586hd7nr87c1okw0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftpf4ga0w77w3uq0w22620ha1hb0o003gw0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftjqc1qkw77w1t7kwvuql4l19ub2f3279w0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1fthu8s3pw77w1k3hw2gjjqdhmhhpu92eqw0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6idik02w51won2w1b91sfh1ronv0q251w0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftjp0te0w77w1sf2w1mfj0eu25dbr4115w0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftjp0te0w77w1sf2w1mfj0eu25dbr4115w0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftigc1b5w77w1lgdw1jujp1c3gtb05d38w0",
+      "referType": "SysXFormCommonControl",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftig8lhow72w5irowi10i581i6cdg03vqw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1fthpfv24w71wbf7rw239o3es1qiftu81tw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftho1qkew71wb9g2w7n0fj81jhl3k82rmw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftie8ik6w71wcmvqw13jabog1jsaej3ruw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftihd3cjw71wcul3wach6leotejp019gfw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftigtr0gw71wcslow1lnq00ujtt5va3g8w0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftjq68rsw71weo2iw3pptt7133ff7es3ew0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftif3grvw71wcofmwbibn0q1sk0s324kew0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1fthsusdnw71wboarw1ago1bv22j3tjr17w0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftho6cnjw71wb9oiwpacg39rtar5h16t3w0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftifv768w72w5id8w1960iiu28m9v7i3nw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1ftie454aw72w5fsgw3qnjklt161r2sptnw0",
+      "referType": "TicDefInterface",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1fthns9elw71wb8pow1hnupju1uvi7li3iw0",
+      "referType": "TicSystem",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g67v7868w3rwkhnwigumhi352vg583fb2w0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6ajuln3w4owno6w251efsg3bpmoeb27sw0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6ia0jerw51whcsw1n0n9bcvbj2o73crgw0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6i9fjffw51wge6w1s369paa5rdl13t4uw0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6i124s5w4ow264sw3u2icgalmi1tp84vw0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6i98sntw51wg14wi7rqhog8me7i69vaew0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g6i92qtdw51wfs9w26nnef91d9etms3suw0",
+      "referType": "SysGeneralFormDefine",
+      "operation": "NEW"
+    },
+    {
+      "fdId": "1g67v6h2fw3rwkh0w14l7ik03f9ubkd8caw0",
+      "referType": "SysGeneralFormCategory",
+      "operation": "NEW"
+    }
+  ]
+}

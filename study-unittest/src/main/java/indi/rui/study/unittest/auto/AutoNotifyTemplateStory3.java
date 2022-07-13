@@ -22,11 +22,11 @@ import java.util.*;
 @Slf4j
 public class AutoNotifyTemplateStory3 {
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
@@ -41,15 +41,27 @@ public class AutoNotifyTemplateStory3 {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mksmokemini.ywork.me", "yaowr", "1");
+//            = new MkDataRequestHelper("http://mkoppore.ywork.me", "liq", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmokemini.ywork.me",
+//            "http://mkoppore.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://mkpro.ywork.me", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://mkpro.ywork.me",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.253.2.124:8080",
+//            "http://10.253.13.232:8080",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkzszq.ywork.me", "liq", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkzszq.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
@@ -59,25 +71,25 @@ public class AutoNotifyTemplateStory3 {
 //        // 新建系统模板
 //        String code = save("new_system_template.json");
 //        // 根据编码查找模板
-//        findByCode(code);
+//        findByCode("$common:test1");
 //        // 查询模板列表
 //        findAll();
 
 
-        // 创建会议将消息模板作为机制保存
-        String conferenceId = createConference();
-        // 查询会议将消息模板作为机制加载
-        getConference(conferenceId);
-        // 修改会议并修改消息模板机制
-        editConference(conferenceId);
-        // 查询会议将消息模板作为机制加载
-        getConference(conferenceId);
-        // 删除会议并删除消息模板机制
-        deleteConference(conferenceId);
+//        // 创建会议将消息模板作为机制保存
+//        String conferenceId = createConference();
+//        // 查询会议将消息模板作为机制加载
+//        getConference(conferenceId);
+//        // 修改会议并修改消息模板机制
+//        editConference(conferenceId);
+//        // 查询会议将消息模板作为机制加载
+//        getConference(conferenceId);
+//        // 删除会议并删除消息模板机制
+//        deleteConference(conferenceId);
 
 
 //        // 使用模板发送待办
-//        String snid = send(code);
+//        String snid = send("P001");
 //        // 查看待办原始记录
 //        timeComputing(snid);
 
@@ -89,7 +101,7 @@ public class AutoNotifyTemplateStory3 {
 
 
 //        // 使用模板发送邮件
-//        String snid = sendEmail("$common:code008");
+//        String snid = sendEmail("P001");
 //        // 查看邮件原始记录
 //        timeComputing(snid);
 
@@ -104,6 +116,10 @@ public class AutoNotifyTemplateStory3 {
 //        SysNotifyTemplateVO templateVO = findByCode("P001");
 //        // 删除模板
 //        delete(templateVO.getFdId());
+
+
+//        // 测试导入模板
+//        testImport();
     }
 
     /**
@@ -272,8 +288,17 @@ public class AutoNotifyTemplateStory3 {
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Send or done todo error! errMsg=" + mkResponse.getMsg());
         }
-        log.info("send notify success! snid={}", mkResponse.getData());
+        log.info("send notify success! mkResponse={}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
         return mkResponse.getData();
+    }
+
+    private static void testImport() {
+        JSONObject template = FileUtils.loadJSON("AutoNotifyTemplateStory3/import/data.json");
+        JSONObject body = new JSONObject();
+        body.put("complete", template);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifyTemplate/testImport", body);
+        log.info("testImport: {}", JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat));
     }
 
     private static String sendTodo(String filename) {

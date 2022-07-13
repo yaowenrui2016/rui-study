@@ -11,7 +11,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class MkReferGroup {
+public class ReferGroup {
 
     private String type;
 
@@ -21,5 +21,5 @@ public class MkReferGroup {
 
     private Boolean isOrg;
 
-    private List<MkReferTreeNode> referNodes;
+    private List<ReferTreeNode> referNodes;
 }

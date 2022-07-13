@@ -1,0 +1,108 @@
+{
+  "providersDisplay": [
+    {
+      "messageKey": "sys-notify:notifyType.todo",
+      "provider": "todo",
+      "name": "待办",
+      "todoExt": false,
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "name": "标题",
+              "property": "subject",
+              "value4Lang": {
+                "zh-CN": "123"
+              },
+              "type": "SINGLE_LINE_TEXT",
+              "required": true
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ]
+    },
+    {
+      "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+      "provider": "ekpInform",
+      "name": "MK待办置已办通知EKP",
+      "todoExt": true,
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "name": "标题",
+              "property": "subject",
+              "value4Lang": {
+                "zh-CN": "123"
+              },
+              "type": "SINGLE_LINE_TEXT",
+              "required": true
+            }
+          ],
+          "style": "PLAIN_TEXT"
+        }
+      ]
+    }
+  ],
+  "fdEnabled": true,
+  "fdCode": "$common:test1",
+  "dynamicProps": {
+    "fdNameCn": "测试"
+  },
+  "creatorName": "李琦",
+  "fdCreateTime": 1656142510000,
+  "fdType": "CUSTOM",
+  "fdTemplateUnit": [
+    {
+      "fdPropMessageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+      "fdPropType": "SINGLE_LINE_TEXT",
+      "fdProvider": "todo",
+      "fdRequired": true,
+      "fdProperty": "subject",
+      "fdId": "1g6csie7pw44fw9qw3l7efdmpb3qio10alw0",
+      "fdIsTodoExt": false,
+      "fdPropName": "标题",
+      "extendProps": {},
+      "fdTemplateId": "1g6csie63w44fw9pwlcrau16flu643sl2jw0",
+      "fdValue": "123",
+      "fdStyle": "PLAIN_TEXT",
+      "fdMessageKey": "sys-notify:notifyType.todo",
+      "fdLang": "zh-CN"
+    },
+    {
+      "fdPropMessageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+      "fdPropType": "SINGLE_LINE_TEXT",
+      "fdProvider": "ekpInform",
+      "fdRequired": true,
+      "fdProperty": "subject",
+      "fdId": "1g6csie84w44fw9rw112164m1t5kbck1ndw0",
+      "fdIsTodoExt": true,
+      "fdPropName": "标题",
+      "extendProps": {},
+      "fdTemplateId": "1g6csie63w44fw9pwlcrau16flu643sl2jw0",
+      "fdValue": "123",
+      "fdStyle": "PLAIN_TEXT",
+      "fdMessageKey": "sys-notify:notify.todo.provider.ekpInform",
+      "fdLang": "zh-CN"
+    }
+  ],
+  "usedVars": [],
+  "fdId": "1g6csie63w44fw9pwlcrau16flu643sl2jw0",
+  "extendProps": {
+    "fdCreateTime": 1656142510000,
+    "fdName": "测试"
+  },
+  "fdCreatorId": "1fjn000ktwqw69kw9qjt9h1tvaorbl6qv5w0",
+  "fdName": "测试",
+  "mechanisms": {
+    "load": "attachment",
+    "attachment": [],
+    "attach-meta": {
+      "com.landray.sys.notify.core.entity.SysNotifyTemplate": "attachGetAll|attachEditAll",
+      "com.landray.sys.notify.core.entity.SysNotifyTemplate#1g6csie63w44fw9pwlcrau16flu643sl2jw0": "5DcNYi++L+Z9ZkI+HqFwfUD+UFfHECQLfR674bKIFV+r6F4ASrtqF+yhNCAtGMa7zLKqsS1mp6qzgibfO/nas4dLxAZhO6I8IdpD32lIzgGMXkGPJdJ7Xj84MfCXFfiula9SlPCaMIx63hlTFuXaTDY9PnVMW9X31hRXKl1pPlQ="
+    }
+  }
+}

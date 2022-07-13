@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class MkReferTreeNode {
+public class ReferTreeNode {
 
     /**
      * 引用类型
@@ -70,7 +70,7 @@ public class MkReferTreeNode {
     /**
      * 实体数据引用的关联项
      */
-    private List<MkReferTreeNode> referNodes;
+    private List<ReferTreeNode> referNodes;
 
     /**
      * 实体数据被引用的节点列表

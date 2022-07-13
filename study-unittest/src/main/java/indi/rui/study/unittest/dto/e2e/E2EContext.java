@@ -1,11 +1,10 @@
-package indi.rui.study.unittest.dto;
+package indi.rui.study.unittest.dto.e2e;
 
-import indi.rui.study.unittest.dto.e2e.MkReferGroup;
-import indi.rui.study.unittest.dto.e2e.MkReferTreeNode;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author: yaowr
@@ -13,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class MkEnvToEnvContext {
+public class E2EContext {
 
     /**
      * 离线导入的附件id
@@ -33,27 +32,32 @@ public class MkEnvToEnvContext {
     /**
      * 主文档节点列表
      */
-    private List<MkReferTreeNode> entityNodes;
+    private List<ReferTreeNode> entityNodes;
 
     /**
      * 关联项分组
      */
-    private List<MkReferGroup> referGroupList;
+    private List<ReferGroup> referGroupList;
 
     /**
      * 关联树
      */
-    private List<MkReferTreeNode> referTree;
+    private List<ReferTreeNode> referTree;
+
+    /**
+     * 导出映射，用于导出时避免重复
+     */
+    private Map<String, ReferTreeNode> exportedMap;
 
     /**
      * 组织架构节点列表
      */
-    private List<MkReferTreeNode> orgNodes;
+    private List<ReferTreeNode> orgNodes;
 
     /**
      * 导入中数据记录
      */
-    private List<ImportingData> importingDataList;
+    private List<ImportItem> importItemList;
 
     /**
      * 任务id
@@ -68,7 +72,7 @@ public class MkEnvToEnvContext {
 
     @Getter
     @Setter
-    public static class ImportingData {
+    public static class ImportItem {
 
         /**
          * 导入数据记录id
@@ -106,7 +110,7 @@ public class MkEnvToEnvContext {
          * 3-成功
          * 4-失败
          */
-        private String fdState;
+        private Integer fdState;
 
         /**
          * 错误信息

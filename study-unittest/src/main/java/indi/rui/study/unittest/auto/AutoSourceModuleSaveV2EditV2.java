@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 @Slf4j
 public class AutoSourceModuleSaveV2EditV2 {
 
-    private static final String ADDRESS = "http://localhost:8040";
+    private static final String ADDRESS = "http://127.0.0.1:8040";
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
             ADDRESS, "yaowr", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(

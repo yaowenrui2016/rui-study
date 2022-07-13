@@ -28,17 +28,17 @@ import java.util.concurrent.CyclicBarrier;
 @Slf4j
 public class AutoNotifyMultiTypeTimeComputing {
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkdev02.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://10.253.4.185:8080",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mktest.ywork.me",
