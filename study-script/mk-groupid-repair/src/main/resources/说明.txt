@@ -1,0 +1,10 @@
+操作说明：
+   -该程序用于检查已办数据是否都来自于外部（经过notifybus-server）的请求。
+   -根据项目实际使用的数据库替换相应的驱动包，默认使用Oracle（对应的驱动包为lib/ojdbc7.jar）
+   -更改config/hibernate.cfg.xml配置文件中的数据库连接信息：
+   	<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+    <property name="connection.url">jdbc:oracle:thin:@192.168.2.189:1521:oracle12</property>
+    <property name="connection.username">mkpaas</property>
+    <property name="connection.password">mkpaas</property>
+    <property name="dialect">org.hibernate.dialect.Oracle12cDialect</property>
+   -该程序需要在jvm上运行，执行启动脚本start.sh

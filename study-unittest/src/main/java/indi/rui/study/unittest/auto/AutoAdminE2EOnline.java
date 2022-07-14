@@ -70,26 +70,11 @@ public class AutoAdminE2EOnline {
         E2EContext context = loadEntityNodes(encOlCmd);         // 第2步：获取主文档
         context = loadReferTree(context.getEntityNodes(), encOlCmd);
         context = loadOrgNodes(context.getReferGroupList(), encOlCmd);
-
-//        context = onlineTargetExportData(encOlCmd, context);
-//        onlineTargetStartImport(encOlCmd, context);
-
-//        // 离线导出（本地）
-//        E2EContext context = offLineLoadReferTree("exportRequest.json");
-//        String filename = offLineExport(context.getReferGroupList());
-////        String filename = "EnvToEnv_ExampleEntity.zip";
-////        uploadAttach("C:\\Users\\yaowr\\Pictures\\temp\\2.jpg");
-////        uploadAttach("D:\\project\\rui-study\\downloadTemp\\EnvToEnv_ExampleEntity_20220609160427.zip");
-//        String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
-////        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
-//        context = loadEntityNodes(attachId);
-//        context = loadReferTree(context.getEntityNodes());
-//        context = loadOrgNodes(context.getReferGroupList());
-//        String taskId = offLineImportData(attachId, context.getOrgNodes());
+        String taskId = startImport(context.getOrgNodes(), encOlCmd);
 
         // 加载任务
-//        Thread.sleep(3000);
-//        findTask(taskId);
+        Thread.sleep(3000);
+        findTask(taskId);
     }
 
     private static void loadApi(String entityName) {
@@ -161,24 +146,29 @@ public class AutoAdminE2EOnline {
         return mkResponse.getData();
     }
 
-    private static E2EContext onlineTargetExportData(String encOlCmd, E2EContext context) {
-        JSONObject json = (JSONObject) JSONObject.toJSON(context);
+    /**
+     * 在线导入
+     */
+    private static String startImport(List<ReferTreeNode> orgNodes, String encOlCmd) {
+        JSONObject replaceOrg = new JSONObject();
+        replaceOrg.put("fdId", "11111");
+        replaceOrg.put("fdName", "张三");
+        List<ReferTreeNode> nodeOperList = new ArrayList<>();
+        for (ReferTreeNode node : orgNodes) {
+            ReferTreeNode operNode = new ReferTreeNode();
+            operNode.setReferType(node.getReferType());
+            operNode.setFdId(node.getFdId());
+            operNode.setOperation("REPLACE");
+            operNode.setReplaceOrg(replaceOrg);
+            nodeOperList.add(operNode);
+        }
+        JSONObject json = new JSONObject();
         json.put("encOlCmd", encOlCmd);
-        MkResponse<E2EContext> response = mkDataRequestHelper.callData(
-                "/data/sys-admin/e2e/online/target/exportData",
-                json, E2EContext.class);
-        log.info("Export data: {}", JSONObject.toJSONString(response, SerializerFeature.PrettyFormat));
-        return response.getData();
-    }
-
-    private static E2EContext onlineTargetStartImport(String encOlCmd, E2EContext context) {
-        JSONObject json = (JSONObject) JSONObject.toJSON(context);
-        json.put("encOlCmd", encOlCmd);
-        MkResponse<E2EContext> response = mkDataRequestHelper.callData(
-                "/data/sys-admin/e2e/online/target/startImport",
-                json, E2EContext.class);
-        log.info("Start import: {}", JSONObject.toJSONString(response, SerializerFeature.PrettyFormat));
-        return response.getData();
+        json.put("nodeOperList", nodeOperList);
+        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-admin/e2e/online/target/startImport", json, JSONObject.class);
+        log.info("online start import: {}", mkResponse.getData().toString(SerializerFeature.PrettyFormat));
+        return mkResponse.getData().getString("taskId");
     }
 
     // ======================== 离线 ========================= //
@@ -229,31 +219,6 @@ public class AutoAdminE2EOnline {
         JSONObject attachInfo = mkResponse.getData();
         log.info("upload: attachId={}", attachInfo.toString());
         return (String) attachInfo.get("fdAttachFileId");
-    }
-
-    /**
-     * 离线导入数据
-     */
-    private static String offLineImportData(String attachId, List<ReferTreeNode> orgNodes) {
-        JSONObject replaceOrg = new JSONObject();
-        replaceOrg.put("fdId", "11111");
-        replaceOrg.put("fdName", "张三");
-        List<ReferTreeNode> nodeOperList = new ArrayList<>();
-        for (ReferTreeNode node : orgNodes) {
-            ReferTreeNode operNode = new ReferTreeNode();
-            operNode.setReferType(node.getReferType());
-            operNode.setFdId(node.getFdId());
-            operNode.setOperation("REPLACE");
-            operNode.setReplaceOrg(replaceOrg);
-            nodeOperList.add(operNode);
-        }
-        JSONObject json = new JSONObject();
-        json.put("attachId", attachId);
-        json.put("nodeOperList", nodeOperList);
-        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-admin/e2e/offline/target/startImport", json, JSONObject.class);
-        log.info("start import: {}", mkResponse.getData().toString(SerializerFeature.PrettyFormat));
-        return mkResponse.getData().getString("taskId");
     }
 
     private static void findTask(String taskId) {

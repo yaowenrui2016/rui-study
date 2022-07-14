@@ -22,11 +22,11 @@ import java.util.*;
 @Slf4j
 public class AutoNotifyTemplateStory3 {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
@@ -46,11 +46,11 @@ public class AutoNotifyTemplateStory3 {
 //            "http://mkoppore.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://mkpro.ywork.me", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://mkpro.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkpro.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkpro.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
@@ -62,6 +62,12 @@ public class AutoNotifyTemplateStory3 {
 //            = new MkDataRequestHelper("http://mkzszq.ywork.me", "liq", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mkzszq.ywork.me",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://mkyfdyf.ywork.me", "liq", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://mkyfdyf.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
@@ -88,10 +94,10 @@ public class AutoNotifyTemplateStory3 {
 //        deleteConference(conferenceId);
 
 
-//        // 使用模板发送待办
-//        String snid = send("P001");
-//        // 查看待办原始记录
-//        timeComputing(snid);
+        // 使用模板发送待办
+        String snid = send("P001");
+        // 查看待办原始记录
+        timeComputing(snid);
 
 
 //        // 获取默认邮件底板

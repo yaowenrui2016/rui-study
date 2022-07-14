@@ -18,5 +18,6 @@
     <modules>
         <module>bgy-notify-repair</module>
         <module>bgy-notify-done-check</module>
+        <module>mk-groupid-repair</module>
     </modules>
 </project>
