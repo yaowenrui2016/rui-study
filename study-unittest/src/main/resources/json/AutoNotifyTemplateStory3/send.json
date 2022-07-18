@@ -8,6 +8,7 @@
   "entityId": "1",
   "entityName": "testNotifyTemplate",
   "orgProperty": "fdLoginName",
+  "creator": "yaowr",
   "targets": [
     "yaowr",
     "liq"

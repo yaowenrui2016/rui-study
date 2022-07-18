@@ -96,7 +96,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
-                            <mainClass>com.landray.groupid.repair.Main</mainClass>
+                            <mainClass>com.landray.groupid.repair.LangFileClearService</mainClass>
                         </manifest>
                         <manifestEntries>
                             <!--MANIFEST.MF 中 Class-Path 加入配置目录信息-->

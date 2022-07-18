@@ -64,10 +64,11 @@ public class AutoNotifyTemplateStory3 {
 //            "http://mkzszq.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkyfdyf.ywork.me", "liq", "1");
+//    private static MkDataRequestHelper mkDataRequestHelper = null;
+//    //    private static MkDataRequestHelper mkDataRequestHelper
+////            = new MkDataRequestHelper("http://mkyfdyf.ywork.me", "liq", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkyfdyf.ywork.me",
+//            "https://mkyfdyf.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
@@ -77,7 +78,7 @@ public class AutoNotifyTemplateStory3 {
 //        // 新建系统模板
 //        String code = save("new_system_template.json");
 //        // 根据编码查找模板
-//        findByCode("$common:test1");
+//        findByCode("P001");
 //        // 查询模板列表
 //        findAll();
 
@@ -96,8 +97,8 @@ public class AutoNotifyTemplateStory3 {
 
         // 使用模板发送待办
         String snid = send("P001");
-        // 查看待办原始记录
-        timeComputing(snid);
+//        // 查看待办原始记录
+//        timeComputing(snid);
 
 
 //        // 获取默认邮件底板
