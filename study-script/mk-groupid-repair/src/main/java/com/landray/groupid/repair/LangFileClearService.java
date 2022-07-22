@@ -7,6 +7,8 @@ import com.landray.groupid.repair.model.ModuleInfo;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -18,9 +20,23 @@ import static com.landray.groupid.repair.util.ModuleUtil.loadModules;
  */
 @Slf4j
 public class LangFileClearService {
+    /**
+     * 加载属性文件
+     */
+    private static Properties properties = new Properties();
+    static {
+        try {
+            InputStream inputStream = PomGroupIdReplaceService.class.getClassLoader().getResourceAsStream("config/application.properties");
+            properties.load(inputStream);
+            log.info("load properties: {}", JSONObject.toJSONString(properties, SerializerFeature.PrettyFormat));
+        } catch (IOException e) {
+            throw new RuntimeException("Load 'config/application.properties' error!");
+        }
+    }
 
-    private static final String WORKSPACE = "D:\\landray\\project\\mkpaas-0713";
-    private static final String RESOURCE_PATTERN = "src\\main\\java\\com\\landray\\%s\\resource";
+    private static String workspace = properties.getProperty("project.workspace");
+    private static String resourcePattern = properties.getProperty("clear.lang.resource");
+
 
     public static void main(String[] args) {
         List<LangFileInfo> langFileInfos = findLangFileInfo();
@@ -34,7 +50,7 @@ public class LangFileClearService {
             }
             totalFiles += langFiles.size();
         }
-        log.info("lang file delete:{}（总共删除{}个模块下的{}个资源文件）",
+        log.info("lang file delete:{} (Totally delete {} modules with {} resource '.properties' files)",
                 JSONObject.toJSONString(langFileMap, SerializerFeature.PrettyFormat),
                 langFileInfos.size(),
                 totalFiles
@@ -46,7 +62,7 @@ public class LangFileClearService {
         List<LangFileInfo> langFileInfos = new ArrayList<>();
         for (ModuleInfo moduleInfo : loadModules()) {
             String module = moduleInfo.getModuleDir();
-            File moduleDir = new File(WORKSPACE + File.separator + module);
+            File moduleDir = new File(workspace + File.separator + module);
             if (moduleDir.exists()) {
                 File[] projectDirs = moduleDir.listFiles();
                 if (projectDirs != null) {
@@ -55,7 +71,7 @@ public class LangFileClearService {
                         String project;
                         if (projectDir.isDirectory() && (project = projectDir.getName()).startsWith("mk")
                                 && project.endsWith("-core")) {
-                            File resourceDir = new File(projectDir, String.format(RESOURCE_PATTERN, moduleInfo.getModuleName().replace("-", File.separator)));
+                            File resourceDir = new File(projectDir, String.format(resourcePattern, moduleInfo.getModuleName().replace("-", File.separator)));
                             File[] langFiles = resourceDir.listFiles(
                                     pathname -> !pathname.getName().equals("ApplicationResources.properties")
                                             && pathname.getName().matches("^ApplicationResources_.+\\.properties$"));

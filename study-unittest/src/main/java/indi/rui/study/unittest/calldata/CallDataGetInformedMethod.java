@@ -1,11 +1,12 @@
 package indi.rui.study.unittest.calldata;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.InformedMethodDTO;
 import indi.rui.study.unittest.dto.MkResponse;
-import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
+import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -31,7 +32,9 @@ public class CallDataGetInformedMethod {
 //            = new MkDataRequestHelper("http://mkoppo.ywork.me", "liq", "1");
 
     public static void main(String[] args) {
-        getInformedMethodRPC();
+//        getInformedMethodRPC();
+        getInformedMethodForInnerRPC();
+        open();
         getInformedMethodForInnerRPC();
     }
 
@@ -55,5 +58,16 @@ public class CallDataGetInformedMethod {
         }
         log.info("Get informed method for inner: {}", JSON.toJSONString(mkResponse.getData(),
                 SerializerFeature.PrettyFormat));
+    }
+
+    private static void open() {
+        JSONObject json = FileUtils.loadJSON("CallDataGetInformedMethod/open.json");
+        // 拉取来源系统和模块
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/config/open", json);
+        if (!mkResponse.isSuccess()) {
+            throw new RuntimeException("Open informed method error! errMsg=" + mkResponse.getMsg());
+        }
+        log.info("Open informed method: {}", mkResponse.isSuccess());
     }
 }

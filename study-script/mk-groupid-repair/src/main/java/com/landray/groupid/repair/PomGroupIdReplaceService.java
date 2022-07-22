@@ -11,14 +11,8 @@ import org.dom4j.Element;
 import org.dom4j.io.SAXReader;
 import org.dom4j.io.XMLWriter;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 import static com.landray.groupid.repair.util.ModuleUtil.loadModules;
 
@@ -28,11 +22,23 @@ import static com.landray.groupid.repair.util.ModuleUtil.loadModules;
  */
 @Slf4j
 public class PomGroupIdReplaceService {
+    /**
+     * 加载属性文件
+     */
+    private static Properties properties = new Properties();
+    static {
+        try {
+            InputStream inputStream = PomGroupIdReplaceService.class.getClassLoader().getResourceAsStream("config/application.properties");
+            properties.load(inputStream);
+            log.info("load properties: {}", JSONObject.toJSONString(properties, SerializerFeature.PrettyFormat));
+        } catch (IOException e) {
+            throw new RuntimeException("Load 'config/application.properties' error!");
+        }
+    }
 
-    private static String workspace = "D:\\landray\\project\\mkpaas-0713";
-
-    private static final String SOURCE = "${mk.group-id}";
-    private static final String TARGET = "${landray.mk.group-id}";
+    private static String workspace = properties.getProperty("project.workspace");
+    private static String source = properties.getProperty("pom.groupId.source");
+    private static String target = properties.getProperty("pom.groupId.target");
 
     public static void main(String[] args) {
         List<PomInfo> pomInfos = findPomXml();
@@ -48,7 +54,7 @@ public class PomGroupIdReplaceService {
                 totalReplaced += pomInfo.getReplaced();
             }
         }
-        log.info("Finished: {} (总共{}个模块，{}个pom.xml，{}处替换)",
+        log.info("Finished: {} (Totally find {} modules, {} pom.xml files, {} replaces)",
                 JSONObject.toJSONString(projectMap, SerializerFeature.PrettyFormat),
                 projectMap.size(),
                 pomNum,
@@ -72,8 +78,8 @@ public class PomGroupIdReplaceService {
                 List<Element> dependencyEleList = dependenciesEle.elements();
                 for (Element dependencyEle : dependencyEleList) {
                     Element groupIdEle = dependencyEle.element("groupId");
-                    if (groupIdEle.getText().equals(SOURCE)) {
-                        groupIdEle.setText(TARGET);
+                    if (groupIdEle.getText().equals(source)) {
+                        groupIdEle.setText(target);
                         replaced++;
                     }
                 }

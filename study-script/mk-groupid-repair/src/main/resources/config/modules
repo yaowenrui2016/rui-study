@@ -31,3 +31,8 @@ mk-sys-job
 mk-dbc-analysis
 mk-sys-security
 mk-sys-recycle
+mk-common
+mk-sys-monitor
+mk-package
+mk-framework-gateway
+mk-framework-discovery
