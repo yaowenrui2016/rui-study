@@ -46,8 +46,11 @@ public class AutoCreatePersonAndAuthorized {
 
     /* ------------------ 各个环境 --------------- */
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://127.0.0.1:8040", "secadmin", "Password_1");
+
     private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://127.0.0.1:8040", "secadmin", "Password_1");
+            "http://mkpre.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mktest.ywork.me", "secadmin", "Password_1");
