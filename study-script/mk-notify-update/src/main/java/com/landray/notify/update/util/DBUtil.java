@@ -11,7 +11,7 @@ import java.math.BigInteger;
  */
 public class DBUtil {
 
-    private static final String DEFAULT_SCHEMA = "MySQL";
+    private static final String DEFAULT_SCHEMA = "mysql";
 
     enum DBType {
         MYSQL,

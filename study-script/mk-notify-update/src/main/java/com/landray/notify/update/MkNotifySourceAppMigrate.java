@@ -5,6 +5,7 @@ import com.landray.notify.update.util.DBUtil;
 import com.landray.notify.update.util.SessionFactoryHolder;
 import com.landray.notify.update.util.TransactionUtil;
 import lombok.extern.slf4j.Slf4j;
+import org.hibernate.SessionFactory;
 import org.hibernate.query.internal.NativeQueryImpl;
 import org.hibernate.transform.Transformers;
 
@@ -23,18 +24,22 @@ public class MkNotifySourceAppMigrate {
     private static final String PREVIOUS_TABLE_NAME = "sys_notify_source_m_apps";
     private static final String SOURCE_APP_SOURCE_ID_ADMIN_MANUAL = "Admin Manual";
 
+    private static SessionFactory sessionFactory = SessionFactoryHolder.getInstance();
     private static EntityManager entityManager = SessionFactoryHolder.createEntityManager();
 
     public static void main(String[] args) {
+        migrateSourceAppModule();
     }
 
-    public static void migrateSourceAppModule(String database) {
+    public static void migrateSourceAppModule() {
         try {
             /**
              * 第一个元素：值为1表示旧表存在，为0表示不存在
              * 第二个元素：存放查找到的旧表数据行数
              * 第三个元素：存放迁移成功的数据行数
              */
+            Map<String, Object> props = sessionFactory.getProperties();
+            String database = (String) props.get("hibernate.database");
             final int[] report = new int[]{0, 0, 0};
             TransactionUtil.inNewTransaction(() -> {
                 if (!DBUtil.checkExists(entityManager, database, PREVIOUS_TABLE_NAME)) {
