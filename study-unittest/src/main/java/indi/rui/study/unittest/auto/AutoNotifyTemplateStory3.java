@@ -22,17 +22,17 @@ import java.util.*;
 @Slf4j
 public class AutoNotifyTemplateStory3 {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mkpre.ywork.me", "yaowr", "1");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://10.251.9.250:8080",
+            "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mkpre.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://10.251.9.250:8080",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
@@ -88,9 +88,9 @@ public class AutoNotifyTemplateStory3 {
 //        // 获取模板元数据
 //        getTemplateMeta();
 //        // 新建系统模板
-//        String code = save("new_system_template.json");
+//        String code = save("create_notifyTemplate.json");
 //        // 根据编码查找模板
-//        findByCode("paas-lbpm:lbpm.notify.template.review");
+//        findByCode("P001");
 //        // 查询模板列表
 //        findAll();
 
@@ -108,7 +108,7 @@ public class AutoNotifyTemplateStory3 {
 
 
         // 使用模板发送待办
-        String snid = send("paas-lbpm:lbpm.notify.template.review");
+        String snid = send("P001");
 //        // 查看待办原始记录
 //        timeComputing(snid);
 

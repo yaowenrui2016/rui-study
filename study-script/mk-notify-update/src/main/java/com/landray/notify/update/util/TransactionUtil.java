@@ -1,19 +1,10 @@
 package com.landray.notify.update.util;
 
-import com.landray.notify.update.model.SourceApp;
-import com.landray.notify.update.model.SourceModule;
-import com.landray.notify.update.support.AcmePhysicalNamingStrategy;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.boot.MetadataBuilder;
-import org.hibernate.boot.MetadataSources;
-import org.hibernate.boot.registry.BootstrapServiceRegistry;
-import org.hibernate.boot.registry.BootstrapServiceRegistryBuilder;
-import org.hibernate.boot.registry.StandardServiceRegistry;
-import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import java.util.function.Consumer;
 
 /**
  * @author: yaowr
@@ -22,31 +13,35 @@ import javax.persistence.EntityManager;
 @Slf4j
 public class TransactionUtil {
 
-    private static SessionFactory sessionFactory = SessionFactoryHolder.getInstance();
-
-    public static void inNewTransaction(Runnable runnable) {
-        Session session = null;
+    /**
+     * 开启事务
+     *
+     * @param consumer
+     */
+    public static void inTransaction(Consumer<EntityManager> consumer) {
+        EntityManager entityManager = null;
+        EntityTransaction entityTx = null;
         try {
-            // 打开session并开启事务
-            session = sessionFactory.openSession();
-            session.beginTransaction();
+            // 创建entityManager
+            entityManager = SessionFactoryHolder.createEntityManager();
+            // 开启事务
+            entityTx = entityManager.getTransaction();
+            entityTx.begin();
             // 运行业务方法
-            runnable.run();
+            consumer.accept(entityManager);
             // 提交事务
-            session.getTransaction().commit();
+            entityTx.commit();
         } catch (Exception e) {
             // 回滚事务
-            if (session != null) {
-                session.getTransaction().rollback();
-                log.error("Mock data rollback!", e);
+            if (entityTx != null) {
+                entityTx.rollback();
+                log.error("Transaction error, rollback!", e);
             } else {
-                log.error("Mock data error!", e);
+                log.error("Transaction error!", e);
             }
         } finally {
-            // 关闭session
-            if (session != null) {
-                session.close();
-            }
+            // 关闭entityManager
+            entityManager.close();
         }
     }
 }

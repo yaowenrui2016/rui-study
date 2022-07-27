@@ -2,6 +2,7 @@ package com.landray.notify.update;
 
 import com.landray.notify.update.model.SourceAppModule;
 import com.landray.notify.update.util.DBUtil;
+import com.landray.notify.update.util.IDGenerator;
 import com.landray.notify.update.util.SessionFactoryHolder;
 import com.landray.notify.update.util.TransactionUtil;
 import lombok.extern.slf4j.Slf4j;
@@ -9,7 +10,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.internal.NativeQueryImpl;
 import org.hibernate.transform.Transformers;
 
-import javax.persistence.EntityManager;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -25,7 +25,6 @@ public class MkNotifySourceAppMigrate {
     private static final String SOURCE_APP_SOURCE_ID_ADMIN_MANUAL = "Admin Manual";
 
     private static SessionFactory sessionFactory = SessionFactoryHolder.getInstance();
-    private static EntityManager entityManager = SessionFactoryHolder.createEntityManager();
 
     public static void main(String[] args) {
         migrateSourceAppModule();
@@ -34,15 +33,16 @@ public class MkNotifySourceAppMigrate {
     public static void migrateSourceAppModule() {
         try {
             /**
-             * 第一个元素：值为1表示旧表存在，为0表示不存在
+             * 第一个元素：值为1表示旧表存在，需要执行数据迁移；为0表示不存在，不需要执行数据迁移
              * 第二个元素：存放查找到的旧表数据行数
              * 第三个元素：存放迁移成功的数据行数
              */
             Map<String, Object> props = sessionFactory.getProperties();
             String database = (String) props.get("hibernate.database");
+            String schema = (String) props.get("hibernate.schema");
             final int[] report = new int[]{0, 0, 0};
-            TransactionUtil.inNewTransaction(() -> {
-                if (!DBUtil.checkExists(entityManager, database, PREVIOUS_TABLE_NAME)) {
+            TransactionUtil.inTransaction(entityManager -> {
+                if (!DBUtil.checkExists(entityManager, database, schema, PREVIOUS_TABLE_NAME)) {
                     return;
                 }
                 report[0] = 1;
@@ -62,11 +62,12 @@ public class MkNotifySourceAppMigrate {
                     // 插入数据到新表
                     for (String keyInfo : filteredBaksMap.keySet()) {
                         String[] info = keyInfo.split(":");
-                        SourceAppModule vo = new SourceAppModule();
-                        vo.setFdAppId(info[0]);
-                        vo.setFdModuleId(info[1]);
-                        vo.setFdSourceId(SOURCE_APP_SOURCE_ID_ADMIN_MANUAL);
-                        add(vo);
+                        SourceAppModule appModule = new SourceAppModule();
+                        appModule.setFdId(IDGenerator.generateID());
+                        appModule.setFdAppId(info[0]);
+                        appModule.setFdModuleId(info[1]);
+                        appModule.setFdSourceId(SOURCE_APP_SOURCE_ID_ADMIN_MANUAL);
+                        entityManager.persist(appModule);
                     }
                     report[2] = filteredBaksMap.size();
                 }
@@ -75,22 +76,16 @@ public class MkNotifySourceAppMigrate {
             });
 
             if (report[0] == 1) {
-                log.info("Previous table '{}' found {} rows , migrate {} rows.",
-                        PREVIOUS_TABLE_NAME,
+                log.info("Found [{}] rows in previous table '{}'  , migrate [{}] rows into new table 'sys_notify_source_app_module'.",
                         report[1],
+                        PREVIOUS_TABLE_NAME,
                         report[2]
                 );
             } else {
-                log.warn("Previous table '{}' not found!", PREVIOUS_TABLE_NAME);
+                log.info("Not fount previous table '{}'", PREVIOUS_TABLE_NAME);
             }
         } catch (Throwable e) {
             log.error("Migrate source app module exception!", e);
         }
-    }
-
-    private static void add(SourceAppModule appModule) {
-        TransactionUtil.inNewTransaction(() -> {
-            entityManager.persist(appModule);
-        });
     }
 }

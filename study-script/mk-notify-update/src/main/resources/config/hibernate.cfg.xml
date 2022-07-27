@@ -16,8 +16,9 @@
         <!-- Database connection settings -->
         <!-- MYSQL -->
         <property name="database">mysql</property>
+        <property name="schema">jingbo_0727</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://study.rui.ubuntu:3306/mkpaas_0722?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>
+        <property name="connection.url">jdbc:mysql://study.rui.ubuntu:3306/jingbo_0727?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>
         <property name="connection.username">root</property>
         <property name="connection.password">password</property>
         <property name="dialect">org.hibernate.dialect.MySQL55Dialect</property>
@@ -39,13 +40,15 @@
         <property name="show_sql">false</property>
 
         <!-- Drop and re-create the database schema on startup -->
-        <property name="hbm2ddl.auto">none</property>
+        <property name="hbm2ddl.auto">update</property>
 
         <!-- 驼峰命名，也可以在启动Hibernate时显示指定 -->
 <!--        <property name="hibernate.physical_naming_strategy">com.landray.repair.conf.AcmePhysicalNamingStrategy</property>-->
 
         <!-- Names the annotated entity class -->
-<!--        <mapping class="com.landray.repair.entity.SourceModuleModule"/>-->
+        <mapping class="com.landray.notify.update.model.SourceApp"/>
+        <mapping class="com.landray.notify.update.model.SourceModule"/>
+        <mapping class="com.landray.notify.update.model.SourceAppModule"/>
 
 <!--        <mapping resource="config/hbm/SourceAppModule.hbm.xml" />-->
 

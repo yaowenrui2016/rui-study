@@ -37,8 +37,8 @@ public class SessionFactoryHolder {
                             .build();
                     try {
                         MetadataSources sources = new MetadataSources(registry);
-                        sources.addAnnotatedClass(SourceApp.class);
-                        sources.addAnnotatedClass(SourceModule.class);
+//                        sources.addAnnotatedClass(SourceApp.class);
+//                        sources.addAnnotatedClass(SourceModule.class);
                         MetadataBuilder metadataBuilder = sources.getMetadataBuilder();
                         metadataBuilder.applyPhysicalNamingStrategy(new AcmePhysicalNamingStrategy());
                         sessionFactory = metadataBuilder.build().buildSessionFactory();

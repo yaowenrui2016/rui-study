@@ -11,8 +11,6 @@ import java.math.BigInteger;
  */
 public class DBUtil {
 
-    private static final String DEFAULT_SCHEMA = "mysql";
-
     enum DBType {
         MYSQL,
         ORACLE,
@@ -36,12 +34,12 @@ public class DBUtil {
      * @param table
      * @return
      */
-    public static boolean checkExists(EntityManager entityManager, String database, String table) {
+    public static boolean checkExists(EntityManager entityManager, String database, String schema, String table) {
         DBType dbType = DBType.of(database);
         boolean exists = false;
         switch (dbType) {
             case MYSQL:
-                exists = getMysqlCheck(entityManager, table);
+                exists = getMysqlCheck(entityManager, schema, table);
                 break;
             case SQLSERVER:
                 exists = getSqlServerCheck(entityManager, table);
@@ -61,10 +59,10 @@ public class DBUtil {
      * @param table
      * @return
      */
-    private static boolean getMysqlCheck(EntityManager entityManager, String table) {
+    private static boolean getMysqlCheck(EntityManager entityManager, String schema, String table) {
         String sql = "select count(1) from information_schema.tables where table_schema= ? and table_name= ?";
         BigInteger result = (BigInteger) entityManager.createNativeQuery(sql)
-                .setParameter(1, DEFAULT_SCHEMA)
+                .setParameter(1, schema)
                 .setParameter(2, table)
                 .getSingleResult();
         return result.intValue() > 0;

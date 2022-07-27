@@ -20,9 +20,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creatorName}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
               }
             }
           ],
@@ -45,9 +45,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "邮件标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "郵件標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Email subject: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "邮件标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "郵件標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "Email subject: The contract initiator applied by ${extendContents.auditor} is ${creatorName}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
               }
             },
             {
@@ -57,9 +57,9 @@
               "required": true,
               "type": "RICH_TEXT",
               "value4Lang": {
-                "zh-CN": "邮件正文：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "郵件正文：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Email Content: The contract initiator applied by ${extendContents.auditor} is ${creator}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "邮件正文：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "郵件正文：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "Email Content: The contract initiator applied by ${extendContents.auditor} is ${creatorName}, the contract amount is ${replaceText.money}，additional：#{customVars.dinner}"
               }
             }
           ],
@@ -82,9 +82,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creatorName}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
               }
             }
           ],
@@ -99,9 +99,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "会议标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "會議標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "Conference subject: Contract initiator for ${extendContents.auditor} is ${creatorName}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
               }
             },
             {
@@ -148,9 +148,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办同步标题：由${extendContents.auditor}申请的合同发起人为${creator}，合同金额${replaceText.money}",
-                "zh-HK": "待辦同步標題：由${extendContents.auditor}申請的合同贊助者為${creator}，合同金額${replaceText.money}",
-                "en-US": "Todo sync subject: Contract initiator for ${extendContents.auditor} is ${creator}, contract amount ${replaceText.money}"
+                "zh-CN": "待办同步标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}",
+                "zh-HK": "待辦同步標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}",
+                "en-US": "Todo sync subject: Contract initiator for ${extendContents.auditor} is ${creatorName}, contract amount ${replaceText.money}"
               }
             }
           ],
