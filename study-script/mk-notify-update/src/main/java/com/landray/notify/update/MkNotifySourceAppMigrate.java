@@ -3,10 +3,9 @@ package com.landray.notify.update;
 import com.landray.notify.update.model.SourceAppModule;
 import com.landray.notify.update.util.DBUtil;
 import com.landray.notify.update.util.IDGenerator;
-import com.landray.notify.update.util.SessionFactoryHolder;
 import com.landray.notify.update.util.TransactionUtil;
+import indi.rui.study.unittest.util.PropertiesUtil;
 import lombok.extern.slf4j.Slf4j;
-import org.hibernate.SessionFactory;
 import org.hibernate.query.internal.NativeQueryImpl;
 import org.hibernate.transform.Transformers;
 
@@ -24,8 +23,6 @@ public class MkNotifySourceAppMigrate {
     private static final String PREVIOUS_TABLE_NAME = "sys_notify_source_m_apps";
     private static final String SOURCE_APP_SOURCE_ID_ADMIN_MANUAL = "Admin Manual";
 
-    private static SessionFactory sessionFactory = SessionFactoryHolder.getInstance();
-
     public static void main(String[] args) {
         migrateSourceAppModule();
     }
@@ -37,9 +34,8 @@ public class MkNotifySourceAppMigrate {
              * 第二个元素：存放查找到的旧表数据行数
              * 第三个元素：存放迁移成功的数据行数
              */
-            Map<String, Object> props = sessionFactory.getProperties();
-            String database = (String) props.get("hibernate.database");
-            String schema = (String) props.get("hibernate.schema");
+            String database = PropertiesUtil.getProperty("database");
+            String schema = PropertiesUtil.getProperty("schema");
             final int[] report = new int[]{0, 0, 0};
             TransactionUtil.inTransaction(entityManager -> {
                 if (!DBUtil.checkExists(entityManager, database, schema, PREVIOUS_TABLE_NAME)) {

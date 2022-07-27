@@ -15,8 +15,6 @@
 
         <!-- Database connection settings -->
         <!-- MYSQL -->
-        <property name="database">mysql</property>
-        <property name="schema">jingbo_0727</property>
         <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="connection.url">jdbc:mysql://study.rui.ubuntu:3306/jingbo_0727?useUnicode=true&amp;characterEncoding=utf-8&amp;useSSL=false</property>
         <property name="connection.username">root</property>

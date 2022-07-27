@@ -84,7 +84,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.4</version>
                 <configuration>
-                    <finalName>mk-groupid-repair</finalName>
+                    <finalName>mk-notify-update-tool</finalName>
                     <excludes>
                         <!--不打包资源文件目录-->
                         <exclude>json/</exclude>
@@ -96,7 +96,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
-                            <mainClass>com.landray.groupid.repair.LangFileClearService</mainClass>
+                            <mainClass>com.landray.notify.update.MkNotifySourceAppMigrate</mainClass>
                         </manifest>
                         <manifestEntries>
                             <!--MANIFEST.MF 中 Class-Path 加入配置目录信息-->
