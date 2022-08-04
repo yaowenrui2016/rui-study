@@ -128,11 +128,17 @@ public class MkLoginHelper {
         if (!success) {
             throw new RuntimeException("username=" + username + ", password=" + password +
                     ", url=" + url + ", errMsg=" + errorMsg);
+        } else {
+            log.info("login url: {}", url);
         }
         // 返回结果
         MkLoginResult result = new MkLoginResult();
         result.setXAuthToken(xAuthToken);
         result.setUserInfo(userInfo);
         return result;
+    }
+
+    public static void main(String[] args) {
+        login("yaowr", "1");
     }
 }

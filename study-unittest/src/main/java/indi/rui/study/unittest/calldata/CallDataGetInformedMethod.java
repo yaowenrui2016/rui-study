@@ -34,8 +34,6 @@ public class CallDataGetInformedMethod {
     public static void main(String[] args) {
 //        getInformedMethodRPC();
         getInformedMethodForInnerRPC();
-        open();
-        getInformedMethodForInnerRPC();
     }
 
     private static void getInformedMethodRPC() {
@@ -58,16 +56,5 @@ public class CallDataGetInformedMethod {
         }
         log.info("Get informed method for inner: {}", JSON.toJSONString(mkResponse.getData(),
                 SerializerFeature.PrettyFormat));
-    }
-
-    private static void open() {
-        JSONObject json = FileUtils.loadJSON("CallDataGetInformedMethod/open.json");
-        // 拉取来源系统和模块
-        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-notify/config/open", json);
-        if (!mkResponse.isSuccess()) {
-            throw new RuntimeException("Open informed method error! errMsg=" + mkResponse.getMsg());
-        }
-        log.info("Open informed method: {}", mkResponse.isSuccess());
     }
 }

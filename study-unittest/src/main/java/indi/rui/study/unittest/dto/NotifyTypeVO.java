@@ -13,6 +13,7 @@ import lombok.Setter;
 public class NotifyTypeVO {
     private String notifyType;
     private String displayName;
+    private String desc;
     private String configPageUrl;
     private Boolean enabled;
 

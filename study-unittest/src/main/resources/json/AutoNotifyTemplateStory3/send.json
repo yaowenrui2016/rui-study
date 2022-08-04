@@ -11,6 +11,7 @@
   "creator": "yaowr",
   "targets": [
     "yaowr",
+    "lqtest002",
     "liq"
   ],
   "replaceText": {

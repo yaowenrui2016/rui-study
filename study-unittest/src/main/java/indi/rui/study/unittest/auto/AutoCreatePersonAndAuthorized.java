@@ -27,8 +27,9 @@ public class AutoCreatePersonAndAuthorized {
 //            "zhoum", "周勉"
 //    };
 
-    private static final String[] USER_LOGIN_NAMES = new String[]{
+    private static String[] USER_LOGIN_NAMES = new String[]{
             "yaowr", "姚文锐",
+            "lqtest002", "王大海"
 //            "zhangyl", "张越良",
 //            "cuipx", "崔璞璇",
 //            "chenp", "陈鹏",
@@ -40,6 +41,16 @@ public class AutoCreatePersonAndAuthorized {
 //            "penghe", "彭贺",
 //            "laow", "老王",
     };
+
+    static {
+        int count = 200;
+        USER_LOGIN_NAMES = new String[count * 2];
+        for (int i = 1; i <= count; i++) {
+            USER_LOGIN_NAMES[2 * (i - 1)] = "TestUser" + i;
+            USER_LOGIN_NAMES[2 * (i - 1) + 1] = "用户" + i;
+        }
+    }
+
 
 //    private static final String[] USER_LOGIN_NAMES = new String[]{
 //            "yaowr", "姚文锐",};

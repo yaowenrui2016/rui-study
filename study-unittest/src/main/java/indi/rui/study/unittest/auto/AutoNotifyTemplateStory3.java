@@ -22,17 +22,17 @@ import java.util.*;
 @Slf4j
 public class AutoNotifyTemplateStory3 {
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkpre.ywork.me", "yaowr", "1");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.251.9.250:8080",
+//            "http://127.0.0.1:8040",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
+    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+            "http://mkpre.ywork.me", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://10.251.9.60:8080",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
