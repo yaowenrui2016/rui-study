@@ -37,8 +37,8 @@ public class AutoNotifyMultiTypeTimeComputing {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://10.253.4.185:8080",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+            "http://192.168.1.229:9102",
+            "366f6858484945534e67715a51424c776a666d5361673d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mktest.ywork.me",

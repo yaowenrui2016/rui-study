@@ -1,0 +1,96 @@
+{
+  "snid": "1gal822nvw40t8w83sw3q77df632kvic11w0",
+  "notifyType": "todo",
+  "appName": "MKPaaS",
+  "moduleName": "km-review",
+  "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+  "entityId": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0",
+  "entityKey": "custom",
+  "notifyId": "1gal822low40t5w5i6w30s6s034q3ib8gdw0",
+  "parameter1": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0",
+  "targets": [
+    "1g1pi9c92wggw1bnbw17ammpg162kg5q4kw0"
+  ],
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "https://mkzszq.ywork.me/web/#/current/km-review/kmReviewMain/view/1gal81jfqw40t7w54jw1l4jcctgtp57ekow0?processInstanceId=1gal81jmew40t5w5gkw1trcnqh1vimkt11w0&formKey=default&taskId=1gal822fhw40t5w5i4wrhn30j13sj8n4j1w0&mechAuthToken=MfwLOKI99RtqKIQtiDotE0yFGHFOD0elnNeDVXeg9cbZet0qKn9l+DHWnHGaTKQtR0LEzDoQGk67CQKq+NE1H4yeobQwHbyQmUgxdESiBgU=",
+  "providerIds": [
+    "todo",
+    "sms"
+  ],
+  "requestTime": 1660717959936,
+  "subject": "业务方法消息通知",
+  "replaceText": {
+    "creator": "李琦",
+    "subject": "业务方法测试",
+    "operation": "提交",
+    "operator": "李琦"
+  },
+  "customVars": {},
+  "extendFields": [
+    {
+      "supportFastApproval": "false"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "replaceText": {
+        "creator": "李琦",
+        "subject": "业务方法测试",
+        "operation": "提交",
+        "operator": "李琦"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0",
+      "entityKey": "custom",
+      "creatorName": "李琦",
+      "parameter1": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0"
+    },
+    "zh-HK": {
+      "replaceText": {
+        "creator": "李琦",
+        "subject": "业务方法测试",
+        "operation": "提交",
+        "operator": "李琦"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0",
+      "entityKey": "custom",
+      "creatorName": "李琦",
+      "parameter1": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0"
+    },
+    "zh-CN": {
+      "replaceText": {
+        "creator": "李琦",
+        "subject": "业务方法测试",
+        "operation": "提交",
+        "operator": "李琦"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0",
+      "entityKey": "custom",
+      "creatorName": "李琦",
+      "parameter1": "1gal81jmew40t5w5gkw1trcnqh1vimkt11w0"
+    }
+  },
+  "template": "$common:test",
+  "todoType": 2,
+  "todoLevel": 3,
+  "creator": "1g1pl8rptwggw1jpkw1hpe6mc3bp1c421hw0",
+  "creatorName": "李琦",
+  "mobileLink": "https://mkzszq.ywork.me/web/#/current/km-review/kmReviewMain/view/1gal81jfqw40t7w54jw1l4jcctgtp57ekow0?processInstanceId=1gal81jmew40t5w5gkw1trcnqh1vimkt11w0&formKey=default&taskId=1gal822fhw40t5w5i4wrhn30j13sj8n4j1w0&mechAuthToken=MfwLOKI99RtqKIQtiDotE0yFGHFOD0elnNeDVXeg9cbZet0qKn9l+DHWnHGaTKQtR0LEzDoQGk67CQKq+NE1H4yeobQwHbyQmUgxdESiBgU=",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdProcessNo\":\"00005\",\"fdStatus\":\"20\",\"fdModuleName\":\"km-review\",\"fdTemplateId\":\"1gal6d2b9w40t5w2srwpkmdcuj5th6n30pw0\",\"fdTitle\":\"业务方法测试\",\"fdApplicantId\":\"1g1pl8rptwggw1jpkw1hpe6mc3bp1c421hw0\",\"fdApplicationTime\":1660717944526,\"fdLink\":{\"PAD\":\"https://mkzszq.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1gal81jmew40t5w5gkw1trcnqh1vimkt11w0\",\"PC\":\"https://mkzszq.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1gal81jmew40t5w5gkw1trcnqh1vimkt11w0\",\"MOBILE\":\"https://mkzszq.ywork.me/web/sys-lbpm/desktop/static/transfer.html?processId=1gal81jmew40t5w5gkw1trcnqh1vimkt11w0\"},\"fdInstanceId\":\"1gal81jfqw40t7w54jw1l4jcctgtp57ekow0\"}",
+  "queryType": 2
+}

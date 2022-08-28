@@ -1,0 +1,23 @@
+[
+  {
+    "fdPath": "sys-lbpm/manage/locale",
+    "fdMsgKey": "statistic.route-module-process-overview",
+    "fdLangResouce": {
+      "zh-cn": "流程概览2--manage"
+    }
+  },
+  {
+    "fdPath": "sys-lbpm/desktop/locale",
+    "fdMsgKey": "statistic.route-module-process-overview",
+    "fdLangResouce": {
+      "zh-cn": "流程概览2--desktop"
+    }
+  },
+  {
+    "fdPath": "sys-lbpm/mobile/locale",
+    "fdMsgKey": "statistic.route-module-process-overview",
+    "fdLangResouce": {
+      "zh-cn": "流程概览2--mobile"
+    }
+  }
+]

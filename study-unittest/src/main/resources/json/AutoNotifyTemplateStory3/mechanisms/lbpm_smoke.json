@@ -1,0 +1,904 @@
+{
+  "fdId": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+  "dynamicProps": {
+    "fdSimpleNameCn": "123",
+    "fdNameCn": "消息测试"
+  },
+  "mechanisms": {
+    "load": "*",
+    "sys-xform": {
+      "fdId": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+      "dynamicProps": {},
+      "mechanisms": {
+        "sys-auth": {
+          "mechAuthToken": "htN406t9c2/qfRFHM/0P2UlemtuFk8DW9Vx6uuCKX54m2CGTghMtVJGU7s1V7ePN4EI2aKko3FVGmem/HTzR+cgd3dqdJlszul7tX5oCqoWodJ2kXowLeWp1ep/aNbBF"
+        },
+        "attachment": []
+      },
+      "fdCreator": {
+        "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+        "fdName": "李琦"
+      },
+      "fdCreateTime": 1660186961250,
+      "fdAlter": {
+        "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+        "fdName": "李琦"
+      },
+      "fdAlterTime": 1660195577015,
+      "fdName": "消息测试",
+      "fdTableName": "mk_model_202208110y63h",
+      "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+      "fdConfig": "{\"auth\":[{\"fdName\":\":publicLang.sysFormAuth\",\"authOrg\":[],\"fdIsAvailable\":true,\"add\":{\"mk_model_202208110y63h\":{\"fields\":{\"fd_col_mhm02d\":{\"visible\":true,\"editable\":true,\"required\":false,\"hide\":false}}}},\"edit\":{\"mk_model_202208110y63h\":{\"fields\":{\"fd_col_mhm02d\":{\"visible\":true,\"editable\":true,\"required\":false,\"hide\":false}}}},\"view\":{\"mk_model_202208110y63h\":{\"fields\":{\"fd_col_mhm02d\":{\"visible\":true,\"hide\":false}}}},\"fdCreator\":{\"fdId\":\"1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0\",\"fdName\":\"李琦\"},\"fdCreateTime\":1660186959554}],\"dataModel\":[{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"dynamicProps\":{},\"fdCreator\":{\"fdId\":\"1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0\",\"fdName\":\"李琦\"},\"fdCreateTime\":1660186961439,\"fdAlter\":{\"fdId\":\"1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0\",\"fdName\":\"李琦\"},\"fdAlterTime\":1660195577011,\"fdName\":\"消息测试\",\"fdTableName\":\"mk_model_202208110y63h\",\"fdType\":\"main\",\"fdFields\":[{\"fdId\":\"1ga5dmup8w34w9mw1o8d9s633a2ksm3hgew0\",\"fdLabel\":\"单行文本1\",\"fdLabelLangKey\":\"!{l6oggb8t30a9aauvbef}\",\"fdName\":\"fd_col_mhm02d\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_col_mhm02d\\\",\\\"config\\\":{\\\"key\\\":\\\"@elem/xform-input~ifk25p\\\",\\\"type\\\":\\\"text\\\",\\\"controlProps\\\":{\\\"title\\\":\\\"!{l6oggb8t30a9aauvbef}\\\",\\\"$$tableName\\\":\\\"mk_model_202208110y63h\\\",\\\"maxLength\\\":100,\\\"$$tableType\\\":\\\"main\\\",\\\"name\\\":\\\"fd_col_mhm02d\\\",\\\"uuid\\\":\\\"fd_col_mhm02d\\\",\\\"id\\\":\\\"@elem/xform-input~ifk25p\\\",\\\"placeholder\\\":\\\"!{l6oggb90hqwazy1rc1}\\\",\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"maskFormatType\\\":\\\"********\\\",\\\"encryptMonth\\\":9999,\\\"failureRule\\\":\\\"ANONYMIZE\\\",\\\"desktop\\\":{\\\"type\\\":\\\"@elem/xform-input\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\",\\\"type\\\":\\\"@elem/xform-m-input\\\"},\\\"type\\\":\\\"@elem/xform-input\\\"},\\\"labelProps\\\":{\\\"labelTextAlign\\\":\\\"left\\\",\\\"mobileContentAlign\\\":\\\"right\\\",\\\"title\\\":\\\"!{l6oggb8t30a9aauvbef}\\\",\\\"desktop\\\":{\\\"layout\\\":\\\"vertical\\\"},\\\"mobile\\\":{\\\"layout\\\":\\\"vertical\\\"}},\\\"kind\\\":\\\"control\\\",\\\"label\\\":\\\"!{l6oggb8t30a9aauvbef}\\\"}}\",\"fdFontExtendData\":\"{\\\"passValue\\\":false,\\\"trace\\\":false,\\\"defaultValueType\\\":\\\"formula\\\",\\\"encryptDefinition\\\":{}}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":100,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":false,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":1,\"uuid\":\"fd_col_mhm02d\"},{\"fdId\":\"1ga5dl9h5w34w5fw31tjprc32gi34818ipw0\",\"fdLabel\":\"编号\",\"fdLabelLangKey\":\"KmReviewMain.fdNumber\",\"fdName\":\"fdNumber\",\"fdColumn\":\"fd_number\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdNumber\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdNumber\"},{\"fdId\":\"1ga5dl9h7w34w5gw19i554e16baolh2r4ew0\",\"fdLabel\":\"创建时间\",\"fdLabelLangKey\":\"KmReviewMain.fdCreateTime\",\"fdName\":\"fdCreateTime\",\"fdColumn\":\"fd_create_time\",\"fdType\":\"timestamp\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreateTime\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdCreateTime\"},{\"fdId\":\"1ga5dl9haw34w5hw3v5btp91js5i3e3hq6w0\",\"fdLabel\":\"创建人\",\"fdLabelLangKey\":\"KmReviewMain.fdCreator\",\"fdName\":\"fdCreator\",\"fdColumn\":\"fd_creator_id\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreator\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdCreator\"},{\"fdId\":\"1ga5dl9hdw34w5iw1ukuqcp71miua3gjupw0\",\"fdLabel\":\"附件可拷贝者\",\"fdLabelLangKey\":\"KmReviewMain.fdAttCopys\",\"fdName\":\"fdAttCopys\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttCopys\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAttCopys\"},{\"fdId\":\"1ga5dl9hgw34w5jw2eft5s635m8q8532d5w0\",\"fdLabel\":\"附件可打印者\",\"fdLabelLangKey\":\"KmReviewMain.fdAttPrints\",\"fdName\":\"fdAttPrints\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttPrints\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAttPrints\"},{\"fdId\":\"1ga5dl9hlw34w5kwmforuv95uqci1ralevw0\",\"fdLabel\":\"传阅对象\",\"fdLabelLangKey\":\"KmReviewMain.fdCirculatedReceiver\",\"fdName\":\"fdCirculatedReceiver\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCirculatedReceiver\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdCirculatedReceiver\"},{\"fdId\":\"1ga5dl9hqw34w5lw2nonkic2lo07k919jow0\",\"fdLabel\":\"流程状态\",\"fdLabelLangKey\":\"KmReviewMain.fdProcessStatus\",\"fdName\":\"fdProcessStatus\",\"fdColumn\":\"fd_process_status\",\"fdType\":\"radio\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdProcessStatus\\\"}\",\"fdFontExtendData\":\"{\\\"options\\\":[{\\\"value\\\":\\\"00\\\",\\\"messageKey\\\":\\\"km-review:property.status.discard\\\",\\\"label\\\":\\\"废弃\\\"},{\\\"value\\\":\\\"10\\\",\\\"messageKey\\\":\\\"km-review:property.status.draft.temp\\\",\\\"label\\\":\\\"草稿\\\"},{\\\"value\\\":\\\"11\\\",\\\"messageKey\\\":\\\"km-review:property.status.draft.reject\\\",\\\"label\\\":\\\"驳回\\\"},{\\\"value\\\":\\\"20\\\",\\\"messageKey\\\":\\\"km-review:property.status.draft.examine\\\",\\\"label\\\":\\\"待审\\\"},{\\\"value\\\":\\\"21\\\",\\\"messageKey\\\":\\\"km-review:property.status.suspend\\\",\\\"label\\\":\\\"挂起\\\"},{\\\"value\\\":\\\"29\\\",\\\"messageKey\\\":\\\"km-review:property.status.exception\\\",\\\"label\\\":\\\"异常\\\"},{\\\"value\\\":\\\"30\\\",\\\"messageKey\\\":\\\"km-review:property.status.publish\\\",\\\"label\\\":\\\"发布\\\"}]}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"optionDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdProcessStatus\"},{\"fdId\":\"1ga5dl9jmw34w5mwpcvt9f1gku1gkl9qdiw0\",\"fdLabel\":\"标题\",\"fdLabelLangKey\":\"KmReviewMain.fdSubject\",\"fdName\":\"fdSubject\",\"fdColumn\":\"fd_subject\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdSubject\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdSubject\"},{\"fdId\":\"1ga5dl9naw34w66w20jeia794ngu28kqtuw0\",\"fdLabel\":\"对应版本\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdVersion\",\"fdName\":\"fd_version\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_version\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":9999,\"uuid\":\"fd_version\"},{\"fdId\":\"1ga5dl9jpw34w5nwbmh2932t9spe825hd3w0\",\"fdLabel\":\"外部文档Mobile链接\",\"fdLabelLangKey\":\"KmReviewMain.fdOuterMobileLink\",\"fdName\":\"fdOuterMobileLink\",\"fdColumn\":\"fd_outer_mobile_link\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterMobileLink\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdOuterMobileLink\"},{\"fdId\":\"1ga5dl9jsw34w5ow28vdurr2kmr6a61npjw0\",\"fdLabel\":\"修改人\",\"fdLabelLangKey\":\"KmReviewMain.fdAlter\",\"fdName\":\"fdAlter\",\"fdColumn\":\"fd_alter_id\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAlter\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAlter\"},{\"fdId\":\"1ga5dl9k1w34w5pw1po9r6282611o3g1lhw0\",\"fdLabel\":\"编辑者\",\"fdLabelLangKey\":\"KmReviewMain.fdEditors\",\"fdName\":\"fdEditors\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdEditors\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdEditors\"},{\"fdId\":\"1ga5dl9k4w34w5qw2l0psqt1h3006r2a6vw0\",\"fdLabel\":\"拥有者\",\"fdLabelLangKey\":\"KmReviewMain.fdOwner\",\"fdName\":\"fdOwner\",\"fdColumn\":\"fd_owner_id\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOwner\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdOwner\"},{\"fdId\":\"1ga5dl9k7w34w5rw2dl97vm10n3f5m3ntmw0\",\"fdLabel\":\"最后修改时间\",\"fdLabelLangKey\":\"KmReviewMain.fdLastModifiedTime\",\"fdName\":\"fdLastModifiedTime\",\"fdColumn\":\"fd_last_modified_time\",\"fdType\":\"timestamp\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdLastModifiedTime\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdLastModifiedTime\"},{\"fdId\":\"1ga5dl9kbw34w5sw1epudtb2j0hefh3qquw0\",\"fdLabel\":\"附件可下载者\",\"fdLabelLangKey\":\"KmReviewMain.fdAttDownloads\",\"fdName\":\"fdAttDownloads\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAttDownloads\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAttDownloads\"},{\"fdId\":\"1ga5dl9kfw34w5tw20hn6vf2q6akni3hkbw0\",\"fdLabel\":\"阅读者\",\"fdLabelLangKey\":\"KmReviewMain.fdReaders\",\"fdName\":\"fdReaders\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdReaders\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdReaders\"},{\"fdId\":\"1ga5dl9kjw34w5uw2pde54s1hj4fpi22h6w0\",\"fdLabel\":\"修改时间\",\"fdLabelLangKey\":\"KmReviewMain.fdAlterTime\",\"fdName\":\"fdAlterTime\",\"fdColumn\":\"fd_alter_time\",\"fdType\":\"timestamp\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAlterTime\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAlterTime\"},{\"fdId\":\"1ga5dl9knw34w5vw2n191bt1cl4cf916u8w0\",\"fdLabel\":\"创建者部门\",\"fdLabelLangKey\":\"KmReviewMain.fdCreatorDept\",\"fdName\":\"fdCreatorDept\",\"fdColumn\":\"fd_creator_dept\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdCreatorDept\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdCreatorDept\"},{\"fdId\":\"1ga5dl9krw34w60wtq7ovn2t4ljol3qmofw0\",\"fdLabel\":\"外部文档主键\",\"fdLabelLangKey\":\"KmReviewMain.fdOuterDocId\",\"fdName\":\"fdOuterDocId\",\"fdColumn\":\"fd_outer_doc_id\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterDocId\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdOuterDocId\"},{\"fdId\":\"1ga5dl9ndw34w67w38mt95h1lr7cs88fm6w0\",\"fdLabel\":\"主键ID\",\"fdLabelLangKey\":\"SysModelingMainEntity.fdId\",\"fdName\":\"fd_id\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fd_id\\\"}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":36,\"fdIsStored\":true,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":false,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"SYS-XFORM\",\"fdOrder\":9999,\"uuid\":\"fd_id\"},{\"fdId\":\"1ga5dl9kuw34w61w2lodd531rjmmf2hkepw0\",\"fdLabel\":\"所有可阅读者\",\"fdLabelLangKey\":\"KmReviewMain.fdAllReaders\",\"fdName\":\"fdAllReaders\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAllReaders\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAllReaders\"},{\"fdId\":\"1ga5dl9mrw34w62wiuiql3h4clnh3b8aflw0\",\"fdLabel\":\"所有可编辑者\",\"fdLabelLangKey\":\"KmReviewMain.fdAllEditors\",\"fdName\":\"fdAllEditors\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdAllEditors\\\"}\",\"fdFontExtendData\":\"{\\\"multi\\\":true}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdAllEditors\"},{\"fdId\":\"1ga5dl9n1w34w63w26nevug3jd7ijl3rogw0\",\"fdLabel\":\"拥有者部门\",\"fdLabelLangKey\":\"KmReviewMain.fdOwnerDept\",\"fdName\":\"fdOwnerDept\",\"fdColumn\":\"fd_owner_dept\",\"fdType\":\"address\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOwnerDept\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"address\",\"fdDictType\":\"orgElementDict\",\"fdLength\":60,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdOwnerDept\"},{\"fdId\":\"1ga5dl9n4w34w64w1jjpk9d2qhjdhn26icw0\",\"fdLabel\":\"外部文档PC链接\",\"fdLabelLangKey\":\"KmReviewMain.fdOuterPcLink\",\"fdName\":\"fdOuterPcLink\",\"fdColumn\":\"fd_outer_pc_link\",\"fdType\":\"text\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdOuterPcLink\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"varchar\",\"fdDictType\":\"simpleDict\",\"fdLength\":200,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdOuterPcLink\"},{\"fdId\":\"1ga5dl9n8w34w65w2bb1ias1n7bsr839haw0\",\"fdLabel\":\"发布时间\",\"fdLabelLangKey\":\"KmReviewMain.fdPublishTime\",\"fdName\":\"fdPublishTime\",\"fdColumn\":\"fd_publish_time\",\"fdType\":\"timestamp\",\"fdAttribute\":\"{\\\"uuid\\\":\\\"fdPublishTime\\\"}\",\"fdFontExtendData\":\"{}\",\"fdDataType\":\"timestamp\",\"fdDictType\":\"dateDict\",\"fdLength\":0,\"fdIsStored\":false,\"fdIsIndex\":false,\"fdIsSystem\":true,\"fdDisplay\":true,\"fdOuterMapping\":false,\"fdState\":\"effective\",\"fdDataModel\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdMechanismType\":\"KmReviewMain\",\"fdOrder\":9999,\"uuid\":\"fdPublishTime\"}],\"fdXForm\":{\"fdId\":\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0\",\"fdName\":\"消息测试\"},\"fdOuterMapping\":false,\"needDelete\":false}],\"views\":\"[{\\\"id\\\":\\\"bd124601-beb0-47fe-a7de-3edd42d3e062\\\",\\\"name\\\":\\\"表单1\\\",\\\"viewAttr\\\":{\\\"desktopLayout\\\":\\\"vertical\\\",\\\"mobileLayout\\\":\\\"vertical\\\",\\\"logo\\\":{}},\\\"useDataField\\\":{\\\"desktop\\\":[\\\"fd_col_mhm02d\\\"],\\\"mobile\\\":[]},\\\"render\\\":{\\\"desktop\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[{\\\"key\\\":\\\"layout~sj5prq\\\",\\\"type\\\":\\\"layout\\\",\\\"controlProps\\\":{\\\"id\\\":\\\"layout~sj5prq\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid\\\",\\\"controlProps\\\":{\\\"columns\\\":1,\\\"rows\\\":1,\\\"id\\\":\\\"@elem/layout-grid~wno3c9\\\"},\\\"children\\\":[{\\\"type\\\":\\\"@elem/layout-grid.GridItem\\\",\\\"controlProps\\\":{\\\"column\\\":1,\\\"row\\\":1,\\\"id\\\":\\\"@elem/layout-grid.GridItem~zno90d\\\"},\\\"children\\\":[{\\\"key\\\":\\\"fd_col_mhm02d\\\"}],\\\"key\\\":\\\"@elem/layout-grid.GridItem~zno90d\\\",\\\"kind\\\":\\\"container\\\"}],\\\"key\\\":\\\"@elem/layout-grid~wno3c9\\\",\\\"kind\\\":\\\"container\\\"}],\\\"kind\\\":\\\"container\\\"}],\\\"controlProps\\\":{\\\"importBtn\\\":null,\\\"onDesktopImport\\\":null}}]}],\\\"mobile\\\":[{\\\"key\\\":\\\"@elem/xform-appearance\\\",\\\"type\\\":\\\"@elem/xform-appearance\\\",\\\"kind\\\":\\\"container\\\",\\\"controlProps\\\":{\\\"$$tableName\\\":\\\"\\\"},\\\"children\\\":[{\\\"key\\\":\\\"main\\\",\\\"type\\\":\\\"main\\\",\\\"kind\\\":\\\"container\\\",\\\"children\\\":[],\\\"controlProps\\\":{\\\"importBtn\\\":null,\\\"onDesktopImport\\\":null}}]}]}}]\",\"attribute\":{\"formAttr\":\"{\\\"subjectRule\\\":{},\\\"formRule\\\":{\\\"pattern\\\":{}},\\\"abstract\\\":[],\\\"dataUnique\\\":{},\\\"controlAction\\\":{}}\",\"subjectRule\":{},\"dataUnique\":{}},\"error\":\"{}\",\"authFilter\":{\"detailAuthDefine\":{}},\"lang\":\"{\\\"!{l6oggb8t30a9aauvbef}\\\":{\\\"prop\\\":\\\"label\\\",\\\"name\\\":\\\"fd_col_mhm02d\\\",\\\"type\\\":\\\"input\\\",\\\"content\\\":{\\\"Cn\\\":\\\"单行文本1\\\",\\\"default\\\":\\\"单行文本1\\\"}}}\",\"extendMap\":{}}",
+      "fdStatus": "official",
+      "fdVersionId": "1ga5dmukqw2ow1qjw2iallt23v1hqe63a2w0",
+      "fdOuterMapping": false,
+      "fdEntityId": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+      "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+      "fdEntityKey": "sys-xform",
+      "fdRunEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+      "fdBuildNew": false
+    },
+    "sys-auth": {
+      "mechAuthToken": "htN406t9c2/qfRFHM/0P2UlemtuFk8DW9Vx6uuCKX56imIf448bI2Zb24kBUnzgi3uuxIlNOe4ANczRT0uiZO7UrtL0wmtsw6ChE/YXogO5oxfN7oR54Qqu8cvn0y0VG"
+    },
+    "lbpmTemplate": [
+      {
+        "fdId": "1ga5dla3vw2cw2stw371b5l4hspvo4e2kdw0",
+        "dynamicProps": {
+          "fdNameCn": "消息测试"
+        },
+        "mechanisms": {
+          "notify-template": [
+            {
+              "fdCode": "2dad64fbe23b4adaba8f511f46ca83f4",
+              "fdName": "自定义消息模板8af632",
+              "providersDisplay": [
+                {
+                  "provider": "todo",
+                  "messageKey": "sys-notify:notifyType.todo",
+                  "name": "待办",
+                  "todoExt": false,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "1",
+                            "en-US": "test多语言#{customVars.1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d}"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ekpInform",
+                  "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+                  "name": "EKP同步",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "2"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ticDingTalkTodo",
+                  "messageKey": "tic-ding:label.TicDingTalkTodoProvider.provider.message",
+                  "name": "钉钉待办",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "3"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "customVars": {
+                "zh-cn": [],
+                "en-us": [
+                  {
+                    "displayName": "单行文本1",
+                    "varName": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d"
+                  }
+                ],
+                "zh-hk": []
+              }
+            },
+            {
+              "fdCode": "8a3a2b2891e64b3ba82af1e48d4bab1f",
+              "fdName": "自定义消息模板0964cd",
+              "providersDisplay": [
+                {
+                  "provider": "todo",
+                  "messageKey": "sys-notify:notifyType.todo",
+                  "name": "待办",
+                  "todoExt": false,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "1",
+                            "en-US": "English#{customVars.1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject}"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ekpInform",
+                  "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+                  "name": "EKP同步",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "2"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ticDingTalkTodo",
+                  "messageKey": "tic-ding:label.TicDingTalkTodoProvider.provider.message",
+                  "name": "钉钉待办",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "3"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "customVars": {
+                "zh-cn": [],
+                "en-us": [
+                  {
+                    "displayName": "标题",
+                    "varName": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject"
+                  }
+                ],
+                "zh-hk": []
+              }
+            },
+            {
+              "fdCode": "6275b6b7e8ad44d0a95da2bf00c5f4a8",
+              "fdName": "自定义消息模板8bb7fc",
+              "providersDisplay": [
+                {
+                  "provider": "todo",
+                  "messageKey": "sys-notify:notifyType.todo",
+                  "name": "待办",
+                  "todoExt": false,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "9999"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ekpInform",
+                  "messageKey": "sys-notify:notify.todo.provider.ekpInform",
+                  "name": "EKP同步",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "999"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "provider": "ticDingTalkTodo",
+                  "messageKey": "tic-ding:label.TicDingTalkTodoProvider.provider.message",
+                  "name": "钉钉待办",
+                  "todoExt": true,
+                  "displayStyles": [
+                    {
+                      "style": "PLAIN_TEXT",
+                      "dispProps": [
+                        {
+                          "property": "subject",
+                          "name": "标题",
+                          "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+                          "type": "SINGLE_LINE_TEXT",
+                          "required": true,
+                          "value4Lang": {
+                            "zh-CN": "999"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "customVars": {
+                "zh-cn": [],
+                "en-us": [],
+                "zh-hk": []
+              }
+            }
+          ]
+        },
+        "fdContentType": "json",
+        "fdContent": "{\"name\":\"消息测试\",\"elements\":[{\"type\":\"generalStart\",\"id\":\"N1\",\"name\":\"开始节点\",\"element\":\"startEvent\",\"bounds\":{\"x\":525.5,\"y\":100,\"width\":34,\"height\":34,\"relative\":false},\"operations\":[],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"开始节点\",\"nameUs\":\"Start Node\"},\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"draft\",\"id\":\"N2\",\"name\":\"起草节点\",\"element\":\"manualTask\",\"bounds\":{\"x\":462.5,\"y\":200,\"width\":160,\"height\":40,\"relative\":false},\"formKey\":\"default\",\"formName\":\"默认表单\",\"operationRefId\":\"custom\",\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"false\",\"modifyProcessAuthority\":\"2\",\"nodeAuthority\":\"0\",\"canAbandonRejectedProcess\":\"true\",\"number\":\"N2\",\"nodeNotifyTypeMethod\":[],\"operations\":[{\"identity\":\"1\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_abandon\",\"name\":\"废弃\",\"srcName\":\"废弃\"}]},{\"identity\":\"2\",\"elements\":[{\"element\":\"operation\",\"type\":\"drafter_submit\",\"name\":\"提交\",\"srcName\":\"提交\",\"isAlway\":true}]},{\"identity\":\"3\",\"elements\":[]}],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"起草节点\",\"nameUs\":\"Drafting Node\"},\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"generalEnd\",\"id\":\"N3\",\"name\":\"结束节点\",\"element\":\"endEvent\",\"bounds\":{\"x\":525.5,\"y\":540,\"width\":34,\"height\":34,\"relative\":false},\"operations\":[],\"timeoutStrategies\":\"[]\",\"language\":{\"nameCn\":\"结束节点\",\"nameUs\":\"End Node\"},\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"review\",\"formKey\":\"default\",\"operationRefId\":\"default\",\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"true\",\"modifyProcessAuthority\":\"1\",\"nodeAuthority\":\"2\",\"allowUploadAttachments\":\"true\",\"canModifyCommentViewPermission\":\"false\",\"canModifyProcess\":\"false\",\"handSignRequired\":\"false\",\"canCirculated\":\"false\",\"allowQuickApproval\":\"false\",\"allowSendDing\":\"true\",\"allowMobileHandle\":\"true\",\"name\":\"审批节点\",\"bounds\":{\"x\":462.5,\"y\":370,\"width\":160,\"height\":40,\"relative\":false},\"number\":\"N4\",\"relateId\":\"N4\",\"emptyHandlerType\":2,\"cooperateType\":\"3\",\"ignoreOnSameIdentity\":\"1\",\"notifyTemplateSwitch\":true,\"element\":\"manualTask\",\"id\":\"N4\",\"nodeNotifyTypeMethod\":[],\"handlers\":{\"id\":\"handlers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"members\":[{\"id\":\"1ga2q9kfpw16w60mw37nklff1q060rp22fw0\",\"name\":\"lq测试4\",\"element\":\"user\",\"type\":\"1\"}],\"element\":\"users\"},\"operations\":[],\"timeoutStrategies\":\"[]\",\"fdScene\":{\"fdMode\":0},\"language\":{\"nameCn\":\"审批节点\",\"nameUs\":\"Approval Node\"},\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyContentType\":\"custom\",\"notifyTemplateContext\":\"[{\\\"isPush\\\":true,\\\"fdMessageContent\\\":{\\\"msgType\\\":2,\\\"notifyTemplateCode\\\":\\\"2dad64fbe23b4adaba8f511f46ca83f4\\\",\\\"customNotifyContent\\\":{\\\"fdCode\\\":\\\"2dad64fbe23b4adaba8f511f46ca83f4\\\",\\\"fdName\\\":\\\"自定义消息模板8af632\\\",\\\"providersDisplay\\\":[{\\\"provider\\\":\\\"todo\\\",\\\"messageKey\\\":\\\"sys-notify:notifyType.todo\\\",\\\"name\\\":\\\"待办\\\",\\\"todoExt\\\":false,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"1\\\",\\\"en-US\\\":\\\"test多语言#{customVars.1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d}\\\"}}]}]},{\\\"provider\\\":\\\"ekpInform\\\",\\\"messageKey\\\":\\\"sys-notify:notify.todo.provider.ekpInform\\\",\\\"name\\\":\\\"EKP同步\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"2\\\"}}]}]},{\\\"provider\\\":\\\"ticDingTalkTodo\\\",\\\"messageKey\\\":\\\"tic-ding:label.TicDingTalkTodoProvider.provider.message\\\",\\\"name\\\":\\\"钉钉待办\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"3\\\"}}]}]}],\\\"customVars\\\":{\\\"zh-cn\\\":[],\\\"en-us\\\":[{\\\"displayName\\\":\\\"单行文本1\\\",\\\"varName\\\":\\\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d\\\"}],\\\"zh-hk\\\":[]}},\\\"params\\\":[{\\\"key\\\":\\\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d\\\",\\\"language\\\":{\\\"en-us\\\":{\\\"value\\\":\\\"${1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fd_col_mhm02d}\\\",\\\"display\\\":\\\"单行文本1\\\"}}}]},\\\"notifyTemplateCodeError\\\":false,\\\"customNotifyContentCodeError\\\":false,\\\"notifyTitleCodeError\\\":false,\\\"notifyType\\\":\\\"approval\\\"}]\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"review\",\"formKey\":\"default\",\"operationRefId\":\"default\",\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"true\",\"modifyProcessAuthority\":\"1\",\"nodeAuthority\":\"2\",\"allowUploadAttachments\":\"true\",\"canModifyCommentViewPermission\":\"false\",\"canModifyProcess\":\"false\",\"handSignRequired\":\"false\",\"canCirculated\":\"false\",\"allowQuickApproval\":\"false\",\"allowSendDing\":\"true\",\"allowMobileHandle\":\"true\",\"name\":\"审批节点2\",\"bounds\":{\"x\":462.5,\"y\":280,\"width\":160,\"height\":40,\"relative\":false},\"number\":\"N5\",\"relateId\":\"N5\",\"emptyHandlerType\":2,\"cooperateType\":\"3\",\"ignoreOnSameIdentity\":\"1\",\"notifyTemplateSwitch\":true,\"element\":\"manualTask\",\"id\":\"N5\",\"nodeNotifyTypeMethod\":[],\"handlers\":{\"id\":\"handlers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"members\":[{\"id\":\"1ga2q9kfpw16w60mw37nklff1q060rp22fw0\",\"name\":\"lq测试4\",\"element\":\"user\",\"type\":\"1\"}],\"element\":\"users\"},\"operations\":[],\"timeoutStrategies\":\"[]\",\"fdScene\":{\"fdMode\":0},\"language\":{\"nameCn\":\"审批节点2\",\"nameUs\":\"Approval Node\"},\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyContentType\":\"custom\",\"notifyTemplateContext\":\"[{\\\"isPush\\\":true,\\\"fdMessageContent\\\":{\\\"msgType\\\":2,\\\"notifyTemplateCode\\\":\\\"8a3a2b2891e64b3ba82af1e48d4bab1f\\\",\\\"customNotifyContent\\\":{\\\"fdCode\\\":\\\"8a3a2b2891e64b3ba82af1e48d4bab1f\\\",\\\"fdName\\\":\\\"自定义消息模板0964cd\\\",\\\"providersDisplay\\\":[{\\\"provider\\\":\\\"todo\\\",\\\"messageKey\\\":\\\"sys-notify:notifyType.todo\\\",\\\"name\\\":\\\"待办\\\",\\\"todoExt\\\":false,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"1\\\",\\\"en-US\\\":\\\"English#{customVars.1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject}\\\"}}]}]},{\\\"provider\\\":\\\"ekpInform\\\",\\\"messageKey\\\":\\\"sys-notify:notify.todo.provider.ekpInform\\\",\\\"name\\\":\\\"EKP同步\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"2\\\"}}]}]},{\\\"provider\\\":\\\"ticDingTalkTodo\\\",\\\"messageKey\\\":\\\"tic-ding:label.TicDingTalkTodoProvider.provider.message\\\",\\\"name\\\":\\\"钉钉待办\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"3\\\"}}]}]}],\\\"customVars\\\":{\\\"zh-cn\\\":[],\\\"en-us\\\":[{\\\"displayName\\\":\\\"标题\\\",\\\"varName\\\":\\\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject\\\"}],\\\"zh-hk\\\":[]}},\\\"params\\\":[{\\\"key\\\":\\\"1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject\\\",\\\"language\\\":{\\\"en-us\\\":{\\\"value\\\":\\\"${1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0-fdSubject}\\\",\\\"display\\\":\\\"标题\\\"}}}]},\\\"notifyTemplateCodeError\\\":false,\\\"customNotifyContentCodeError\\\":false,\\\"notifyTitleCodeError\\\":false,\\\"notifyType\\\":\\\"approval\\\"}]\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"review\",\"formKey\":\"default\",\"operationRefId\":\"default\",\"openModifyProcessAuthority\":\"true\",\"openNodeAuthority\":\"true\",\"modifyProcessAuthority\":\"1\",\"nodeAuthority\":\"2\",\"allowUploadAttachments\":\"true\",\"canModifyCommentViewPermission\":\"false\",\"canModifyProcess\":\"false\",\"handSignRequired\":\"false\",\"canCirculated\":\"false\",\"allowQuickApproval\":\"false\",\"allowSendDing\":\"true\",\"allowMobileHandle\":\"true\",\"name\":\"审批节点\",\"bounds\":{\"x\":462.5,\"y\":450,\"width\":160,\"height\":40,\"relative\":false},\"number\":\"N6\",\"relateId\":\"N6\",\"emptyHandlerType\":2,\"cooperateType\":\"3\",\"ignoreOnSameIdentity\":\"3\",\"notifyTemplateSwitch\":true,\"element\":\"manualTask\",\"id\":\"N6\",\"nodeNotifyTypeMethod\":[],\"handlers\":{\"id\":\"handlers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"members\":[{\"id\":\"1ga2q9kfpw16w60mw37nklff1q060rp22fw0\",\"name\":\"lq测试4\",\"element\":\"user\",\"type\":\"1\"}],\"element\":\"users\"},\"operations\":[],\"timeoutStrategies\":\"[]\",\"fdScene\":{\"fdMode\":0},\"language\":{\"nameCn\":\"审批节点\",\"nameUs\":\"Approval Node\"},\"viewCommentNodes\":\"\",\"viewCommentType\":\"all\",\"viewCommentUsers\":{\"id\":\"viewCommentUsers\",\"type\":\"org\",\"source\":\"1\",\"ruleKey\":\"\",\"ruleName\":\"\",\"element\":\"users\",\"members\":[]},\"nodeNotifyType\":\"{\\\"system\\\":\\\"todo\\\"}\",\"nodeNotifyContentType\":\"custom\",\"notifyTemplateContext\":\"[{\\\"isPush\\\":true,\\\"fdMessageContent\\\":{\\\"msgType\\\":2,\\\"notifyTemplateCode\\\":\\\"6275b6b7e8ad44d0a95da2bf00c5f4a8\\\",\\\"customNotifyContent\\\":{\\\"fdCode\\\":\\\"6275b6b7e8ad44d0a95da2bf00c5f4a8\\\",\\\"fdName\\\":\\\"自定义消息模板8bb7fc\\\",\\\"providersDisplay\\\":[{\\\"provider\\\":\\\"todo\\\",\\\"messageKey\\\":\\\"sys-notify:notifyType.todo\\\",\\\"name\\\":\\\"待办\\\",\\\"todoExt\\\":false,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"9999\\\"}}]}]},{\\\"provider\\\":\\\"ekpInform\\\",\\\"messageKey\\\":\\\"sys-notify:notify.todo.provider.ekpInform\\\",\\\"name\\\":\\\"EKP同步\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"999\\\"}}]}]},{\\\"provider\\\":\\\"ticDingTalkTodo\\\",\\\"messageKey\\\":\\\"tic-ding:label.TicDingTalkTodoProvider.provider.message\\\",\\\"name\\\":\\\"钉钉待办\\\",\\\"todoExt\\\":true,\\\"displayStyles\\\":[{\\\"style\\\":\\\"PLAIN_TEXT\\\",\\\"dispProps\\\":[{\\\"property\\\":\\\"subject\\\",\\\"name\\\":\\\"标题\\\",\\\"messageKey\\\":\\\"sys-notify:sys.notify.defaultProvider.displayProperty.subject\\\",\\\"type\\\":\\\"SINGLE_LINE_TEXT\\\",\\\"required\\\":true,\\\"value4Lang\\\":{\\\"zh-CN\\\":\\\"999\\\"}}]}]}],\\\"customVars\\\":{\\\"zh-cn\\\":[],\\\"en-us\\\":[],\\\"zh-hk\\\":[]}},\\\"params\\\":[]},\\\"notifyTemplateCodeError\\\":false,\\\"customNotifyContentCodeError\\\":false,\\\"notifyTitleCodeError\\\":false,\\\"notifyType\\\":\\\"approval\\\"}]\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"id\":\"E4\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N1\",\"targetRef\":\"N2\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"id\":\"E5\",\"element\":\"sequenceFlow\",\"sourceRef\":\"N2\",\"targetRef\":\"N5\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"id\":\"E7\",\"sourceRef\":\"N5\",\"targetRef\":\"N4\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"id\":\"E6\",\"sourceRef\":\"N4\",\"targetRef\":\"N6\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"},{\"type\":\"sequenceFlow\",\"element\":\"sequenceFlow\",\"id\":\"E8\",\"sourceRef\":\"N6\",\"targetRef\":\"N3\",\"wayPoints\":[],\"style\":\"sequenceFlow\",\"operations\":[],\"timeoutStrategies\":\"[]\",\"name\":\"\",\"config\":\"{}\",\"componentOriginalValue\":\"{}\"}],\"operSubmitValidators\":[],\"events\":[],\"default\":[],\"diagram\":\"\",\"flowType\":\"0\",\"notifyDrafterOnEnd\":\"true\",\"notifyParticipantOnEnd\":\"false\",\"notifyDrafterOnException\":\"false\",\"notifyAdminOnException\":\"false\",\"adminFormAuth\":\"{\\\"view\\\":true,\\\"editable\\\":false,\\\"deletable\\\":false}\",\"processEndIsCirculated\":\"true\",\"rejectDenyRetract\":\"false\",\"canCirculationIdentity\":\"draft\",\"fdHighLights\":{\"fdColorCode\":\"#FF943E\"},\"groupChat\":{\"isEnabled\":false}}",
+        "fdTemplateCode": "template_ogg22s",
+        "fdDefinitionId": "1ga5ls7tvw2cw54cwlejbqf3r17pmm3g6ow0",
+        "fdCategory": {
+          "fdId": "1ga2qrvucwpw14ew2pqcon41oft4581mu7w0",
+          "dynamicProps": {
+            "fdNameCn": "lq"
+          },
+          "fdName": "lq",
+          "fdOrder": 2,
+          "fdParent": {
+            "fdId": "1ga1m5dpmwiwow38ue9ck2c41fi19faoa2w0",
+            "fdName": "流程管理"
+          },
+          "fdHierarchyId": "x1ga1m5dpmwiwow38ue9ck2c41fi19faoa2w0x1ga2qrvucwpw14ew2pqcon41oft4581mu7w0x",
+          "fdType": 2,
+          "fdSystemCode": "INNER_SYSTEM",
+          "fdModuleCode": "km-review",
+          "fdFormCategoryId": "1ga2qrvsbw15w1d8w2ughhkg2ikamh12c7w0",
+          "fdChildFlag": false,
+          "fdCreator": {
+            "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+            "fdName": "李琦"
+          },
+          "fdAlter": {
+            "fdId": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+            "fdName": "刘芬"
+          },
+          "fdAllReaders": [
+            {
+              "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+              "fdName": "所有用户"
+            }
+          ],
+          "fdAllEditors": [],
+          "fdReaders": [],
+          "fdEditors": []
+        },
+        "fdFormFields": {
+          "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0": {
+            "type": "object",
+            "$ref": "mk_model_202208110y63h",
+            "description": "表单变量",
+            "properties": {
+              "fdNumber": {
+                "type": "string",
+                "required": false,
+                "description": "编号",
+                "maxLength": 200
+              },
+              "fdCreateTime": {
+                "type": "integer",
+                "required": false,
+                "description": "创建时间",
+                "format": "date-time"
+              },
+              "fdCreator": {
+                "type": "object",
+                "$ref": "ORG_PERSON",
+                "required": false,
+                "description": "创建人",
+                "properties": {
+                  "fdId": {
+                    "type": "string",
+                    "required": true,
+                    "description": "ID",
+                    "maxLength": 36
+                  },
+                  "fdName": {
+                    "type": "string",
+                    "required": true,
+                    "description": "名称",
+                    "maxLength": 200
+                  }
+                }
+              },
+              "fdAttCopys": {
+                "type": "array",
+                "required": true,
+                "description": "附件可拷贝者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdAttPrints": {
+                "type": "array",
+                "required": true,
+                "description": "附件可打印者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdCirculatedReceiver": {
+                "type": "array",
+                "required": true,
+                "description": "传阅对象",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdProcessStatus": {
+                "type": "string",
+                "required": false,
+                "description": "流程状态",
+                "maxLength": 200,
+                "enum": [
+                  "挂起|21",
+                  "异常|29",
+                  "驳回|11",
+                  "发布|30",
+                  "草稿|10",
+                  "废弃|00",
+                  "待审|20"
+                ]
+              },
+              "fdSubject": {
+                "type": "string",
+                "required": false,
+                "description": "标题",
+                "maxLength": 200
+              },
+              "fdOuterMobileLink": {
+                "type": "string",
+                "required": false,
+                "description": "外部文档Mobile链接",
+                "maxLength": 200
+              },
+              "fdAlter": {
+                "type": "object",
+                "$ref": "ORG_PERSON",
+                "required": false,
+                "description": "修改人",
+                "properties": {
+                  "fdId": {
+                    "type": "string",
+                    "required": true,
+                    "description": "ID",
+                    "maxLength": 36
+                  },
+                  "fdName": {
+                    "type": "string",
+                    "required": true,
+                    "description": "名称",
+                    "maxLength": 200
+                  }
+                }
+              },
+              "fdOwner": {
+                "type": "object",
+                "$ref": "ORG_PERSON",
+                "required": false,
+                "description": "拥有者",
+                "properties": {
+                  "fdId": {
+                    "type": "string",
+                    "required": true,
+                    "description": "ID",
+                    "maxLength": 36
+                  },
+                  "fdName": {
+                    "type": "string",
+                    "required": true,
+                    "description": "名称",
+                    "maxLength": 200
+                  }
+                }
+              },
+              "fdLastModifiedTime": {
+                "type": "integer",
+                "required": false,
+                "description": "最后修改时间",
+                "format": "date-time"
+              },
+              "fdReaders": {
+                "type": "array",
+                "required": true,
+                "description": "阅读者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdAlterTime": {
+                "type": "integer",
+                "required": false,
+                "description": "修改时间",
+                "format": "date-time"
+              },
+              "fdOuterDocId": {
+                "type": "string",
+                "required": false,
+                "description": "外部文档主键",
+                "maxLength": 200
+              },
+              "fdAllReaders": {
+                "type": "array",
+                "required": true,
+                "description": "所有可阅读者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdOwnerDept": {
+                "type": "object",
+                "$ref": "ORG_PERSON",
+                "required": false,
+                "description": "拥有者部门",
+                "properties": {
+                  "fdId": {
+                    "type": "string",
+                    "required": true,
+                    "description": "ID",
+                    "maxLength": 36
+                  },
+                  "fdName": {
+                    "type": "string",
+                    "required": true,
+                    "description": "名称",
+                    "maxLength": 200
+                  }
+                }
+              },
+              "fdOuterPcLink": {
+                "type": "string",
+                "required": false,
+                "description": "外部文档PC链接",
+                "maxLength": 200
+              },
+              "fdPublishTime": {
+                "type": "integer",
+                "required": false,
+                "description": "发布时间",
+                "format": "date-time"
+              },
+              "fd_id": {
+                "type": "string",
+                "required": false,
+                "description": "主键ID",
+                "maxLength": 36
+              },
+              "fd_col_mhm02d": {
+                "type": "string",
+                "required": false,
+                "description": "单行文本1",
+                "maxLength": 100
+              },
+              "fdEditors": {
+                "type": "array",
+                "required": true,
+                "description": "编辑者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdAttDownloads": {
+                "type": "array",
+                "required": true,
+                "description": "附件可下载者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fdCreatorDept": {
+                "type": "object",
+                "$ref": "ORG_PERSON",
+                "required": false,
+                "description": "创建者部门",
+                "properties": {
+                  "fdId": {
+                    "type": "string",
+                    "required": true,
+                    "description": "ID",
+                    "maxLength": 36
+                  },
+                  "fdName": {
+                    "type": "string",
+                    "required": true,
+                    "description": "名称",
+                    "maxLength": 200
+                  }
+                }
+              },
+              "fdAllEditors": {
+                "type": "array",
+                "required": true,
+                "description": "所有可编辑者",
+                "items": {
+                  "type": "object",
+                  "$ref": "ORG_PERSON",
+                  "description": "组织简要表",
+                  "properties": {
+                    "fdId": {
+                      "type": "string",
+                      "required": true,
+                      "description": "ID",
+                      "maxLength": 36
+                    },
+                    "fdName": {
+                      "type": "string",
+                      "required": true,
+                      "description": "名称",
+                      "maxLength": 200
+                    }
+                  }
+                }
+              },
+              "fd_version": {
+                "type": "string",
+                "required": false,
+                "description": "对应版本",
+                "maxLength": 36
+              }
+            }
+          }
+        },
+        "fdTempVariables": [],
+        "businessMethodList": [],
+        "fdTemplateForms": [
+          {
+            "fdName": "内置表单",
+            "hidden": true,
+            "fdIsDefault": true,
+            "fdSystemCode": "INNER_SYSTEM",
+            "fdFormCode": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+            "fdModuleCode": "km-review",
+            "fdFormKey": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0"
+          }
+        ],
+        "fdTemplateFormAuths": [],
+        "fdTimeoutStrategiesOfNode": [],
+        "fdTimeoutStrategiesOfProcess": [],
+        "fdSystemCode": "INNER_SYSTEM",
+        "fdModuleCode": "km-review",
+        "fdCreator": {
+          "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+          "fdName": "李琦"
+        },
+        "fdAlter": {
+          "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+          "fdName": "李琦"
+        },
+        "fdMessageNotifyType": "{\"system\":\"todo\"}",
+        "fdFlowType": "0",
+        "fdRunType": "1",
+        "fdEnable": true,
+        "fdPcEnable": true,
+        "fdMobileEnable": true,
+        "isAudit": false,
+        "isDraft": false,
+        "isAllSubNew": true,
+        "isImport": false,
+        "fdFavorites": false,
+        "definitionOrgList": [
+          {
+            "originOrgId": "1ga2q9kfpw16w60mw37nklff1q060rp22fw0",
+            "originOrgName": "lq测试4",
+            "originOrgType": 1,
+            "loginName": "lqtest004"
+          }
+        ],
+        "fdStatus": "published",
+        "fdIntegrateFormMode": 0,
+        "fdPublishType": "instant",
+        "fdEditors": [],
+        "fdAllEditors": [],
+        "fdReaders": [],
+        "fdAllReaders": [
+          {
+            "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+            "fdName": "所有用户"
+          }
+        ],
+        "mechanismName": "lbpmTemplate",
+        "common": false,
+        "fdName": "消息测试",
+        "fdCreateTime": 1660186962061,
+        "fdAlterTime": 1660195577737,
+        "fdEntityId": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+        "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+        "fdEntityKey": "KmReviewMain",
+        "fdLabelContent": "[]",
+        "fdMetadata": [],
+        "fdSubProcessTemplateForms": [],
+        "fdCommonId": "",
+        "fdFormCategory": {
+          "fdFormCategoryId": "1ga2qrvsbw15w1d8w2ughhkg2ikamh12c7w0"
+        }
+      }
+    ],
+    "sysnumber": [
+      {
+        "fdId": "1ga5dn0rfw32w1ghw1ak2u4m355prcvtq6w0",
+        "fdType": "1",
+        "fdSysNumber": {
+          "fdId": "1g50t5j91w2hkw3pw21oq0bj2fi971vn60w0",
+          "dynamicProps": {},
+          "fdCreator": {
+            "fdId": "1ga2nlqsnw16w1mkw3n8k8fo16v1oaemtkw0",
+            "fdName": "lxm1"
+          },
+          "fdCreateTime": 1660100449541,
+          "fdContentClob": "[{\"name\":\"T\",\"error\":false,\"type\":\"const\",\"ruleData\":{\"value\":\"T\"},\"id\":\"4\"},{\"name\":\"20200830\",\"type\":\"date\",\"error\":false,\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"yyyyMMdd\"},\"id\":\"1\"},{\"name\":\"133055\",\"error\":false,\"type\":\"time\",\"ruleData\":{\"zone\":\"中文(中国)\",\"format\":\"HHmmss\"},\"id\":\"3\"},{\"name\":\"0001\",\"type\":\"flow\",\"error\":false,\"ruleData\":{\"period\":\"none\",\"start\":\"1\",\"len\":\"4\",\"step\":\"1\",\"isZeroFill\":true,\"areas\":[],\"values\":[]},\"id\":\"2\"}]",
+          "fdEntityName": "com.landray.km.review.core.entity.KmReviewMain",
+          "fdDefaultFlag": false,
+          "fdTemplateFlag": false,
+          "fdVirtualNumberValue": "T202008301330550001",
+          "authReaders": [],
+          "refCount": 0,
+          "fdName": "默认"
+        },
+        "fdEntityName": "com.landray.km.review.core.entity.KmReviewTemplate",
+        "fdEntityId": "1ga5dl3vnw2ow1q7w39a4rj81velhqk395w0",
+        "fdEntityKey": "kmReviewTemplate"
+      }
+    ]
+  },
+  "fdCreator": {
+    "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+    "fdName": "李琦"
+  },
+  "fdCreateTime": 1660186960875,
+  "fdAlter": {
+    "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+    "fdName": "李琦"
+  },
+  "fdAlterTime": 1660195576721,
+  "fdReaders": [],
+  "fdReaderFlag": true,
+  "fdNotReaderFlag": false,
+  "fdAllReaders": [
+    {
+      "fdId": "1d9bn74v4w0w5w42chj830sdrn628d63c4w0",
+      "fdName": "所有用户"
+    }
+  ],
+  "fdEditors": [],
+  "fdAllEditors": [],
+  "fdCode": "template_ogg22s",
+  "fdSimpleName": "123",
+  "fdTableName": "mk_model_202208110y63h",
+  "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\"}",
+  "fdCategory": {
+    "fdId": "1ga2qrvsbw15w1d8w2ughhkg2ikamh12c7w0",
+    "dynamicProps": {
+      "fdNameCn": "lq"
+    },
+    "fdCreator": {
+      "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+      "fdName": "李琦"
+    },
+    "fdCreateTime": 1660100149133,
+    "fdAlter": {
+      "fdId": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+      "fdName": "刘芬"
+    },
+    "fdAlterTime": 1660100481806,
+    "fdReaders": [],
+    "fdReaderFlag": false,
+    "fdNotReaderFlag": false,
+    "fdAllReaders": [
+      {
+        "fdId": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+        "fdName": "李琦"
+      }
+    ],
+    "fdEditors": [],
+    "fdAllEditors": [],
+    "fdName": "lq",
+    "fdOrder": 2,
+    "fdHierarchyId": "x1ga2qrvsbw15w1d8w2ughhkg2ikamh12c7w0x",
+    "fdIcon": "{\"name\":\"category-default\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}"
+  },
+  "lbpmFormCategoryVO": {
+    "dynamicProps": {
+      "fdNameCn": "lq"
+    },
+    "fdSystemCode": "INNER_SYSTEM",
+    "fdModuleCode": "km-review",
+    "fdFormCategoryId": "1ga2qrvsbw15w1d8w2ughhkg2ikamh12c7w0",
+    "fdFormParentCategory": {},
+    "fdName": "lq"
+  },
+  "fdStatus": 1,
+  "fdNumberType": 0,
+  "fdBuildNew": false,
+  "fdName": "消息测试"
+}

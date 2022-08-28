@@ -1,0 +1,14 @@
+[
+  {
+    "fdPath": "sys-lbpm/manage/locale",
+    "fdMsgKey": "statistic.route-module-process-overview"
+  },
+  {
+    "fdPath": "sys-lbpm/desktop/locale",
+    "fdMsgKey": "statistic.route-module-process-overview"
+  },
+  {
+    "fdPath": "sys-lbpm/mobile/locale",
+    "fdMsgKey": "statistic.route-module-process-overview"
+  }
+]

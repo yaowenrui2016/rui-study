@@ -28,11 +28,11 @@ public class AutoNotifyTemplateStory3 {
 //            "http://127.0.0.1:8040",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-            "http://mkpre.ywork.me", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://10.251.9.60:8080",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mkpre.ywork.me", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://10.251.9.60:8080",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
@@ -65,15 +65,15 @@ public class AutoNotifyTemplateStory3 {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
+//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "liq", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.253.2.132:8080",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//            "http://10.253.2.84:8080",
+//            "+++++++++++++++++++++++++++++++++++++++++++");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkzszq.ywork.me", "liq", "1");
+//            = new MkDataRequestHelper("https://mkzszq.ywork.me", "liq", "1");
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkzszq.ywork.me",
+//            "https://mkzszq.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = null;
@@ -83,14 +83,20 @@ public class AutoNotifyTemplateStory3 {
 //            "https://mkyfdyf.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("https://mk-tongweb.ywork.me", "yuxd", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "https://mk-tongweb.ywork.me",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
+
 
     public static void main(String[] args) {
 //        // 获取模板元数据
 //        getTemplateMeta();
 //        // 新建系统模板
 //        String code = save("create_notifyTemplate.json");
-//        // 根据编码查找模板
-//        findByCode("P001");
+        // 根据编码查找模板
+        findByCode("$common:test");
 //        // 查询模板列表
 //        findAll();
 
@@ -108,7 +114,7 @@ public class AutoNotifyTemplateStory3 {
 
 
         // 使用模板发送待办
-        String snid = send("P001");
+        String snid = send("$common:test");
 //        // 查看待办原始记录
 //        timeComputing(snid);
 
@@ -126,7 +132,7 @@ public class AutoNotifyTemplateStory3 {
 
 
 //        // 发送待办
-//        String snid = sendTodo("test/send.json");
+//        String snid = sendTodo("test/smoke.json");
 //        // 查看待办原始记录
 //        timeComputing(snid);
 
@@ -298,9 +304,9 @@ public class AutoNotifyTemplateStory3 {
     }
 
     private static String send(String code) {
-        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory3/send.json");
+        JSONObject json = FileUtils.loadJSON("AutoNotifyTemplateStory3/zszq/send.json");
         json.put("entityKey", new SimpleDateFormat("yyyyMMddHHmmss").format(new Date()));
-        json.put("template", code);
+//        json.put("template", code);
         MkResponse<String> mkResponse = mkApiRequestHelper.callApiForMkResponse(
                 "/api/sys-notifybus/sysNotifyComponent/send",
                 json, String.class);

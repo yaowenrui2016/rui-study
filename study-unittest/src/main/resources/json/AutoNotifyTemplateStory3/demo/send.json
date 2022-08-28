@@ -1,0 +1,112 @@
+{
+  "snid": "1gaj2ltoswstrwaquhw5ele421p7i8he3ow0",
+  "notifyType": "todo;email",
+  "appName": "MKPaaS",
+  "moduleName": "sys-modeling",
+  "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+  "entityId": "1gaj2ltniwsttw69dfw14815af1sl5a2r2w0",
+  "entityKey": "NodeInstance",
+  "notifyId": "1gaj2lto7wsttw69dnwpntjl81u96d1l1cw0",
+  "parameter1": "1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0",
+  "targets": [
+    "1g65kup27w8ewuvciw1q6d7ik38pv9nt3aw0"
+  ],
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "https://mk.landray.com.cn/web/#/current/sys-modeling/flgl/view/1g8vil2dswstiwbdrdw4m9j9t1qq09u92aw0/1gaj2jgjewstqw85l0wchpmpb1l6mqj0vlw0?formKey=default&taskId=1gaj2ltniwsttw69dfw14815af1sl5a2r2w0&mechAuthToken=MfwLOKI99RtqKIQtiDotE4kj7trFCpaip651HxApzO22yZMV8Indx9ooYjENzAgRuNdp/ohYX3ad/BsKEH2e44yeobQwHbyQmUgxdESiBgU=&processInstanceId=1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0",
+  "providerIds": [
+    "todo",
+    "email",
+    "ticDingTalkWorkNotify"
+  ],
+  "requestTime": 1660645209884,
+  "subject": "${replaceText.delegate}请审批流程:${replaceText.subject}",
+  "content": "${replaceText.delegate}请审批流程:${replaceText.subject}",
+  "replaceText": {
+    "delegate": "",
+    "creator": "ued前端维护",
+    "subject": "采购花生油",
+    "operation": "提交",
+    "operator": "ued前端维护"
+  },
+  "customVars": {},
+  "extendFields": [
+    {
+      "supportFastApproval": "false"
+    }
+  ],
+  "langContent": {
+    "en-US": {
+      "subject": "${replaceText.delegate}Please approve the process: ${replaceText.subject}",
+      "content": "${replaceText.delegate}Please approve the process: ${replaceText.subject}",
+      "replaceText": {
+        "delegate": "",
+        "creator": "ued前端维护",
+        "subject": "采购花生油",
+        "operation": "提交",
+        "operator": "ued前端维护"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1gaj2ltniwsttw69dfw14815af1sl5a2r2w0",
+      "entityKey": "NodeInstance",
+      "nodeName": "李文毅审批",
+      "creatorName": "ued前端维护",
+      "parameter1": "1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0"
+    },
+    "zh-HK": {
+      "subject": "${replaceText.delegate}請審批流程:${replaceText.subject}",
+      "content": "${replaceText.delegate}請審批流程:${replaceText.subject}",
+      "replaceText": {
+        "delegate": "",
+        "creator": "ued前端维护",
+        "subject": "采购花生油",
+        "operation": "提交",
+        "operator": "ued前端维护"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1gaj2ltniwsttw69dfw14815af1sl5a2r2w0",
+      "entityKey": "NodeInstance",
+      "nodeName": "李文毅审批",
+      "creatorName": "ued前端维护",
+      "parameter1": "1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0"
+    },
+    "zh-CN": {
+      "subject": "${replaceText.delegate}请审批流程:${replaceText.subject}",
+      "content": "${replaceText.delegate}请审批流程:${replaceText.subject}",
+      "replaceText": {
+        "delegate": "",
+        "creator": "ued前端维护",
+        "subject": "采购花生油",
+        "operation": "提交",
+        "operator": "ued前端维护"
+      },
+      "customVars": {},
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.NodeInstance",
+      "entityId": "1gaj2ltniwsttw69dfw14815af1sl5a2r2w0",
+      "entityKey": "NodeInstance",
+      "nodeName": "李文毅审批",
+      "creatorName": "ued前端维护",
+      "parameter1": "1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0"
+    }
+  },
+  "template": "paas-lbpm:lbpm.notify.template.review",
+  "todoType": 1,
+  "todoLevel": 3,
+  "creator": "1f23qjg9dwkw120wm9puuibunul3168gq3w0",
+  "creatorName": "ued前端维护",
+  "mobileLink": "https://mk.landray.com.cn/web/#/current/sys-modeling/flgl/view/1g8vil2dswstiwbdrdw4m9j9t1qq09u92aw0/1gaj2jgjewstqw85l0wchpmpb1l6mqj0vlw0?formKey=default&taskId=1gaj2ltniwsttw69dfw14815af1sl5a2r2w0&mechAuthToken=MfwLOKI99RtqKIQtiDotE4kj7trFCpaip651HxApzO22yZMV8Indx9ooYjENzAgRuNdp/ohYX3ad/BsKEH2e44yeobQwHbyQmUgxdESiBgU=&processInstanceId=1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0",
+  "nodeName": "李文毅审批",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdProcessNo\":\"template_er327n22081618180001\",\"fdStatus\":\"20\",\"fdModuleName\":\"sys-modeling\",\"fdTemplateId\":\"1g8vil2edwstiwbdruw3f8a9o01ngdiev3w0\",\"fdTitle\":\"采购花生油\",\"fdApplicantId\":\"1f23qjg9dwkw120wm9puuibunul3168gq3w0\",\"fdApplicationTime\":1660645130913,\"fdLink\":{\"PAD\":\"https://mk.landray.com.cn/web/sys-lbpm/desktop/static/transfer.html?processId=1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0\",\"PC\":\"https://mk.landray.com.cn/web/sys-lbpm/desktop/static/transfer.html?processId=1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0\",\"MOBILE\":\"https://mk.landray.com.cn/web/sys-lbpm/desktop/static/transfer.html?processId=1gaj2jgl1wsttw698rwh8suqg1b9417c1qw0\"},\"fdInstanceId\":\"1gaj2jgjewstqw85l0wchpmpb1l6mqj0vlw0\"}",
+  "queryType": 1
+}

@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.dto;
 
+import indi.rui.study.unittest.dto.org.SimplePerson;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -30,7 +31,7 @@ public class MkRightGroupVO {
 
     private String fdLastModifier;
 
-    private List<IdNameProperty> fdSysOrgElements;
+    private List<SimplePerson> fdSysOrgElements;
 
     private List<IdNameProperty> fdSysRightRoles;
 

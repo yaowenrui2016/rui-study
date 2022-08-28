@@ -1,0 +1,637 @@
+{
+  "correlationClassesVOS": [
+    {
+      "fdClassesMainId": "rest",
+      "fdClassesMainName": "休息",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0"
+    }
+  ],
+  "ruleVOS": [
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1577808000000,
+      "fdEnd": 1577808000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1577894400000,
+      "fdEnd": 1577894400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1577980800000,
+      "fdEnd": 1577980800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578067200000,
+      "fdEnd": 1578067200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578153600000,
+      "fdEnd": 1578153600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578240000000,
+      "fdEnd": 1578240000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578326400000,
+      "fdEnd": 1578326400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578412800000,
+      "fdEnd": 1578412800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578499200000,
+      "fdEnd": 1578499200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578585600000,
+      "fdEnd": 1578585600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578672000000,
+      "fdEnd": 1578672000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578758400000,
+      "fdEnd": 1578758400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578844800000,
+      "fdEnd": 1578844800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578931200000,
+      "fdEnd": 1578931200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579017600000,
+      "fdEnd": 1579017600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579104000000,
+      "fdEnd": 1579104000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579190400000,
+      "fdEnd": 1579190400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579276800000,
+      "fdEnd": 1579276800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579363200000,
+      "fdEnd": 1579363200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579449600000,
+      "fdEnd": 1579449600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579536000000,
+      "fdEnd": 1579536000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579622400000,
+      "fdEnd": 1579622400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579708800000,
+      "fdEnd": 1579708800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579795200000,
+      "fdEnd": 1579795200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579881600000,
+      "fdEnd": 1579881600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579968000000,
+      "fdEnd": 1579968000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580054400000,
+      "fdEnd": 1580054400000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1580140800000,
+      "fdEnd": 1580140800000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580227200000,
+      "fdEnd": 1580227200000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1580313600000,
+      "fdEnd": 1580313600000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580400000000,
+      "fdEnd": 1580400000000,
+      "fdIndex": 1,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5kdow16wr2w1b4lds42jbh1tf7e42w0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1577808000000,
+      "fdEnd": 1577808000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1577894400000,
+      "fdEnd": 1577894400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1577980800000,
+      "fdEnd": 1577980800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578067200000,
+      "fdEnd": 1578067200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578153600000,
+      "fdEnd": 1578153600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578240000000,
+      "fdEnd": 1578240000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578326400000,
+      "fdEnd": 1578326400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578412800000,
+      "fdEnd": 1578412800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578499200000,
+      "fdEnd": 1578499200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578585600000,
+      "fdEnd": 1578585600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578672000000,
+      "fdEnd": 1578672000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578758400000,
+      "fdEnd": 1578758400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1578844800000,
+      "fdEnd": 1578844800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1578931200000,
+      "fdEnd": 1578931200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579017600000,
+      "fdEnd": 1579017600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579104000000,
+      "fdEnd": 1579104000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579190400000,
+      "fdEnd": 1579190400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579276800000,
+      "fdEnd": 1579276800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579363200000,
+      "fdEnd": 1579363200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579449600000,
+      "fdEnd": 1579449600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579536000000,
+      "fdEnd": 1579536000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579622400000,
+      "fdEnd": 1579622400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579708800000,
+      "fdEnd": 1579708800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579795200000,
+      "fdEnd": 1579795200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1579881600000,
+      "fdEnd": 1579881600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1579968000000,
+      "fdEnd": 1579968000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580054400000,
+      "fdEnd": 1580054400000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1580140800000,
+      "fdEnd": 1580140800000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580227200000,
+      "fdEnd": 1580227200000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2md6b3wuwbfcw88lhor2tld3dl10lusw0",
+      "fdBegin": 1580313600000,
+      "fdEnd": 1580313600000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    },
+    {
+      "fdClassesMainId": "1ga2mjcojwuwbiswkugfsp1e84t5b2mdeew0",
+      "fdBegin": 1580400000000,
+      "fdEnd": 1580400000000,
+      "fdIndex": 2,
+      "fdMonth": "2020-01",
+      "fdOrgId": "1ga2m5ngvw16wrgw361u24a1jdeols22fmw0",
+      "fdScheduleMainId": "1ga2suctawuweiuw3hrj4e0sppsfml75vlw0",
+      "fdType": 2
+    }
+  ],
+  "scheduleRuleVOS": [],
+  "scheduleMainVO": {
+    "fdBegin": 1609430400000,
+    "fdEnd": 1640966400000,
+    "fdId": "1ga33tdihwpw3hw1e5nkpd2vdajls3g5q9w0"
+  }
+}

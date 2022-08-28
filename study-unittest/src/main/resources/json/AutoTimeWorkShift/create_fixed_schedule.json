@@ -1,0 +1,54 @@
+{
+  "fdName": "固定排班测试",
+  "fdBegin": 1659283200000,
+  "fdEnd": 1664553600000,
+  "fdTimeZone": {},
+  "fdType": 1,
+  "fdOrgList": [
+  ],
+  "fdHoliday": {},
+  "fdFixed": [
+    {
+      "fdDayOfWeek": 1,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 2,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 3,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 4,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 5,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 6,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    },
+    {
+      "fdDayOfWeek": 7,
+      "fdWorkClasses": {
+        "fdId": ""
+      }
+    }
+  ]
+}

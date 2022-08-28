@@ -1,0 +1,77 @@
+{
+  "editerVOS": [
+    {
+      "fdOrgId": "1ga7od75pw9w8t0w2ojr0o53op1di31ffuw0",
+      "fdOrgName": "姚文锐"
+    }
+  ],
+  "rangeVOS": [
+    {
+      "fdOrgId": "1ga7em96pw9w5d1w1v6phtov2o9obd7pe7w0",
+      "fdOrgName": "jk部门20220812053120",
+      "fdHierarchyId": "x1ga7em96pw9w5d1w1v6phtov2o9obd7pe7w0x"
+    }
+  ],
+  "scheduleMainVO": {
+    "fdName": "固定排班测试",
+    "fdBegin": 1659283200000,
+    "fdEnd": 1664553600000,
+    "fdTimeZoneId": "1ga7oerqsw9w8v3w2mkcv6hd4sc52kmnktw0",
+    "fdType": 1,
+    "fdCreatorName": "姚文锐",
+    "fdDefaultClassId": "日常"
+  },
+  "fixationVOS": [
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 1,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": true,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 2,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": true,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 3,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": true,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 4,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": true,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 5,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": true,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 6,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": false,
+      "fdName": "日常"
+    },
+    {
+      "fdClassesMainId": "1ga7ohrtiw9w929w2o4l92cttfkft1odk2w0",
+      "fdDayOfWeek": 7,
+      "fdTimes": "09:00-12:00 ；13:00-18:00",
+      "fdIsWork": false,
+      "fdName": "日常"
+    }
+  ],
+  "isNewVersion": null,
+  "newVersionStartTime": null
+}

@@ -1,0 +1,84 @@
+{
+  "fdMessageContent": {
+    "msgType": 2,
+    "notifyTemplateCode": "8603fed874bf4daba2b79791c5ca6177",
+    "customNotifyContent": {
+      "fdCode": "8603fed874bf4daba2b79791c5ca6177",
+      "fdName": "自定义消息模板127f4d",
+      "providersDisplay": [
+        {
+          "provider": "email",
+          "messageKey": "sys-notify:notifyType.email",
+          "name": "邮件",
+          "todoExt": false,
+          "displayStyles": [
+            {
+              "style": "TEXT_CARD",
+              "dispProps": [
+                {
+                  "property": "subject",
+                  "name": "邮件标题",
+                  "messageKey": "sys-notify:sys.notify.email.displayProperty.subject",
+                  "type": "SINGLE_LINE_TEXT",
+                  "required": true,
+                  "value4Lang": {
+                    "zh-CN": "第三方师傅",
+                    "en-US": "#{customVars._ProcessStatus}#{customVars.1gafl452vw8fw2ltw36a24422b170ue2otw0-fdSubject}dd"
+                  }
+                },
+                {
+                  "property": "content",
+                  "name": "邮件正文",
+                  "messageKey": "sys-notify:sys.notify.email.displayProperty.content",
+                  "type": "RICH_TEXT",
+                  "required": true,
+                  "value4Lang": {
+                    "zh-CN": "<p>dfsf</p>",
+                    "en-US": "<p>sdfsaf&nbsp;</p>"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "customVars": {
+        "zh-cn": [],
+        "en-us": [
+          {
+            "displayName": "流程状态",
+            "varName": "_ProcessStatus"
+          },
+          {
+            "displayName": "标题",
+            "varName": "1gafl452vw8fw2ltw36a24422b170ue2otw0-fdSubject"
+          }
+        ],
+        "zh-hk": []
+      }
+    },
+    "params": [
+      {
+        "key": "_ProcessStatus",
+        "language": {
+          "en-us": {
+            "value": "${_ProcessStatus}",
+            "display": "流程状态"
+          }
+        }
+      },
+      {
+        "key": "1gafl452vw8fw2ltw36a24422b170ue2otw0-fdSubject",
+        "language": {
+          "en-us": {
+            "value": "${1gafl452vw8fw2ltw36a24422b170ue2otw0-fdSubject}",
+            "display": "标题"
+          }
+        }
+      }
+    ]
+  },
+  "notifyMethods": [
+    "email"
+  ]
+}

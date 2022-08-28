@@ -1,0 +1,52 @@
+{
+  "fdType": "CUSTOM",
+  "fdName": "1111",
+  "dynamicProps": {
+    "fdNameCn": "1111"
+  },
+  "fdCode": "$common:222",
+  "providersDisplay": [
+    {
+      "provider": "sms",
+      "messageKey": "sys-notify:notifyType.sms",
+      "name": "短信",
+      "todoExt": false,
+      "displayStyles": [
+        {
+          "style": "PLAIN_TEXT",
+          "dispProps": [
+            {
+              "property": "subject",
+              "name": "标题",
+              "messageKey": "sys-notify:sys.notify.defaultProvider.displayProperty.subject",
+              "value4Lang": {
+                "zh-CN": "#{customVars.8e95ec1998a746fe9f11628f9106d780}111"
+              },
+              "type": "SINGLE_LINE_TEXT",
+              "required": true
+            }
+          ],
+          "check": true
+        }
+      ]
+    }
+  ],
+  "customVars": [
+    {
+      "displayName": "123",
+      "varName": "8e95ec1998a746fe9f11628f9106d780"
+    },
+    {
+      "displayName": "yao",
+      "varName": "abc"
+    },
+    {
+      "displayName": "yaowr",
+      "varName": "abc"
+    }
+  ],
+  "mechanisms": {
+    "attachment": []
+  },
+  "fdId": "1galkchkuw1vw5tlw2g11qkq1h9a3a3ll3w0"
+}

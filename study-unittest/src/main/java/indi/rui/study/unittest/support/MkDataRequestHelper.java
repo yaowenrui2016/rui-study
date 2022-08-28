@@ -186,7 +186,7 @@ public class MkDataRequestHelper {
 
     // =================== 私有方法 ================== //
 
-    private String callDataForString(String path, JSON body) {
+    public String callDataForString(String path, JSON body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());

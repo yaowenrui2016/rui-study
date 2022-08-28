@@ -1,0 +1,19 @@
+{
+  "fdName": "测试班次",
+  "fdColor": "{\"r\":80,\"g\":196,\"b\":94,\"a\":1}",
+  "fdEnabled": true,
+  "fdTimePeriodList": [
+    {
+      "fdWorkBegin": 1320,
+      "fdWorkEnd": 1560,
+      "fdRestBegin": 0,
+      "fdRestEnd": 0
+    },
+    {
+      "fdWorkBegin": 2400,
+      "fdWorkEnd": 2640,
+      "fdRestBegin": 0,
+      "fdRestEnd": 0
+    }
+  ]
+}

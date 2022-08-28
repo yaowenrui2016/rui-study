@@ -1,0 +1,29 @@
+{
+  "code": "return.optSuccess",
+  "data": {
+    "creatorName": "姚文锐",
+    "customVars": [
+      {
+        "displayName": "合同金额",
+        "varName": "money"
+      }
+    ],
+    "fdCode": "P001",
+    "fdCreateTime": 1658829771000,
+    "fdCreatorId": "1g8ssv4daw8w1bw1s3rn3h3vfh3hnb2ghcw0",
+    "fdEnabled": true,
+    "fdId": "1g8svb3r3w2w3iwaiu9if1vjh3693pt7n1w0",
+    "fdModule": "sys-notify-example",
+    "fdName": "系统模板-会议模板样例",
+    "fdType": "CUSTOM",
+    "usedVars": [
+      {
+        "displayName": "dinner",
+        "varName": "dinner"
+      }
+    ]
+  },
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1gb4hpbl8w29w18w24nqn315mn5639hherw0"
+}

@@ -3,6 +3,7 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.*;
+import indi.rui.study.unittest.dto.org.SimplePerson;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import lombok.extern.slf4j.Slf4j;
 
@@ -42,14 +43,14 @@ public class AutoCreatePersonAndAuthorized {
 //            "laow", "老王",
     };
 
-    static {
-        int count = 200;
-        USER_LOGIN_NAMES = new String[count * 2];
-        for (int i = 1; i <= count; i++) {
-            USER_LOGIN_NAMES[2 * (i - 1)] = "TestUser" + i;
-            USER_LOGIN_NAMES[2 * (i - 1) + 1] = "用户" + i;
-        }
-    }
+//    static {
+//        int count = 200;
+//        USER_LOGIN_NAMES = new String[count * 2];
+//        for (int i = 1; i <= count; i++) {
+//            USER_LOGIN_NAMES[2 * (i - 1)] = "TestUser" + i;
+//            USER_LOGIN_NAMES[2 * (i - 1) + 1] = "用户" + i;
+//        }
+//    }
 
 
 //    private static final String[] USER_LOGIN_NAMES = new String[]{
@@ -61,19 +62,13 @@ public class AutoCreatePersonAndAuthorized {
             "http://127.0.0.1:8040", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mksmoke.ywork.me", "secadmin", "Password_1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkpre.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mktest.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mksmoke.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkdev01.ywork.me", "secadmin", "Password_1");
@@ -82,9 +77,39 @@ public class AutoCreatePersonAndAuthorized {
 //            "http://mkdev02.ywork.me", "secadmin", "Password_1");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
+
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkoppo.ywork.me", "secadmin", "Password_1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "https://mk-tongweb.ywork.me", "secadmin", "Password_1");
+
+
     /* ---------------------- */
+    // ***    PUBLIC方法   *** //
+    /* ---------------------- */
+
+    /**
+     * 创建并返回人员
+     *
+     * @param person
+     * @return
+     */
+    public static SimplePerson createAndGetPerson(SimplePerson person) {
+        // 查找用户
+        SimplePerson origin = findPerson(person.getFdLoginName());
+        if (origin == null) {
+            // 创建用户
+            addPerson(person.getFdLoginName(), person.getFdName());
+            origin = findPerson(person.getFdLoginName());
+        }
+        return origin;
+    }
+
 
     public static void main(String[] args) {
         MkRightGroupVO group;
@@ -97,12 +122,12 @@ public class AutoCreatePersonAndAuthorized {
             exists = false;
         }
         // 获取用户
-        List<IdNameProperty> orgs = new ArrayList<>();
+        List<SimplePerson> orgs = new ArrayList<>();
         for (int i = 0; i < USER_LOGIN_NAMES.length; i += 2) {
             String loginName = USER_LOGIN_NAMES[i];
             String name = USER_LOGIN_NAMES[i + 1];
             // 查找用户
-            IdNameProperty person = findPerson(loginName);
+            SimplePerson person = findPerson(loginName);
             if (person == null) {
                 // 创建用户
                 person = addPerson(loginName, name);
@@ -138,7 +163,7 @@ public class AutoCreatePersonAndAuthorized {
         }
     }
 
-    private static IdNameProperty addPerson(String loginName, String name) {
+    private static SimplePerson addPerson(String loginName, String name) {
         JSONObject json = initPerson();
         json.put("fdGender", "M");
         json.put("fdInner", true);
@@ -155,7 +180,7 @@ public class AutoCreatePersonAndAuthorized {
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("add person account failed");
         }
-        return IdNameProperty.of((String) json.get("fdId"), (String) json.get("fdName"));
+        return JSONObject.parseObject(json.toJSONString(), SimplePerson.class);
     }
 
     private static JSONObject initPerson() {
@@ -183,8 +208,14 @@ public class AutoCreatePersonAndAuthorized {
         return rtnList;
     }
 
-    private static IdNameProperty findPerson(String loginName) {
+    private static SimplePerson findPerson(String loginName) {
         JSONObject json = new JSONObject();
+        json.put("columns", Arrays.asList(
+                "fdId",
+                "fdName",
+                "fdOrgType",
+                "fdAccount.fdLoginName",
+                "fdHierarchyId"));
         Map<String, Object> conditions = (Map<String, Object>) json.computeIfAbsent(
                 "conditions", (k) -> new HashMap<>());
         conditions.put("fdAccount.fdLoginName", Collections.singletonMap("$eq", loginName));
@@ -193,11 +224,16 @@ public class AutoCreatePersonAndAuthorized {
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Find person failed");
         }
-        IdNameProperty person = null;
+        SimplePerson person = null;
         List<JSONObject> resultPersons = mkResponse.getData().getContent();
         if (resultPersons != null && !resultPersons.isEmpty()) {
             JSONObject resultPerson = resultPersons.get(0);
-            person = IdNameProperty.of((String) resultPerson.get("fdId"), (String) resultPerson.get("fdName"));
+            person = new SimplePerson();
+            person.setFdId((String) resultPerson.get("fdId"));
+            person.setFdName((String) resultPerson.get("fdName"));
+            person.setFdOrgType((Integer) resultPerson.get("fdOrgType"));
+            person.setFdLoginName((String) ((JSONObject) resultPerson.get("fdAccount")).get("fdLoginName"));
+            person.setFdHierarchyId((String) resultPerson.get("fdHierarchyId"));
         }
         return person;
     }
