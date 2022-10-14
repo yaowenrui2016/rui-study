@@ -3,20 +3,18 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import indi.rui.study.unittest.dto.e2e.E2EContext;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
+import indi.rui.study.unittest.dto.e2e.E2EContext;
+import indi.rui.study.unittest.dto.e2e.MkSysMechTptEnvToEnvTaskVO;
 import indi.rui.study.unittest.dto.e2e.ReferGroup;
 import indi.rui.study.unittest.dto.e2e.ReferTreeNode;
-import indi.rui.study.unittest.dto.e2e.MkSysMechTptEnvToEnvTaskVO;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.beanutils.BeanUtils;
 
 import java.io.File;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -64,27 +62,79 @@ public class AutoAdminE2E {
 
 
     public static void main(String[] args) throws InterruptedException {
+        // 异步导出功能
+        asyncLoad("exportRequest.json");
+
+        // 轮询导出进度
+        pollProgress();
+
+//        // 取消导出
+//        abortAsyncLoad();
+
         // 离线导出（本地）
         E2EContext context = offLineLoadReferTree("exportRequest.json");
+
         String filename = offLineExport(context.getReferGroupList());
 //        String filename = "EnvToEnv_ExampleEntity.zip";
 //        uploadAttach("C:\\Users\\yaowr\\Pictures\\temp\\2.jpg");
 //        uploadAttach("D:\\project\\rui-study\\downloadTemp\\EnvToEnv_ExampleEntity_20220609160427.zip");
-        String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
-//        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
-        context = loadEntityNodes(attachId);
-        context = loadReferTree(context.getEntityNodes());
-        context = loadOrgNodes(context.getReferGroupList());
-        String taskId = offLineImportData(attachId, context.getOrgNodes());
 
-        // 加载任务
-        Thread.sleep(3000);
-        findTask(taskId);
+//        // 离线导入
+//        String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
+////        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
+//        context = loadEntityNodes(attachId);
+//        context = loadReferTree(context.getEntityNodes());
+//        context = loadOrgNodes(context.getReferGroupList());
+//        String taskId = offLineImportData(attachId, context.getOrgNodes());
+//
+//        // 加载任务
+//        Thread.sleep(3000);
+//        findTask(taskId);
 
 //        // 离线导出（dev02）
 //        E2EContext context = offLineLoadReferTree("test/request_body.json");
 //        String filename = offLineExport(context.getReferGroupList());
     }
+
+    /**
+     * 异步导出请求
+     */
+    private static void asyncLoad(String filename) {
+        JSONObject body = FileUtils.loadJSON("AutoAdminE2E/" + filename);
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-admin/e2e/offline/source/asyncLoad", body, E2EContext.class);
+        log.info("asyncLoad: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
+    /**
+     * 轮询导出进度
+     */
+    private static void pollProgress() {
+        JSONObject body = new JSONObject();
+        MkResponse<E2EContext> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-admin/e2e/offline/source/pollProgress", body, E2EContext.class);
+        log.info("pollProgress: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
+    /**
+     * 轮询导出进度
+     */
+    private static void abortAsyncLoad() {
+        JSONObject body = new JSONObject();
+        MkResponse<E2EContext> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-admin/e2e/offline/source/abortAsyncLoad", body, E2EContext.class);
+        log.info("abortAsyncLoad: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
     /**
      * 离线获取关联树
      */

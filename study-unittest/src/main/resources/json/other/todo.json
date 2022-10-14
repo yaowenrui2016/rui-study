@@ -1,0 +1,39 @@
+{
+  "success": true,
+  "code": "return.optSuccess",
+  "msg": "您的操作已成功！",
+  "data": {
+    "fdId": "1gf39ogb1wmw2fj8w3nmpgo23oglfsi1ecw0",
+    "fdSnid": "1gf39og9nwmw2fj4w3i1lh8l14vj4dt35lw0",
+    "fdDigest": "3d42ec913a9050fb79fca6fa3086a96d",
+    "fdNotifyId": "183c69bf07b7cbf8f48a8ec4adab9a3b",
+    "fdAppName": "origin-ekp",
+    "fdModuleName": "km-review",
+    "fdType": 1,
+    "fdLevel": 3,
+    "fdFavorite": false,
+    "fdReaded": true,
+    "fdLink": "https://ekp.gcc.edu.cn/sys/notify/sys_notify_todo/sysNotifyTodo.do?method=view&fdId=183c69bf07b7cbf8f48a8ec4adab9a3b",
+    "fdParameter1": "183c69bf0611c6679e66a874ad2b0305",
+    "fdParameter2": "183c69bf069815a8f2d110d46ccaa40d",
+    "fdOwnerId": "1g3qu4iqvwbw30s1wbhl9hl2tl6ji02j59w0",
+    "fdOwner": "李俊锋",
+    "fdCreator": {
+      "fdId": "1g3n7fu21w7w5bdnw193hobl2fngmeqjaaw0",
+      "fdName": "管理员"
+    },
+    "fdCreatorId": "1g3n7fu21w7w5bdnw193hobl2fngmeqjaaw0",
+    "fdExtendContent": "[{\"titleMsgKey\":\"sys-lbpmservice:lbpmSupport.STATUS_RUNNING\",\"title\":\"处理节点\",\"value\":\"审批节点1\",\"valueMode\":\"value\",\"key\":\"lbpmCurrNode\"}]",
+    "fdGenerateTime": 1665484473000,
+    "fdStatus": 1,
+    "fdAppModule": "origin-ekp:km-review",
+    "fdQueryType": 1,
+    "mechanismName": "notify",
+    "fdEntityName": "com.landray.kmss.km.review.model.KmReviewMain",
+    "fdEntityId": "183c69bc7f53f52648fa1f7496899689",
+    "fdEntityKey": "183c69bc7f53f52648fa1f7496899689",
+    "fdSubject": "请审批[信息化建设处]管理员提交的流程：用餐申请（测试模板）-管理员-2022101101908",
+    "fdCreateTime": 1665484451000
+  },
+  "traceId": "1gf53gutgwkw3ssjwqnjekg25lmh1npfirw0"
+}

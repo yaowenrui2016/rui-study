@@ -72,7 +72,7 @@ public class MkLoginHelper {
      * @return X-Auth-Token
      */
     public static MkLoginResult doLogin(String address, String username, String password) {
-        return doLogin(address, username, password, null);
+        return doLoginWithPubKeyFile(address, username, password, null);
     }
 
     /**
@@ -82,12 +82,23 @@ public class MkLoginHelper {
      * @param password
      * @return X-Auth-Token
      */
-    public static MkLoginResult doLogin(String address, String username, String password, String pubKeyFile) {
+    public static MkLoginResult doLoginWithPubKeyFile(String address, String username, String password, String pubKeyFile) {
         // 密码加密处理
         String pubKey = FileUtils.readFileToString(
                 Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
                         KEY_PAIR_DIR + "pubkey" + (StringUtils.isBlank(pubKeyFile) ? "" : "_" + pubKeyFile) + ".txt"))
                         .getFile(), "utf-8");
+        return doLoginWithPubKey(address, username, password, pubKey);
+    }
+
+    /**
+     * 登录
+     *
+     * @param username
+     * @param password
+     * @return X-Auth-Token
+     */
+    public static MkLoginResult doLoginWithPubKey(String address, String username, String password, String pubKey) {
         String encPwd = RsaHelper.encode(Hex.decode(pubKey), password);
         // 返回字段信息
         String xAuthToken = null;

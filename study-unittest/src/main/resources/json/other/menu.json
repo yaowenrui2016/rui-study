@@ -1,0 +1,6 @@
+menu.admin.one.level.SECADMIN=[sys-org, sys-right, sys-admin, sys-manager]
+menu.admin.one.level.SECAUDITOR=[sys-admin]
+menu.admin.one.level.SUPERADMIN=[sys-admin, sys-monitor]
+menu.admin.one.level.SYSADMIN=[sys-admin, sys-monitor]
+
+menu.admin.one.level.SYSADMIN

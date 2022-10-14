@@ -25,9 +25,12 @@ import java.util.Map;
 @Slf4j
 public class MkDataRequestHelper {
 
-    private final MkLoginResult loginResult;
+    private MkLoginResult loginResult;
 
-    private final String address;
+    private String address;
+
+    public MkDataRequestHelper() {
+    }
 
     public MkDataRequestHelper(String address, String username, String password) {
         this(address, username, password, null);
@@ -36,7 +39,7 @@ public class MkDataRequestHelper {
     public MkDataRequestHelper(String address, String username, String password, String pubKeyFile) {
         this.address = address;
         // 登录用户
-        this.loginResult = MkLoginHelper.doLogin(address, username, password, pubKeyFile);
+        this.loginResult = MkLoginHelper.doLoginWithPubKeyFile(address, username, password, pubKeyFile);
     }
 
     // ====================== public method =======================
@@ -53,7 +56,6 @@ public class MkDataRequestHelper {
      */
     public String httpGet(String url) {
         Map<String, String> httpHeaders = new HashMap<>();
-        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         httpHeaders.put("content-type", "application/json;charset=utf-8");
         String httpResult = null;
         try {

@@ -26,6 +26,7 @@ import org.apache.http.util.EntityUtils;
 
 import javax.net.ssl.SSLContext;
 import java.io.*;
+import java.net.URLDecoder;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
@@ -297,9 +298,9 @@ public class HttpClientUtils {
                 NameValuePair param = values[0].getParameterByName("filename");
                 if (param != null) {
                     try {
-                        //filename = new String(param.getValue().toString().getBytes(), "utf-8");
-                        //filename=URLDecoder.decode(param.getValue(),"utf-8");
-                        filename = param.getValue();
+//                        filename = new String(param.getValue().toString().getBytes(), "utf-8");
+                        filename= URLDecoder.decode(param.getValue(),"utf-8");
+//                        filename = param.getValue();
                     } catch (Exception e) {
                         e.printStackTrace();
                     }

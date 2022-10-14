@@ -1,0 +1,12 @@
+{
+  "nodeOperList": [
+    {
+      "fdId": "1g8fp3vjcw8aw130qw3oji0ab35nv4628tw0",
+      "referType": "kmReviewTemplateType",
+      "operation": "COVER",
+      "extendData": {
+        "operation": "创建副本"
+      }
+    }
+  ]
+}

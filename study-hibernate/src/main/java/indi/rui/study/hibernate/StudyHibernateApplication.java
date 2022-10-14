@@ -6,9 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @Slf4j
 @SpringBootApplication
-public class
-
-StudyHibernateApplication {
+public class StudyHibernateApplication {
 
     public static void main(String[] args) {
         long begin = System.currentTimeMillis();

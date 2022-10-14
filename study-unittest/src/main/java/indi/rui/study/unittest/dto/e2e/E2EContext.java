@@ -3,6 +3,7 @@ package indi.rui.study.unittest.dto.e2e;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
@@ -68,6 +69,21 @@ public class E2EContext {
      * 错误信息
      */
     private String errMsg;
+
+    /**
+     * 导出进度
+     */
+    private Integer progress;
+
+    /**
+     * 开始导出时间
+     */
+    private Date startTime;
+
+    /**
+     * 完成导出时间
+     */
+    private Date endTime;
 
 
     @Getter

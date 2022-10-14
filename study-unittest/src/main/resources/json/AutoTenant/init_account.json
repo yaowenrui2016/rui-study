@@ -1,0 +1,10 @@
+{
+  "tenantEnabled": false,
+  "adminType": "THREE_PERSON",
+  "sysadmin": "sysadmin",
+  "sysadminPwd": "nBQZ7flKtHg3ePhp4FP+mk3lVDGvcYslKhOVJEFseFsji09HK0bEO4SIa47V0If3Y966fr/JsjUHF1ppf4qev9eV92bW3plUYKTBgbZ61BIcKchiEkDtdeigsKbmj9RSoIWQf1j5MWZUYu1aj6OPnujSHZElZqstTKjD2OEMrgA=",
+  "secadmin": "secadmin",
+  "secadminPwd": "nBQZ7flKtHg3ePhp4FP+mk3lVDGvcYslKhOVJEFseFsji09HK0bEO4SIa47V0If3Y966fr/JsjUHF1ppf4qev9eV92bW3plUYKTBgbZ61BIcKchiEkDtdeigsKbmj9RSoIWQf1j5MWZUYu1aj6OPnujSHZElZqstTKjD2OEMrgA=",
+  "secauditor": "secauditor",
+  "secauditorPwd": "nBQZ7flKtHg3ePhp4FP+mk3lVDGvcYslKhOVJEFseFsji09HK0bEO4SIa47V0If3Y966fr/JsjUHF1ppf4qev9eV92bW3plUYKTBgbZ61BIcKchiEkDtdeigsKbmj9RSoIWQf1j5MWZUYu1aj6OPnujSHZElZqstTKjD2OEMrgA="
+}

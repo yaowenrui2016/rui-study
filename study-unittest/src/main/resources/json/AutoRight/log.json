@@ -1,0 +1,3 @@
+refresh right delete=["SYS_SYSADMIN"],
+module=sys-right,
+rolesMap=

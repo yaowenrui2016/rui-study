@@ -88,6 +88,9 @@ public class AutoCreatePersonAndAuthorized {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "https://mk-tongweb.ywork.me", "secadmin", "Password_1");
 
+//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
+//            "http://mkmini.ywork.me", "secadmin", "Password_1");
+
 
     /* ---------------------- */
     // ***    PUBLIC方法   *** //

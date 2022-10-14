@@ -11,8 +11,8 @@ import lombok.extern.slf4j.Slf4j;
 public class TestDownloadFile {
 
     public static void main(String[] args) {
-        String downloadPath = "";
-        String url = "http://localhost:13004/study-hibernate/download/normal";
+        String downloadPath = "D:\\project\\rui-study\\downloadTemp";
+        String url = "http://localhost:13004/study-hibernate/download/noFileDownload";
         try {
             String filename = HttpClientUtils.httpGetDownload(url, null, null, downloadPath);
             log.info("download success: {}", filename);

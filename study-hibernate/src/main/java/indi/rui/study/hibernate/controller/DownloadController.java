@@ -69,6 +69,26 @@ public class DownloadController {
         }
     }
 
+    @RequestMapping(path = "noFileDownload", method = RequestMethod.GET)
+    public void noFileDownload(HttpServletRequest request, HttpServletResponse response) {
+        // 字节
+        byte[] content = "下载内容".getBytes();
+        // 设置下载http响应头
+        String filename = encodeFileName(request, "文件.txt");
+        response.addHeader("Content-Type", "text/plain");
+        response.addHeader("Content-Disposition", "attachment; filename=" + filename + "; filename*=utf-8''" + filename);
+        response.addHeader("Content-Length", "" + content.length);
+        OutputStream out = null;
+        try {
+            out = response.getOutputStream();
+            out.write(content);
+            out.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new RuntimeException("下载文件失败");
+        }
+    }
+
 
     /**
      * 文件名编码

@@ -1,0 +1,35 @@
+{
+  "运维管理权限": {
+    "business": true,
+    "desc": "运维管理权限",
+    "label": "运维管理权限",
+    "messageKey": "运维管理权限",
+    "module": "sys-right",
+    "name": "SYS_SYSADMIN",
+    "order": 0
+  },
+  "ROLE_SYSRIGHT_SETTING": {
+    "business": true,
+    "desc": "sys-right:role.ROLE_SYSRIGHT_SETTING.desc",
+    "description": "必须拥有该权限才可以进入权限模块",
+    "extendRoles": [
+      "MENU_SYS_RIGHT_ROLE"
+    ],
+    "label": "权限机制默认权限",
+    "messageKey": "sys-right:role.ROLE_SYSRIGHT_SETTING.name",
+    "module": "sys-right",
+    "name": "ROLE_SYSRIGHT_SETTING",
+    "order": 1
+  },
+  "ROLE_SYSRIGHT_EDITOR": {
+    "business": true,
+    "desc": "sys-right:role.ROLE_SYSRIGHT_EDITOR.desc",
+    "description": "拥有该权限可以进行角色编辑、赋权、查看权限等操作",
+    "extendRoles": [],
+    "label": "权限维护权限",
+    "messageKey": "sys-right:role.ROLE_SYSRIGHT_EDITOR.name",
+    "module": "sys-right",
+    "name": "ROLE_SYSRIGHT_EDITOR",
+    "order": 1
+  }
+}

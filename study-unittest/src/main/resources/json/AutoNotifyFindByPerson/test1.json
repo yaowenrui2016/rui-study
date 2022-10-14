@@ -4,7 +4,7 @@
   "conditions": {
     "todoOrDone": "todo",
     "targets": [
-      "[用户登录名]"
+      "yaowr"
     ],
     "orgProperty": "fdLoginName",
     "fdType": 1

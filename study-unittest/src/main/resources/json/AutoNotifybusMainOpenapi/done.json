@@ -1,0 +1,12 @@
+{
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "0",
+  "entityName": "developer_0930",
+  "orgProperty": "fdLoginName",
+  "targets": [
+    {
+      "fdLoginName": "yaowr"
+    }
+  ]
+}
