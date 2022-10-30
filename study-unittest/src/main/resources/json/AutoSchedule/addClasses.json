@@ -1,0 +1,13 @@
+{
+  "main": {
+    "fdName": "常规班次",
+    "fdStatus": true,
+    "fdColor": "＃90EE90"
+  },
+  "detail": [
+    {
+      "fdWorkBegin": 480,
+      "fdWorkEnd": 960
+    }
+  ]
+}

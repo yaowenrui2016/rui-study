@@ -1,0 +1,7 @@
+{
+  "scheduleMainVO":{
+    "fdName": "测试排班",
+    "fdType": 1,
+    "fdHolidayId": "123"
+  }
+}

@@ -1,13 +1,16 @@
 package indi.rui.study.unittest.auto;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.*;
 import indi.rui.study.unittest.dto.org.SimplePerson;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * @author: yaowr
@@ -64,33 +67,6 @@ public class AutoCreatePersonAndAuthorized {
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mksmoke.ywork.me", "secadmin", "Password_1");
 
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkpre.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mktest.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkdev01.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkdev02.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mksmokemini.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "https://mkdemo.landray.com.cn", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkoppo.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "https://mk-tongweb.ywork.me", "secadmin", "Password_1");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
-//            "http://mkmini.ywork.me", "secadmin", "Password_1");
-
 
     /* ---------------------- */
     // ***    PUBLIC方法   *** //
@@ -139,18 +115,12 @@ public class AutoCreatePersonAndAuthorized {
         }
         group.setFdSysOrgElements(orgs);
         // 获取角色
-        List<MkRightRolePanel> rolesPanel = getAllRoles();
-        List<IdNameProperty> roles = new ArrayList<>();
-        for (MkRightRolePanel rolePanel : rolesPanel) {
-            List<MkRightRolePanel.Option> options = rolePanel.getOptions();
-            for (MkRightRolePanel.Option option : options) {
-                IdNameProperty role = new IdNameProperty();
-                role.setFdId(option.getFdId());
-                role.setFdName(option.getFdName());
-                roles.add(role);
-            }
+        List<JSONObject> allRoles = getAllRoles();
+        if (!CollectionUtils.isEmpty(allRoles)) {
+            List<IdNameProperty> roles = allRoles.stream().map(jsonObject -> IdNameProperty.of(jsonObject.getString("fdId"),
+                    jsonObject.getString("fdName"))).collect(Collectors.toList());
+            group.setFdSysRightRoles(roles);
         }
-        group.setFdSysRightRoles(roles);
         if (exists) {
             // 更新角色并授权给用户
             updateGroup(group);
@@ -284,12 +254,16 @@ public class AutoCreatePersonAndAuthorized {
         }
     }
 
-    private static List<MkRightRolePanel> getAllRoles() {
-        MkResponse<List<MkRightRolePanel>> mkResponse = mkDataRequestHelper.callDataForList(
-                "/data/sys-right/sysRightRole/getAll", null, MkRightRolePanel.class);
-        List<MkRightRolePanel> rtnList = null;
+    private static List<JSONObject> getAllRoles() {
+        JSONObject body = new JSONObject();
+        body.put("pageSize", 1000);
+        body.put("count", false);
+        body.put("columns", Arrays.asList("fdId", "fdName"));
+        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-right/sysRightRole/findAll", body, JSONObject.class);
+        List<JSONObject> rtnList = null;
         if (mkResponse.isSuccess()) {
-            rtnList = mkResponse.getData();
+            rtnList = mkResponse.getData().getContent();
         }
         return rtnList;
     }

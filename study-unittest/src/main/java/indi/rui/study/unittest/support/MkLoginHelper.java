@@ -60,7 +60,7 @@ public class MkLoginHelper {
      * @param password
      * @return X-Auth-Token
      */
-    public static UserInfo loginLoadUserInfo(String address, String username, String password) {
+    public static JSONObject loginLoadUserInfo(String address, String username, String password) {
         return doLogin(address, username, password).getUserInfo();
     }
 
@@ -102,7 +102,7 @@ public class MkLoginHelper {
         String encPwd = RsaHelper.encode(Hex.decode(pubKey), password);
         // 返回字段信息
         String xAuthToken = null;
-        UserInfo userInfo = null;
+        JSONObject userInfo = null;
         // 请求地址
         String url = null;
         boolean success = false;
@@ -112,8 +112,8 @@ public class MkLoginHelper {
             url = address + "/data/sys-auth/login?" + "j_username=" + username + "&j_password=" + URLEncoder.encode(encPwd, "utf-8");
             String httpResult = HttpClientUtils.httpPost(url, null, null, cookieStore);
             if (httpResult != null) {
-                MkResponse<UserInfo> mkResponse = JSONObject.parseObject(httpResult,
-                        new TypeReference<MkResponse<UserInfo>>() {
+                MkResponse<JSONObject> mkResponse = JSONObject.parseObject(httpResult,
+                        new TypeReference<MkResponse<JSONObject>>() {
                         });
                 if (mkResponse.isSuccess()) {
                     for (Cookie cookie : cookieStore.getCookies()) {

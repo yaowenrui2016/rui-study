@@ -18,33 +18,15 @@ public class AutoTenant {
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
 //            = new MkDataRequestHelper("http://mksmoke.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mktest.ywork.me", "jj01", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mktest.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkmini.ywork.me/", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkmini.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkmini-se.ywork.me", "yuxd", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkpre.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://mkmini.ywork.me/",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 
     /**
@@ -53,14 +35,14 @@ public class AutoTenant {
      * @param args
      */
     public static void main(String[] args) {
-        // 初始化账号
-        initAccount();
+//        // 初始化账号
+//        initAccount();
 
 //        // 获取初始化信息
 //        getInitialInfo();
 //
-//        // 重置初始化信息
-//        resetInitialInfo();
+        // 重置初始化信息
+        resetInitialInfo();
 //
 //        // 获取初始化信息
 //        getInitialInfo();

@@ -1,0 +1,24 @@
+{
+  "subject": "Test Send Todo",
+  "notifyType": "todo",
+  "todoType": 1,
+  "link": "http://www.baidu.com",
+  "appName": "MKPaaS",
+  "moduleName": "sys-notify",
+  "entityId": "1",
+  "entityName": "com_landray_sys_notify_SysNotifyTodo",
+  "targets": [
+    {
+      "fdLoginName": "yaowr"
+    },
+    {
+      "fdLoginName": "yuxd"
+    },
+    {
+      "fdLoginName": "liuf"
+    },
+    {
+      "fdLoginName": "jm"
+    }
+  ]
+}

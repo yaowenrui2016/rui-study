@@ -36,17 +36,17 @@ public class AutoNotifyMultiTypeTimeComputing {
 //            "http://mkdev02.ywork.me",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://192.168.1.229:9102",
-            "366f6858484945534e67715a51424c776a666d5361673d3d");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://192.168.1.229:9102",
+//            "366f6858484945534e67715a51424c776a666d5361673d3d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://mktest.ywork.me",
 //            "43534c48566d654e5031674d355238395259346736673d3d");
 
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "https://p.landray.com.cn",
-//            "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "https://p.landray.com.cn",
+            "7455654271706f49474936332f6857624757456a467a726c316838566b2f386f583350595477392b4c78593d");
 
 //    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
 //            "http://192.168.51.160:8084",

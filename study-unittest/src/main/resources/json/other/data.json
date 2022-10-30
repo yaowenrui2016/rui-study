@@ -1,0 +1,15 @@
+{
+  "dynamicProps": {
+    "fdTenantId": 0,
+    "fdNameCn": "产品测试"
+  },
+  "fdId": "1gcbjbviswetw3cgw3up0d8919mojjuiulw0",
+  "extendProps": {},
+  "fdCreateTime": 1662541758050,
+  "fdName": "产品测试",
+  "fdCreator": {
+    "fdId": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+    "fdName": "吴婉琳"
+  },
+  "fdOrder": 12
+}

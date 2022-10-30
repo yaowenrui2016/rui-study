@@ -79,17 +79,17 @@ public class AutoAdminE2E {
 //        uploadAttach("C:\\Users\\yaowr\\Pictures\\temp\\2.jpg");
 //        uploadAttach("D:\\project\\rui-study\\downloadTemp\\EnvToEnv_ExampleEntity_20220609160427.zip");
 
-//        // 离线导入
-//        String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
-////        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
-//        context = loadEntityNodes(attachId);
-//        context = loadReferTree(context.getEntityNodes());
-//        context = loadOrgNodes(context.getReferGroupList());
-//        String taskId = offLineImportData(attachId, context.getOrgNodes());
-//
-//        // 加载任务
-//        Thread.sleep(3000);
-//        findTask(taskId);
+        // 离线导入
+        String attachId = uploadAttach(DOWNLOAD_PATH + File.separator + filename);
+//        String attachId = "1g1umpa28wofw17l7w2mdapn1tu4i532j6w0";
+        context = loadEntityNodes(attachId);
+        context = loadReferTree(context.getEntityNodes());
+        context = loadOrgNodes(context.getReferGroupList());
+        String taskId = offLineImportData(attachId, context.getOrgNodes());
+
+        // 加载任务
+        Thread.sleep(3000);
+        findTask(taskId);
 
 //        // 离线导出（dev02）
 //        E2EContext context = offLineLoadReferTree("test/request_body.json");

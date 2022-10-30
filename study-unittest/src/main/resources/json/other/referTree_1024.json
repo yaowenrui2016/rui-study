@@ -1,0 +1,934 @@
+{
+  "success": true,
+  "code": "return.optSuccess",
+  "msg": "您的操作已成功！",
+  "data": {
+    "referGroupList": [
+      {
+        "referType": "SysModelingAppCategory",
+        "referDispName": "低代码业务分类",
+        "entityName": "com.landray.sys.modeling.core.entity.base.SysModelingAppCategory",
+        "isOrg": false,
+        "referNodes": [
+          {
+            "referType": "SysModelingAppCategory",
+            "referDispName": "低代码业务分类",
+            "entityName": "com.landray.sys.modeling.core.entity.base.SysModelingAppCategory",
+            "isMain": false,
+            "isOrg": false,
+            "existTransport": true,
+            "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+            "fdName": "用例执行",
+            "isCopy": false,
+            "tranData": {
+              "fdCode": "7660",
+              "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+              "fdName": "用例执行"
+            },
+            "referNodes": [
+              {
+                "referType": "SysOrgElement",
+                "referDispName": "组织架构",
+                "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+                "isMain": false,
+                "isOrg": true,
+                "existTransport": false,
+                "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+                "fdName": "建模管理员",
+                "fdOrgType": 8,
+                "isCopy": false,
+                "tranData": {
+                  "fdOrgType": 8,
+                  "fdLoginName": "jm",
+                  "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+                  "parentFullName": "产品研发中心/蓝凌软件/建模管理员",
+                  "fdAvailable": true,
+                  "fdName": "建模管理员"
+                },
+                "referByNodes": [
+                  {
+                    "referType": "SysModelingAppCategory",
+                    "referDispName": "低代码业务分类",
+                    "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+                    "fdName": "用例执行",
+                    "path": "fdCreator",
+                    "pathDesc": "创建人"
+                  },
+                  {
+                    "referType": "SysModelingAppCategory",
+                    "referDispName": "低代码业务分类",
+                    "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+                    "fdName": "用例执行",
+                    "path": "fdAlter",
+                    "pathDesc": "修改人"
+                  }
+                ],
+                "operation": "CHECKED"
+              }
+            ],
+            "referByNodes": [
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "application.fdCategory",
+                "pathDesc": "应用/业务应用/所属业务应用分类"
+              }
+            ],
+            "operation": "CHECKED"
+          }
+        ]
+      }
+    ],
+    "referTree": [
+      {
+        "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+        "referDispName": "MKR-7660-009",
+        "entityName": "com.landray.sys.modeling.core.entity.base.SysModelingApplication",
+        "isMain": true,
+        "isOrg": false,
+        "existTransport": true,
+        "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+        "fdName": "MKR-7660-009",
+        "isCopy": false,
+        "tranData": {
+          "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+          "fdName": "MKR-7660-009"
+        },
+        "referNodes": [
+          {
+            "referType": "SysOrgElement",
+            "referDispName": "组织架构",
+            "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+            "isMain": false,
+            "isOrg": true,
+            "existTransport": false,
+            "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+            "fdName": "建模管理员",
+            "fdOrgType": 8,
+            "isCopy": false,
+            "tranData": {
+              "fdOrgType": 8,
+              "fdLoginName": "jm",
+              "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+              "parentFullName": "产品研发中心/蓝凌软件/建模管理员",
+              "fdAvailable": true,
+              "fdName": "建模管理员"
+            },
+            "referByNodes": [
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "homePages[0].fdCreator",
+                "pathDesc": "应用/PC首页/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "homePages[0].fdAlter",
+                "pathDesc": "应用/PC首页/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "application.fdCreator",
+                "pathDesc": "应用/业务应用/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDesign.fdCreator",
+                "pathDesc": "表单/表单设计/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDesign.fdAlter",
+                "pathDesc": "表单/表单设计/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDesign.fdConfig.auth[0].fdCreator",
+                "pathDesc": "表单设计/权限设置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDesign.fdConfig.dataModel[0].fdCreator",
+                "pathDesc": "表单设计/数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDesign.fdConfig.dataModel[0].fdAlter",
+                "pathDesc": "表单设计/数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformListViews[0].fdCreator",
+                "pathDesc": "表单/表单列表视图配置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformListViews[0].fdAlter",
+                "pathDesc": "表单/表单列表视图配置/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[0].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[0].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[1].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[1].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[2].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[2].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[3].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[3].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[4].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[4].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[5].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[5].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[6].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[6].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[7].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].operations[7].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].form.fdCreator",
+                "pathDesc": "表单/业务表单/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].form.fdAlter",
+                "pathDesc": "表单/业务表单/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].listViews[0].fdCreator",
+                "pathDesc": "表单/列表视图/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].listViews[0].fdAlter",
+                "pathDesc": "表单/列表视图/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDataModels[0].fdCreator",
+                "pathDesc": "表单/表单数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformDataModels[0].fdAlter",
+                "pathDesc": "表单/表单数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformOfficials[0].fdCreator",
+                "pathDesc": "表单/表单发布/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformOfficials[0].fdAlter",
+                "pathDesc": "表单/表单发布/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformOfficials[0].fdConfig.auth[0].fdCreator",
+                "pathDesc": "表单设计/权限设置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformOfficials[0].fdConfig.dataModel[0].fdCreator",
+                "pathDesc": "表单设计/数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].xformOfficials[0].fdConfig.dataModel[0].fdAlter",
+                "pathDesc": "表单设计/数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].views[0].fdCreator",
+                "pathDesc": "表单/查看视图/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[0].views[0].fdAlter",
+                "pathDesc": "表单/查看视图/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdCreator",
+                "pathDesc": "表单/表单设计/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdAlter",
+                "pathDesc": "表单/表单设计/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.auth[0].fdCreator",
+                "pathDesc": "表单设计/权限设置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdCreator",
+                "pathDesc": "表单设计/数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdAlter",
+                "pathDesc": "表单设计/数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformListViews[0].fdCreator",
+                "pathDesc": "表单/表单列表视图配置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformListViews[0].fdAlter",
+                "pathDesc": "表单/表单列表视图配置/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[0].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[0].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[1].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[1].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[2].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[2].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[3].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[3].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[4].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[4].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[5].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[5].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[6].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[6].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[7].fdCreator",
+                "pathDesc": "表单/基础设置/业务操作/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].operations[7].fdAlter",
+                "pathDesc": "表单/基础设置/业务操作/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].form.fdCreator",
+                "pathDesc": "表单/业务表单/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].form.fdAlter",
+                "pathDesc": "表单/业务表单/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].listViews[0].fdCreator",
+                "pathDesc": "表单/列表视图/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].listViews[0].fdAlter",
+                "pathDesc": "表单/列表视图/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDataModels[0].fdCreator",
+                "pathDesc": "表单/表单数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDataModels[0].fdAlter",
+                "pathDesc": "表单/表单数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdCreator",
+                "pathDesc": "表单/表单发布/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdAlter",
+                "pathDesc": "表单/表单发布/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.auth[0].fdCreator",
+                "pathDesc": "表单设计/权限设置/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdCreator",
+                "pathDesc": "表单设计/数据模型/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdAlter",
+                "pathDesc": "表单设计/数据模型/修改人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].views[0].fdCreator",
+                "pathDesc": "表单/查看视图/创建人"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].views[0].fdAlter",
+                "pathDesc": "表单/查看视图/修改人"
+              }
+            ],
+            "operation": "CHECKED"
+          },
+          {
+            "referType": "SysModelingApplication",
+            "referDispName": "低代码应用",
+            "entityName": "virtual.SysModelingApplication",
+            "isMain": false,
+            "isOrg": false,
+            "existTransport": false,
+            "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "fdName": "MKR-7660-009",
+            "isCopy": true,
+            "tranData": {
+              "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+              "fdAppCode": "009",
+              "fdName": "MKR-7660-009"
+            },
+            "referByNodes": [
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.appCode",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDataModels[0].fdFields[15].fdAttribute.config.controlProps.relationCfg.appCode",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.appCode",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              }
+            ],
+            "operation": "CHECKED"
+          },
+          {
+            "referType": "SysModelingAppCategory",
+            "referDispName": "低代码业务分类",
+            "entityName": "com.landray.sys.modeling.core.entity.base.SysModelingAppCategory",
+            "isMain": false,
+            "isOrg": false,
+            "existTransport": true,
+            "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+            "fdName": "用例执行",
+            "isCopy": false,
+            "tranData": {
+              "fdCode": "7660",
+              "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+              "fdName": "用例执行"
+            },
+            "referNodes": [
+              {
+                "referType": "SysOrgElement",
+                "referDispName": "组织架构",
+                "entityName": "com.landray.sys.org.entity.SysOrgElementSummary",
+                "isMain": false,
+                "isOrg": true,
+                "existTransport": false,
+                "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+                "fdName": "建模管理员",
+                "fdOrgType": 8,
+                "isCopy": false,
+                "tranData": {
+                  "fdOrgType": 8,
+                  "fdLoginName": "jm",
+                  "fdId": "1g7b85c2ow4we3ow1jfiejfr0c1ku2srdrw0",
+                  "parentFullName": "产品研发中心/蓝凌软件/建模管理员",
+                  "fdAvailable": true,
+                  "fdName": "建模管理员"
+                },
+                "referByNodes": [
+                  {
+                    "referType": "SysModelingAppCategory",
+                    "referDispName": "低代码业务分类",
+                    "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+                    "fdName": "用例执行",
+                    "path": "fdCreator",
+                    "pathDesc": "创建人"
+                  },
+                  {
+                    "referType": "SysModelingAppCategory",
+                    "referDispName": "低代码业务分类",
+                    "fdId": "1gfqh7ar2wvawqrw1c4i9is1k5475s2gccw0",
+                    "fdName": "用例执行",
+                    "path": "fdAlter",
+                    "pathDesc": "修改人"
+                  }
+                ],
+                "operation": "CHECKED"
+              }
+            ],
+            "referByNodes": [
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "application.fdCategory",
+                "pathDesc": "应用/业务应用/所属业务应用分类"
+              }
+            ],
+            "operation": "CHECKED"
+          },
+          {
+            "referType": "SysModelingXForm",
+            "referDispName": "表单模板",
+            "entityName": "virtual.SysModelingXForm",
+            "isMain": false,
+            "isOrg": false,
+            "existTransport": false,
+            "fdId": "1gfsf1j0qwvfw1utw18g4sjh2vq27pe39hw0",
+            "fdName": "简单表单00901",
+            "isCopy": false,
+            "tranData": {
+              "fdCode": "template_1n8vrb",
+              "fdId": "1gfsf1j0qwvfw1utw18g4sjh2vq27pe39hw0",
+              "fdAppCode": "009",
+              "fdName": "简单表单00901"
+            },
+            "referByNodes": [
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdFields[1].fdFontExtendData.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDataModels[0].fdFields[15].fdAttribute.config.controlProps.relationCfg.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformDataModels[0].fdFields[15].fdFontExtendData.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              },
+              {
+                "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "referDispName": "MKR-7660-009",
+                "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+                "fdName": "MKR-7660-009",
+                "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdFields[1].fdFontExtendData.modelId",
+                "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+              }
+            ],
+            "operation": "CHECKED"
+          }
+        ],
+        "referByNodes": [
+          {
+            "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "referDispName": "MKR-7660-009",
+            "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "fdName": "MKR-7660-009",
+            "path": "forms[1].xformDesign.fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.appCode",
+            "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+          },
+          {
+            "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "referDispName": "MKR-7660-009",
+            "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "fdName": "MKR-7660-009",
+            "path": "forms[1].xformDataModels[0].fdFields[15].fdAttribute.config.controlProps.relationCfg.appCode",
+            "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+          },
+          {
+            "referType": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "referDispName": "MKR-7660-009",
+            "fdId": "1gfsf119gwvfw1tew2n5ihrepu89qj2hinw0",
+            "fdName": "MKR-7660-009",
+            "path": "forms[1].xformOfficials[0].fdConfig.dataModel[0].fdFields[1].fdAttribute.config.controlProps.relationCfg.appCode",
+            "pathDesc": "表单设计/控件/业务关联1/关联的表单记录"
+          }
+        ],
+        "operation": "CHECKED"
+      }
+    ]
+  },
+  "traceId": "1gg4eovoqw4vwu4pwub4bmrrnj0qi20kkow0"
+}

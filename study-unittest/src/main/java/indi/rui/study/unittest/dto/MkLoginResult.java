@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.dto;
 
+import com.alibaba.fastjson.JSONObject;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -10,6 +11,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class MkLoginResult {
-    private UserInfo userInfo;
+    private JSONObject userInfo;
     private String xAuthToken;
 }

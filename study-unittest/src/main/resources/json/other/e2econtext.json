@@ -1,0 +1,128 @@
+{
+  "exportedMap": {
+    "1919": {
+      "data": {
+        "fdCode": "T_0",
+        "fdCreateTime": 1648692480000,
+        "fdTenantId": 0,
+        "fdId": "1919",
+        "extendProps": {}
+      },
+      "entityName": "com.landray.sys.admin.demo.core.entity.ExampleDetailEntity",
+      "existTransport": true,
+      "fdId": "1919",
+      "isCopy": false,
+      "isMain": false,
+      "isOrg": false,
+      "operation": "CHECKED",
+      "referByNodes": [
+        {
+          "fdId": "0ff10220w0",
+          "fdName": "审批模板",
+          "path": "fdDetail",
+          "referDispName": "ExampleEntity类型",
+          "referType": "ExampleEntity"
+        },
+        {
+          "fdId": "0ff10220w0",
+          "fdName": "审批模板",
+          "path": "fdDesc",
+          "referDispName": "ExampleEntity类型",
+          "referType": "ExampleEntity"
+        }
+      ],
+      "referDispName": "ExampleDetailEntity类型",
+      "referType": "ExampleDetailEntity",
+      "tranData": {
+        "fdCode": "T_0",
+        "fdTenantId": 0,
+        "fdId": "1919",
+        "extendProps": {}
+      }
+    },
+    "0ff10220w0": {
+      "data": {
+        "fdDesc": {
+          "fdTenantId": 0,
+          "fdId": "1919",
+          "extendProps": {}
+        },
+        "fdCode": "C001",
+        "fdCreateTime": 1648692480000,
+        "fdCreator": {
+          "fdTenantId": 0,
+          "fdId": "1002",
+          "extendProps": {
+            "fdName": "李四"
+          },
+          "fdName": "李四"
+        },
+        "fdContent": "关于加班是否调休，暂时还未确定",
+        "fdSubject": "流程审批",
+        "fdEditor": {
+          "fdTenantId": 0,
+          "fdId": "1001",
+          "extendProps": {
+            "fdName": "张三"
+          },
+          "fdName": "张三"
+        },
+        "fdTenantId": 0,
+        "fdId": "0ff10220w0",
+        "extendProps": {},
+        "fdDetail": {
+          "fdTenantId": 0,
+          "fdId": "1919",
+          "extendProps": {
+            "$ref": "$.exportedMap.1919.tranData.extendProps"
+          }
+        },
+        "fdName": "审批模板",
+        "mechanisms": {
+          "sys-xform": {
+            "fdId": "1g4upv7djw4s1w1ew1u1dnhg1mhfpqk3hcw0",
+            "mechanisms": {
+              "load": "*",
+              "attachment": [
+                {
+                  "fdId": "1g53q2dekw6ew13wjc4b1l2d8e2mv2a82ew0",
+                  "fullName": "EnvToEnv_ExampleEntity_20220609160427.zip"
+                }
+              ]
+            }
+          },
+          "attachment": [
+            {
+              "fdId": "1g1pth0i7w2ew13wd4n8k23m82o782c46bw0",
+              "fullName": "2.jpg"
+            }
+          ]
+        }
+      },
+      "entityName": "com.landray.sys.admin.demo.core.entity.ExampleEntity",
+      "existTransport": true,
+      "fdId": "0ff10220w0",
+      "fdName": "审批模板",
+      "isCopy": false,
+      "isMain": true,
+      "isOrg": false,
+      "operation": "CHECKED",
+      "referDispName": "ExampleEntity类型",
+      "referNodes": [
+        {
+          "$ref": "$.exportedMap.1919"
+        }
+      ],
+      "referType": "ExampleEntity",
+      "tranData": {
+        "fdId": "0ff10220w0",
+        "fdName": "审批模板"
+      }
+    }
+  },
+  "referTree": [
+    {
+      "$ref": "$.exportedMap.0ff10220w0"
+    }
+  ]
+}

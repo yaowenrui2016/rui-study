@@ -16,9 +16,11 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLContextBuilder;
 import org.apache.http.conn.ssl.TrustStrategy;
+import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.entity.mime.content.FileBody;
+import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -266,12 +268,11 @@ public class HttpClientUtils {
                 }
             }
             if (uploadFile != null && uploadFile.exists()) {
-                FileBody fileBody = new FileBody(uploadFile);
                 HttpEntity httpEntity = MultipartEntityBuilder.create()
                         .addBinaryBody("fdFile", uploadFile)
                         .addTextBody("fdFileFullName", uploadFile.getName())
-//                        .addPart("fdFile", fileBody)
-//                        .addPart("fdFileFullName", new StringBody(uploadFile.getName(), ContentType.TEXT_PLAIN))
+//                        .addPart("fdFile", new FileBody(uploadFile))
+//                        .addPart("fdFileFullName", new StringBody(uploadFile.getName()))
                         .build();
                 httpPost.setEntity(httpEntity);
             }

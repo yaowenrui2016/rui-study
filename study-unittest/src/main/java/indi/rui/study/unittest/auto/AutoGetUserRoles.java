@@ -43,8 +43,8 @@ public class AutoGetUserRoles {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-        UserInfo userInfo = mkDataRequestHelper.getUserInfo();
-        getRoles(userInfo.getUserId());
+        JSONObject userInfo = mkDataRequestHelper.getUserInfo();
+        getRoles(userInfo.getString("userId"));
     }
 
 

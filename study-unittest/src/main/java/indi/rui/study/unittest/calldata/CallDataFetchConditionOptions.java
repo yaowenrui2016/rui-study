@@ -22,7 +22,7 @@ public class CallDataFetchConditionOptions {
 
     public static void main(String[] args) {
         // 获取用户ID
-        String userId = mkDataRequestHelper.getUserInfo().getUserId();
+        String userId = mkDataRequestHelper.getUserInfo().getString("userId");
         // 禁用模块
         JSONObject json = new JSONObject();
         json.put("personId", userId);

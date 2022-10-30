@@ -21,22 +21,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Slf4j
 public class AutoNotifySendALotCheckAmount {
 
-    private static final int TOTAL = 10;
+    private static final int TOTAL = 100;
+
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040", "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040", "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mksmoke.ywork.me", "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkdev01.ywork.me", "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.253.1.18:8080", "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://192.168.51.202:8050", "73456775666d4c416f73776139584a4131432f6847413d3d");
+            "http://mksmoke.ywork.me", "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     /**
      * 执行待办发送线程池
@@ -108,6 +99,7 @@ public class AutoNotifySendALotCheckAmount {
             targets.add("TestUser" + i);
         }
         targets.add("yaowr");
+        targets.add("weilq");
         return targets;
     }
 }

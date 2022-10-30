@@ -44,7 +44,7 @@ public class MkDataRequestHelper {
 
     // ====================== public method =======================
 
-    public UserInfo getUserInfo() {
+    public JSONObject getUserInfo() {
         return this.loginResult.getUserInfo();
     }
 

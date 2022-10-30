@@ -28,9 +28,9 @@ public class TestNotifyMobileLinkFindByPerson {
 //        send();
         findByPerson();
 
-        UserInfo userInfo = MkLoginHelper.loginLoadUserInfo(address, "yaowr", "1");
+        JSONObject userInfo = MkLoginHelper.loginLoadUserInfo(address, "yaowr", "1");
         log.info("userInfo:\n{}", JSONObject.toJSONString(userInfo, SerializerFeature.PrettyFormat));
-        findAll(userInfo.getUserId());
+        findAll(userInfo.getString("userId"));
 //        remove();
     }
 
