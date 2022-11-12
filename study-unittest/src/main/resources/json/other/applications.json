@@ -1,0 +1,20 @@
+{
+  "code": "return.optSuccess",
+  "data": [
+    {
+      "fdNo": "101",
+      "fdDesc": "系统启动报错",
+      "dynamicProps": {
+        "fdNameUs": "Cate1"
+      },
+      "fdIcon": "abbbbbbbbbbbb",
+      "fdSource": "APPLICATION",
+      "fdId": "1ggp253ouw1fw23w2t029411j3rk782lhiw0",
+      "fdUrl": "https://www.baidu.com",
+      "fdName": "自建应用1"
+    }
+  ],
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1ggp253pbw1fw24w311t88j4319gp259lnw0"
+}

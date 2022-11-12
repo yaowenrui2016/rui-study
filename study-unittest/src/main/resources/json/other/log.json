@@ -1,0 +1,41 @@
+{
+  "fdId": "1ghl5vej4w2nw9cw2cvq9922945rdd2kenw0",
+  "fdTenantId": 0,
+  "fdBatchType": "SINGLE",
+  "fdBeginTime": 1668231969379,
+  "fdEndTime": 1668231969695,
+  "fdTimeConsuming": 316,
+  "fdGroup": "data.change",
+  "fdModule": "sys-org",
+  "fdModuleLabel": "组织管理",
+  "fdTraceId": "1ghl5veh8w2nw9aw1l0ptcf3v5j63d31lhw0",
+  "fdSuccess": 1,
+  "fdAudit": {
+    "fdStatus": 0
+  },
+  "fdOperator": {
+    "fdLoginName": "secadmin",
+    "fdUserId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
+    "fdUserName": "安全保密管理员",
+    "fdDeptId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
+    "fdUserGrade": 4
+  },
+  "fdOperation": {
+    "fdName": "新增",
+    "fdMethod": "add",
+    "fdContent": {}
+  },
+  "fdRequest": {
+    "fdUrl": "http://127.0.0.1:8040/data/sys-org/sysOrgCommPost/add",
+    "fdIp": "127.0.0.1",
+    "fdOs": "Unknown",
+    "fdBrower": "Unknown",
+    "fdMethod": "POST",
+    "fdUserAgent": "Apache-HttpClient/4.5.12 (Java/1.8.0_202)"
+  },
+  "fdEntity": {
+    "fdId": "1ghl5vemfw2nw9iw1qplmse2hdbhsm5rhsw0",
+    "fdEntityName": "com.landray.sys.org.core.entity.SysOrgCommPost",
+    "fdEntityLabel": "公共岗位"
+  }
+}

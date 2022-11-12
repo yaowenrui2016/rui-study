@@ -33,12 +33,12 @@ public class AutoCreatePersonAndAuthorized {
 
     private static String[] USER_LOGIN_NAMES = new String[]{
             "yaowr", "姚文锐",
-            "lqtest002", "王大海"
-//            "zhangyl", "张越良",
-//            "cuipx", "崔璞璇",
-//            "chenp", "陈鹏",
-//            "zhugr", "朱国荣",
-//            "lizj", "李振佳",
+            "lqtest002", "王大海",
+            "zhangyl", "张越良",
+            "cuipx", "崔璞璇",
+            "chenp", "陈鹏",
+            "zhugr", "朱国荣",
+            "lizj", "李振佳",
 //            "weilq", "韦莉琦",
 //            "yuxd", "余小冬",
 //            "youqinghong", "游青洪",
@@ -260,7 +260,7 @@ public class AutoCreatePersonAndAuthorized {
         body.put("count", false);
         body.put("columns", Arrays.asList("fdId", "fdName"));
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-                "/data/sys-right/sysRightRole/findAll", body, JSONObject.class);
+                "/data/sys-right/sysRightRole/list", body, JSONObject.class);
         List<JSONObject> rtnList = null;
         if (mkResponse.isSuccess()) {
             rtnList = mkResponse.getData().getContent();
