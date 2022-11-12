@@ -90,7 +90,7 @@ public class AutoTimeWorkShift {
      */
     public static void main(String[] args) {
         // 创建班次
-//        createClasses();
+        createClasses();
         // 查询班次
         List<SysTimeWorkClassesVO> classesList = findClasses();
         // 获取班次

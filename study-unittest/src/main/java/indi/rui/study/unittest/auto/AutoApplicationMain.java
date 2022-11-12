@@ -6,10 +6,12 @@ import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
+import indi.rui.study.unittest.support.UserHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,26 +35,56 @@ public class AutoApplicationMain {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-
 //        // 检查唯一字段值是否存在
 //        boolean exist = checkUniqueField();
-
-//        // 保存
-//        if (!exist) {
-            saveApplication();
-//        }
-
 //        // 查询应用并且按分类看板返回结果
 //        panels();
+        // 新增
+        create();
+        // 查询列表
+        List<JSONObject> applications = listApplication();
+        if (!CollectionUtils.isEmpty(applications)) {
+            // 编辑
+            edit(applications.get(0));
+            // 获取详情
+            getApplication(applications.get(0));
+//            // 删除
+//            delete(applications.get(0));
+            // 删除所有
+            deleteAll(applications);
+        }
+    }
 
-//        // 查询列表
-//        List<JSONObject> cates = listApplication();
 
-//        // 获取详情
-//        getApplication(cates);
+    /**
+     * 新增
+     */
+    private static void create() {
+        JSONObject body = FileUtils.loadJSON("AutoApplicationMain/add.json");
+        body.put("fdVisitors", UserHelper.getUsers("yaowr", "chenp"));
+        body.put("fdEditors", UserHelper.getUsers("yaowr", "chenp"));
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-application/main/save", body, JSONObject.class);
+        log.info("create: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
 
-//        // 删除
-//        delete(cates);
+
+    /**
+     * 编辑
+     */
+    private static void edit(JSONObject application) {
+        JSONObject body = FileUtils.loadJSON("AutoApplicationMain/edit.json");
+        body.put("fdId", application.getString("fdId"));
+        body.put("fdVisitors", UserHelper.getUsers("zhangyl", "lizj"));
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-application/main/save", body, JSONObject.class);
+        log.info("edit: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
     }
 
 
@@ -68,20 +100,6 @@ public class AutoApplicationMain {
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );
         return mkResponse.getData();
-    }
-
-
-    /**
-     * 保存
-     */
-    private static void saveApplication() {
-        JSONObject body = FileUtils.loadJSON("AutoApplicationMain/application.json");
-        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-application/main/save", body, JSONObject.class);
-        log.info("saveApplication: request={}, response={}",
-                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
-                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
-        );
     }
 
 
@@ -124,34 +142,45 @@ public class AutoApplicationMain {
     /**
      * 获取详情
      */
-    private static void getApplication(List<JSONObject> applications) {
-        if (!CollectionUtils.isEmpty(applications)) {
-            for (JSONObject application : applications) {
-                JSONObject body = new JSONObject();
-                body.put("fdId", application.getString("fdId"));
-                MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
-                        "/data/sys-application/main/get", body, JSONObject.class);
-                log.info("getApplication: request={}, response={}",
-                        JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
-                        JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
-                );
-            }
-        }
+    private static void getApplication(JSONObject application) {
+        JSONObject body = new JSONObject();
+        body.put("fdId", application.getString("fdId"));
+        MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-application/main/get", body, JSONObject.class);
+        log.info("getApplication: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
     }
 
 
     /**
      * 删除
      */
-    private static void delete(List<JSONObject> applications) {
+    private static void delete(JSONObject application) {
+        JSONObject body = new JSONObject();
+        body.put("fdIds", Collections.singletonList(application.getString("fdId")));
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-application/main/deleteAll", body, JSONObject.class);
+        log.info("delete: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
+
+    /**
+     * 删除所有
+     */
+    private static void deleteAll(List<JSONObject> applications) {
         if (!CollectionUtils.isEmpty(applications)) {
-            List<String> ids = applications.stream().map(jsonObject -> jsonObject.getString("fdId"))
-                    .collect(Collectors.toList());
+            List<String> ids = applications.stream()
+                    .map(application -> application.getString("fdId")).collect(Collectors.toList());
             JSONObject body = new JSONObject();
             body.put("fdIds", ids);
             MkResponse<?> mkResponse = mkDataRequestHelper.callData(
                     "/data/sys-application/main/deleteAll", body, JSONObject.class);
-            log.info("delete: request={}, response={}",
+            log.info("deleteAll: request={}, response={}",
                     JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                     JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
             );

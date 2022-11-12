@@ -39,9 +39,10 @@ public class AutoAdminSystem {
      */
     private static void systemInitByIds() {
         JSONArray body = new JSONArray();
-        JSONObject id = new JSONObject();
-        id.put("fdId", "sys-application:initializer.application");
-        body.add(id);
+        JSONObject each1 = new JSONObject();
+//        each1.put("fdId", "sys-application:initializer.application");
+        each1.put("fdId", "sys-right:sys.right.initializer");
+        body.add(each1);
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-admin/systemInitialize/systemInitByIds", body, JSONObject.class);
         log.info("systemInitByIds: request={}, response={}",

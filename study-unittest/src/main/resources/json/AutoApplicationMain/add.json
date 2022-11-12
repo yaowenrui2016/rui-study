@@ -1,0 +1,11 @@
+{
+  "fdName": "测试自建应用1",
+  "fdNo": "1",
+  "fdCategory": null,
+  "fdUrl": "https://www.baidu.com",
+  "fdIcon": "aaa",
+  "fdDesc": "自动访问百度",
+  "dynamicProps": {
+    "fdNameUs": "auto1"
+  }
+}

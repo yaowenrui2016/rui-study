@@ -1,0 +1,14 @@
+{
+  "fdName": "朝九晚六",
+  "fdColor": "#AE0000",
+  "fdTimePeriodList": [
+    {
+      "fdWorkBegin": "540",
+      "fdWorkEnd": "720"
+    },
+    {
+      "fdWorkBegin": "840",
+      "fdWorkEnd": "1080"
+    }
+  ]
+}

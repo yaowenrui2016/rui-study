@@ -1,0 +1,11 @@
+{
+  "fdName": "测试自建应用_1",
+  "fdNo": "2",
+  "fdCategory": null,
+  "fdUrl": "https://www.taobao.com",
+  "fdIcon": "bbb",
+  "fdDesc": "自动访问淘宝",
+  "dynamicProps": {
+    "fdNameUs": "Auto_1"
+  }
+}
