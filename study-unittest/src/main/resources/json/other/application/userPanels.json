@@ -1,0 +1,106 @@
+[
+  {
+    "categoryPanels": [
+      {
+        "name": "未分类",
+        "order": -2147483648,
+        "applications": [
+          {
+            "fdDesc": "自动访问百度",
+            "fdEditors": [
+              {
+                "fdId": "1gh3d8drjw1qw1fw1khcm6i19p2ncca48vw0",
+                "fdName": "陈鹏"
+              },
+              {
+                "fdId": "1ge6mn12cwlw48sw127iai810kr7u25ljcw0",
+                "fdName": "姚文锐"
+              }
+            ],
+            "dynamicProps": {
+              "fdTenantId": 0,
+              "fdNameUs": "auto1"
+            },
+            "fdIcon": "aaa",
+            "fdSource": "APPLICATION",
+            "fdLastModifiedTime": 1669271198000,
+            "fdRoles": "ROLE_SYS_APPLICATION_SETTING",
+            "fdCreateTime": 1669271198000,
+            "fdVisitors": [
+              {
+                "fdId": "1gh3d8drjw1qw1fw1khcm6i19p2ncca48vw0",
+                "fdName": "陈鹏"
+              },
+              {
+                "fdId": "1ge6mn12cwlw48sw127iai810kr7u25ljcw0",
+                "fdName": "姚文锐"
+              }
+            ],
+            "fdCreator": {
+              "fdIsAvailable": true,
+              "fdOrgType": 8,
+              "fdEmail": "yaowr@landray.com.cn",
+              "fdLoginName": "yaowr",
+              "fdIsBusiness": true,
+              "fdTenantId": 0,
+              "fdId": "1ge6mn12cwlw48sw127iai810kr7u25ljcw0",
+              "fdName": "姚文锐"
+            },
+            "fdNo": "1",
+            "fdId": "1gik525taw4dw1mw30vcqh426i807n25ftw0",
+            "fdUrl": "https://www.baidu.com",
+            "fdName": "测试自建应用1",
+            "fdOrder": 0
+          },
+          {
+            "fdDesc": "自动访问百度",
+            "fdEditors": [
+              {
+                "fdId": "1gh3d8drjw1qw1fw1khcm6i19p2ncca48vw0",
+                "fdName": "陈鹏"
+              },
+              {
+                "fdId": "1ge6mn12cwlw48sw127iai810kr7u25ljcw0",
+                "fdName": "姚文锐"
+              }
+            ],
+            "dynamicProps": {
+              "fdTenantId": 0,
+              "fdNameUs": "auto1"
+            },
+            "fdIcon": "aaa",
+            "fdSource": "MODELING",
+            "fdLastModifiedTime": 1669272043000,
+            "fdRoles": "ROLE_SYS_APPLICATION_SETTING",
+            "fdCreateTime": 1669272043000,
+            "fdVisitors": [
+              {
+                "fdId": "1gh3d8drjw1qw1fw1khcm6i19p2ncca48vw0",
+                "fdName": "陈鹏"
+              },
+              {
+                "fdId": "1ge6mn12cwlw48sw127iai810kr7u25ljcw0",
+                "fdName": "姚文锐"
+              }
+            ],
+            "fdCreator": {
+              "fdIsAvailable": true,
+              "fdOrgType": 8,
+              "fdEmail": "weilq@landray.com.cn",
+              "fdLoginName": "weilq",
+              "fdIsBusiness": true,
+              "fdTenantId": 0,
+              "fdId": "1gik5kgfrw4dw3nw3527dna1h38ri12lk0w0",
+              "fdName": "韦莉琦"
+            },
+            "fdNo": "2",
+            "fdId": "1gik5rvidw4dw5uw3tn60k21be4v0c1otdw0",
+            "fdUrl": "https://www.baidu.com",
+            "fdName": "测试自建应用2",
+            "fdOrder": 1
+          }
+        ]
+      }
+    ]
+  }
+]

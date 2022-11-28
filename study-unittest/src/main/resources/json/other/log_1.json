@@ -1,0 +1,42 @@
+{
+  "fdId": "1gi5bm1stw3uw3qw2u4svep3r1kfjf3bv5w0",
+  "fdTenantId": 0,
+  "fdBatchType": "SINGLE",
+  "fdBeginTime": 1668774823836,
+  "fdEndTime": 1668774828327,
+  "fdTimeConsuming": 4491,
+  "fdGroup": "data.change",
+  "fdModule": "sys-org",
+  "fdModuleLabel": "组织管理",
+  "fdTraceId": "1gi5bm1pnw3uw3ow1a7b47f1f3u6fv2fopw0",
+  "fdSuccess": 1,
+  "fdAudit": {
+    "fdStatus": 0
+  },
+  "fdOperator": {
+    "fdLoginName": "secadmin",
+    "fdUserId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
+    "fdUserName": "安全保密管理员",
+    "fdDeptId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
+    "fdUserGrade": 4
+  },
+  "fdOperation": {
+    "fdName": "删除",
+    "fdMethod": "delete",
+    "fdContent": {}
+  },
+  "fdRequest": {
+    "fdUrl": "http://127.0.0.1:8040/data/sys-org/sysOrgStaffingLevel/delete",
+    "fdIp": "127.0.0.1",
+    "fdOs": "Unknown",
+    "fdBrower": "Unknown",
+    "fdMethod": "POST",
+    "fdUserAgent": "Apache-HttpClient/4.5.12 (Java/1.8.0_202)"
+  },
+  "fdEntity": {
+    "fdId": "1gi5bm1duw3uw3fw6rilh91nfe9517m9e9w0",
+    "fdSubject": "开发",
+    "fdEntityName": "com.landray.sys.org.core.entity.SysOrgStaffingLevel",
+    "fdEntityLabel": "职务"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "fdName": "yaoTest",
+  "fdOrgType": 16,
+  "fdIsBusiness": true,
+  "fdIsAvailable": true,
+  "fdGroupType": 1,
+  "fdLabelRefList": [],
+  "dynamicProps": {
+    "fdNameCn": "yaoTest"
+  }
+}

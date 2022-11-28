@@ -1,6 +1,7 @@
 package indi.rui.study.unittest.util;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.http.*;
@@ -16,11 +17,8 @@ import org.apache.http.client.methods.HttpRequestBase;
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.SSLContextBuilder;
 import org.apache.http.conn.ssl.TrustStrategy;
-import org.apache.http.entity.ContentType;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
-import org.apache.http.entity.mime.content.FileBody;
-import org.apache.http.entity.mime.content.StringBody;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
@@ -248,7 +246,7 @@ public class HttpClientUtils {
      * @throws Exception
      */
     public static String httpPostUpload(String url, Map<String, String> header,
-                                        File uploadFile)
+                                        File uploadFile, String fileProp, JSONObject params)
             throws Exception {
         try (CloseableHttpClient httpClient = createHttpClient(url)) {
             HttpPost httpPost = new HttpPost(url);
@@ -268,12 +266,17 @@ public class HttpClientUtils {
                 }
             }
             if (uploadFile != null && uploadFile.exists()) {
-                HttpEntity httpEntity = MultipartEntityBuilder.create()
-                        .addBinaryBody("fdFile", uploadFile)
-                        .addTextBody("fdFileFullName", uploadFile.getName())
+                MultipartEntityBuilder builder = MultipartEntityBuilder.create()
+                        .addBinaryBody(fileProp, uploadFile)
+                        .addTextBody("filename", uploadFile.getName());
 //                        .addPart("fdFile", new FileBody(uploadFile))
 //                        .addPart("fdFileFullName", new StringBody(uploadFile.getName()))
-                        .build();
+                if (params != null) {
+                    for (String param : params.keySet()) {
+                        builder.addTextBody(param, params.getString(param));
+                    }
+                }
+                HttpEntity httpEntity = builder.build();
                 httpPost.setEntity(httpEntity);
             }
             ResponseHandler<String> responseHandler = new BasicResponseHandler();
@@ -300,7 +303,7 @@ public class HttpClientUtils {
                 if (param != null) {
                     try {
 //                        filename = new String(param.getValue().toString().getBytes(), "utf-8");
-                        filename= URLDecoder.decode(param.getValue(),"utf-8");
+                        filename = URLDecoder.decode(param.getValue(), "utf-8");
 //                        filename = param.getValue();
                     } catch (Exception e) {
                         e.printStackTrace();

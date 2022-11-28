@@ -1,0 +1,13 @@
+{
+  "fdName": "yaoTest_",
+  "fdOrgType": 16,
+  "fdIsBusiness": true,
+  "fdIsAvailable": true,
+  "fdNo": 12,
+  "fdDescribe": "按不出",
+  "fdGroupType": 1,
+  "fdLabelRefList": [],
+  "dynamicProps": {
+    "fdNameCn": "yaoTest"
+  }
+}

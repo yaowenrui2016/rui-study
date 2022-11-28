@@ -6,26 +6,23 @@ import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
-import indi.rui.study.unittest.support.UserHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /**
- * 班次
- *
  * @author: yaowr
  * @create: 2022-11-02
  */
 @Slf4j
-public class AutoTimeWorkClasses {
+public class AutoOrgGroup {
+
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "secadmin", "Password_1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -37,30 +34,29 @@ public class AutoTimeWorkClasses {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-//        // 新增班次
-//        create();
-        // 查询班次列表
-        List<JSONObject> classesList = list();
-        if (!CollectionUtils.isEmpty(classesList)) {
-//            // 编辑班次
-//            edit(classesList.get(0));
-//            // 查询班次详情
-//            get(classesList.get(0));
-            // 批量删除班次
-            deleteAll(classesList);
+//        // 新增群组
+//        add();
+        // 查询群组列表
+        List<JSONObject> groupList = list();
+        if (!CollectionUtils.isEmpty(groupList)) {
+            // 编辑群组详情
+            edit(groupList.get(0));
+            // 查询群组详情
+            get(groupList.get(0));
+            // 批量删除群组
+            deleteAll(groupList.get(0));
         }
     }
 
 
     /**
-     * 新增班次
+     * 新增群组
      */
-    private static void create() {
-        JSONObject body = FileUtils.loadJSON("AutoTimeWorkClasses/create_cross.json");
-        body.put("fdEditors", UserHelper.getUsers("yaowr", "chenp"));
+    private static void add() {
+        JSONObject body = FileUtils.loadJSON("AutoOrgGroup/group.json");
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/workClasses/create", body, JSONObject.class);
-        log.info("create: request={}, response={}",
+                "/data/sys-org/sysOrgGroup/add", body, JSONObject.class);
+        log.info("add: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );
@@ -68,15 +64,14 @@ public class AutoTimeWorkClasses {
 
 
     /**
-     * 编辑班次
+     * 新增群组
      */
-    private static void edit(JSONObject classes) {
-        JSONObject body = FileUtils.loadJSON("AutoTimeWorkClasses/edit.json");
-        body.put("fdEditors", UserHelper.getUsers("zhangyl", "lizj"));
-        body.put("fdId", classes.getString("fdId"));
+    private static void edit(JSONObject person) {
+        JSONObject body = FileUtils.loadJSON("AutoOrgGroup/edit.json");
+        body.put("fdId", "1gi4tpn3bw3qwqdwp13nmf2gt9qkl1qaa8w0");
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/workClasses/edit", body, JSONObject.class);
-        log.info("edit: request={}, response={}",
+                "/data/sys-org/sysOrgGroup/update", body, JSONObject.class);
+        log.info("add: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );
@@ -88,14 +83,8 @@ public class AutoTimeWorkClasses {
      */
     private static List<JSONObject> list() {
         JSONObject body = new JSONObject();
-        body.put("pageSize", 20);
-        body.put("offset", 0);
-        body.put("columns", Arrays.asList("fdId", "fdName", "fdEnabled", "fdColor", "fdCreator", "fdTimePeriodList"));
-        JSONObject sort = new JSONObject();
-        sort.put("fdCreateTime", "DESC");
-        body.put("sorts", sort);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-                "/data/sys-time/workClasses/list", body, JSONObject.class);
+                "/data/sys-org/sysOrgGroup/list", body, JSONObject.class);
         log.info("list: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
@@ -105,13 +94,13 @@ public class AutoTimeWorkClasses {
 
 
     /**
-     * 查询班次详情
+     * 查询群组详情
      */
     private static void get(JSONObject person) {
         JSONObject body = new JSONObject();
         body.put("fdId", person.getString("fdId"));
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/workClasses/get", body, JSONObject.class);
+                "/data/sys-org/sysOrgGroup/get", body, JSONObject.class);
         log.info("get: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
@@ -120,13 +109,13 @@ public class AutoTimeWorkClasses {
 
 
     /**
-     * 批量删除班次
+     * 批量删除群组
      */
-    private static void deleteAll(List<JSONObject> classesList) {
+    private static void deleteAll(JSONObject person) {
         JSONObject body = new JSONObject();
-        body.put("fdIds", classesList.stream().map(json -> json.getString("fdId")).collect(Collectors.toList()));
+        body.put("fdIds", Collections.singletonList(person.getString("fdId")));
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/workClasses/deleteAll", body, JSONObject.class);
+                "/data/sys-org/sysOrgGroup/deleteAll", body, JSONObject.class);
         log.info("deleteAll: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)

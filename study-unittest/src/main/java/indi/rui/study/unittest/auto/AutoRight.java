@@ -3,10 +3,12 @@ package indi.rui.study.unittest.auto;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import indi.rui.study.unittest.dto.IdNameProperty;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
+import indi.rui.study.unittest.support.UserHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
@@ -40,23 +42,33 @@ public class AutoRight {
      * @param args
      */
     public static void main(String[] args) {
-
-        // 角色列表
-        List<JSONObject> groupList = groupList();
-
-        // 获取角色
-        if (!CollectionUtils.isEmpty(groupList)) {
-            JSONObject group = getGroup(groupList.get(0));
-
-            // 编辑角色
-            editGroup(group);
-        }
-
+//        // 新建分类
+//        createCate();
+//        // 角色列表
+//        List<JSONObject> groupList = groupList();
+//        // 获取角色
+//        if (!CollectionUtils.isEmpty(groupList)) {
+//            // 编辑角色
+//            editGroup(getGroup(groupList.get(0)));
+//        }
 //        // 刷新权限
 //        refresh2();
-
         // 获取权限
-//        getRolesByOrgs();
+        getRolesByOrgs();
+    }
+
+
+    /**
+     * 角色列表
+     */
+    private static void createCate() {
+        JSONObject body = FileUtils.loadJSON("AutoRight/add_cate.json");
+        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-right/sysRightCategory/add", body, JSONObject.class);
+        log.info("createCate: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
     }
 
 
@@ -99,11 +111,16 @@ public class AutoRight {
     private static JSONObject editGroup(JSONObject group) {
         JSONObject body = group;
         if (group != null) {
-            JSONObject personWangdh = FileUtils.loadJSON("AutoRight/person_wangdh.json");
-            JSONArray persons = group.getJSONArray("fdSysOrgElements");
-            boolean removed = persons.removeIf(person -> ((JSONObject) person).getString("fdId").equals(personWangdh.getString("fdId")));
-            if (!removed) {
-                persons.add(personWangdh);
+//            JSONObject personWangdh = FileUtils.loadJSON("AutoRight/person_wangdh.json");
+//            JSONArray persons = group.getJSONArray("fdSysOrgElements");
+//            boolean removed = persons.removeIf(person -> ((JSONObject) person).getString("fdId").equals(personWangdh.getString("fdId")));
+//            if (!removed) {
+//                persons.add(personWangdh);
+//            }
+            if ("1gi4vqm0gw3qwuhw3fu1uno24nvq44307nw0".equals(group.getString("categoryId"))) {
+                group.put("categoryId", "1gi4vlej3w3qwtnw305c67a1vktusv1tmmw0");
+            } else if ("1gi4vlej3w3qwtnw305c67a1vktusv1tmmw0".equals(group.getString("categoryId"))) {
+                group.put("categoryId", "1gi4vqm0gw3qwuhw3fu1uno24nvq44307nw0");
             }
         }
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
@@ -131,7 +148,7 @@ public class AutoRight {
      */
     private static void getRolesByOrgs() {
         JSONObject body = new JSONObject();
-        body.put("fdIds", Collections.singletonList("1gfqe90ujwiw34nw1t2pcplos371f2qka3w2"));
+        body.put("fdIds", Collections.singletonList(UserHelper.getUser("yaowr").getFdId()));
         log.info("getRolesByOrgs: request={}", JSONObject.toJSONString(body, SerializerFeature.PrettyFormat));
         List<String> rightList = mkApiRequestHelper.callApiForList(
                 "/api/sys-right/sysRightRole/getRolesByOrgs", body, String.class);

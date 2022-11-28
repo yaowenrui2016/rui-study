@@ -1,11 +1,14 @@
 package indi.rui.study.unittest.auto;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
+import indi.rui.study.unittest.dto.IdNameProperty;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
+import indi.rui.study.unittest.support.UserHelper;
 import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
@@ -36,7 +39,6 @@ public class AutoOrg {
     public static void main(String[] args) {
         // 查询人员
         List<JSONObject> persons = list();
-
         if (!CollectionUtils.isEmpty(persons)) {
 //            // 恢复启用
 //            restoreEnabled(persons.get(0));
@@ -44,13 +46,13 @@ public class AutoOrg {
 //            invalidated(persons.get(0));
             // 根据人员ID获取人员与账号信息
             getPersonAccount(persons.get(0));
-
         }
-
 //        // 新增岗位
 //        addPost();
-//        // 启用所有
-//        enableAll(persons);
+        // 启用所有
+        enableAll(persons);
+        // 修改排序号
+//        updateOrders();
     }
 
 
@@ -142,6 +144,23 @@ public class AutoOrg {
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-org/sysOrgPerson/enableAll", body, Boolean.class);
         log.info("enableAll: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
+    private static void updateOrders() {
+        JSONArray body = new JSONArray();
+        List<IdNameProperty> idNameList = UserHelper.getUsers("yaowr", "chenp");
+        for (int i = 0; i < idNameList.size(); i++) {
+            JSONObject person = new JSONObject();
+            person.put("fdId", idNameList.get(i).getFdId());
+            person.put("fdOrder", i);
+            body.add(person);
+        }
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-org/sysOrgPerson/updateOrders", body, Boolean.class);
+        log.info("updateOrders: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );

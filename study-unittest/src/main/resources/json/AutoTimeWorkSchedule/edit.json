@@ -1,0 +1,45 @@
+{
+  "fdName": "测试固定排班1",
+  "fdBegin": "1667232000000",
+  "fdType": 1,
+  "fdFixed": [
+    {
+      "fdDayOfWeek": 1,
+      "fdWorkClasses": {
+        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+      }
+    },
+    {
+      "fdDayOfWeek": 2,
+      "fdWorkClasses": {
+        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+      }
+    },
+    {
+      "fdDayOfWeek": 3,
+      "fdWorkClasses": {
+        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+      }
+    },
+    {
+      "fdDayOfWeek": 4,
+      "fdWorkClasses": {
+        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+      }
+    },
+    {
+      "fdDayOfWeek": 5,
+      "fdWorkClasses": {
+        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+      }
+    },
+    {
+      "fdDayOfWeek": 6
+    },
+    {
+      "fdDayOfWeek": 7
+    }
+  ],
+  "fdOrgList": [],
+  "fdEditors": []
+}

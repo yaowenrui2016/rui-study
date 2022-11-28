@@ -1,6 +1,7 @@
 {
-  "fdName": "分类2",
+  "fdName": "分类3",
   "fdCode": "2",
+  "fdSource": "APPLICATION",
   "dynamicProps": {
     "fdNameUs": "Cate2"
   }

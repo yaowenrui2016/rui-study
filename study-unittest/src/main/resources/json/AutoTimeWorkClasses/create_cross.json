@@ -1,0 +1,12 @@
+{
+  "fdName": "跨天班次",
+  "fdColor": "#ffffff",
+  "fdTimePeriodList": [
+    {
+      "fdWorkBegin": 1080,
+      "fdWorkEnd": 1800,
+      "fdRestBegin": 1320,
+      "fdRestEnd": 1560
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.util;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import lombok.extern.slf4j.Slf4j;
@@ -70,5 +71,12 @@ public class FileUtils {
         String sendJson = FileUtils.readFileToString(filePath, "utf-8");
         return JSONObject.parseObject(sendJson, new TypeReference<List<T>>(type) {
         });
+    }
+
+    public static JSONArray loadJSONArray(String filename) {
+        String filePath = Objects.requireNonNull(ClassLoader.getSystemClassLoader().getResource(
+                "json/" + filename)).getFile();
+        String sendJson = FileUtils.readFileToString(filePath, "utf-8");
+        return JSONObject.parseArray(sendJson);
     }
 }

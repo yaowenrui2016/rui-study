@@ -1,0 +1,49 @@
+[
+  {
+    "cmd": "SEND",
+    "sendContext": {
+      "subject": "Test Send Todo 1",
+      "notifyType": "todo",
+      "todoType": 1,
+      "link": "http://www.baidu.com",
+      "appName": "MKPaaS",
+      "moduleName": "sys-notify",
+      "entityId": "1",
+      "entityName": "com.landray.sys.notify.SysNotifyTodo",
+      "orgProperty": "fdLoginName",
+      "targets": [
+        "yaowr",
+        "yuxd",
+        "liuf"
+      ]
+    }
+  },
+  {
+    "cmd": "SEND",
+    "sendContext": {
+      "subject": "Test Send Todo 2",
+      "notifyType": "todo",
+      "todoType": 1,
+      "link": "http://www.baidu.com",
+      "appName": "MKPaaS",
+      "moduleName": "sys-notify",
+      "entityId": "2",
+      "entityName": "com.landray.sys.notify.SysNotifyTodo",
+      "orgProperty": "fdLoginName",
+      "targets": [
+        "yaowr",
+        "yuxd",
+        "liuf"
+      ]
+    }
+  },
+  {
+    "cmd": "DONE",
+    "context": {
+      "appName": "MKPaaS",
+      "moduleName": "sys-notify",
+      "entityId": "2",
+      "entityName": "com.landray.sys.notify.SysNotifyTodo"
+    }
+  }
+]

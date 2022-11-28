@@ -1,0 +1,15 @@
+{
+  "offset": 0,
+  "pageSize": 1000,
+  "columns": [
+    "fdId",
+    "fdName",
+    "fdEnabled",
+    "fdColor",
+    "fdCreator",
+    "fdTimePeriodList"
+  ],
+  "sorts": {
+    "fdCreateTime": "DESC"
+  }
+}

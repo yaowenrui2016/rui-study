@@ -1,0 +1,67 @@
+{
+  "notifyType": "todo",
+  "appName": "MKPaaS",
+  "moduleName": "km-review",
+  "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+  "entityId": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+  "entityKey": "custom",
+  "notifyId": "1ght4tqm8w12gw1bk59w183bjnd6in49s1w0",
+  "parameter1": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+  "targets": [
+    "yaowr"
+  ],
+  "orgProperty": "fdLoginName",
+  "providerParameters": {
+    "extendLbpmParameter": {
+      "processSystem": "INNER_SYSTEM"
+    }
+  },
+  "link": "https://mov2.myoas.com/web/sys-lbpm/desktop/static/transfer.html?processId=1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+  "requestTime": 1668499303114,
+  "subject": "申请人发起了催办，流程单据：${replaceText.subject}，请尽快处理！",
+  "replaceText": {
+    "creator": "莫常美",
+    "subject": "测试催办消息",
+    "operation": "提交",
+    "operator": "莫常美"
+  },
+  "langContent": {
+    "en-US": {
+      "replaceText": {
+        "creator": "Ella",
+        "subject": "测试催办消息",
+        "operation": "Submit",
+        "operator": "Ella"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+      "entityKey": "custom",
+      "creator": "Ella",
+      "parameter1": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0"
+    },
+    "zh-CN": {
+      "replaceText": {
+        "creator": "莫常美",
+        "subject": "测试催办消息",
+        "operation": "提交",
+        "operator": "莫常美"
+      },
+      "appName": "MKPaaS",
+      "moduleName": "sys-lbpm",
+      "entityName": "com.landray.paas.lbpm.engine.builder.ProcessInstance",
+      "entityId": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+      "entityKey": "custom",
+      "creator": "莫常美",
+      "parameter1": "1ght4s12iw12jw1cir9w660bkf21rqc2o3w0"
+    }
+  },
+  "todoType": 2,
+  "todoLevel": 3,
+  "creator": "1f86svmd2w44wv1tw3eqbhov34e20u01tow0",
+  "creatorName": "莫常美",
+  "mobileLink": "https://mov2.myoas.com/web/sys-lbpm/desktop/static/transfer.html?processId=1ght4s12iw12jw1cir9w660bkf21rqc2o3w0",
+  "docInfo": "{\"fdAppName\":\"MKPaaS\",\"fdProcessNo\":\"T202211151600444896\",\"fdStatus\":\"20\",\"fdModuleName\":\"km-review\",\"fdTemplateId\":\"1g70nfglpw1vw3q6w1d3lu643i35gl32sow0\",\"fdTitle\":\"测试催办消息\",\"fdApplicantId\":\"1f86svmd2w44wv1tw3eqbhov34e20u01tow0\",\"fdApplicationTime\":1668499244114,\"fdLink\":{\"PAD\":\"https://mov2.myoas.com/web/sys-lbpm/desktop/static/transfer.html?processId=1ght4s12iw12jw1cir9w660bkf21rqc2o3w0\",\"PC\":\"https://mov2.myoas.com/web/sys-lbpm/desktop/static/transfer.html?processId=1ght4s12iw12jw1cir9w660bkf21rqc2o3w0\",\"MOBILE\":\"https://mov2.myoas.com/web/sys-lbpm/desktop/static/transfer.html?processId=1ght4s12iw12jw1cir9w660bkf21rqc2o3w0\"},\"fdInstanceId\":\"1ght4s122w12rwecf9w2dnletg1mhct08sw0\"}",
+  "queryType": 2
+}

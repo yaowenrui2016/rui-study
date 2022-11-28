@@ -1,0 +1,72 @@
+{
+    "fdEditors": [
+    {
+      "fdId": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+      "fdName": "刘芬"
+    }
+  ],
+  "fdOrgList": [
+    {
+      "fdOrgId": "1gicduak0w7b4w3q5w2c03lc3131mp7t3bw0"
+    }
+  ],
+  "fdName": "yaoTest",
+  "fdBegin": 1667232000000,
+  "fdEnd": 1698768000000,
+  "fdTimeZone": {
+    "fdId": "1ga2m88tswuwbdaw1hiposv30rksm63hj3w0"
+  },
+  "fdType": 1,
+  "fdCreatorName": "刘芬",
+  "fdClassesList": [
+    {
+      "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+    }
+  ],
+  "fdFixed": [
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 1
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 2
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 3
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 4
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 5
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 6
+    },
+    {
+      "fdWorkClasses": {
+        "fdId": "1gikha1gcw7l5w8epwvrquo03oetoqtpvmw0"
+      },
+      "fdDayOfWeek": 7
+    }
+  ],
+  "fdIsOverdue": false,
+  "newVersionStartTime": 1669305600000
+}

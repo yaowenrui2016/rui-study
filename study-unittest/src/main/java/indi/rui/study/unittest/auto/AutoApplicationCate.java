@@ -10,7 +10,6 @@ import indi.rui.study.unittest.util.FileUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.collections.CollectionUtils;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -34,18 +33,14 @@ public class AutoApplicationCate {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-
-        // 检查唯一字段值是否存在
-        boolean exist = checkUniqueField();
-
-        // 保存
-        if (!exist) {
+//        // 检查唯一字段值是否存在
+//        boolean exist = checkUniqueField();
+//        // 保存
+//        if (!exist) {
             saveCategory();
-        }
-
+//        }
         // 获取分类
         List<JSONObject> cates = categoryList();
-
         // 删除
 //        delete(cates);
     }
@@ -87,6 +82,9 @@ public class AutoApplicationCate {
         JSONObject body = new JSONObject();
         body.put("pageSize", 20);
         body.put("offset", 0);
+        JSONObject sort = new JSONObject();
+        sort.put("fdOrder", "ASC");
+        body.put("sorts", sort);
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-application/cate/list", body, JSONObject.class);
         log.info("categoryList: request={}, response={}",

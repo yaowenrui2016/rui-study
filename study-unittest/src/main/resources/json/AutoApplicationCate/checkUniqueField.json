@@ -1,6 +1,10 @@
 {
-  "field": "fdName",
+  "fields": [
+    "fdName",
+    "fdSource"
+  ],
   "data": {
-    "fdName": "分类2"
+    "fdName": "分类2",
+    "fdSource": "APPLICATION"
   }
 }

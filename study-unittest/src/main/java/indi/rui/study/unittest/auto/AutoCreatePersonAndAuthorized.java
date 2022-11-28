@@ -1,9 +1,11 @@
 package indi.rui.study.unittest.auto;
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import indi.rui.study.unittest.dto.*;
+import indi.rui.study.unittest.dto.IdNameProperty;
+import indi.rui.study.unittest.dto.MkResponse;
+import indi.rui.study.unittest.dto.MkRightGroupVO;
+import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.org.SimplePerson;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
 import lombok.extern.slf4j.Slf4j;
@@ -39,7 +41,8 @@ public class AutoCreatePersonAndAuthorized {
             "chenp", "陈鹏",
             "zhugr", "朱国荣",
             "lizj", "李振佳",
-//            "weilq", "韦莉琦",
+            "weilq", "韦莉琦",
+            "zhangs", "张三"
 //            "yuxd", "余小冬",
 //            "youqinghong", "游青洪",
 //            "penghe", "彭贺",
@@ -258,13 +261,19 @@ public class AutoCreatePersonAndAuthorized {
         JSONObject body = new JSONObject();
         body.put("pageSize", 1000);
         body.put("count", false);
-        body.put("columns", Arrays.asList("fdId", "fdName"));
+        body.put("columns", Arrays.asList("fdId", "fdName", "fdCode"));
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
                 "/data/sys-right/sysRightRole/list", body, JSONObject.class);
         List<JSONObject> rtnList = null;
         if (mkResponse.isSuccess()) {
             rtnList = mkResponse.getData().getContent();
+            filterRoles(rtnList);
         }
         return rtnList;
+    }
+
+    private static void filterRoles(List<JSONObject> roles) {
+//        List<String> removeRoles = Arrays.asList("ROLE_SYS_APPLICATION_SETTING");
+//        roles.removeIf(role -> removeRoles.contains(role.getString("fdCode")));
     }
 }

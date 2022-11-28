@@ -37,22 +37,22 @@ public class AutoApplicationMain {
     public static void main(String[] args) {
 //        // 检查唯一字段值是否存在
 //        boolean exist = checkUniqueField();
-//        // 查询应用并且按分类看板返回结果
-//        panels();
         // 新增
         create();
-        // 查询列表
-        List<JSONObject> applications = listApplication();
-        if (!CollectionUtils.isEmpty(applications)) {
-            // 编辑
-            edit(applications.get(0));
-            // 获取详情
-            getApplication(applications.get(0));
+//        // 查询应用并且按分类看板返回结果
+//        panels();
+//        // 查询列表
+//        List<JSONObject> applications = listApplication();
+//        if (!CollectionUtils.isEmpty(applications)) {
+//            // 编辑
+//            edit(applications.get(0));
+//            // 获取详情
+//            getApplication(applications.get(0));
 //            // 删除
 //            delete(applications.get(0));
-            // 删除所有
-            deleteAll(applications);
-        }
+//            // 删除所有
+//            deleteAll(applications);
+//        }
     }
 
 
@@ -128,7 +128,7 @@ public class AutoApplicationMain {
         body.put("pageSize", 1000);
         body.put("offset", 0);
         JSONObject conditions = new JSONObject();
-        conditions.put("fdSource", "DEVELOPED");
+        conditions.put("fdSource", "MODELING");
         body.put("conditions", conditions);
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-application/main/panels", body, JSONObject.class);

@@ -1,0 +1,1191 @@
+{
+  "source": "MODELING",
+  "applications": [
+    {
+      "name": "yaoTest",
+      "url": "/web/#/current/sys-modeling/1231/index",
+      "mobileUrl": "/web/#/current/sys-modeling/1231/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gike12huw7liws9w19a953g3rjcrq62gdw0/form",
+      "icon": "{\"name\":\"weak-management-and-control-of-scientific-research-institutes\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "1231",
+      "creator": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gagebhlbw91wh3w2uc6obtlr3t8k2pkmvw0",
+          "fdName": "余小冬"
+        },
+        {
+          "fdId": "1ga2pj8hpw16w41gw25p36q03lum8uc1kpw0",
+          "fdName": "刘芬1"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga2ppp6pw16w4nrwh2fm5317je9dhr7sqw0",
+          "fdName": "韦莉琦"
+        },
+        {
+          "fdId": "1ghkpqcbfw6apwjpdw22o8fuv2j8hq222sw0",
+          "fdName": "姚文锐"
+        }
+      ]
+    },
+    {
+      "name": "10089",
+      "url": "/web/#/current/sys-modeling/12345/index",
+      "mobileUrl": "/web/#/current/sys-modeling/12345/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gijr4mn6w7juwmehw28g9c9f2nj6m2b18w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "12345",
+      "creator": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "zhangxttest",
+      "url": "/web/#/current/sys-modeling/zhangxttest/index",
+      "mobileUrl": "/web/#/current/sys-modeling/zhangxttest/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gi7utopnw78rwacdwmpfrh8142g2j52brw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "zhangxttest",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "11189",
+      "url": "/web/#/current/sys-modeling/12asd/index",
+      "mobileUrl": "/web/#/current/sys-modeling/12asd/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ght0j3j2w6tpw90cw2g6uev834jbq2marw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "12asd",
+      "creator": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gb869pv8wbbw4ecw17qvnos1mpv4k02n8w0",
+          "fdName": "林秀贤"
+        },
+        {
+          "fdId": "1gb4lon76w8mw2ssw26bs7fn974vj4afmpw0",
+          "fdName": "陈火旺"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1gb85rv71wbbw479w3va3hck3702hap17kw0",
+          "fdName": "陈宇森"
+        },
+        {
+          "fdId": "1gaikjrofwa0w423wr5js1m29sjt7i2v0hw0",
+          "fdName": "林勋尔"
+        }
+      ]
+    },
+    {
+      "name": "liuyu-demo",
+      "url": "/web/#/current/sys-modeling/liuyu/index",
+      "mobileUrl": "/web/#/current/sys-modeling/liuyu/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gh89tf9rw5fsw3elw2fkt8bl3au2i8a10w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "liuyu",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "修改zxt1118测试",
+      "url": "/web/#/current/sys-modeling/123421123/index",
+      "mobileUrl": "/web/#/current/sys-modeling/123421123/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gh7tk5mpw5f4wievw2slgajl1lmq95a5mw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "123421123",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gfpl6t19w3djwegvw580hhu3cmkasdvfuw0",
+          "fdName": "zxt权限测试3号"
+        },
+        {
+          "fdId": "1gfpl65mow3djwegawc2qpdk2j1usm528qw0",
+          "fdName": "zxt权限测试2号"
+        },
+        {
+          "fdId": "1gfpl55a1w3djwecfw14les8o2kscrdh3gw0",
+          "fdName": "zxt流程权限1号"
+        }
+      ],
+      "editors": []
+    },
+    {
+      "name": "syk跨系统导入导出",
+      "url": "/web/#/current/sys-modeling/sykyingyong/index",
+      "mobileUrl": "/web/#/current/sys-modeling/sykyingyong/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gfvk2s8lw3t5w7sjwh9klhb26174p42v8w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "sykyingyong",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "swj",
+      "url": "/web/#/current/sys-modeling/swj/index",
+      "mobileUrl": "/web/#/current/sys-modeling/swj/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gevskt9vw45wccw1k18es1qdu06o7ge30w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "swj",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "采购与供应商管理",
+      "url": "/web/#/current/sys-modeling/100239/index",
+      "mobileUrl": "/web/#/current/sys-modeling/100239/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ger7ce0lw2cfw1156w3erc2em1f1rop83w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "100239",
+      "desc": "采购与供应商管理包括采购需求、采购计划、采购订单、发货和收货通知，寻源管理，供应商管理、物料管理等模块，帮助企业建立标准化采购流程，实现供应商全生命周期闭环管理。",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1ga1mfdrhwnw9nw2qncuej3svph8q16dchw0",
+          "fdName": "蓝凌管理员"
+        },
+        {
+          "fdId": "1ga2os8vow16w2lbw2bcoj8h4lifp93ufqw0",
+          "fdName": "张敏"
+        }
+      ],
+      "editors": []
+    },
+    {
+      "name": "培训管理_luozh",
+      "url": "/web/#/current/sys-modeling/peixun-2/index",
+      "mobileUrl": "/web/#/current/sys-modeling/peixun-2/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdn33t60w10swlalw1stocoj3m3t8he1pw0/form",
+      "icon": "{\"name\":\"@attach/icon/1g38q7l8qwmwngltw1i9s5hm1ilen9535qw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "peixun-2",
+      "desc": "助力企业构建高竞争力人才体系，线上培训管理，极大方便了培训管理的安排，并且支持无纸化办公，增强与学员互动，适配培训方面个性化管理需求。助力企业构建高竞争力人才体系，线上培训管理，极大方便了培训管理的安排，并且支持无纸化办公，增强与学员互动，适配培训方面个性化管理需求。助力企业构建高竞争力人才体系，线上培训管理，极大方便了培训管理的安排，并且支持无纸化办公，增强与学员互动，适配培训方面个性化管理需求",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1ga2ojhfgw16w2fqw3l8v5l816o0rgh114w0",
+          "fdName": "spj子机构"
+        },
+        {
+          "fdId": "1ga2ohhiiw16w2eswh7999f14f1gur3p36w0",
+          "fdName": "spj冒烟机构"
+        },
+        {
+          "fdId": "1ga2ojmuiw16w2gew2q0nvqk3b6k5e630aw0",
+          "fdName": "SUP"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+          "fdName": "a部门主管"
+        }
+      ]
+    },
+    {
+      "name": "0924测试",
+      "url": "/web/#/current/sys-modeling/test092401/index",
+      "mobileUrl": "/web/#/current/sys-modeling/test092401/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gfumco29w3q0w5lkqwfg1h536va2qu27lw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fbtl8h97wcqw6tqtw21hd8pq8tvk782hqw0\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "test092401",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "导入0922",
+      "url": "/web/#/current/sys-modeling/t-09222/index",
+      "mobileUrl": "/web/#/current/sys-modeling/t-09222/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ge61m4ogw1iswfjvw2e4ab8af69iss2qjw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "t-09222",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "物业管理",
+      "url": "/web/#/current/sys-modeling/wy0001/index",
+      "mobileUrl": "/web/#/current/sys-modeling/wy0001/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ge1h2joaw1dcw1188w3t19egph2atif1pw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "wy0001",
+      "desc": "专注商业楼宇移动化物业管理：以报事报修为核心，实现物业合同管理、费用台账、缴费通知记录全流程",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "hq应用",
+      "url": "/web/#/current/sys-modeling/0921/index",
+      "mobileUrl": "/web/#/current/sys-modeling/0921/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdf8dma6wlcw56jwm47ocm1r3lclg1svaw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "0921",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gcauojvowdlw1bfw1kdomlo7iau391fb1w0",
+          "fdName": "张志江"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1gb85rv71wbbw479w3va3hck3702hap17kw0",
+          "fdName": "陈宇森"
+        }
+      ]
+    },
+    {
+      "name": "luozh测试9月",
+      "url": "/web/#/current/sys-modeling/km-luozh093001/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-luozh093001/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdf0ip0lwkjw56kw156k2n8b9r06jiqk8w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-luozh093001",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "任务管理(fgw)",
+      "url": "/web/#/current/sys-modeling/RW-002/index",
+      "mobileUrl": "/web/#/current/sys-modeling/RW-002/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdd425b2wj0w62w2ld57v61bo0fe12504w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "RW-002",
+      "creator": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "信息发布_4",
+      "url": "/web/#/current/sys-modeling/xxfb-4/index",
+      "mobileUrl": "/web/#/current/sys-modeling/xxfb-4/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdcf6d3fwhiwfdjw23cblb1g66lct35uiw0/form",
+      "icon": "{\"name\":\"message\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "xxfb-4",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+          "fdName": "吴婉琳"
+        }
+      ],
+      "editors": []
+    },
+    {
+      "name": "test-name",
+      "url": "/web/#/current/sys-modeling/km-test/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-test/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gda8bknswf7w4cvw2f0ttjlo16nrb1g33w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-test",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "Imp测试应用",
+      "url": "/web/#/current/sys-modeling/Imp-test/index",
+      "mobileUrl": "/web/#/current/sys-modeling/Imp-test/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gda6fm50wf7w43sw10a68602q47n9opdkw0/form",
+      "icon": "{\"name\":\"public\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "Imp-test",
+      "creator": "1ga1mfdrhwnw9nw2qncuej3svph8q16dchw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "车辆管理_1",
+      "url": "/web/#/current/sys-modeling/CL002-1/index",
+      "mobileUrl": "/web/#/current/sys-modeling/CL002-1/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcqm6kpjwmrw47iw3sce410g40emn2hp3w0/form",
+      "icon": "{\"name\":\"@attach/icon/1fv32n50cwp2wr4fdw3tt7j8tholnvj33rw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "CL002-1",
+      "desc": "统筹车辆安排，合理配置资源：让用车申请者清晰明了的查看车辆的使用情况，在有效解决企业车辆资源配置不合理、管理难度大等问题的同时，通过合理的车辆资源调配调用，还有助于企业办公管理的规范和谐，推动企业可持续发展",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "hq简单应用0905_1",
+      "url": "/web/#/current/sys-modeling/0905-1/index",
+      "mobileUrl": "/web/#/current/sys-modeling/0905-1/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcdtfvlbwg6w2vrw26vqifg2o7d1heljjw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "0905-1",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "HumanResources",
+      "url": "/web/#/current/sys-modeling/mk-hr/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-hr/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcbjh1hhwetw3dlw1asdcmh2irh3rb3kcw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fbtl8h97wcqw6tqtw21hd8pq8tvk782hqw0\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-hr",
+      "creator": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+          "fdName": "建模超级管理员"
+        }
+      ]
+    },
+    {
+      "name": "费用报销33",
+      "url": "/web/#/current/sys-modeling/fssc-expense/index",
+      "mobileUrl": "/web/#/current/sys-modeling/fssc-expense/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gc87cffuwbsw1fuw3n8pulht2362g3o9ew0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "fssc-expense",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "一个测试应用",
+      "url": "/web/#/current/sys-modeling/CP-10086/index",
+      "mobileUrl": "/web/#/current/sys-modeling/CP-10086/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gc6ag5l1wb2w2lhw1ba3bnkmi28q0bvoaw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "CP-10086",
+      "creator": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "5525",
+      "url": "/web/#/current/sys-modeling/2222225/index",
+      "mobileUrl": "/web/#/current/sys-modeling/2222225/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gbphn0dbw3lw3lbw1r6tkel290cdje2frw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "2222225",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "测试复制应用名称修改",
+      "url": "/web/#/current/sys-modeling/zw22222222/index",
+      "mobileUrl": "/web/#/current/sys-modeling/zw22222222/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gd2d8b44w4ow1l0weclk7k3ifmrat1f5bw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "zw22222222",
+      "creator": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "0829_wangb",
+      "url": "/web/#/current/sys-modeling/0829wangb/index",
+      "mobileUrl": "/web/#/current/sys-modeling/0829wangb/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gbkm1us1wuw27ew1gcnc3g3big6u23a97w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "0829wangb",
+      "desc": "20220916 18:00:29",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+          "fdName": "LujlAdmin"
+        }
+      ]
+    },
+    {
+      "name": "spj企业用车",
+      "url": "/web/#/current/sys-modeling/km-car/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-car/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gg73sg85w45mw3smjw3e0ch32rfhrlsdfw0/form",
+      "icon": "{\"name\":\"@attach/icon/1gb9bc0edwc0w13uw2nonos63bu5blggk9w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "km-car",
+      "creator": "1ga2ojmuiw16w2gew2q0nvqk3b6k5e630aw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1ga2ojmuiw16w2gew2q0nvqk3b6k5e630aw0",
+          "fdName": "SUP"
+        },
+        {
+          "fdId": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+          "fdName": "a部门主管"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga2ojmuiw16w2gew2q0nvqk3b6k5e630aw0",
+          "fdName": "SUP"
+        }
+      ]
+    },
+    {
+      "name": "巡店管理_luozh",
+      "url": "/web/#/current/sys-modeling/KM-3/index",
+      "mobileUrl": "/web/#/current/sys-modeling/KM-3/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1fru9l2mgwn1w575uw2ai2f3b173hpfg3dw0/form",
+      "icon": "{\"name\":\"@attach/icon/1g65ar50mwdw32cew6s149j1n6gk4ok35rw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "KM-3",
+      "desc": " 建立巡店管理平台，实现巡店从制定计划到巡店的全过程信息化审批、管控。制定巡店计划，审批通过后开始巡店，对巡店发现的问题进行记录提交，并且将巡店记录导出报表，进行系统分析和查看。\n",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+          "fdName": "luozhihua"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+          "fdName": "luozhihua"
+        }
+      ]
+    },
+    {
+      "name": "测试应用1",
+      "url": "/web/#/current/sys-modeling/test01/index",
+      "mobileUrl": "/web/#/current/sys-modeling/test01/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gann03muw3iwm7wtm4n1q27c1mgv2gpkow0/form",
+      "icon": "{\"name\":\"@attach/icon/1g3o1a8h9w32sw32gqwuedeons3fvaa134w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "test01",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1gb3ro682w8mwc7w543ssh2t1bdebiucgcw0",
+          "fdName": "吴婉琳"
+        }
+      ]
+    },
+    {
+      "name": "图书管理",
+      "url": "/web/#/current/sys-modeling/books-review/index",
+      "mobileUrl": "/web/#/current/sys-modeling/books-review/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gba1nb20wclw5vlw1d72p3o2l3o1vogiaw0/form",
+      "icon": "{\"name\":\"knowledge-book\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "books-review",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "巡店管理练习（勿动）",
+      "url": "/web/#/current/sys-modeling/cai/index",
+      "mobileUrl": "/web/#/current/sys-modeling/cai/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gg73sg3pw45mw3scgw2ggoamf3elhhft2w0/form",
+      "icon": "{\"name\":\"lightappstore\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "cai",
+      "creator": "1ga1mfdrhwnw9nw2qncuej3svph8q16dchw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "UED验收",
+      "url": "/web/#/current/sys-modeling/2345678987654/index",
+      "mobileUrl": "/web/#/current/sys-modeling/2345678987654/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gaj96ahjwhw5rw8jdmqs2inkfp13si2mqw0/form",
+      "icon": "{\"name\":\"yellow-light\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "2345678987654",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "巡店管理",
+      "url": "/web/#/current/sys-modeling/KM/index",
+      "mobileUrl": "/web/#/current/sys-modeling/KM/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1galfg4dqw82wnn3w3mf8m0f16ksqb33omw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "KM",
+      "desc": " 建立巡店管理平台，实现巡店从制定计划到巡店的全过程信息化审批、管控。制定巡店计划，审批通过后开始巡店，对巡店发现的问题进行记录提交，并且将巡店记录导出报表，进行系统分析和查看。\n",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "钉钉场景",
+      "url": "/web/#/current/sys-modeling/dingding/index",
+      "mobileUrl": "/web/#/current/sys-modeling/dingding/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gai8s2sdw9iw2mmwrg2m7h31dmnj021e2w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "dingding",
+      "creator": "1ga2or2hbw16w2jgw2rfrnk1159406k18ew0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "周梓凡的应用(勿删)",
+      "url": "/web/#/current/sys-modeling/zzf/index",
+      "mobileUrl": "/web/#/current/sys-modeling/zzf/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gai7s3f3w9iw2egw1us08kt1epjo173rgw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "zzf",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "应用导入导出",
+      "url": "/web/#/current/sys-modeling/km-appdrdc/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-appdrdc/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gaggcohsw96w10jw29r18032m8untsqihw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-appdrdc",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "liqi",
+      "url": "/web/#/current/sys-modeling/lq1/index",
+      "mobileUrl": "/web/#/current/sys-modeling/lq1/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gafn7oqjw82w3j9w1mbpvtp147qpjf1okw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "lq1",
+      "creator": "1ga2q4l8jw16w5h3w34gqb6sd1gjsr21vcw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "lingy测试应用",
+      "url": "/web/#/current/sys-modeling/lingy20220812/index",
+      "mobileUrl": "/web/#/current/sys-modeling/lingy20220812/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ga8c57t0w5dw111w1d3rgdsamh21n142dw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "lingy20220812",
+      "creator": "1ga2p5qntw16w3bcwv4mm631dr3f44194kw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+          "fdName": "LujlAdmin"
+        }
+      ]
+    },
+    {
+      "name": "打印火柴",
+      "url": "/web/#/current/sys-modeling/00001/index",
+      "mobileUrl": "/web/#/current/sys-modeling/00001/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ga5bfe8iw2vwkcw3mctivt2jlrqtlvkkrw0/form",
+      "icon": "{\"name\":\"@attach/icon/1g4ehc79bw1mw2lgcawj4nv4m207kd7a78w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "00001",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "zxt0819新需求测试",
+      "url": "/web/#/current/sys-modeling/31754/index",
+      "mobileUrl": "/web/#/current/sys-modeling/31754/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcq93e45wm6w17ow2t3tt6q1p5m7b839rw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "31754",
+      "creator": "1ga2ppp6pw16w4nrwh2fm5317je9dhr7sqw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "syk",
+      "url": "/web/#/current/sys-modeling/syk/index",
+      "mobileUrl": "/web/#/current/sys-modeling/syk/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gfvjchrtw3t5w3rmw2mk4iem3sjioo01rw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "syk",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "陈宇森测试",
+      "url": "/web/#/current/sys-modeling/13580441838-132/index",
+      "mobileUrl": "/web/#/current/sys-modeling/13580441838-132/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ga3a4khhw1lwlsw21acprkclf5ng2d2c1w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "13580441838-132",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gb1ve17uw7jw1rtw8dls7c2btlfru2797w0",
+          "fdName": "陈宇森专用"
+        },
+        {
+          "fdId": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+          "fdName": "建模超级管理员"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+          "fdName": "建模超级管理员"
+        },
+        {
+          "fdId": "1gb1ve17uw7jw1rtw8dls7c2btlfru2797w0",
+          "fdName": "陈宇森专用"
+        }
+      ]
+    },
+    {
+      "name": "验收-ytx",
+      "url": "/web/#/current/sys-modeling/km-daying/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-daying/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcbnqm55wetw5gvwhqb5n0qvi4it2ap3pw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-daying",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "zxt缺陷验证应用",
+      "url": "/web/#/current/sys-modeling/231754/index",
+      "mobileUrl": "/web/#/current/sys-modeling/231754/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gd2efol6w4ow27qw690h223dmrcer1er9w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "231754",
+      "creator": "1ga2ppp6pw16w4nrwh2fm5317je9dhr7sqw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "周梓凡的打印",
+      "url": "/web/#/current/sys-modeling/zprint/index",
+      "mobileUrl": "/web/#/current/sys-modeling/zprint/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gg70kmggw45mw2vp1w2ck25c024oudb5ow0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "zprint",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "10087",
+      "url": "/web/#/current/sys-modeling/km123/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km123/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ghvi9vuew708w796w3glmvfl198quvp3vw0/form",
+      "icon": "{\"name\":\"@attach/icon/1ge6dk518wsu5w2kpj1w3oe8k2lceoc4v1w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "km123",
+      "category": "999",
+      "creator": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "10086_",
+      "url": "/web/#/current/sys-modeling/0tr/index",
+      "mobileUrl": "/web/#/current/sys-modeling/0tr/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ghqdl9o5w6qnw5cqw25j3nnkmiuii11sqw0/form",
+      "icon": "{\"name\":\"@attach/icon/1ge6dk510wsu5w2kpj0w6786sl10e04uq1w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "0tr",
+      "category": "999",
+      "creator": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+          "fdName": "a部门主管"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1ga3bdvrsw16wcuuw18s6ghkco05j22401w0",
+          "fdName": "a部门主管"
+        },
+        {
+          "fdId": "1ga2ojmuiw16w2gew2q0nvqk3b6k5e630aw0",
+          "fdName": "SUP"
+        },
+        {
+          "fdId": "1ga3behe2w16wcvbw1ccgbq63ab9lk03gcw0",
+          "fdName": "b部门主管"
+        },
+        {
+          "fdId": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+          "fdName": "刘芬"
+        }
+      ]
+    },
+    {
+      "name": "原始应用",
+      "url": "/web/#/current/sys-modeling/yuanshi/index",
+      "mobileUrl": "/web/#/current/sys-modeling/yuanshi/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1galnqkbhw26wcngw1541jl72csmtur3e2w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "yuanshi",
+      "category": "test-NO",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LJL-2022Q4应用",
+      "url": "/web/#/current/sys-modeling/Q42022app/index",
+      "mobileUrl": "/web/#/current/sys-modeling/Q42022app/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gguf9r4kw545w63rw27jcg1p2j0pvsn39w0/form",
+      "icon": "{\"name\":\"system-background\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "Q42022app",
+      "category": "Applyformclassification",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LJL-明细表应用",
+      "url": "/web/#/current/sys-modeling/mk-PartsListApplication/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-PartsListApplication/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ggbnno5kw4ccw3bjhw24l5q90afb6m128w0/form",
+      "icon": "{\"name\":\"project\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-PartsListApplication",
+      "category": "Applyformclassification",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "zxt1028测试",
+      "url": "/web/#/current/sys-modeling/986051123/index",
+      "mobileUrl": "/web/#/current/sys-modeling/986051123/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gfl4cgc8w39tw27nwo4joig1u1qd5s371w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "986051123",
+      "category": "Applyformclassification",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gg4c77saw41pw11nnw27td71k3ckckc93w0",
+          "fdName": "yanmj普通用户"
+        },
+        {
+          "fdId": "1gfpl55a1w3djwecfw14les8o2kscrdh3gw0",
+          "fdName": "zxt流程权限1号"
+        },
+        {
+          "fdId": "1gfpl65mow3djwegawc2qpdk2j1usm528qw0",
+          "fdName": "zxt权限测试2号"
+        },
+        {
+          "fdId": "1gfpl6t19w3djwegvw580hhu3cmkasdvfuw0",
+          "fdName": "zxt权限测试3号"
+        }
+      ],
+      "editors": []
+    },
+    {
+      "name": "LJL-0924动态控件应用",
+      "url": "/web/#/current/sys-modeling/mk-DynamicControlsApp/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-DynamicControlsApp/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdmievbow101wc5w1d49rtp1dn2li323kw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fbtl8h97wcqw6tqtw21hd8pq8tvk782hqw0\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-DynamicControlsApp",
+      "category": "Applyformclassification",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LJL-0914新应用",
+      "url": "/web/#/current/sys-modeling/mk-http0914app/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-http0914app/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gd2kjl6bw4ow624w20ibvrn9706fj2p5pw0/form",
+      "icon": "{\"name\":\"@attach/icon/1gcqo6gdcwmbw35bw2nueon43ip2hl63idw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-http0914app",
+      "category": "Applyformclassification",
+      "desc": "http://mksmoke.ywork.me/web/#/manage/sys-modeling/sysModelingApplication/list 时建的应用",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LJL-钉钉类应用",
+      "url": "/web/#/current/sys-modeling/mk-DingTalkapplications/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-DingTalkapplications/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ggm7u7cnw4qcwlqw1boi91j2apc8622nkw0/form",
+      "icon": "{\"name\":\"dingding\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-DingTalkapplications",
+      "category": "Applyformclassification",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LJL-分库应用(勿动)",
+      "url": "/web/#/current/sys-modeling/mk-Sub-libraryApplication/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-Sub-libraryApplication/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ga38qvrtw1lwdnw2bodtkj2bhp9d72alcw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fm9dtd29wksw2almnwa3moht3cjms0nm5w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-Sub-libraryApplication",
+      "category": "Applyformclassification",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+          "fdName": "建模超级管理员"
+        }
+      ]
+    },
+    {
+      "name": "应用平台管理",
+      "url": "/web/#/current/sys-modeling/app-manage/index",
+      "mobileUrl": "/web/#/current/sys-modeling/app-manage/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gd005hv1w1nw2kew162vpe82dehuhn1viw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "app-manage",
+      "category": "1gcvvg7daw1nw1imw1bjqe7243np51m50nw0",
+      "creator": "1ga2piqdmw16w408w17ur7fe3nbhq9q3h4w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LY-1118需求",
+      "url": "/web/#/current/sys-modeling/xuqiu1118/index",
+      "mobileUrl": "/web/#/current/sys-modeling/xuqiu1118/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gh8d8oc8w5fsw8e0w3mldcuj1p4hua824w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "xuqiu1118",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "子明细表",
+      "url": "/web/#/current/sys-modeling/zimingxi/index",
+      "mobileUrl": "/web/#/current/sys-modeling/zimingxi/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ggh60qvaw4k9w18rweq8co12es85o537ow0/form",
+      "icon": "{\"name\":\"@attach/icon/1ggcg1hf7w2qw1t7w44kn4p168smmk3grgw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "zimingxi",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LY-20221028",
+      "url": "/web/#/current/sys-modeling/LY-20221028/index",
+      "mobileUrl": "/web/#/current/sys-modeling/LY-20221028/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gfhoapidw35iw1nabwoa74k7ll9gt2bldw0/form",
+      "icon": "{\"name\":\"@attach/icon/1g6iqrefmw34w3cpccw3k531sbj8af9t2mw0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "LY-20221028",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1gb4unmlpw9nwf2w3jd94bn9jq9le2ed5pw0",
+          "fdName": "liuy1"
+        }
+      ]
+    },
+    {
+      "name": "明细表",
+      "url": "/web/#/current/sys-modeling/mingxi0922/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mingxi0922/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gdhio0lrwoiwoslw33j3dvb1iap6hucu1w0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "mingxi0922",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "表单权限",
+      "url": "/web/#/current/sys-modeling/km-review0909/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-review0909/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcgvhub6wirw2vw1bm7nic5g899mf4k5rw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-review0909",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "巡店应用",
+      "url": "/web/#/current/sys-modeling/km-luozh-063001/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-luozh-063001/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gbrapkm5w49w11bw3vtgr0a38ueb27trcw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-luozh-063001",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "星期天",
+      "url": "/web/#/current/sys-modeling/km-xingqi/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-xingqi/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gal77bjjw26w1ppw2g2a2kg935cga2e0cw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "km-xingqi",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "LY-20220819",
+      "url": "/web/#/current/sys-modeling/LY-20220819/index",
+      "mobileUrl": "/web/#/current/sys-modeling/LY-20220819/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gai941v4w9iw2ppw8u5k8fbr0s8auihs0w0/form",
+      "icon": "{\"name\":\"admin\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "LY-20220819",
+      "category": "LY",
+      "creator": "1ga2m9npqw16wu1w2h381mr3kebmac3nvpw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "Lyy的应用",
+      "url": "/web/#/current/sys-modeling/lyyApp/index",
+      "mobileUrl": "/web/#/current/sys-modeling/lyyApp/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ganfigvbw3ewg3w2krt9672iou55g2k9uw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "lyyApp",
+      "category": "sys_ivh98c",
+      "creator": "1ga2rp5afw16w70kwvidjpg1qdlikd2i44w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "蓝钉场景群-LuoYY",
+      "url": "/web/#/current/sys-modeling/ldcjq20211202-1/index",
+      "mobileUrl": "/web/#/current/sys-modeling/ldcjq20211202-1/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gal812fpw26w280w20nun0v27ub7se3pdw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "ldcjq20211202-1",
+      "category": "sys_ivh98c",
+      "creator": "1ga2rp5afw16w70kwvidjpg1qdlikd2i44w0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "yuxd专用应用",
+      "url": "/web/#/current/sys-modeling/yuxdtest/index",
+      "mobileUrl": "/web/#/current/sys-modeling/yuxdtest/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gbn3katpwbswc6gw3cm3afa2jrbipd3l3w0/form",
+      "icon": "{\"name\":\"first\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "yuxdtest",
+      "category": "DEMO",
+      "creator": "1gagebhlbw91wh3w2uc6obtlr3t8k2pkmvw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1gageau47w91wguw3osq7aa3uscnusunmrw0",
+          "fdName": "基础平台"
+        }
+      ]
+    },
+    {
+      "name": "0930测试",
+      "url": "/web/#/current/sys-modeling/test093001/index",
+      "mobileUrl": "/web/#/current/sys-modeling/test093001/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gd2oe58sw4ow9sdw3kfbdca16ffgi02mtw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fbtl8h97wcqw6tqtw21hd8pq8tvk782hqw0\",\"type\":\"complex\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "test093001",
+      "category": "1ga5fcbeaw2vw1plw3pet4io37dm9vg10sw0",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "0909测试",
+      "url": "/web/#/current/sys-modeling/km-082211/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-082211/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gb24hth0w7rw5tw36judbg35pumhsrdfcw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fcuo7fc6wduw5derw3clmhtb138j2ev3ew0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "km-082211",
+      "category": "1ga5fcbeaw2vw1plw3pet4io37dm9vg10sw0",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "luozh日志测试",
+      "url": "/web/#/current/sys-modeling/km-12580test/index",
+      "mobileUrl": "/web/#/current/sys-modeling/km-12580test/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gba1iectwclw5ghw1joji2d32jg16okbjw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fcuo7fc6wduw5derw3clmhtb138j2ev3ew0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "km-12580test",
+      "category": "1ga5fcbeaw2vw1plw3pet4io37dm9vg10sw0",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    },
+    {
+      "name": "luozh测试0819",
+      "url": "/web/#/current/sys-modeling/test08191/index",
+      "mobileUrl": "/web/#/current/sys-modeling/test08191/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1ga36cb7hw1lw1tw1s7j8qi1t4gh1b292dw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fm9dtd2lwksw2almrw3kth5ju33c0b921w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "test08191",
+      "category": "1ga5fcbeaw2vw1plw3pet4io37dm9vg10sw0",
+      "creator": "1ga2pqv67w16w4rrw113682pm6dr0g2tlkw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga2pvhbgw16w583w2490v9g24r8vfk172w0",
+          "fdName": "luozh2"
+        },
+        {
+          "fdId": "1ga2pvs36w16w594w1i8h2kf2s1ci3k17hw0",
+          "fdName": "luozh3"
+        }
+      ]
+    },
+    {
+      "name": "LJL-第三方数据源应用",
+      "url": "/web/#/current/sys-modeling/mk-notcodeapp/index",
+      "mobileUrl": "/web/#/current/sys-modeling/mk-notcodeapp/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gba1ncucwclw674wittvbr2f8nk9n2tihw0/form",
+      "icon": "{\"name\":\"@attach/icon/1fm9dtd2lwksw2almtw3r0dmq92dqutpd2w0\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "mk-notcodeapp",
+      "category": "1ga5b9fp8w2vwbgw261qmi22meqj392bg5w0",
+      "creator": "1ga33ad8uw16wauuw2ia2kq23d2sc351urw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": [
+        {
+          "fdId": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+          "fdName": "建模超级管理员"
+        }
+      ]
+    },
+    {
+      "name": "zxt0930测试应用1",
+      "url": "/web/#/current/sys-modeling/98605/index",
+      "mobileUrl": "/web/#/current/sys-modeling/98605/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gcqc8gr1wm6w2b7w875a0r3jmc4q7fnoow0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "98605",
+      "category": "linxx",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gbkcd79bwswfhw2gk63lg9tfh0t1d7g2bw0",
+          "fdName": "zxt打印机制权限测试"
+        }
+      ],
+      "editors": []
+    },
+    {
+      "name": "数据规则应用",
+      "url": "/web/#/current/sys-modeling/date/index",
+      "mobileUrl": "/web/#/current/sys-modeling/date/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gg8vqg92w57wq15w3fdk3b11jpjc6q1tqw0/form",
+      "icon": "{\"name\":\"add-document\",\"type\":\"vector\",\"style\":{\"backgroundColor\":\"\",\"color\":\"#4285f4\",\"borderRadius\":0}}",
+      "no": "date",
+      "category": "123-linxxx",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [
+        {
+          "fdId": "1gb863roqwbbw4bhw1tpgs9aifmc9f16vcw0",
+          "fdName": "黄琴"
+        }
+      ],
+      "editors": [
+        {
+          "fdId": "1gb863roqwbbw4bhw1tpgs9aifmc9f16vcw0",
+          "fdName": "黄琴"
+        }
+      ]
+    },
+    {
+      "name": "1022",
+      "url": "/web/#/current/sys-modeling/modeling-1022/index",
+      "mobileUrl": "/web/#/current/sys-modeling/modeling-1022/index",
+      "manageUrl": "/web/#/manage/sys-modeling/sysModelingApplication/edit/1gg9cldt9w492w13cw1slulqk20cpa6s23w0/form",
+      "icon": "{\"name\":\"admin\",\"type\":\"bitmap\",\"style\":{\"backgroundColor\":\"\",\"color\":\"\",\"borderRadius\":0}}",
+      "no": "modeling-1022",
+      "category": "123-linxxx",
+      "creator": "1ga2mql0lw16w19kw1djhgb31ahfasg1blw0",
+      "roles": "ROLE_SYSMODELING_ADMIN,ROLE_SYSMODELING_BASE_APP_UPDATE",
+      "visitors": [],
+      "editors": []
+    }
+  ]
+}

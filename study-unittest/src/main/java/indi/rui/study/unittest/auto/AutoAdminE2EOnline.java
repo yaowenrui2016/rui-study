@@ -211,7 +211,7 @@ public class AutoAdminE2EOnline {
      */
     private static String uploadAttach(String filePath) {
         String response = mkDataRequestHelper.callDataUpload(
-                "/data/sys-attach/upload", new File(filePath));
+                "/data/sys-attach/upload", new File(filePath),"fdFile", null);
         MkResponse<JSONObject> mkResponse = JSONObject.parseObject(response, new TypeReference<MkResponse<JSONObject>>(JSONObject.class) {
         });
         // {"fdAttachFileId":"1g1n3qka3w1vw3sw1sct9s8ojnci633s6dw0","fdFileName":"EnvToEnv_ExampleEntity.zip"}

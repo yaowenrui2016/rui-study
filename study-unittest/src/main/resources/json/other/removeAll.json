@@ -1,0 +1,32 @@
+{
+  "appName": "xt001",
+  "entityId": "bpm.awspaas",
+  "entityName": "bpm.awspaas",
+  "langContent": {
+    "zh-CN": {
+      "appName": "xt001",
+      "entityId": "bpm.awspaas",
+      "entityName": "bpm.awspaas",
+      "moduleName": "流程管理",
+      "timestamp": "2022-11-06 15:41:24"
+    }
+  },
+  "moduleName": "流程管理",
+  "notifyId": "4ffc8010-d084-4d85-be37-7be466317748",
+  "queryType": "TODO",
+  "retry": false,
+  "snid": "1gh5srn2jw3cw4h28w26all5i2ehnpa01uw0",
+  "timestamp": 1667720484115,
+  "todoLevel": "NORMAL",
+  "todoType": "TODO",
+  "userFields": [
+    "fdId",
+    "fdName",
+    "fdLoginName",
+    "fdOriId",
+    "fdNo",
+    "fdEmail",
+    "fdWorkPhone",
+    "fdAccount"
+  ]
+}

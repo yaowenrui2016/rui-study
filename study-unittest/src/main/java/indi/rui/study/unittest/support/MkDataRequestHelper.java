@@ -10,6 +10,7 @@ import indi.rui.study.unittest.dto.QueryResult;
 import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.File;
 import java.util.HashMap;
@@ -99,14 +100,17 @@ public class MkDataRequestHelper {
      * @param path
      * @param uploadFile
      */
-    public String callDataUpload(String path, File uploadFile) {
+    public String callDataUpload(String path, File uploadFile, String fileProp, JSONObject params) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
         httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         // 不能设置content-type: multipart/form-data，否则导致"the request was rejected because no multipart boundary was found"
 //        httpHeaders.put("content-type", "multipart/form-data");
         try {
-            return HttpClientUtils.httpPostUpload(url, httpHeaders, uploadFile);
+            if (StringUtils.isBlank(fileProp)) {
+                fileProp = "file";
+            }
+            return HttpClientUtils.httpPostUpload(url, httpHeaders, uploadFile, fileProp, params);
         } catch (Exception e) {
             log.error("Call mk data upload file error! [url={}, uploadFile={}]",
                     url,

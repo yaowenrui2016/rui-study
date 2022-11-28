@@ -1,32 +1,52 @@
 {
-  "fdId": "1ghl5vej4w2nw9cw2cvq9922945rdd2kenw0",
+  "fdId": "1gi27lp1iw3mw1iw1mjm4l93go79gu16b8w0",
   "fdTenantId": 0,
   "fdBatchType": "SINGLE",
-  "fdBeginTime": 1668231969379,
-  "fdEndTime": 1668231969695,
-  "fdTimeConsuming": 316,
-  "fdGroup": "data.change",
-  "fdModule": "sys-org",
-  "fdModuleLabel": "组织管理",
-  "fdTraceId": "1ghl5veh8w2nw9aw1l0ptcf3v5j63d31lhw0",
+  "fdBeginTime": 1668669957169,
+  "fdEndTime": 1668670005742,
+  "fdTimeConsuming": 48573,
+  "fdGroup": "read.access",
+  "fdModule": "sys-admin-demo",
+  "fdModuleLabel": "Admin演示",
+  "fdTraceId": "1gi27lovmw3mw1gwju3v433f7tstj3j0p0w0",
   "fdSuccess": 1,
   "fdAudit": {
     "fdStatus": 0
   },
   "fdOperator": {
-    "fdLoginName": "secadmin",
-    "fdUserId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
-    "fdUserName": "安全保密管理员",
-    "fdDeptId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
-    "fdUserGrade": 4
+    "fdLoginName": "lqtest002",
+    "fdUserId": "1ge6mn2a3wlw49dw2h20udt5bpn9el7r3bw0",
+    "fdUserName": "王大海",
+    "fdDeptId": "1ge6mn2a3wlw49dw2h20udt5bpn9el7r3bw0",
+    "fdUserGrade": 1
   },
   "fdOperation": {
-    "fdName": "新增",
-    "fdMethod": "add",
-    "fdContent": {}
+    "fdName": "跨环境导出",
+    "fdMethod": "export",
+    "fdContent": {
+      "fdAccess": {
+        "query": "{\"nodeOperList\":[{\"fdId\":\"1919\",\"operation\":\"CHECKED\",\"referType\":\"ExampleDetailEntity\"}]}",
+        "display": {
+          "fdOperator": "null",
+          "fdSubject": "null",
+          "fdReferTree": "null",
+          "fdId": "ID",
+          "fdStartTime": "null",
+          "fdCreateTime": "创建时间",
+          "fdEndTime": "null",
+          "fdType": "null"
+        },
+        "result": [
+          {
+            "fdId": "0ff10220w0",
+            "fdName": "审批模板"
+          }
+        ]
+      }
+    }
   },
   "fdRequest": {
-    "fdUrl": "http://127.0.0.1:8040/data/sys-org/sysOrgCommPost/add",
+    "fdUrl": "http://127.0.0.1:8040/data/sys-admin/e2e/offline/source/export",
     "fdIp": "127.0.0.1",
     "fdOs": "Unknown",
     "fdBrower": "Unknown",
@@ -34,8 +54,6 @@
     "fdUserAgent": "Apache-HttpClient/4.5.12 (Java/1.8.0_202)"
   },
   "fdEntity": {
-    "fdId": "1ghl5vemfw2nw9iw1qplmse2hdbhsm5rhsw0",
-    "fdEntityName": "com.landray.sys.org.core.entity.SysOrgCommPost",
-    "fdEntityLabel": "公共岗位"
+    "fdEntityName": "com.landray.sys.admin.demo.core.entity.ExampleEntity"
   }
 }

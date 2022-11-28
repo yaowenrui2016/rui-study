@@ -1,0 +1,41 @@
+{
+  "code": "return.optSuccess",
+  "data": {
+    "personName": "yaowr",
+    "deptName": "研发部",
+    "totalWorkTime": 1440,
+    "details": [
+      {
+        "date": 1667232000000,
+        "fdTodayWorkTime": 1440,
+        "fdTomorrowWorkTime": 0,
+        "workClassesName": "朝九晚五",
+        "workScheduleName": "排班1"
+      },
+      {
+        "date": 1667232000000,
+        "fdTodayWorkTime": 1440,
+        "fdTomorrowWorkTime": 0,
+        "workClassesName": "朝九晚五",
+        "workScheduleName": "排班1"
+      },
+      {
+        "date": 1667232000000,
+        "fdTodayWorkTime": 1440,
+        "fdTomorrowWorkTime": 0,
+        "workClassesName": "朝九晚五",
+        "workScheduleName": "排班1"
+      },
+      {
+        "date": 1667232000000,
+        "fdTodayWorkTime": 1440,
+        "fdTomorrowWorkTime": 0,
+        "workClassesName": "朝九晚五",
+        "workScheduleName": "排班1"
+      }
+    ]
+  },
+  "msg": "您的操作已成功！",
+  "success": true,
+  "traceId": "1ghtetujrw39w1tw30rdqeg1lafjcam8epw0"
+}

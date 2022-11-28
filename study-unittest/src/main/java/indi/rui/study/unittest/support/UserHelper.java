@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import indi.rui.study.unittest.dto.IdNameProperty;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.collections.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,5 +54,17 @@ public class UserHelper {
             }
         }
         return persons;
+    }
+
+
+    /**
+     * 查询人员
+     */
+    public static IdNameProperty getUser(String loginName) {
+        List<IdNameProperty> userList = getUsers(loginName);
+        if (!CollectionUtils.isEmpty(userList)) {
+            return userList.get(0);
+        }
+        return null;
     }
 }
