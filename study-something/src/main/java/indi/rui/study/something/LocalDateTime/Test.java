@@ -11,8 +11,21 @@ import java.util.Date;
  */
 public class Test {
     public static void main(String[] args) {
-        testDateToLocalDateTime();
+//        testDateToLocalDateTime();
 //        testLocalDateTimePlus();
+        testDayOfWeek();
+//        testPlus();
+    }
+
+    private static void testPlus() {
+        LocalDateTime dateTime = LocalDateTime.now();
+        LocalDateTime newDateTime = dateTime.plusDays(1);
+        System.out.println("dateTime=" + dateTime.getDayOfMonth());
+        System.out.println("newDateTime=" + newDateTime.getDayOfMonth());
+    }
+
+    private static void testDayOfWeek() {
+        System.out.println(LocalDateTime.now().getDayOfWeek().getValue());
     }
 
     private static void testLocalDateTimePlus() {

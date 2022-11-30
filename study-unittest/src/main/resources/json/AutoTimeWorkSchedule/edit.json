@@ -1,43 +1,47 @@
 {
   "fdName": "测试固定排班1",
-  "fdBegin": "1667232000000",
+  "fdBegin": "1669824000000",
   "fdType": 1,
   "fdFixed": [
     {
       "fdDayOfWeek": 1,
+      "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
       }
     },
     {
       "fdDayOfWeek": 2,
+      "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
       }
     },
     {
       "fdDayOfWeek": 3,
-      "fdWorkClasses": {
-        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
-      }
+      "fdIsTodayWork": false
     },
     {
       "fdDayOfWeek": 4,
+      "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
       }
     },
     {
       "fdDayOfWeek": 5,
+      "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1ghtl97fdw3bw2jw3c2u2q51l4sjfe77duw0"
+        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
       }
     },
     {
-      "fdDayOfWeek": 6
+      "fdDayOfWeek": 6,
+      "fdIsTodayWork": false
     },
     {
-      "fdDayOfWeek": 7
+      "fdDayOfWeek": 7,
+      "fdIsTodayWork": false
     }
   ],
   "fdOrgList": [],

@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.List;
 
 /**
  * 排班
@@ -19,7 +20,7 @@ import java.text.SimpleDateFormat;
 @Slf4j
 public class AutoTimeWorkComponent {
 
-    private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+    private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
     private static MkDataRequestHelper mkDataRequestHelper
@@ -35,8 +36,26 @@ public class AutoTimeWorkComponent {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-        // 获取工作区间
-        getWorkPeriod();
+//        // 获取排班列表
+//        getScheduleList();
+//        // 获取工作时间段
+//        getWorkPeriod();
+        // 获取最后期限
+        getDeadLine();
+    }
+
+
+    /**
+     * 获取排班列表
+     */
+    private static void getScheduleList() {
+        JSONObject body = new JSONObject();
+        List<JSONObject> result = mkApiRequestHelper.callApiForList(
+                "/api/sys-time/workScheduleComponent/getScheduleList", body, JSONObject.class);
+        log.info("getScheduleList: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
+        );
     }
 
 
@@ -46,12 +65,35 @@ public class AutoTimeWorkComponent {
     private static void getWorkPeriod() {
         try {
             JSONObject body = new JSONObject();
-            body.put("beginTime", FORMAT.parse("2022-12-01"));
-            body.put("endTime", FORMAT.parse("2022-12-31"));
-            body.put("orgId", UserHelper.getUsers("lizj").get(0).getFdId());
+            body.put("beginTime", FORMAT.parse("2022-12-02 03:45:00"));
+            body.put("endTime", FORMAT.parse("2022-12-02 20:50:00"));
+//            body.put("orgId", UserHelper.getUserId("yaowr"));
+            body.put("scheduleId", "1gj3j04lewkw46jw2mpdm4p2kotuup23klw0");
             JSONObject result = mkApiRequestHelper.callApi(
                     "/api/sys-time/workScheduleComponent/getWorkPeriod", body, JSONObject.class);
             log.info("getWorkPeriod: request={}, response={}",
+                    JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                    JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
+            );
+        } catch (ParseException e) {
+            log.error("getWorkPeriod error!", e);
+        }
+    }
+
+
+    /**
+     * 获取最后期限
+     */
+    private static void getDeadLine() {
+        try {
+            JSONObject body = new JSONObject();
+            body.put("beginTime", FORMAT.parse("2022-12-02 03:45:00"));
+            body.put("duration", 150);
+//            body.put("orgId", UserHelper.getUserId("yaowr"));
+            body.put("scheduleId", "1gj3j04lewkw46jw2mpdm4p2kotuup23klw0");
+            JSONObject result = mkApiRequestHelper.callApi(
+                    "/api/sys-time/workScheduleComponent/getDeadLine", body, JSONObject.class);
+            log.info("getDeadLine: request={}, response={}",
                     JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                     JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
             );

@@ -7,9 +7,14 @@
     "fdType",
     "fdBegin",
     "fdEnd",
+    "fdVersion",
+    "fdSourceId",
     "fdCreator",
     "fdOrgList"
   ],
+  "conditions": {
+    "fdCurrentVersion": true
+  },
   "sorts": {
     "fdCreateTime": "DESC"
   }

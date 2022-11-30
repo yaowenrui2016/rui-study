@@ -8,7 +8,9 @@ import org.apache.commons.collections.CollectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author: yaowr
@@ -32,7 +34,7 @@ public class UserHelper {
 
 
     /**
-     * 查询人员
+     * 查询人员列表
      */
     public static List<IdNameProperty> getUsers(String... loginNames) {
         List<IdNameProperty> persons = new ArrayList<>();
@@ -56,7 +58,6 @@ public class UserHelper {
         return persons;
     }
 
-
     /**
      * 查询人员
      */
@@ -64,6 +65,31 @@ public class UserHelper {
         List<IdNameProperty> userList = getUsers(loginName);
         if (!CollectionUtils.isEmpty(userList)) {
             return userList.get(0);
+        }
+        return null;
+    }
+
+    /**
+     * 查询人员id列表
+     */
+    public static List<String> getUserIds(String... loginNames) {
+        List<String> personIds;
+        List<IdNameProperty> users = getUsers(loginNames);
+        if (!CollectionUtils.isEmpty(users)) {
+            personIds = users.stream().map(IdNameProperty::getFdId).collect(Collectors.toList());
+        } else {
+            personIds = Collections.emptyList();
+        }
+        return personIds;
+    }
+
+    /**
+     * 查询人员id列表
+     */
+    public static String getUserId(String loginName) {
+        IdNameProperty user = getUser(loginName);
+        if (user != null) {
+            return user.getFdId();
         }
         return null;
     }
