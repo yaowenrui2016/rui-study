@@ -76,7 +76,7 @@ public class HttpClientUtils {
 
     public static String httpPost(String url, JSON body, Map<String, String> header)
             throws Exception {
-        String response;
+        String response = null;
         CloseableHttpClient httpClient = createHttpClient(url);
         ResponseHandler<String> responseHandler = new BasicResponseHandler();
         try {
@@ -101,6 +101,8 @@ public class HttpClientUtils {
                 httpPost.setEntity(requestEntity);
             }
             response = httpClient.execute(httpPost, responseHandler);
+        } catch (HttpResponseException e) {
+            log.error("message={}", e.getLocalizedMessage());
         } finally {
             try {
                 httpClient.close();

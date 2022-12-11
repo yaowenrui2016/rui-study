@@ -16,17 +16,17 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class AutoNotifyBatchNotify {
 
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "http://127.0.0.1:8040",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//    private static MkDataRequestHelper mkDataRequestHelper
+//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+//            "http://127.0.0.1:8040",
+//            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkdev01.ywork.me", "jm", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkdev01.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+//            = new MkDataRequestHelper("https://mkoppo.ywork.me", "jm", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "https://mkoppo.ywork.me",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
         // 批量消息

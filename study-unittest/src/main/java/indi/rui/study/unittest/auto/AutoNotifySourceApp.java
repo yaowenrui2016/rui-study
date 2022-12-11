@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
  * @create: 2022-08-10
  */
 @Slf4j
-public class AutoNotifySourceModule {
+public class AutoNotifySourceApp {
 
     private static MkDataRequestHelper mkDataRequestHelper
             = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
@@ -40,25 +40,37 @@ public class AutoNotifySourceModule {
      * @param args
      */
     public static void main(String[] args) {
-//        // 新增来源模块
-//        addModule();
+        // 拉取来源系统模块
+        pull();
+//        // 新增来源系统
+//        addApp();
         // 查询系统
-        List<JSONObject> moduleList = list();
-        if (!CollectionUtils.isEmpty(moduleList)) {
+        List<JSONObject> appList = getAppList();
+        if (!CollectionUtils.isEmpty(appList)) {
 //            // 新增来源模块
 //            addModule(appList.get(0));
-            // 删除来源模块
-            deleteAll(moduleList);
+//            // 删除来源系统
+//            deleteAll(appList);
         }
     }
 
+    private static void pull() {
+        JSONObject body = null;
+        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
+                "/data/sys-notify/sysNotifySourceApp/pull/true", body, JSONObject.class);
+        log.info("pull: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+    }
+
     /**
-     * 新增来源模块
+     * 新增来源系统
      */
     private static void addApp() {
         JSONObject body = FileUtils.loadJSON("AutoNotifySourceApp/addApp.json");
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-notify/sysNotifySourceModule/add", body, JSONObject.class);
+                "/data/sys-notify/sysNotifySourceApp/add", body, JSONObject.class);
         log.info("addApp: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
@@ -66,37 +78,34 @@ public class AutoNotifySourceModule {
     }
 
     /**
-     * 查询来源模块
-     */
-    private static List<JSONObject> list() {
-        JSONObject body = new JSONObject();
-        JSONObject conditions = new JSONObject();
-//        JSONObject fdNameCond = new JSONObject();
-//        fdNameCond.put("$contains", "yao");
-//        conditions.put("fdName", fdNameCond);
-        conditions.put("fdSourceId", "Admin Pull");
-        body.put("conditions", conditions);
-        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-                "/data/sys-notify/sysNotifySourceModule/list", body, JSONObject.class);
-        log.info("list: request={}, response={}",
-                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
-                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
-        );
-        return mkResponse.getData().getContent();
-    }
-
-    /**
-     * 删除来源模块
+     * 删除来源系统
      */
     private static void deleteAll(List<JSONObject> sourceApps) {
         JSONObject body = new JSONObject();
         body.put("fdIds", sourceApps.stream().map(json -> json.getString("fdId")).collect(Collectors.toList()));
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-notify/sysNotifySourceModule/deleteAll", body, JSONObject.class);
+                "/data/sys-notify/sysNotifySourceApp/deleteAll", body, JSONObject.class);
         log.info("deleteAll: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );
+    }
+
+    /**
+     * 查询系统
+     */
+    private static List<JSONObject> getAppList() {
+        JSONObject body = new JSONObject();
+        JSONObject conditions = new JSONObject();
+        conditions.put("fdSourceId", "Admin Pull");
+        body.put("conditions", conditions);
+        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-notify/sysNotifySourceApp/list", body, JSONObject.class);
+        log.info("getAppList: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+        return mkResponse.getData().getContent();
     }
 
     /**

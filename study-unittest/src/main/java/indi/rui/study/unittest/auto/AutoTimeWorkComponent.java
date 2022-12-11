@@ -1,5 +1,6 @@
 package indi.rui.study.unittest.auto;
 
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
@@ -38,10 +39,12 @@ public class AutoTimeWorkComponent {
     public static void main(String[] args) {
 //        // 获取排班列表
 //        getScheduleList();
-//        // 获取工作时间段
-//        getWorkPeriod();
-        // 获取最后期限
-        getDeadLine();
+        // 获取工作时间段
+        getWorkPeriod();
+//        // 获取最后期限
+//        getDeadLine();
+        // 获取上班时间长度
+        getDuration();
     }
 
 
@@ -65,12 +68,21 @@ public class AutoTimeWorkComponent {
     private static void getWorkPeriod() {
         try {
             JSONObject body = new JSONObject();
-            body.put("beginTime", FORMAT.parse("2022-12-02 03:45:00"));
-            body.put("endTime", FORMAT.parse("2022-12-02 20:50:00"));
-//            body.put("orgId", UserHelper.getUserId("yaowr"));
-            body.put("scheduleId", "1gj3j04lewkw46jw2mpdm4p2kotuup23klw0");
+            body.put("beginTime", FORMAT.parse("2022-12-08 15:50:00"));
+            body.put("endTime", FORMAT.parse("2022-12-09 19:02:00"));
+            body.put("orgId", UserHelper.getUserId("yaowr"));
+//            body.put("scheduleId", "1gjnss0u4w9w1kw3scld252iq53gf273e8w0");
             JSONObject result = mkApiRequestHelper.callApi(
                     "/api/sys-time/workScheduleComponent/getWorkPeriod", body, JSONObject.class);
+            JSONArray periods = result.getJSONArray("periods");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            for (int i = 0; i < periods.size(); i++) {
+                JSONObject period = periods.getJSONObject(i);
+                String begin = formatter.format(period.getLong("begin"));
+                period.put("begin", begin);
+                String end = formatter.format(period.getLong("end"));
+                period.put("end", end);
+            }
             log.info("getWorkPeriod: request={}, response={}",
                     JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                     JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
@@ -89,8 +101,8 @@ public class AutoTimeWorkComponent {
             JSONObject body = new JSONObject();
             body.put("beginTime", FORMAT.parse("2022-12-02 03:45:00"));
             body.put("duration", 150);
-//            body.put("orgId", UserHelper.getUserId("yaowr"));
-            body.put("scheduleId", "1gj3j04lewkw46jw2mpdm4p2kotuup23klw0");
+            body.put("orgId", UserHelper.getUserId("yaowr"));
+//            body.put("scheduleId", "1gjnss0u4w9w1kw3scld252iq53gf273e8w0");
             JSONObject result = mkApiRequestHelper.callApi(
                     "/api/sys-time/workScheduleComponent/getDeadLine", body, JSONObject.class);
             log.info("getDeadLine: request={}, response={}",
@@ -98,7 +110,29 @@ public class AutoTimeWorkComponent {
                     JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
             );
         } catch (ParseException e) {
-            log.error("getWorkPeriod error!", e);
+            log.error("getDeadLine error!", e);
+        }
+    }
+
+
+    /**
+     * 获取上班时间长度
+     */
+    private static void getDuration() {
+        try {
+            JSONObject body = new JSONObject();
+            body.put("beginTime", FORMAT.parse("2022-12-08 15:50:00"));
+            body.put("endTime", FORMAT.parse("2022-12-09 19:02:00"));
+            body.put("orgId", UserHelper.getUserId("yaowr"));
+//            body.put("scheduleId", "1gjnss0u4w9w1kw3scld252iq53gf273e8w0");
+            JSONObject result = mkApiRequestHelper.callApi(
+                    "/api/sys-time/workScheduleComponent/getDuration", body, JSONObject.class);
+            log.info("getDuration: request={}, response={}",
+                    JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                    JSONObject.toJSONString(result, SerializerFeature.PrettyFormat)
+            );
+        } catch (ParseException e) {
+            log.error("getDuration error!", e);
         }
     }
 }

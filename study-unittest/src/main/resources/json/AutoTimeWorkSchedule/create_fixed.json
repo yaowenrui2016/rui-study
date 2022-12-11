@@ -1,41 +1,38 @@
 {
-  "fdName": "测试固定排班2",
-  "fdBegin": "1667232000000",
-  "fdType": 1,
   "fdFixed": [
     {
       "fdDayOfWeek": 1,
       "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
+        "fdId": "1gjret9lfw4w22w3tr80g65qgmem26ju1lw0"
       }
     },
     {
       "fdDayOfWeek": 2,
       "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
+        "fdId": "1gjret9lfw4w22w3tr80g65qgmem26ju1lw0"
       }
     },
     {
       "fdDayOfWeek": 3,
       "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
+        "fdId": "1gjret9lfw4w22w3tr80g65qgmem26ju1lw0"
       }
     },
     {
       "fdDayOfWeek": 4,
       "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
+        "fdId": "1gjret9lfw4w22w3tr80g65qgmem26ju1lw0"
       }
     },
     {
       "fdDayOfWeek": 5,
       "fdIsTodayWork": true,
       "fdWorkClasses": {
-        "fdId": "1gin2gd3fw4iw1lw3o4virjt42insms4pbw0"
+        "fdId": "1gjret9lfw4w22w3tr80g65qgmem26ju1lw0"
       }
     },
     {
@@ -46,7 +43,5 @@
       "fdDayOfWeek": 7,
       "fdIsTodayWork": false
     }
-  ],
-  "fdOrgList": [],
-  "fdEditors": []
+  ]
 }

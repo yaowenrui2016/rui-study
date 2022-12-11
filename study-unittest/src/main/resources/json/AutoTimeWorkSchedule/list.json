@@ -9,8 +9,9 @@
     "fdEnd",
     "fdVersion",
     "fdSourceId",
-    "fdCreator",
-    "fdOrgList"
+    "fdOrgList",
+    "fdEditors",
+    "fdCreator"
   ],
   "conditions": {
     "fdCurrentVersion": true

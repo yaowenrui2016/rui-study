@@ -42,19 +42,19 @@ public class AutoCreatePersonAndAuthorized {
             "zhugr", "朱国荣",
             "lizj", "李振佳",
             "weilq", "韦莉琦",
-            "zhangs", "张三"
-//            "yuxd", "余小冬",
-//            "youqinghong", "游青洪",
-//            "penghe", "彭贺",
-//            "laow", "老王",
+            "zhangs", "张三",
+            "yuxd", "余小冬",
+            "youqinghong", "游青洪",
+            "penghe", "彭贺",
+            "laow", "老王",
     };
 
 //    static {
-//        int count = 200;
+//        int count = 1000;
 //        USER_LOGIN_NAMES = new String[count * 2];
 //        for (int i = 1; i <= count; i++) {
-//            USER_LOGIN_NAMES[2 * (i - 1)] = "TestUser" + i;
-//            USER_LOGIN_NAMES[2 * (i - 1) + 1] = "用户" + i;
+//            USER_LOGIN_NAMES[2 * (i - 1)] = "Thousand" + i;
+//            USER_LOGIN_NAMES[2 * (i - 1) + 1] = "千人" + i;
 //        }
 //    }
 
@@ -151,6 +151,7 @@ public class AutoCreatePersonAndAuthorized {
         json.put("fdEmail", loginName + "@landray.com.cn");
         json.put("fdOrder", 0);
         json.put("fdPassword", 1);
+        json.put("fdParent", getDept());
         MkResponse<JSONObject> mkResponse = mkDataRequestHelper.callData(
                 "/data/sys-org/sysOrgPerson/addPersonAccount", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {
@@ -272,8 +273,37 @@ public class AutoCreatePersonAndAuthorized {
         return rtnList;
     }
 
+
+    /**
+     * 查询列表
+     */
+    private static JSONObject getDept() {
+        JSONObject body = new JSONObject();
+        JSONObject orgType = new JSONObject();
+        orgType.put("$eq", 2);
+        JSONObject conditions = new JSONObject();
+        conditions.put("fdOrgType", orgType);
+        conditions.put("fdName", "财务部");
+        body.put("conditions", conditions);
+        MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
+                "/data/sys-org/sysOrgDept/list", body, JSONObject.class);
+        log.info("list: request={}, response={}",
+                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
+                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
+        );
+        List<JSONObject> deptList = mkResponse.getData().getContent();
+        if (!CollectionUtils.isEmpty(deptList)) {
+            return deptList.get(0);
+        }
+        return null;
+    }
+
     private static void filterRoles(List<JSONObject> roles) {
-//        List<String> removeRoles = Arrays.asList("ROLE_SYS_APPLICATION_SETTING");
-//        roles.removeIf(role -> removeRoles.contains(role.getString("fdCode")));
+        List<String> removeRoles = Arrays.asList(
+                "ROLE_SYSTIME_ADMIN",
+                "ROLE_SYSTIME_SCHEDULE",
+                "ROLE_SYSTIME_CLASSES"
+        );
+        roles.removeIf(role -> removeRoles.contains(role.getString("fdCode")));
     }
 }
