@@ -300,9 +300,9 @@ public class AutoCreatePersonAndAuthorized {
 
     private static void filterRoles(List<JSONObject> roles) {
         List<String> removeRoles = Arrays.asList(
-                "ROLE_SYSTIME_ADMIN",
-                "ROLE_SYSTIME_SCHEDULE",
-                "ROLE_SYSTIME_CLASSES"
+//                "ROLE_SYSTIME_ADMIN",
+//                "ROLE_SYSTIME_SCHEDULE",
+//                "ROLE_SYSTIME_CLASSES"
         );
         roles.removeIf(role -> removeRoles.contains(role.getString("fdCode")));
     }

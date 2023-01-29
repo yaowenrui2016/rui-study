@@ -1,0 +1,41 @@
+{
+  "fdId": "1gkn1bb2iw19w3gw30kfsrv39qff5v1cg9w0",
+  "fdTenantId": 0,
+  "fdBatchType": "SINGLE",
+  "fdBeginTime": 1671515450449,
+  "fdEndTime": 1671515462403,
+  "fdTimeConsuming": 11954,
+  "fdGroup": "data.change",
+  "fdModule": "sys-org",
+  "fdModuleLabel": "组织管理",
+  "fdTraceId": "1gkn1bb0ow19w3ew1e0r4rauvqm63g0im6w0",
+  "fdSuccess": 1,
+  "fdAudit": {
+    "fdStatus": 0
+  },
+  "fdOperator": {
+    "fdLoginName": "secadmin",
+    "fdUserId": "1d9bn74v4w0w2w1lqhtv413vah5v3mij7nw0",
+    "fdUserName": "安全保密管理员",
+    "fdUserGrade": 4
+  },
+  "fdOperation": {
+    "fdName": "重置密码",
+    "fdMethod": "resetPassword",
+    "fdContent": {}
+  },
+  "fdRequest": {
+    "fdUrl": "http://127.0.0.1:8040/data/sys-org/sysOrgPersonUpdatePwd/resetPassword",
+    "fdIp": "127.0.0.1",
+    "fdOs": "Unknown",
+    "fdBrower": "Unknown",
+    "fdMethod": "POST",
+    "fdUserAgent": "Apache-HttpClient/4.5.12 (Java/1.8.0_202)"
+  },
+  "fdEntity": {
+    "fdId": "1ge6mn1fowlw492w7tkphd1e9phbr135o4w0",
+    "fdSubject": "yaowr",
+    "fdEntityName": "com.landray.sys.org.core.entity.SysOrgAccount",
+    "fdEntityLabel": "行政组织-人员"
+  }
+}

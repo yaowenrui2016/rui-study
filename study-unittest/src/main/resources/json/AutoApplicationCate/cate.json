@@ -1,8 +1,11 @@
 {
-  "fdName": "分类3",
-  "fdCode": "2",
+  "fdName": "yaoTest分类3",
+  "fdCode": "1003",
   "fdSource": "APPLICATION",
   "dynamicProps": {
-    "fdNameUs": "Cate2"
+    "fdNameUs": "YaoTestCate3"
+  },
+  "mechanisms": {
+    "notify-template": []
   }
 }

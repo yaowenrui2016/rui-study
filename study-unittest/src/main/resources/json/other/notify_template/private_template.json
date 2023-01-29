@@ -1,0 +1,52 @@
+{
+  "customVars": [
+    {
+      "displayName": "表单版本ID(fd_version)",
+      "varName": "1gjltb8pow7gjwk9w754h653uh9md02psow0-fd_version"
+    },
+    {
+      "displayName": "创建时间(fdCreateTime)",
+      "varName": "1gjltb8pow7gjwk9w754h653uh9md02psow0-fdCreateTime-time"
+    }
+  ],
+  "fdCode": "9b36033cd5934298b0190385ef23f205",
+  "fdEntityId": "1gjltckfow7g5w2hcw26jh5d426acvj02kw0",
+  "fdEntityKey": "template_dfdyz7-method_p5s3r6",
+  "fdEntityName": "com.landray.sys.lbpm.core.entity.template.LbpmTemplate",
+  "fdName": "自定义消息模板401852",
+  "providersDisplay": [
+    {
+      "displayStyles": [
+        {
+          "dispProps": [
+            {
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.subject",
+              "name": "邮件标题",
+              "property": "subject",
+              "required": true,
+              "type": "SINGLE_LINE_TEXT",
+              "value4Lang": {
+                "zh-CN": "阿斯蒂芬#{customVars.1gjltb8pow7gjwk9w754h653uh9md02psow0-fd_version}"
+              }
+            },
+            {
+              "messageKey": "sys-notify:sys.notify.email.displayProperty.content",
+              "name": "邮件正文",
+              "property": "content",
+              "required": true,
+              "type": "RICH_TEXT",
+              "value4Lang": {
+                "zh-CN": "<p>as的法大师傅<span>#{customVars.1gjltb8pow7gjwk9w754h653uh9md02psow0-fdCreateTime-time}</span></p>"
+              }
+            }
+          ],
+          "style": "TEXT_CARD"
+        }
+      ],
+      "messageKey": "sys-notify:notifyType.email",
+      "name": "邮件",
+      "provider": "email",
+      "todoExt": false
+    }
+  ]
+}

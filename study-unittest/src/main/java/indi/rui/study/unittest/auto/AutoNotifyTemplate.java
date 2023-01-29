@@ -71,7 +71,7 @@ public class AutoNotifyTemplate {
         // 新建模板
         JSONObject json = FileUtils.loadJSON("AutoNotifyTemplate/add2.json");
         MkResponse<QueryResult<JSONObject>> mkResponse = mkDataRequestHelper.callDataForMkQueryResult(
-                "/data/sys-notify/sysNotifyTemplate/add", json, JSONObject.class);
+                "/data/sys-notify/sysNotifyTemplate/save", json, JSONObject.class);
         if (!mkResponse.isSuccess()) {
             throw new RuntimeException("Find template error! errMsg=" + mkResponse.getMsg());
         }

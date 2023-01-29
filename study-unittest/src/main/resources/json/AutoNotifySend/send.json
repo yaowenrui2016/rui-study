@@ -1,11 +1,12 @@
 {
-  "subject": "Test Send Todo",
+  "subject": "Test Send Todo 2",
   "notifyType": "todo",
   "todoType": 1,
-  "link": "http://www.baidu.com",
+  "link": "https://mksmoke.ywork.me/",
+  "mobileLink": "https://mktest.ywork.me/",
   "appName": "MKPaaS",
   "moduleName": "sys-notify",
-  "entityId": "1",
+  "entityId": "3",
   "entityName": "com.landray.sys.notify.SysNotifyTodo",
   "orgProperty": "fdLoginName",
   "targets": [
@@ -14,5 +15,6 @@
     "liuf",
     "jm",
     "tenantmanage"
-  ]
+  ],
+  "template": "P001"
 }

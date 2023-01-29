@@ -121,8 +121,10 @@ public class AutoTimeWorkComponent {
     private static void getDuration() {
         try {
             JSONObject body = new JSONObject();
-            body.put("beginTime", FORMAT.parse("2022-12-08 15:50:00"));
-            body.put("endTime", FORMAT.parse("2022-12-09 19:02:00"));
+//            body.put("beginTime", FORMAT.parse("2022-12-08 15:50:00"));
+//            body.put("endTime", FORMAT.parse("2022-12-09 19:02:00"));
+            body.put("beginTime", FORMAT.parse("2022-12-08 00:01:00"));
+            body.put("endTime", FORMAT.parse("2022-12-08 00:05:00"));
             body.put("orgId", UserHelper.getUserId("yaowr"));
 //            body.put("scheduleId", "1gjnss0u4w9w1kw3scld252iq53gf273e8w0");
             JSONObject result = mkApiRequestHelper.callApi(

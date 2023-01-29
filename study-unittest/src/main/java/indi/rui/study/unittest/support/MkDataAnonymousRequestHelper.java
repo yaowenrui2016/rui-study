@@ -4,10 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import indi.rui.study.unittest.dto.MkLoginResult;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.dto.QueryResult;
-import indi.rui.study.unittest.dto.UserInfo;
 import indi.rui.study.unittest.util.HttpClientUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -24,30 +22,18 @@ import java.util.Map;
  * @create: 2021-12-08
  */
 @Slf4j
-public class MkDataRequestHelper {
-
-    private MkLoginResult loginResult;
+public class MkDataAnonymousRequestHelper {
 
     private String address;
 
-    public MkDataRequestHelper() {
+    public MkDataAnonymousRequestHelper() {
     }
 
-    public MkDataRequestHelper(String address, String username, String password) {
-        this(address, username, password, null,null);
-    }
-
-    public MkDataRequestHelper(String address, String username, String password, String verificationCode, String pubKeyFile) {
+    public MkDataAnonymousRequestHelper(String address) {
         this.address = address;
-        // 登录用户
-        this.loginResult = MkLoginHelper.login(address, username, password,verificationCode, pubKeyFile);
     }
 
     // ====================== public method =======================
-
-    public JSONObject getUserInfo() {
-        return this.loginResult.getUserInfo();
-    }
 
     /**
      * 发送GET请求
@@ -80,7 +66,6 @@ public class MkDataRequestHelper {
     public String callDataDownload(String path, JSONObject body, String downloadPath) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
-        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         httpHeaders.put("content-type", "application/json;charset=utf-8");
         String filename = null;
         try {
@@ -103,7 +88,6 @@ public class MkDataRequestHelper {
     public String callDataUpload(String path, File uploadFile, String fileProp, JSONObject params) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
-        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         // 不能设置content-type: multipart/form-data，否则导致"the request was rejected because no multipart boundary was found"
 //        httpHeaders.put("content-type", "multipart/form-data");
         try {
@@ -195,7 +179,6 @@ public class MkDataRequestHelper {
     public String callDataForString(String path, JSON body) {
         String url = address + path;
         Map<String, String> httpHeaders = new HashMap<>();
-        httpHeaders.put("X-AUTH-TOKEN", loginResult.getXAuthToken());
         httpHeaders.put("content-type", "application/json;charset=utf-8");
         String httpResult = null;
         try {

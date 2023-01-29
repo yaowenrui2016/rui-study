@@ -1,0 +1,21 @@
+{
+  "pageSize": 20,
+  "offset": 0,
+  "columns": [
+    "fdScheduleId",
+    "fdPerson",
+    "fdWorkClasses",
+    "fdWorkPeriod",
+    "fdIsRestDay",
+    "fdDay",
+    "fdCreateTime",
+    "fdCreator"
+  ],
+  "conditions": {
+    "fdPerson.fdId": "abc",
+    "fdDay": {
+      "$gte": "2022-12-01",
+      "$lte": "2023-01-31"
+    }
+  }
+}

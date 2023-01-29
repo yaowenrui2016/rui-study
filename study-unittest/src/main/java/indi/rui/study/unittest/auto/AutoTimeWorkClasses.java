@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class AutoTimeWorkClasses {
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yuxd", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -42,8 +42,8 @@ public class AutoTimeWorkClasses {
         // 查询班次列表
         List<JSONObject> classesList = list();
         if (!CollectionUtils.isEmpty(classesList)) {
-            // 启用/禁用班次
-            updateEnable(classesList.get(0));
+//            // 启用/禁用班次
+//            updateEnable(classesList.get(0));
 //            // 编辑班次
 //            edit(classesList.get(0));
 //            // 查询班次详情
@@ -109,7 +109,7 @@ public class AutoTimeWorkClasses {
         JSONObject body = new JSONObject();
         body.put("pageSize", 20);
         body.put("offset", 0);
-        body.put("columns", Arrays.asList("fdId", "fdName", "fdEnabled", "fdColor", "fdCreator", "fdEditors", "fdTimePeriodList"));
+        body.put("columns", Arrays.asList("fdId", "fdName", "fdEnabled", "fdColor", "fdCreator", "fdCreateTime", "fdEditors", "fdTimePeriodList"));
         JSONObject sort = new JSONObject();
         sort.put("fdCreateTime", "DESC");
         body.put("sorts", sort);

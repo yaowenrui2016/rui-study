@@ -37,22 +37,22 @@ public class AutoOrg {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-        // 查询人员
-        List<JSONObject> persons = list();
-        if (!CollectionUtils.isEmpty(persons)) {
+//        // 查询人员
+//        List<JSONObject> persons = list();
+//        if (!CollectionUtils.isEmpty(persons)) {
 //            // 恢复启用
 //            restoreEnabled(persons.get(0));
 //            // 置为无效
 //            invalidated(persons.get(0));
-            // 根据人员ID获取人员与账号信息
-            getPersonAccount(persons.get(0));
-        }
+//            // 根据人员ID获取人员与账号信息
+//            getPersonAccount(persons.get(0));
+//        }
 //        // 新增岗位
 //        addPost();
-        // 启用所有
-        enableAll(persons);
+//        // 启用所有
+//        enableAll(persons);
         // 修改排序号
-//        updateOrders();
+        updateOrders();
     }
 
 
@@ -151,7 +151,11 @@ public class AutoOrg {
 
     private static void updateOrders() {
         JSONArray body = new JSONArray();
-        List<IdNameProperty> idNameList = UserHelper.getUsers("yaowr", "chenp");
+        String[] loginNames = new String[100];
+        for (int i = 0; i < loginNames.length; i++) {
+            loginNames[i] = "thousand" + (i + 1);
+        }
+        List<IdNameProperty> idNameList = UserHelper.getUsers(loginNames);
         for (int i = 0; i < idNameList.size(); i++) {
             JSONObject person = new JSONObject();
             person.put("fdId", idNameList.get(i).getFdId());

@@ -28,7 +28,7 @@ public class AutoAdminE2EUploadFile {
     private static File uploadFile = new File("D:\\project\\rui-study\\downloadTemp\\审批模板_20221014150010.zip");
 
     public static void main(String[] args) throws IOException {
-        MkLoginResult loginResult = MkLoginHelper.doLoginWithPubKey("http://127.0.0.1:8040", "sysadmin", "Password_1", RSA_PUB_KEY);
+        MkLoginResult loginResult = MkLoginHelper.doLoginWithPubKey("http://127.0.0.1:8040", "sysadmin", "Password_1", null, RSA_PUB_KEY);
         CloseableHttpClient httpClient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("http://127.0.0.1:8040/data/sys-admin/e2eTools/parse");
         RequestConfig requestConfig = RequestConfig.custom()

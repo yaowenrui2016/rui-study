@@ -20,9 +20,9 @@
               "required": true,
               "type": "SINGLE_LINE_TEXT",
               "value4Lang": {
-                "zh-CN": "待办标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
-                "zh-HK": "待辦標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
-                "en-US": "To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creatorName}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
+                "zh-CN": "${appName}${moduleName}待办标题：由${extendContents.auditor}申请的合同发起人为${creatorName}，合同金额${replaceText.money}，附加记录：#{customVars.dinner}",
+                "zh-HK": "${appName}${moduleName}待辦標題：由${extendContents.auditor}申請的合同贊助者為${creatorName}，合同金額${replaceText.money}，附件記錄：#{customVars.dinner}",
+                "en-US": "${appName}${moduleName}To-do title: Contract initiators applied for by ${extendContents.auditor} are ${creatorName}, contract amount ${replaceText.money}，additional：#{customVars.dinner}"
               }
             }
           ],

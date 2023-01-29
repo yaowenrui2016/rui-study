@@ -22,11 +22,11 @@ import java.util.*;
 @Slf4j
 public class AutoNotifyTemplateStory3 {
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://127.0.0.1:8040",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
+    private static MkDataRequestHelper mkDataRequestHelper
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
+            "http://127.0.0.1:8040",
+            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
 //    private static MkDataRequestHelper mkDataRequestHelper = new MkDataRequestHelper(
 //            "http://mkpre.ywork.me", "yaowr", "1");
@@ -34,69 +34,14 @@ public class AutoNotifyTemplateStory3 {
 //            "http://10.251.9.60:8080",
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkdev02.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkdev02.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkoppo.ywork.me", "yaowr", "1", "oppo");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkoppo.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkoppore.ywork.me", "liq", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkoppore.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mkpro.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://mkpro.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mktest.ywork.me", "yaowr", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.251.7.103:8080",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("http://mksmoke.ywork.me", "liq", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "http://10.253.2.84:8080",
-//            "+++++++++++++++++++++++++++++++++++++++++++");
-
-//    private static MkDataRequestHelper mkDataRequestHelper
-//            = new MkDataRequestHelper("https://mkzszq.ywork.me", "liq", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "https://mkzszq.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-//    private static MkDataRequestHelper mkDataRequestHelper = null;
-//    //    private static MkDataRequestHelper mkDataRequestHelper
-////            = new MkDataRequestHelper("http://mkyfdyf.ywork.me", "liq", "1");
-//    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-//            "https://mkyfdyf.ywork.me",
-//            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
-    private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("https://mk-tongweb.ywork.me", "yuxd", "1");
-    private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
-            "https://mk-tongweb.ywork.me",
-            "73456775666d4c416f73776139584a4131432f6847413d3d");
-
 
     public static void main(String[] args) {
 //        // 获取模板元数据
 //        getTemplateMeta();
-//        // 新建系统模板
-//        String code = save("create_notifyTemplate.json");
-        // 根据编码查找模板
-        findByCode("$common:test");
+        // 新建系统模板
+        String code = save("create_notifyTemplate.json");
+//        // 根据编码查找模板
+//        findByCode("$common:test");
 //        // 查询模板列表
 //        findAll();
 

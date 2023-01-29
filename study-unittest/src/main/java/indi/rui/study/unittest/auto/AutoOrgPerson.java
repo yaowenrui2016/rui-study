@@ -5,18 +5,21 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import indi.rui.study.unittest.dto.MkResponse;
 import indi.rui.study.unittest.support.MkApiRequestHelper;
 import indi.rui.study.unittest.support.MkDataRequestHelper;
-import indi.rui.study.unittest.util.FileUtils;
+import indi.rui.study.unittest.support.UserHelper;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
 
 /**
  * @author: yaowr
- * @create: 2022-10-28
+ * @create: 2022-11-02
  */
 @Slf4j
-public class AutoSchedule {
+public class AutoOrgPerson {
+
 
     private static MkDataRequestHelper mkDataRequestHelper
-            = new MkDataRequestHelper("http://127.0.0.1:8040", "yaowr", "1");
+            = new MkDataRequestHelper("http://127.0.0.1:8040", "secadmin", "Password_1");
     private static MkApiRequestHelper mkApiRequestHelper = new MkApiRequestHelper(
             "http://127.0.0.1:8040",
             "73456775666d4c416f73776139584a4131432f6847413d3d");
@@ -28,18 +31,24 @@ public class AutoSchedule {
 //            "73456775666d4c416f73776139584a4131432f6847413d3d");
 
     public static void main(String[] args) {
-        addClasses();
+//        // 管理员重置密码
+//        resetPassword();
+        // 调换上级
+        updateParent();
     }
 
 
     /**
-     * 新增班次
+     * 管理员重置密码
      */
-    private static void addClasses() {
-        JSONObject body = FileUtils.loadJSON("AutoSchedule/addSchedule.json");
+    private static void resetPassword() {
+        JSONObject body = new JSONObject();
+        body.put("accountId", "1ge6mn1fowlw492w7tkphd1e9phbr135o4w0");
+        body.put("newPassword", "1");
+        body.put("reNewPassword", "1");
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/timeScheduleMain/addSchedule", body, JSONObject.class);
-        log.info("addClasses: request={}, response={}",
+                "/data/sys-org/sysOrgPersonUpdatePwd/resetPassword", body, Boolean.class);
+        log.info("resetPassword: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );
@@ -47,27 +56,19 @@ public class AutoSchedule {
 
 
     /**
-     * 新增排班
+     * 调换上级
      */
-    private static void addSchedule() {
-        JSONObject body = FileUtils.loadJSON("AutoSchedule/addSchedule.json");
+    private static void updateParent() {
+        JSONObject body = new JSONObject();
+        body.put("fdParentId", UserHelper.getUserId("yaowr"));
+        String[] loginNames = new String[9];
+        for (int i = 1; i < loginNames.length; i++) {
+            loginNames[i] = "thousand" + i;
+        }
+        body.put("fdIds", UserHelper.getUserIds(loginNames));
         MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/timeScheduleMain/addSchedule", body, JSONObject.class);
-        log.info("updateSchedule: request={}, response={}",
-                JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
-                JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
-        );
-    }
-
-
-    /**
-     * 更新排班
-     */
-    private static void updateSchedule() {
-        JSONObject body = FileUtils.loadJSON("AutoSchedule/updateSchedule.json");
-        MkResponse<?> mkResponse = mkDataRequestHelper.callData(
-                "/data/sys-time/timeScheduleMain/updateSchedule", body, JSONObject.class);
-        log.info("updateSchedule: request={}, response={}",
+                "/data/sys-org/sysOrgPerson/updateParent", body, Boolean.class);
+        log.info("updateParent: request={}, response={}",
                 JSONObject.toJSONString(body, SerializerFeature.PrettyFormat),
                 JSONObject.toJSONString(mkResponse, SerializerFeature.PrettyFormat)
         );

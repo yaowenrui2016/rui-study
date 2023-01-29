@@ -1,0 +1,46 @@
+{
+  "sysLoginConfig": {
+    "loginType": [
+      "fdNo"
+    ]
+  },
+  "sysPwdAuthenticationConfig": {
+    "register": "ALL_ACCOUNT"
+  },
+  "sysPwdSafeConfig": {
+    "isOpen": false,
+    "pwdLength": 6,
+    "strength": [
+      "numberMatch",
+      "letterMatch",
+      "bigLetterMatch",
+      "smallLetterMatch"
+    ]
+  },
+  "sysPwdForceChangeConfig": {
+    "isOpen": false,
+    "firstLogin": false,
+    "validDateOpen": true,
+    "validDate": 2,
+    "noticeOpen": true,
+    "noticeDate": 1,
+    "noticeType": [
+      1,
+      2
+    ]
+  },
+  "sysPwdChangeNoticeConfig": {
+    "isOpen": true,
+    "noticeType": [
+      "todo",
+      "kkTodo"
+    ]
+  },
+  "sysPwdLockConfig": {
+    "isOpen": false,
+    "timeRange": 60,
+    "wrongCount": 5,
+    "lockDuration": 5,
+    "wrongNum": 5
+  }
+}
