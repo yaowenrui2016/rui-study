@@ -25,6 +25,11 @@
             <artifactId>study-common</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>indi.rui</groupId>
+            <artifactId>study-log</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <!-- Kafka客户端 -->
         <dependency>
             <groupId>org.apache.kafka</groupId>
